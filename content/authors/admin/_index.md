@@ -42,6 +42,12 @@ social:
 - icon: researchgate
   icon_pack: fab
   link: https://www.researchgate.net/profile/Elias_Costa6
+- icon: orcid
+  icon_pack: fab
+  link: https://orcid.org/0000-0003-3630-1174
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/elias-mendes-costa-3ba13614b/
 superuser: true
 title: Elias Mendes Costa
 user_groups:

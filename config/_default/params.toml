@@ -105,11 +105,11 @@ appointment_url = "https://calendar.google.com/calendar/"
 # Contact links
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
 contact_links = [
-  #{icon = "facebook", icon_pack = "fab", name = "DM Me", link = "https://www.facebook.com/elias.mendes.98"},
-  {icon = "github", icon_pack = "fab", name = "Follow Me", link = "https://github.com/eliasmccosta"},
- # {icon = "orcid", icon_pack = "fab", name = "Follow Me", link = "https://orcid.org/0000-0003-3630-1174"},
-  {icon = "linkedin", icon_pack = "fa", name = "Follow Me", link = "https://www.linkedin.com/in/elias-mendes-costa-3ba13614b/"},
-  #{icon = "instagram", icon_pack = "fab", name = "Follow Me", link = "https://www.instagram.com/eliasmendescosta/"},
+  {icon = "facebook", icon_pack = "fab", name = "DM Me", link = "https://www.facebook.com/elias.mendes.98"},
+  #{icon = "github", icon_pack = "fab", name = "Follow Me", link = "https://github.com/eliasmccosta"},
+  #{icon = "orcid", icon_pack = "fab", name = "Follow Me", link = "https://orcid.org/0000-0003-3630-1174"},
+ # {icon = "linkedin", icon_pack = "fa", name = "Follow Me", link = "https://www.linkedin.com/in/elias-mendes-costa-3ba13614b/"},
+  {icon = "instagram", icon_pack = "fab", name = "Follow Me", link = "https://www.instagram.com/eliasmendescosta/"},
   #{icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/Twitter"},
   #{icon = "skype", icon_pack = "fab", name = "Skype Me", link = "skype:echo123?call"},
   #{icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
