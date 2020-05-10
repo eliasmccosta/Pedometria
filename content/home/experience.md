@@ -25,20 +25,32 @@ date_format = "Jan 2006"
   date_start = "2019-04-01"
   date_end = ""
   description = """O projeto é uma parceria entre UFRRJ e Petrobras para mapeamento de tipos e atributos do solo bem como avaliação da aptidão das terras nos campos de exploração da Petrobras na Bahia.
-  Responsibilities include:
-  
-  * Trabalho de campo
-  * Processamento de dados e modelagem 
+  Responsabilidades incluem:
+  * Coordenação de trabalho de campo
+  * Processamento de dados e modelagem espacial
   * Escrita de relatórios e artigos
   """
 
 [[experience]]
-  title = "Professor"
-  company = "University X"
-  company_url = ""
-  location = "California"
-  date_start = "2016-01-01"
-  date_end = "2016-12-31"
-  description = """Taught electronic engineering and researched semiconductor physics."""
-
+  title = "Doutorando"
+  company = "UFRRJ"
+  company_url = "http://cursos.ufrrj.br/posgraduacao/cpgacs/"
+  location = "Seroédica-RJ"
+  date_start = "2015-03-01"
+  date_end = "2019-02-19"
+  description = """ Desenvolvimento de projeto de pesquisa intitulado: “Caracterização de solos e avaliação da vulnerabilidade de ambientes no Parque Nacional de Itatiaia”. O projeto tem como objetivo a aplicação das modernas técnicas de mapeamento digital de solo para predição de atributos e tipos de solo, bem como a avaliação da vulnerabilidade ambiental usando uma abordagem participativa no Paque Nacional de Itatiaia. """
+  
+  Responsabilidades incluem:
+  * Coordenação de trabalho de campo
+  * Processamento de dados e modelagem espacial
+  * Escrita de tese e artigos
+  
+  [[experience]]
+  title = "Mestrado"
+  company = "UFRRJ"
+  company_url = "http://cursos.ufrrj.br/posgraduacao/cpgacs/"
+  location = "Seroédica-RJ"
+  date_start = "2013-03-01"
+  date_end = "2015-02-26"
+  description = """ Desenvolvimento de projeto de pesquisa intitulado: “Mapeamento Digital de Solos por Regressão Logística Múltipla em Ambiente de Mar de Morros, Pinheiral-RJ”, que teve por objetivo avaliar a eficiência do algoritmo de classificação “Regressão Logística” em predizer tipos de solos em uma área geomorfologicamente complexa. """
 +++
