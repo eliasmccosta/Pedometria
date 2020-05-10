@@ -34,7 +34,7 @@ links:
 - name: World Congress of Soil Science (WCSS)
   url: https://en.wikipedia.org/wiki/World_Congress_of_Soil_Science
 projects:
-- Parque Naional de Itatiaia
+- PNI
 publication: In *21WCSS*
 publication_short: In *STC*
 publication_types:
@@ -48,14 +48,14 @@ title: Spatial Bayesian belief networks. A participatory approach
   for mapping soil vulnerability at the Itatiaia
   National Park, Brazil
 
-url_code: '#'
-url_dataset: '#'
+url_code: ''
+url_dataset: ''
 url_pdf: https://ainfo.cnptia.embrapa.br/digital/bitstream/item/205723/1/Soil-organic-matter-quality-as-indicator-of-ecosystem-services-2019.pdf
-url_poster: '#'
+url_poster: ''
 url_project: ""
 url_slides: ""
-url_source: '#'
-url_video: '#'
+url_source: ''
+url_video: ''
 ---
 
 {{% alert note %}}

@@ -29,10 +29,15 @@
   url = "#contact"
   weight = 60
   
-  [[main]]
+[[main]]
   name = "Vídeos"
   url = "https://www.youtube.com/channel/UCDkLzuE5WtNF0HRzTnsj-UA"
   weight = 20
+  
+[[main]]
+  name = "Paletras e Workshops"
+  url = "#talks"
+  weight = 60
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
