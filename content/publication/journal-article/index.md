@@ -12,14 +12,14 @@ authors:
 - Robson Altiellys Tosta Marcondes
 - Yuri Andrei Gelsleichter
 date: "2020-01-01T00:00:00Z"
-doi: "https://doi.org/10.36783/18069657rbcs20190107"
+doi: "10.36783/18069657rbcs20190107"
 featured: false
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/jdD8gXaTZsc)'
   focal_point: ""
   preview_only: false
 projects: []
-publication: '*Revista Brasileira de Ciência do Solo, 1*(1)'
+publication: '*Revista Brasileira de Ciência do Solo, 44*:e0190107'
 publication_short: ""
 publication_types:
 - "2"
