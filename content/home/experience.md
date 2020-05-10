@@ -18,18 +18,18 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
-  title = "CEO222"
-  company = "GenCoin"
-  company_url = ""
-  location = "California"
-  date_start = "2017-01-01"
+  title = "Pesquisador (Pós-Doc)"
+  company = "UFRRJ"
+  company_url = "http://cursos.ufrrj.br/posgraduacao/cpgacs/"
+  location = "Seroédica-RJ"
+  date_start = "2019-04-01"
   date_end = ""
-  description = """
+  description = """O projeto é uma parceria entre UFRRJ e Petrobras para mapeamento de tipos e atributos do solo bem como avaliação da aptidão das terras nos campos de exploração da Petrobras na Bahia.
   Responsibilities include:
   
-  * Analysing
-  * Modelling
-  * Deploying
+  * Trabalho de campo
+  * Processamento de dados e modelagem 
+  * Escrita de relatórios e artigos
   """
 
 [[experience]]
