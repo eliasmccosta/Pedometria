@@ -5,7 +5,7 @@ image:
   caption: 'Image credit: [**Elias**](https://www.instagram.com/eliasmendescosta/?hl=pt-br)'
   focal_point: smart
 
-summary: apeamento digital de solos em área de produção de petróleo e gás - Bahia
+summary: Mapeamento digital de solos em área de produção de petróleo e gás - Bahia
 tags:
 - Recôncavo baiano
 - Nordeste
