@@ -34,15 +34,14 @@ links:
 - name: World Congress of Soil Science (WCSS)
   url: https://en.wikipedia.org/wiki/World_Congress_of_Soil_Science
 projects:
-- internal-project
-publication: In *Source Themes Conference*
+- Parque Naional de Itatiaia
+publication: In *21WCSS*
 publication_short: In *STC*
 publication_types:
 - "1"
-publishDate: "2017-01-01T00:00:00Z"
+publishDate: "2018-01-01T00:00:00Z"
 slides: example
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus
-  ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary: Participação no 21 WCSS no Rio de Janeiro
 tags:
 - Source Themes
 title: Spatial Bayesian belief networks. A participatory approach 
@@ -51,7 +50,7 @@ title: Spatial Bayesian belief networks. A participatory approach
 
 url_code: '#'
 url_dataset: '#'
-url_pdf: https://drive.google.com/drive/folders/1__Yi0yktHQRJHSdyOyL1uHYgdTLVtYm3
+url_pdf: https://ainfo.cnptia.embrapa.br/digital/bitstream/item/205723/1/Soil-organic-matter-quality-as-indicator-of-ecosystem-services-2019.pdf
 url_poster: '#'
 url_project: ""
 url_slides: ""
