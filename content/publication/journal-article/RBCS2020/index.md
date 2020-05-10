@@ -15,7 +15,7 @@ date: "2020-01-01T00:00:00Z"
 doi: "10.36783/18069657rbcs20190107"
 featured: false
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/jdD8gXaTZsc)'
+  caption: 'Image credit: [**Elias**](https://www.instagram.com/eliasmendescosta/?hl=pt-br)'
   focal_point: ""
   preview_only: false
 projects: []
