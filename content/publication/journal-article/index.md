@@ -20,7 +20,7 @@ summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere t
   ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 tags:
 - Source Themes
-title: An example journal article
+title: Mapping soil properties in a poorly-accessible area
 #url_code: ""
 #url_dataset: ""
 url_pdf: https://www.scielo.br/pdf/rbcs/v44/1806-9657-rbcs-44-e0190107.pdf
