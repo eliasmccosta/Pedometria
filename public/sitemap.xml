@@ -133,6 +133,11 @@
   </url>
   
   <url>
+    <loc>https://pedometriafacil.netlify.app/publication/journal-article/ca2018/</loc>
+    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://pedometriafacil.netlify.app/tag/deep-learning/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
@@ -205,6 +210,10 @@
   <url>
     <loc>https://pedometriafacil.netlify.app/author/robert-ford/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pedometriafacil.netlify.app/author/alessnadro-samuel-rosahttps/samuel-rosa.github.io/</loc>
   </url>
   
 </urlset>

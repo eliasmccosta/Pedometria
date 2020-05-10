@@ -2,7 +2,6 @@
 authors:
 - admin
 bio: Meu principal interesse acadêmico-científico envolve Gênese, Morfologia, Classificação, Fertilidade e Manejo de Solos, Levantamento e Mapeamento Digital de Solos, Pedologia Quantitativa (Pedometria), Geotecnologias e Análise Ambiental, Modelagem e Programação.
-  matter.
 education:
   courses:
   - course: Doutorado em Agronomia Ciência do Solo
