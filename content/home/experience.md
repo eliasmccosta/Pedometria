@@ -57,6 +57,6 @@ date_format = "Jan 2006"
     Responsabilidades incluem:
   * Coordenação de trabalho de campo
   * Processamento de dados e modelagem espacial
-  * Escrita de tese e artigos
+  * Escrita de dissertação e artigos
   """
 +++
