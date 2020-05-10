@@ -26,7 +26,6 @@ date_format = "Jan 2006"
   date_end = ""
   description = "O projeto é uma parceria entre UFRRJ e Petrobras para mapeamento de tipos e atributos do solo bem como avaliação da aptidão das terras nos campos de exploração da Petrobras na Bahia."
   Responsibilities include:
-  
   * Trabalho de campo para caracterização e coleta de perfis de solo
   * Modelagem e mapeamento de atributos e tipos de solo
   * Preparação de relatórios e artigos científicos
