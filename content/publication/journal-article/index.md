@@ -1,36 +1,41 @@
 ---
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus
-  ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed
-  ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis
-  sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida
-  egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id
-  dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus.
-  Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: DSM tools are useful for soil sampling and mapping in areas with limited access.
+  Non-linear models are more effective to map soil properties than linear models.
+  GAM_scorpan model can improve soil properties predictions.
+  GAM smooth functions can successfully map soil properties in 3-D.
+  The high functionality of 2-D and 3-D maps benefits decision-makers.
+  
 authors:
 - admin
-- Robert Ford
-date: "2015-09-01T00:00:00Z"
-doi: ""
+- Helena Saraiva Koenow Pinheiro
+- Lúcia Helena Cunha dos Anjos
+- Robson Altiellys Tosta Marcondes
+- Yuri Andrei Gelsleichter
+date: "2020-01-01T00:00:00Z"
+doi: "https://doi.org/10.36783/18069657rbcs20190107"
 featured: false
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/jdD8gXaTZsc)'
   focal_point: ""
   preview_only: false
 projects: []
-publication: '*Journal of Source Themes, 1*(1)'
+publication: '*Revista Brasileira de Ciência do Solo, 1*(1)'
 publication_short: ""
 publication_types:
 - "2"
-publishDate: "2017-01-01T00:00:00Z"
+publishDate: "2020-01-01T00:00:00Z"
 slides: example
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus
-  ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary:  DSM tools are useful for soil sampling and mapping in areas with limited access.
+  Non-linear models are more effective to map soil properties than linear models.
+  GAM_scorpan model can improve soil properties predictions.
+  GAM smooth functions can successfully map soil properties in 3-D.
+  The high functionality of 2-D and 3-D maps benefits decision-makers.
 tags:
 - Source Themes
-title: An example journal article
+title: Mapping soil properties in a poorly-accessible area
 url_code: ""
 url_dataset: ""
-url_pdf: http://arxiv.org/pdf/1512.04133v1
+url_pdf: https://www.scielo.br/pdf/rbcs/v44/1806-9657-rbcs-44-e0190107.pdf
 url_poster: ""
 url_project: ""
 url_slides: ""
