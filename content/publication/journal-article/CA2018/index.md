@@ -18,7 +18,7 @@ abstract:
   
 authors:
 - admin
-- '[Alessnadro Samuel Rosa](https://samuel-rosa.github.io/)'
+- Alessandro Samuel Rosa
 - Lúcia Helena Cunha dos Anjos
 date: "2018-01-01T00:00:00Z"
 doi: "10.1590/1413-70542018426027418"
