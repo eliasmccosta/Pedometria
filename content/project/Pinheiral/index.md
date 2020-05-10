@@ -4,14 +4,14 @@ external_link: ""
 image:
   caption: 'Image credit: [**Elias**](https://www.instagram.com/eliasmendescosta/?hl=pt-br)'
   focal_point: smart
-slides: example
+
 summary: Mapeamento Digital de Solos por Regressão Logística Múltipla em Ambiente de Mar de Morros
 tags:
 - Floresta Atlântica
 - Geologia complexa
 - Mar de Morros
 - Áreas degradadas
-title: Pinheiral
+title: Mapeamento Pinheiral
 url_code: ""
 url_pdf: ""
 url_slides: ""

@@ -36,7 +36,7 @@ links:
 projects:
 - PNI
 publication: In *21WCSS*
-publication_short: In *STC*
+publication_short: In *21WCSS*
 publication_types:
 - "1"
 publishDate: "2018-01-01T00:00:00Z"
