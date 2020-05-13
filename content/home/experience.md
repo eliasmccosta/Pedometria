@@ -33,7 +33,7 @@ date_format = "Jan 2006"
   """
 
 [[experience]]
-  title = "Doutorando"
+  title = "Doutorado"
   company = "UFRRJ"
   company_url = "http://cursos.ufrrj.br/posgraduacao/cpgacs/"
   location = "Seroédica-RJ"
