@@ -1,5 +1,11 @@
 ---
-title: "Amostragem para mapeamento digital de solos: um tutorial em R"
+date: "2020-04-15"
+diagram: true
+image:
+  caption: 'Image credit: [**Elias**](https://www.instagram.com/?hl=pt-br)'
+  placement: 3
+math: true
+title: "Amostragem para mapeamento digital de solos: um turorial em R"
 author: "Elias Mendes Costa, Marcos Bacis Ceddia, Laiz de Oliveira Silva, Felipe Nascimento dos Santos, Igor Prata Terra de Rezende, Douglath Alves Corrêa Fernandes Igor Leite da Silva"
 output: 
     bookdown::pdf_document2:
@@ -11,9 +17,10 @@ output:
 bibliography: references.bib
 csl: geoderma-regional.csl
 lang: pt
+
 ---
 ```{r, eval=FALSE, echo=FALSE}
-rmarkdown::render('manuscript.Rmd', encoding = 'UTF-8', output_dir = "../docs")
+rmarkdown::render('index.md', encoding = 'UTF-8', output_dir = "../docs")
 ```
 
 
@@ -69,7 +76,6 @@ library(maptools)
 library(rgdal)
 library(clhs)
 library(spsann)
-library(rgeos)
 # Carregando a base de dados da fazendinha
 dados <- read.csv("../data/dataset.csv"); dados=dados[2:54]
 grid <- read.csv("../data/grid.csv"); grid=grid[2:23]
@@ -449,3 +455,5 @@ legend(635700, 7483400, legend = leg, pch = 21, bty = "n")
 
 
 # Referências
+
+
