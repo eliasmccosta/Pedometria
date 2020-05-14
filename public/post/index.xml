@@ -5,7 +5,7 @@
     <link>https://pedometriafacil.netlify.app/post/</link>
       <atom:link href="https://pedometriafacil.netlify.app/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Pedometria, 2020</copyright>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Pedometria, 2020</copyright><lastBuildDate>Fri, 12 Jul 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://pedometriafacil.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
@@ -13,383 +13,429 @@
     </image>
     
     <item>
-      <title>Amostragem para mapeamento digital de solos: um tutorial em R</title>
+      <title>Writing technical content in Academic</title>
       <link>https://pedometriafacil.netlify.app/post/writing-technical-content/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
       <guid>https://pedometriafacil.netlify.app/post/writing-technical-content/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;rmarkdown::render(&#39;manuscript.Rmd&#39;, encoding = &#39;UTF-8&#39;, output_dir = &amp;quot;../docs&amp;quot;)
+      <description>&lt;p&gt;Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Academic.&lt;/p&gt;
+&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
+&lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
+&lt;p&gt;Academic supports a Markdown extension for highlighting code syntax. You can enable this feature by toggling the &lt;code&gt;highlight&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```python
+import pandas as pd
+data = pd.read_csv(&amp;quot;data.csv&amp;quot;)
+data.head()
+```
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;introdução&#34;&gt;Introdução&lt;/h1&gt;
-&lt;h2 id=&#34;conceitos-básicos-e-terminologias&#34;&gt;Conceitos básicos e terminologias&lt;/h2&gt;
-&lt;p&gt;A &lt;em&gt;amostragem&lt;/em&gt; diz respeito à seleção de um subconjunto de indivíduos de uma população para estimar características de toda a população [@Wang2012a]. Ou A amostragem pode ser definida como selecção de partes de um universo finito, com a proposta de obter informações desse universo [@deGruijter2006]. A &lt;em&gt;amostra&lt;/em&gt; pode ser definida como a parte coletada, e levada para laboratório, ou observada &lt;em&gt;in situ&lt;/em&gt;.  E uma única parte dessa amostra pode ser  definida como &lt;em&gt;unidade amostral&lt;/em&gt;, o número de unidades amostrais é definido como &lt;em&gt;tamanho amostral&lt;/em&gt; ou &lt;em&gt;n amostral&lt;/em&gt; [@deGruijter2006].
-Uma confusão comum na literatura é sobre a definição de amostragem aletória e amostragem arbitrária ou casual [@Brus2019] no segundo caso os locais de amostragem são escolhidos, fundamentalmente, em função da subjetividade da pessoa conduzindo o ntraballho. Para evitar a confusão o termo &lt;em&gt;amostragem probabilística&lt;/em&gt; deve ser priorizado para o as amostras aleatórias. A amostragem de probabilidade é uma amostragem aleatória que atende a dois requisitos. Em primeiro lugar, todas as unidades da população têm uma probabilidade positiva de serem selecionadas. Nenhuma parte da população pode ser excluída. Em segundo lugar, a probabilidade de seleção de cada amostra possível é conhecida. Com amostragem arbitrária (casual), esses dois requisitos geralmente não são atendidos [@Brus2019].&lt;/p&gt;
-&lt;h2 id=&#34;amostragem-no-mapeamento-convencional-de-solos&#34;&gt;Amostragem no mapeamento convencional de solos&lt;/h2&gt;
-&lt;p&gt;No caso do mapeamento convencional de solos, o método de prospecção e a frequência de amostragem dependem do nível de detalhe do levantamento e do objetivo do levantamento [@IBGE2015]. Por exemplo, na terceira edição do Manual Técnico de Pedologia [@IBGE2015] o método de prospecção indicado para levantamento exploratório é o de extrapolação, generalizações, correlações e poucas observações de campo, com uma frequência de amostragem de um perfil completo por classe de solo predominante na associação. Para o levantamento semidetalhado a densidade de observações e a frequência de amostragem são calculadas em função da heterogeneidade da área e da facilidade de correlação de solos e a superfície geomorfológicas. No entanto, é recomendada uma média de 0,002 a 0,20 observações por hectare e um perfil completo e um complementar por classe de solo componente da unidade de mapeamento simples ou associação.
-Porém para o MDS esse esquema de amostragem não se aplica, pois não fornece estimativa estatística representativa. No MDS é necessário o uso de estratégias de amostragem estatisticamente robustas para diminuir a subjetividade e consequentemente os possíveis erros na predição [@Minasny2007b]&lt;/p&gt;
-&lt;h2 id=&#34;amostragem-no-mapeamento-digital-de-solos&#34;&gt;Amostragem no mapeamento digital de solos&lt;/h2&gt;
-&lt;p&gt;No caso do mapeamento digital de solos (MDS) a amostragem é um fator crucial, pois pode contribuir para elevar ou diminuir os custos do levantamento de solos. Ainda é considera uma das etapas mais importantes para o MDS [@CarvalhoJunior2014]. Para o MDS, para uma otimização da calibração de modelos matemáticos as amostras coletadas devem representar ao máximo a distribuição espacial do que está sendo modelado (atributo ou classe de solo), por isso técnicas como o Hipercubo Latino Condicionado (cLHS) [@Minasny2006] são frequentemente usados nessa etapa e para essa finalidade. Esse tipo de amostragem é conhecido como amostragem não probabilística e será abordado com mais detalhes nos exemplos.
-Para validação dos resultados das predições espaciais no MDS o tipo de abordagem recomendado é a amostragem probabilística [@BrusEtAl2011], esse tipo de amostragem busca a imparcialidade e diminuição de viés para validação dos produtos do mapeamento.  Atenção especial deve ser tomada nessa etapa, pois nem sempre é possível uma amostragem completamente probabilística (aleatória). Há então a necessidade de encontrar a condição perfeita do que é factível e o ideal. Exemplos de amostragem probabilística serão abordados com mais detalhe nos exemplos.&lt;br&gt;
-Parte do material aqui desenvolvido foi extraído e adaptado do livro em desenvolvimento de Alessandro Samuel-Rosa, 
-&lt;a href=&#34;http://samuel-rosa.github.io/pedometria-feita-simples/principios-da-amostragem-espacial.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pedometria feita simples&lt;/a&gt;. O capítulo 7 do livro trata de princípios da amostragem espacial. Também foram extraídas informações a respeito de amostragem para validação de mapas digitais de solos [@BrusEtAl2011] e amostragem para mapeamento de solos [@Brus2019]. Assim objetivo desse tutorial e compilar as informações dos trabalhos mencionados para simular difentes estratégias amostrais para dar suporte aos levantamentos de solos com foco em MDS e avaliação dos produtos gerados.&lt;/p&gt;
-&lt;h1 id=&#34;área-experimental-e-base-dados&#34;&gt;Área experimental e base dados&lt;/h1&gt;
-&lt;h2 id=&#34;área-experimental&#34;&gt;Área experimental&lt;/h2&gt;
-&lt;p&gt;Ao longo desse tutorial sobre amostragem, você verá exemplos de cada tipo de amostragem implementados no R usando o conjunto de dados de um área experimental localizada no município de Seropédica, estado do Rio de Janeiro, Brasil, nas coordenadas geográficas centrais aproximadas 22º54’00” S e  43º55’00” W (Figura @ref(fig:localizacao1)).&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r&#34;&gt;knitr::include_graphics(&amp;quot;../figures/localizacao1.png&amp;quot;)
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+data = pd.read_csv(&amp;quot;data.csv&amp;quot;)
+data.head()
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Especificamente, o trabalho foi desenvolvido na Fazendinha Agroecológica km 47 (Sistema Integrado de Produção Agroecológica - SIPA), associada à Embrapa Agrobiologia, Empresa de Pesquisa Agropecuária do Estado do Rio de Janeiro (Pesagro-Rio) e Universidade Federal Rural do Rio de Janeiro, nas coordenadas geográficas centrais aproximadas 22º45’0” S e 43º40’30” W (Figura @ref(fig:localizacao2)).&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r&#34;&gt;knitr::include_graphics(&amp;quot;../figures/localizacao2.png&amp;quot;)
+&lt;h3 id=&#34;math&#34;&gt;Math&lt;/h3&gt;
+&lt;p&gt;Academic supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the &lt;code&gt;math&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;To render &lt;em&gt;inline&lt;/em&gt; or &lt;em&gt;block&lt;/em&gt; math, wrap your LaTeX math with &lt;code&gt;$...$&lt;/code&gt; or &lt;code&gt;$$...$$&lt;/code&gt;, respectively.&lt;/p&gt;
+&lt;p&gt;Example &lt;strong&gt;math block&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;$$\gamma_{n} = \frac{ 
+\left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T 
+\left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}
+{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;O clima do município caracteriza-se por ser do tipo Aw (Tropical com inverno seco), segundo a classificação de Köppen. Seropédica tem uma temperatura média de 23,5 °C e uma pluviosidade média anual de 1354 mm. Os maiores valores de precipitação são verificados nos meses de novembro a janeiro e os menores no período entre maio e agosto [@Oliveira-J2014]. A área dos exemplos encontra-se ocupada por pastagem e caracteriza-se por apresentar relevo suave-ondulado a ondulado, altitude entre 17 a 50 m sobre o nível do mar, e ausência de rochosidade e pedregosidade em superfície [@Nascimento2019].&lt;/p&gt;
-&lt;p&gt;Os Solos da área experimental são caraterizados por apresentar, no geral baixa fertilidade e elevado grau de desonvilvimento com fatores e processos de formação específicos e dominates para cada ordem e posição da paisagem. Para o trabalho de onde os dados derivam [@Nascimento2019], foram abertas 10 trincheiras em diferentes pontos da paisagem, onde foram descritos e classificados perfis do solo, sendo uma trincheira no topo (P10), duas na posição de terço médio (P3 e P9), uma no terço inferior (P8), três no sopé da vertente (P2, P5 e P7) e três na área de baixada (P1, P4 e P6). Os solos froam classificados respectivamente como Argissolos Vermelhos P10, P9 e P3; Argissolo Amarelo, P8; Planossolos Háplicos (arênicos e espessarenicos), P7,P2,P5; Planossolos Háplicos (gleissólicos), P4, P6 e Cambissolo Hálico (com evidente processos de gleização) P1 (Figura @ref(fig:localizacao2)).&lt;/p&gt;
-&lt;h2 id=&#34;base-de-dados-covariáveis-ambientais&#34;&gt;Base de dados (Covariáveis ambientais)&lt;/h2&gt;
-&lt;p&gt;As covariáveis ambientais para modelar as propriedades do solo foram derivadas de duas fontes de dados: modelo digital de elevação, dados de sensoriamento remoto (imagem orbital), uma imagem RapidEye. Elas foram escolhidos para descrever os principais fatores formadores do solo, de acordo com a abordagem scorpan [@McBratneyEtAl2003].&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Modelo Digital de Elevação (MDE)&lt;/em&gt;: O MDE utilizado, com resolução espacial de 2 m, foi gerado a partir das curvas de nível e pontos cotados coeletados com gps geodésico. Do MDE foram derivados 12 atributos de terreno com pontencial uso para modelagem no MDS.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Imagem de satélite&lt;/em&gt;: foram utilizadas duas cenas do sensor RapidEyeambas de 2011. As duas cenas foram usadas para cobrir toda a área de estudo e eles têm uma 12 resolução radiométrica de bits, resolução espacial de 6,5m, e ortorretificadas para resolução espacial de 5m [@RapidEye2012].
-Das cenas foram derivados os indices de vegetação (NDVI, inglês) e índice de vegetação ajustado ao solo (SAVI, inglês).&lt;/p&gt;
-&lt;h2 id=&#34;áreas-ambientalmente-homogêneas-estratos&#34;&gt;Áreas ambientalmente homogêneas (Estratos)&lt;/h2&gt;
-&lt;p&gt;Para fazer o exerício foram criadas áreas ambientalmente similares (homogêneas), essa a bordagem é indicada em casos onde há por exemplo o interesse de fazer a amostragem po estratos. Nesse execício optou-se por criar 10 estratos usando as variáveis, que julgamos serem as mais representativas para discretizar os ambientes. Foram elas elevação, declividade e SAVI. Para fazer o agrupamento da áreas de maior similaridade (criação de clusters) foi utilizado o algorítimo de classificação não supervisionada &lt;em&gt;K-Means Clustering&lt;/em&gt; que visa particionar os pontos em k grupos de forma que a soma dos quadrados dos pontos aos centros de cluster designados seja minimizada. No mínimo, todos os centros do cluster estão na média dos seus conjuntos de Voronoi (o conjunto de pontos de dados que estão mais próximos do centro do cluster).&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;## Carregar os pacotes
-library(sp)
-library(raster)
-library(sampling)
-library(maptools)
-library(rgdal)
-library(clhs)
-library(spsann)
-library(rgeos)
-# Carregando a base de dados da fazendinha
-dados &amp;lt;- read.csv(&amp;quot;../data/dataset.csv&amp;quot;); dados=dados[2:54]
-grid &amp;lt;- read.csv(&amp;quot;../data/grid.csv&amp;quot;); grid=grid[2:23]
-
-# criando um cluster de unidades homogêneas usando os dados das covariáveis ambientais
-cluster &amp;lt;- kmeans(grid[, c(1,2,20)], 10)
-cluster = data.frame(cluster$cluster)
-grid=cbind(grid,cluster)
-
-## Foi necessário transformar os estratos para fator 
-##porque estava dando erro quando calculava o número
-## de amostras por estrato 
-
-# Função para transformar uma variável em fator
-grid$cluster.cluster=as.factor(grid$cluster.cluster) 
-grid1=grid
-#cluster=data.frame(grid[,c(&amp;quot;X&amp;quot;,&amp;quot;Y&amp;quot;)],results=cluster$cluster)
-#coordinates(cluster)= ~ X+Y; gridded(cluster)=T; cluster=raster(cluster)
-#plot(cluster)
-
-# Transformar o dataframe do grid em spatialdataframe
-sp::gridded(grid) &amp;lt;- ~ X + Y
-sp::proj4string(grid) &amp;lt;- sp::CRS(&amp;quot;+proj=utm +zone=23 +south +ellps=GRS80 +
-                                 towgs84=0,0,0,0,0,0,0 +units=m +no_defs&amp;quot;) 
-
-# Definindo o sistema de projção
-crsSIRGAS2000=CRS(&amp;quot;+proj=utm +zone=23 +south +ellps=GRS80 +
-                  towgs84=0,0,0,0,0,0,0 +units=m +no_defs&amp;quot;) 
-
-#carregando arquivos shapfile
-## Estradas
-estrada &amp;lt;- maptools::readShapeSpatial(&amp;quot;../shape/estrada.shp&amp;quot;, 
-                                         proj4string=crsSIRGAS2000,verbose=TRUE)
-## Perfis completos
-perfis &amp;lt;- maptools::readShapeSpatial(&amp;quot;../shape/pontos.shp&amp;quot;, 
-                                      proj4string=crsSIRGAS2000,verbose=TRUE)
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;p&gt;$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left |\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right |^2}$$&lt;/p&gt;
+&lt;p&gt;Example &lt;strong&gt;inline math&lt;/strong&gt; &lt;code&gt;$\nabla F(\mathbf{x}_{n})$&lt;/code&gt; renders as $\nabla F(\mathbf{x}_{n})$.&lt;/p&gt;
+&lt;p&gt;Example &lt;strong&gt;multi-line math&lt;/strong&gt; using the &lt;code&gt;\\\\&lt;/code&gt; math linebreak:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;$$f(k;p_0^*) = \begin{cases} p_0^* &amp;amp; \text{if }k=1, \\\\
+1-p_0^* &amp;amp; \text {if }k=0.\end{cases}$$
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;amostragem-para-mapeamento-de-solos&#34;&gt;Amostragem para mapeamento de solos&lt;/h1&gt;
-&lt;p&gt;Não exite uma um único tipo de estratégia amostral para qualquer trabalho de MDS, cada caso precisa ser estudado de forma particular e no geral a melhor estratégia depnede so objetivo do projeto, do recurso financeiro e humano disponível e dificuldades operacionais encontradas na área que está sendo estuda. Do ponto de vista de dificuldades operacinais tem-se alguns variantes como limitação de de acesso, por se tratar de áreas com acesso limitado, nesses casos há abordagens de amostragem específica como mostra @CambuleEtAl2013 onde se tem áreas de maior acessibilidade e que sejam representativas da área total de estudo. Ainda pode haver limitação por permissão de acesso, sobretudo em áreas particulares. Quanto aos tipos de amostragem elas são divididas basicamente em dois grupos ou tipos fundamentais: &lt;em&gt;Amostragem probabilística&lt;/em&gt; e &lt;em&gt;não probabilística&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;amostragem-não-probabilística&#34;&gt;Amostragem não probabilística&lt;/h2&gt;
-&lt;p&gt;A amostragem não probabilística é uma técnica de amostragem em que as amostras são reunidas em um processo que não dá a todos os indivíduos, no caso de solos perfil de solo &lt;em&gt;pedon&lt;/em&gt; ou ponto amsotral, da população chances iguais de serem selecionados. A escolha dos locais de amostragem depende da definição de um critério a ser atendido, normalmente em MDS a caracterização da máxima variação de solos e suas propriedades representados pelas covariáveis ambientais que simulam os fatores de formação do solo [@McBratneyEtAl2003].
-A amostragem não-probabilística costuma ser dividida em três categorias:
-*casual,
-*conveniente, e
-*intencional.
-Além disso há amostragens não probabilísticas, onde através de algorítimos e de acordo com uma determinada finalidade, pode ser feita a otimização da configuração amostral. As principias otimizações são para representar o máximo possível o espaço de atributos (ex: tipos e/ou propriedades do solo) e espaço geográfico.&lt;/p&gt;
-&lt;h3 id=&#34;amostragem-casual&#34;&gt;Amostragem casual&lt;/h3&gt;
-&lt;p&gt;Na amostragem casual os locais de amostragem são escolhidos, fundamentalmente, em função da subjetividade da pessoa conduzindo a amostragem. Não existe um critério claro a ser atendido. Outros locais amostrais podem ser escolhidos caso outra pessoa conduza a amostragem, mesmo que não haja justificativa plausível para isso.Para fim de MDS esse tipo de amostragem não é recomendado e é mais comum em trabalhos de fetilidade do solo.
-Na prática, a amostragem casual consiste em transitar pela área a ser amostrada e, aqui e acolá (ex: Zig-Zag), definir um local para amostragem.No caso da amostra para fins de avaliação da ferilidade do solo normalmente é feito uma divisão da área em glebas (áreas menores, mais homogêneas). Essa divisão deve considerar a inclinação do terreno, o tipo de cultura, a idade da cultura, as adubações feitas anteriormente. Esse tipo de amostragem dá a impressão de que as observações são aleatórias, um pressuposto estatístico comum, mas como elas foram escolhidas subjetivamente pela pessoa que está conduzindo o trabalho não é possível se calcular a probabilidade de inclusão de cada amostra, portanto ela é casual, mas não aleatória.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;main &amp;lt;- &amp;quot;Amostra casual (zig-zag)&amp;quot;
-plot(
-  grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
-  xlab = &amp;quot;Longitude (m)&amp;quot;, ylab = &amp;quot;Latitude (m)&amp;quot;)
-image(
-  grid, &amp;quot;cluster.cluster&amp;quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
-legend(
-  &amp;quot;topleft&amp;quot;, title = &amp;quot;Áreas homogêneas&amp;quot;, fill = terrain.colors(3),
-  legend = c(&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot;, &amp;quot;10&amp;quot;),
-  border = terrain.colors(10), bty = &amp;quot;n&amp;quot;)
-set.seed(2000)
-pts &amp;lt;- sp::spsample(grid, n = 30, type = &amp;quot;nonaligned&amp;quot;)
-points(pts, pch = 21, cex = 0.75)
-arrows(
-  grid@coords[1, 1], grid@coords[1, 2], pts@coords[length(pts), 1],
-  pts@coords[length(pts), 2],  length = 0.1)
-for (i in 2:length(pts) - 1) {
-  arrows(
-    x1 = pts@coords[i, 1], y1 = pts@coords[i, 2], x0 = pts@coords[i + 1, 1], 
-    y0 = pts@coords[i + 1, 2],  length = 0.1)
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;p&gt;$$f(k;p_0^*) = \begin{cases} p_0^* &amp;amp; \text{if }k=1, \\&lt;br&gt;
+1-p_0^* &amp;amp; \text {if }k=0.\end{cases}$$&lt;/p&gt;
+&lt;h3 id=&#34;diagrams&#34;&gt;Diagrams&lt;/h3&gt;
+&lt;p&gt;Academic supports a Markdown extension for diagrams. You can enable this feature by toggling the &lt;code&gt;diagram&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file or by adding &lt;code&gt;diagram: true&lt;/code&gt; to your page front matter.&lt;/p&gt;
+&lt;p&gt;An example &lt;strong&gt;flowchart&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+graph TD
+A[Hard] --&amp;gt;|Text| B(Round)
+B --&amp;gt; C{Decision}
+C --&amp;gt;|One| D[Result 1]
+C --&amp;gt;|Two| E[Result 2]
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph TD
+A[Hard] --&amp;gt;|Text| B(Round)
+B --&amp;gt; C{Decision}
+C --&amp;gt;|One| D[Result 1]
+C --&amp;gt;|Two| E[Result 2]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example &lt;strong&gt;sequence diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+sequenceDiagram
+Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
+loop Healthcheck
+    John-&amp;gt;&amp;gt;John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John--&amp;gt;&amp;gt;Alice: Great!
+John-&amp;gt;&amp;gt;Bob: How about you?
+Bob--&amp;gt;&amp;gt;John: Jolly good!
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;sequenceDiagram
+Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
+loop Healthcheck
+    John-&amp;gt;&amp;gt;John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John--&amp;gt;&amp;gt;Alice: Great!
+John-&amp;gt;&amp;gt;Bob: How about you?
+Bob--&amp;gt;&amp;gt;John: Jolly good!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example &lt;strong&gt;Gantt diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+gantt
+section Section
+Completed :done,    des1, 2014-01-06,2014-01-08
+Active        :active,  des2, 2014-01-07, 3d
+Parallel 1   :         des3, after des1, 1d
+Parallel 2   :         des4, after des1, 1d
+Parallel 3   :         des5, after des3, 1d
+Parallel 4   :         des6, after des4, 1d
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;gantt
+section Section
+Completed :done,    des1, 2014-01-06,2014-01-08
+Active        :active,  des2, 2014-01-07, 3d
+Parallel 1   :         des3, after des1, 1d
+Parallel 2   :         des4, after des1, 1d
+Parallel 3   :         des5, after des3, 1d
+Parallel 4   :         des6, after des4, 1d
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example &lt;strong&gt;class diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+classDiagram
+Class01 &amp;lt;|-- AveryLongClass : Cool
+&amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01
+Class09 --&amp;gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&amp;gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+class Class10 {
+  &amp;lt;&amp;lt;service&amp;gt;&amp;gt;
+  int id
+  size()
 }
-leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
-legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)
-
+```
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;amostragem-conveniente&#34;&gt;Amostragem conveniente&lt;/h3&gt;
-&lt;p&gt;Esse é um dos exemplos de amostragem em que o processo não é completamente aleatório, pois são priorizados por exemplo locais ao longo das estradas, num tipo de amostragem que pode ser aleatório (dentro do limite de acessibilidade, que seja conveniente) ou amostragem arbitrária, ou seja, amostragem sem uma finalidade específica em mente, a amostragem pode ser ainda direcionada em que o usuário decide os locais que serão amostrados.
-Esse tipo de amostragem busca otimizar recursos (financeiros e operacionais) evitando locais de difícil acesso, podendo assim realizar um número maior de observações. Como resultado esse tipo de amostragem tem observações concentradas por exemplo em áreas próximo a estradas e/ou trilhas, em áreas não montanhosas, em bordas, quando em condição de densas florestas.
-Aqui foram selecionadas amostras com distância máxima da estrada de 50 m&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;main &amp;lt;- &amp;quot;Amostra conveninte (distante da margem da estrada)&amp;quot;
-plot(
-  grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
-  xlab = &amp;quot;Longitude (m)&amp;quot;, ylab = &amp;quot;Latitude (m)&amp;quot;)
-image(
-  grid, &amp;quot;cluster.cluster&amp;quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
-legend(
-  &amp;quot;topleft&amp;quot;, title = &amp;quot;Tipo de solo&amp;quot;, fill = terrain.colors(10),
-  legend = c(&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot;, &amp;quot;10&amp;quot;),
-  border = terrain.colors(10), bty = &amp;quot;n&amp;quot;)
-plot(estrada, add=TRUE)
-t=buffer(estrada, width=50)
-r &amp;lt;- raster(grid) 
-lr &amp;lt;- mask(r, t)
-lr=as(lr, &amp;quot;SpatialPixelsDataFrame&amp;quot;)
-points(spsample(lr, n = 30, &amp;quot;random&amp;quot;), pch = 21, cex = 0.75)
-leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
-legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;amostragem-intencional&#34;&gt;Amostragem intencional&lt;/h3&gt;
-&lt;p&gt;Semelhante a amostragem convencional a amostragem intencional também busca otimizar recursos financeiros e operacionais, mas difere principalmente porque na amostragem intencional são agregados critérios pedológicos, de levatamento para fins de fetilidade do solo e/ou estatístico.
-Em geral, a amostragem intencional é o tipo de amostragem mais eficiente para a obtenção de observações de calibração para a modelagem espacial do solo. Isso se dá exatamente porque a localização das observações é definida com base no modelo usado para descrever a estrutura da variação espacial do solo bem como capturar as variações dos fatores envolvidos com gênese do solo [@McBratneyEtAl2003]. Em outras palavras, a configuração espacial das observações é otimizada para atender aos pressupostos e requerimentos do modelo formação do solo (&lt;em&gt;SCORPAN&lt;/em&gt;) que será usado na modelagem. Quanto melhor as amostras representarem as relações solo-paisagem e estrutura espacial dos dados, melhor será o desempenho do modelo calibrado.&lt;/p&gt;
-&lt;h4 id=&#34;amostragem-intencional-sistemática&#34;&gt;Amostragem intencional sistemática&lt;/h4&gt;
-&lt;p&gt;Na amostragem intencional sistemática um critério pedológico e/ou estatístico tem origem no modelo usado para descrever a estrutura da variação espacial do solo e o método usado para fazer predições espaciais. Por exemplo, o objetivo pode ser selecionar os locais amostrais de maneira a obter a melhor cobertura espacial porque isso pode minimizar a incerteza ou erros das predições. O resultado dessa amostragem é a  alocação de observações equidistantes no que é denominado malha ou grid, que pode quadrada ou triangular.
-Esse tipo de maostragem é comumente usado em trabalhos de mapeamento do solo para fins de agricultura de precisão, por exemplo para avaliação da fertilidade do solo, pois essas áreas são normalmente homogêneas e de mais fácil acesso.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;main &amp;lt;- &amp;quot;Amostra sistemática (malha quadrada)&amp;quot;
-plot(
-  grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
-  xlab = &amp;quot;Longitude (m)&amp;quot;, ylab = &amp;quot;Latitude (m)&amp;quot;)
-image(
-  grid, &amp;quot;cluster.cluster&amp;quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
-legend(
-  &amp;quot;topleft&amp;quot;, title = &amp;quot;Áreas homogêneas&amp;quot;, fill = terrain.colors(10),
-  legend = c(&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot;, &amp;quot;10&amp;quot;),
-  border = terrain.colors(10), bty = &amp;quot;n&amp;quot;)
-pts &amp;lt;- sp::spsample(grid, n = 30, type = &amp;quot;regular&amp;quot;, offset = c(0.5, 0.5))
-points(pts, pch = 21, cex = 0.75)
-polygon(pts@coords[c(1, 2, 6, 5, 1), ])
-leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
-legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)
-
-main &amp;lt;- &amp;quot;Amostra sistemática (malha triangular)&amp;quot;
-plot(
-  grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
-  xlab = &amp;quot;Longitude (m)&amp;quot;, ylab = &amp;quot;Latitude (m)&amp;quot;)
-image(
-  grid, &amp;quot;cluster.cluster&amp;quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
-legend(
-  &amp;quot;topleft&amp;quot;, title = &amp;quot;Áreas homogêneas&amp;quot;, fill = terrain.colors(10),
-  legend = c(&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot;, &amp;quot;10&amp;quot;),
-  border = terrain.colors(10), bty = &amp;quot;n&amp;quot;)
-pts &amp;lt;- sp::spsample(grid, n = 34, type = &amp;quot;hexagonal&amp;quot;, offset = c(0.5, 0.5))
-points(pts, pch = 21, cex = 0.75)
-polygon(pts@coords[c(1, 2, 5, 1), ])
-leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
-legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;amostragem-intencional-caminhamento-livre&#34;&gt;Amostragem intencional caminhamento livre&lt;/h4&gt;
-&lt;p&gt;No critério intencional caminhamento livre as amostras são escolhidas a fim de agregar as questões de custos, conhecimento do especialista (ex: Pedólogo), e máxima caracterização da área. A localização das observações é definida com base no conhecimento tácito do responsável, seu modelo mental das relações solo-paisagem ou pedogênese. O modelo mental é construído com a experiência obtida no campo e sua qualidade geralmente é diretamente proporcional ao número de anos de trabalho de campo.
-Aguns dos exemplos são amostragens em &lt;em&gt;Topossequência&lt;/em&gt;, que busca amostrar os diferentes tipos de solos de acordo com sua variação topográfica, &lt;em&gt;Topolitossequência&lt;/em&gt;, que seria variação no relevo e material de origem, &lt;em&gt;Climosequência&lt;/em&gt;, uma variação nas condições climáticas da região de estudo entre outras.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;main &amp;lt;- &amp;quot;Caminhamento livre&amp;quot;
-plot(
-  grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
-  xlab = &amp;quot;Longitude (m)&amp;quot;, ylab = &amp;quot;Latitude (m)&amp;quot;)
-image(
-  grid, &amp;quot;cluster.cluster&amp;quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
-legend(
-  &amp;quot;topleft&amp;quot;, title = &amp;quot;Áreas homogêneas&amp;quot;, fill = terrain.colors(3),
-  legend = c(&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot;, &amp;quot;10&amp;quot;),
-  border = terrain.colors(10), bty = &amp;quot;n&amp;quot;)
-points(perfis, pch = 21, cex = 0.75)
-text(perfis, perfis$id, cex=0.75, adj = c(01.5))
-arrows(
-  grid@coords[1, 1], grid@coords[1, 2], perfis@coords[length(perfis), 1], 
-  perfis@coords[length(perfis), 2],
-  length = 0.1)
-for (i in 2:length(perfis) - 1) {
-  arrows(
-    x1 = perfis@coords[i, 1], y1 = perfis@coords[i, 2], x0 = perfis@coords[i + 1, 1], 
-    y0 = perfis@coords[i + 1, 2], length = 0.1)
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;classDiagram
+Class01 &amp;lt;|-- AveryLongClass : Cool
+&amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01
+Class09 --&amp;gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&amp;gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+class Class10 {
+  &amp;lt;&amp;lt;service&amp;gt;&amp;gt;
+  int id
+  size()
 }
-leg &amp;lt;- paste(&amp;quot;Amostras n = 10&amp;quot;, sep = &amp;quot;&amp;quot;)
-legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;otimização-de-configurações-amostrais&#34;&gt;Otimização de Configurações Amostrais&lt;/h3&gt;
-&lt;h4 id=&#34;hipercubo-latino-condicionado-clhs&#34;&gt;Hipercubo Latino Condicionado (cLHS)&lt;/h4&gt;
-&lt;p&gt;O cLHS é um algoritmo de busca baseado em regras heurísticas combinadas com um cronograma de recozimento. Para amostragem de uma área informações prévias representativas da área de estudo são fornecidas ao algoritmo como dados auxiliares (covariáveis ambientais). Ele fornece uma cobertura completa da faixa de cada covariável estratificando a distribuição marginal, ou seja, usa as informações fornecidas para produzir uma estratificação de amostragem otimizada [@Minasny2006]. Variações do cLHS para otimização de locais de amostragem podem ser encontradas em @Roudier2012, @Mulder2013, @CarvalhoJunior2014, @Clifford2014, @Kidd2014, e @Stumpf2016.
-No caso desse exemplo usado no cLHS como variáveis auxiliares a elevação, declividade e SAVI, ou seja as mesmas que foram escolhidas para gerar as áreas ambientalmente homogêneas (os estratos).&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;dem=raster(grid[1])
-slope=raster(grid[2])
-savi=raster(grid[20])
-stack=raster::addLayer(dem, slope, savi)
-s &amp;lt;- rasterToPoints(stack, spatial=TRUE)
-set.seed(2001)
-pts &amp;lt;- clhs(s, size = 30, iter = 1000, progress = FALSE) 
-main &amp;lt;- &amp;quot;Amostra pelo Hipercubo Latino Condicionado (cLHS)&amp;quot;
-plot(
-  grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
-  xlab = &amp;quot;Longitude (m)&amp;quot;, ylab = &amp;quot;Latitude (m)&amp;quot;)
-image(
-  grid, &amp;quot;cluster.cluster&amp;quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
-points(pts, pch = 21, cex = 0.75)
-leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
-legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)
+&lt;p&gt;An example &lt;strong&gt;state diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+stateDiagram
+[*] --&amp;gt; Still
+Still --&amp;gt; [*]
+Still --&amp;gt; Moving
+Moving --&amp;gt; Still
+Moving --&amp;gt; Crash
+Crash --&amp;gt; [*]
+```
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;identificação-de-tendência-espacial-e-estimativa-optimclhs&#34;&gt;Identificação de tendência espacial e estimativa (optimCLHS)&lt;/h4&gt;
-&lt;p&gt;Essas é uma Otimização de configurações de amostra para identificação de tendência espacial e estimativa. As funções de otimização foram implementadas no pacote &lt;em&gt;spsann&lt;/em&gt; do &lt;em&gt;R&lt;/em&gt;.
-Esse método busca Otimizar uma configuração de amostra para identificação e estimativa de tendência espacial usando o método proposta por @Minasny2006, metodo anteriormente cidado chocido como cLHS. Nesse método otimizado uma função de utilidade &lt;em&gt;U&lt;/em&gt; é definida para que a amostra reproduza a distribuição marginal e a matriz de correlação das covariáveis numéricas e as proporções de classe do fator covariáveis (cLHS). A função de utilidade é obtida agregando três funções objetivas: &lt;em&gt;O1&lt;/em&gt;, &lt;em&gt;O2&lt;/em&gt; e &lt;em&gt;O3&lt;/em&gt;. Nesse exemplo assim com no cLHS usamos como variáveis auxiliares (covariáveis) a elevação, declividade e SAVI.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;
-candi &amp;lt;- grid1[, 21:22]; names(candi)[1] &amp;lt;- &amp;quot;x&amp;quot; ;names(candi)[2] &amp;lt;- &amp;quot;y&amp;quot;
-covars &amp;lt;- grid1[, c(1,2,20)]
-schedule &amp;lt;- scheduleSPSANN(
-  chains = 1, initial.temperature = 0.001, x.max = 	635865.8, y.max = 7483684,
-  x.min = 0, y.min = 0, cellsize = 40)
-set.seed(2001)
-pts &amp;lt;- spsann::optimCLHS(
-  points = 30, candi = candi, covars = covars, use.coords = TRUE,
-  clhs.version = &amp;quot;update&amp;quot;,  weights = list(O1 = 0.5, O3 = 0.5), schedule = schedule)
-main &amp;lt;- &amp;quot;Identificação de tendência espacial e estimativa (optimCLHS)&amp;quot;
-plot(
-  grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
-  xlab = &amp;quot;Longitude (m)&amp;quot;, ylab = &amp;quot;Latitude (m)&amp;quot;)
-image(
-  grid, &amp;quot;cluster.cluster&amp;quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
-points(pts$points[, 2:3], pch = 21, cex = 0.75)
-leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
-legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;stateDiagram
+[*] --&amp;gt; Still
+Still --&amp;gt; [*]
+Still --&amp;gt; Moving
+Moving --&amp;gt; Still
+Moving --&amp;gt; Crash
+Crash --&amp;gt; [*]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;otimização-de-configurações-de-amostra-para-interpolação-espacial-optimmssd&#34;&gt;Otimização de configurações de amostra para interpolação espacial (optimMSSD)&lt;/h4&gt;
-&lt;p&gt;Otimização para estimativa de tendências espaciais. Esse é um tipo de Configuração amostral espacial otimizada no espaço geográfico para fins de interpolação espacial usando krigagem. O critério utilizado é a média ao quadrado da
-distância mais curta (MSSD, inglês) entre pontos de amostragem e pontos de predição.
-Amostragem por cobertura espacial: A amostragem por cobertura espacial baseia-se no conhecimento de que a variação da krigagem depende da distância entre os pontos da amostra. Assim, quanto melhor o spread dos pontos da amostra no domínio espacial, menor a variação da krigagem. Isso é semelhante a usando uma grade regular de pontos de amostra. No entanto, uma grade regular geralmente é sub-ótima para áreas irregulares [@Walvoort2010].&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;pts &amp;lt;- spsann::optimMSSD(
-  points = 30, candi = candi, schedule = schedule)
-main &amp;lt;- &amp;quot;Otimização de amostra para interpolação espacial (optimMSSD)&amp;quot;
-plot(
-  grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
-  xlab = &amp;quot;Longitude (m)&amp;quot;, ylab = &amp;quot;Latitude (m)&amp;quot;)
-image(
-  grid, &amp;quot;cluster.cluster&amp;quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
-points(pts$points[, 2:3], pch = 21, cex = 0.75)
-leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
-legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)
+&lt;h3 id=&#34;todo-lists&#34;&gt;Todo lists&lt;/h3&gt;
+&lt;p&gt;You can even write your todo lists in Academic too:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;- [x] Write math example
+- [x] Write diagram example
+- [ ] Do something else
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Para mais e informações sobre funções implementadas no R para otimização amostral, vocês podem consultar o o pacote 
-&lt;a href=&#34;https://cran.r-project.org/web/packages/spsann/spsann.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;spsann&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;amostragem-probabilística&#34;&gt;Amostragem probabilística&lt;/h2&gt;
-&lt;p&gt;A amostragem probabilistica é uma técnica de amostragem em que a amostra de uma população maior, no caso uma coleção de perfis de solo ou &lt;em&gt;pedon&lt;/em&gt; de toda área, é escolhida usando um método baseado na teoria da probabilidade. Para que um perfil (ou ponto amostral) seja considerado uma amostra probabilística, ele deve ser selecionado usando uma seleção aleatória. Nesse tipo de amostragem todo e qualquer local possui alguma chance de ser amostrado, mesmo que alguns tenham maior chance do que outros. No caso da modelagem espacial do solo, a amostragem probabilística costuma ser usada para a validação das predições espaciais [@BrusEtAl2011]. Entretanto, ela também pode ser usada para obter observações para a calibração dos modelos preditivos ou serem usadas para validação e calibração em métodos de calçibração cruzada como o &lt;em&gt;leave-one-out&lt;/em&gt; (LOO-CV) [@BrusEtAl2011].&lt;/p&gt;
-&lt;h3 id=&#34;amostragem-aleatória-simples&#34;&gt;Amostragem aleatória simples&lt;/h3&gt;
-&lt;p&gt;Amostragem aleatória simples é a técnica de amostragem onde todos os elementos que compõem o universo amostral têm idêntica probabilidade de serem selecionados para a amostra, ou seja, mesma probabilidade de inclusão e são completamente independentes uns dos outros.
-Seria como fazer um sorteio justo entre os indivíduos do universo: No caso específico da ciência do solo seria por exemplo selecionar qualquer &lt;em&gt;pedon&lt;/em&gt; de um determinado tipo de solo (classe). Nesse tipo de amostragem é apenas definido o número de amostras, &lt;em&gt;n&lt;/em&gt;.
-Apesar de ser um método totalmente probabilístico, ou seja, não é tendencioso ou enviesado, condição ideal para validação dos resultados das predições no MDS, as mostras nesse método selecionadas podem ser irregularidade na distribuição espacial dos locais amostrais, pode haver forte agrupamento de alguns locais amostrais além da presença de amplos espaços vazios entre locais amostrais.
-Isso significa que a amostras aleatórias simples não são boas quando se busca amostras espacialmente representativas de uma área de estudo e/ou que cubram a variação das características do terreno e paisagem, condição essa, ideal para calibração de modelos no MDS.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;main &amp;lt;- &amp;quot;Amostra aleatória simples&amp;quot;
-plot(
-  grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
-  xlab = &amp;quot;Longitude (m)&amp;quot;, ylab = &amp;quot;Latitude (m)&amp;quot;)
-image(
-  grid, &amp;quot;cluster.cluster&amp;quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
-set.seed(2001)
-pts &amp;lt;- grid[sampling::srswr(30, length(grid)) == 1, ]
-set.seed(2001)
-pts@coords &amp;lt;- 
-  pts@coords + matrix(runif(prod(dim(pts@coords)), min = -0.5, max = 0.5), ncol = 2) * 
-  grid@grid@cellsize
-points(pts, pch = 21, cex = 0.75)
-leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
-legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Write math example&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Write diagram example&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Do something else&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tables&#34;&gt;Tables&lt;/h3&gt;
+&lt;p&gt;Represent your data in tables:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;First Header&lt;/th&gt;
+&lt;th&gt;Second Header&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;asides&#34;&gt;Asides&lt;/h3&gt;
+&lt;p&gt;Academic supports a 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/#alerts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcode for asides&lt;/a&gt;, also referred to as &lt;em&gt;notices&lt;/em&gt;, &lt;em&gt;hints&lt;/em&gt;, or &lt;em&gt;alerts&lt;/em&gt;. By wrapping a paragraph in &lt;code&gt;{{% alert note %}} ... {{% /alert %}}&lt;/code&gt;, it will render as an aside.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% alert note %}}
+A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+{{% /alert %}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;icons&#34;&gt;Icons&lt;/h3&gt;
+&lt;p&gt;Academic enables you to use a wide range of 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/page-builder/#icons&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;icons from &lt;em&gt;Font Awesome&lt;/em&gt; and &lt;em&gt;Academicons&lt;/em&gt;&lt;/a&gt; in addition to 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/#emojis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;emojis&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here are some examples using the &lt;code&gt;icon&lt;/code&gt; shortcode to render icons:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; icon name=&amp;quot;terminal&amp;quot; pack=&amp;quot;fas&amp;quot; &amp;gt;}} Terminal  
+{{&amp;lt; icon name=&amp;quot;python&amp;quot; pack=&amp;quot;fab&amp;quot; &amp;gt;}} Python  
+{{&amp;lt; icon name=&amp;quot;r-project&amp;quot; pack=&amp;quot;fab&amp;quot; &amp;gt;}} R
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;p&gt;
+  &lt;i class=&#34;fas fa-terminal  pr-1 fa-fw&#34;&gt;&lt;/i&gt; Terminal&lt;br&gt;
 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;amostragem-aleatória-estratificada-simples&#34;&gt;Amostragem aleatória estratificada simples&lt;/h3&gt;
-&lt;p&gt;As amostras estratificadas podem ser podem ser: &lt;em&gt;estratificada proporcional&lt;/em&gt;, quando a quantidade de pontos é proporcional a área do estrato; &lt;em&gt;estratificada uniforme&lt;/em&gt;, quando há o mesmo número de amostras para todos os estratos; &lt;em&gt;estratificada ótima&lt;/em&gt;, nesse caso o tamanho das amostras é definido em proporção com o desvio-padrão das variáveis estudadas. Isto é, se obtêm camadas maiores dos estratos com maior  variabilidade interna para representar melhor o total da amostra nos grupos populacionais mais difíceis de estudar.
-Assim como a amostragem aleatória simples a amostragem aleatória estratificada simples pertence à família de amostras probabilísticas e consiste em dividir toda a população ou o &amp;ldquo;objeto de estudo&amp;rdquo; em diferentes subgrupos ou estratos diferentes, de maneira que um indivíduo pode fazer parte apenas de um único estrato ou camada. No caso específico desse exemplo dividimos a área em 10 estratos, que são as nossas áreas ambientalmente homogêneas e pontos de amostragem são selecionados aleatoriamente dentro de cada estrato.
-Se as subáreas (estratos) são internamente homogêneas e heterogêneas entre si o uso da amostragem aleatória estratificada reduz o erro amostral e pode ser, de certa forma, mais eficiente para validação dos resultados do MDS, pois você certifica não que ficaram espaços vazios e que todos os tipos de solos (ou atributos do solo) tem no mínimo um representante para validação partindo do pressuposto que os estratos ambientalmente heterogêneos entre se representam solos diferentes, que poderiam não terem sido amostras na amostragem aleatória simples.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;main &amp;lt;- &amp;quot;Amostra aleatória estratificada simples&amp;quot;
-plot(
-  grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
-  xlab = &amp;quot;Longitude (m)&amp;quot;, ylab = &amp;quot;Latitude (m)&amp;quot;)
-image(
-  grid, &amp;quot;cluster.cluster&amp;quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
-legend( &amp;quot;topleft&amp;quot;, title = &amp;quot;Áreas homogêneas&amp;quot;, fill = terrain.colors(10),
-  legend = c(&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot;, &amp;quot;10&amp;quot;),
-  border = terrain.colors(10), bty = &amp;quot;n&amp;quot;)
-n &amp;lt;- round(30 * summary(grid$cluster.cluster) / length(grid))
-set.seed(2001)
-pts &amp;lt;- sampling::strata(
-  grid[order(grid$cluster.cluster), ], stratanames = &amp;quot;cluster.cluster&amp;quot;, size = n, 
-  method = &amp;quot;srswr&amp;quot;)$ID_unit
-pts &amp;lt;- grid[order(grid$cluster.cluster), ][pts, ]
-set.seed(2001)
-pts@coords &amp;lt;- pts@coords + 
-  matrix(runif(prod(dim(pts@coords)), min = -0.5, max = 0.5), ncol = 2) * 
-  grid@grid@cellsize
-points(pts, pch = 21, cex = 0.75)
-leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
-legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;amostragem-aleatória-sistemática&#34;&gt;Amostragem aleatória sistemática&lt;/h3&gt;
-&lt;p&gt;Amostragem aleatória sistemática é uma técnica dentro da categoria de &lt;em&gt;amostragem probabilística&lt;/em&gt; – que requer certo controle do marco amostral entre os indivíduos selecionados junto com a probabilidade que sejam selecionados – consiste em escolher um indivíduo inicialmente de forma aleatória entre a população e, posteriormente, selecionar para amostra cada enésimo indivíduo disponível de forma sistemática, pode ser por exemplo há uma distância pré-definida e seguindo uma determinada direção. O pesquisador deve ter certeza de que sistematização escolhida não reflete um certo padrão de características presentes no terreno. Se existir um padrão na população e coincidir com a sistematização do pesquisador, a aleatoriedade da técnica de amostragem fica comprometida.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;main &amp;lt;- &amp;quot;Amostra aleatória sistemática (malha quadrada)&amp;quot;
-plot(
-  grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
-  xlab = &amp;quot;Longitude (m)&amp;quot;, ylab = &amp;quot;Latitude (m)&amp;quot;)
-image(
-  grid, &amp;quot;cluster.cluster&amp;quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
-legend(
-  &amp;quot;topleft&amp;quot;, title = &amp;quot;Áreas homogêneas&amp;quot;, fill = terrain.colors(10),
-  legend = c(&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot;, &amp;quot;10&amp;quot;),
-  border = terrain.colors(10), bty = &amp;quot;n&amp;quot;)
-set.seed(2001)
-pts &amp;lt;- sp::spsample(grid, n = 30, type = &amp;quot;regular&amp;quot;)
-points(pts, pch = 21, cex = 0.75)
-polygon(pts@coords[c(1, 5, 6, 2, 1), ])
-set.seed(1984)
-points(sp::spsample(grid, n = 30, type = &amp;quot;regular&amp;quot;), pch = 20, cex = 0.75)
-legend(636200, 7483450, legend = &amp;quot;Amostras (2019)&amp;quot;, pch = 21, bty = &amp;quot;n&amp;quot;)
-legend(636200, 7483400, legend = &amp;quot;Amostras (2020)&amp;quot;, pch = 20, bty = &amp;quot;n&amp;quot;)
+  &lt;i class=&#34;fab fa-python  pr-1 fa-fw&#34;&gt;&lt;/i&gt; Python&lt;br&gt;
 
-main &amp;lt;- &amp;quot;Amostra aleatória sistemática (malha desalinhada)&amp;quot;
-plot(
-  grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
-  xlab = &amp;quot;Longitude (m)&amp;quot;, ylab = &amp;quot;Latitude (m)&amp;quot;)
-image(
-  grid, &amp;quot;cluster.cluster&amp;quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
-legend(
-  &amp;quot;topleft&amp;quot;, title = &amp;quot;Áreas homogêneas&amp;quot;, fill = terrain.colors(10),
-  legend = c(&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot;, &amp;quot;10&amp;quot;),
-  border = terrain.colors(10), bty = &amp;quot;n&amp;quot;)
-set.seed(2001)
-pts &amp;lt;- sp::spsample(grid, n = 31, type = &amp;quot;nonaligned&amp;quot;)
-points(pts, pch = 21, cex = 0.75)
-polygon(pts@coords[c(2, 7, 8, 3, 2), ])
-leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
-legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)
+  &lt;i class=&#34;fab fa-r-project  pr-1 fa-fw&#34;&gt;&lt;/i&gt; R&lt;/p&gt;
+&lt;h3 id=&#34;did-you-find-this-page-helpful-consider-sharing-it-&#34;&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h3&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Display Jupyter Notebooks with Academic</title>
+      <link>https://pedometriafacil.netlify.app/post/jupyter/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://pedometriafacil.netlify.app/post/jupyter/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from IPython.core.display import Image
+Image(&#39;https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png&#39;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;amostragem-aleatória-em-conglomerados&#34;&gt;Amostragem aleatória em conglomerados&lt;/h3&gt;
-&lt;p&gt;Amostra por conglomerados é um procedimento de &lt;em&gt;amostragem probabilística&lt;/em&gt; em que os elementos da população são selecionados aleatoriamente de forma natural por grupos (clusters). Os elementos da amostragem são selecionados a partir da população de maneira individual, um de cada vez. A separação desses clusters é evidente numa população quando os grupos são mutuamente homogêneos e internamente heterogêneos.
-Na amostragem aleatória em conglomerados um estágio após seleção de grupos todos os indivíduos daquele grupo são selecionados. No caso da amostragem em dois estágios após a definição e seleção de grupos uma amostra aleatória ( por exemplo uma amostra aleatória simples) se tornam os elementos de cada grupo selecionado.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-{r,&#34;&gt;main &amp;lt;- &amp;quot;Amostra aleatória em conglomerados (dois estágios)&amp;quot;
-plot(
-  grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
-  xlab = &amp;quot;Longitude (m)&amp;quot;, ylab = &amp;quot;Latitude (m)&amp;quot;)
-image(
-  grid, &amp;quot;cluster.cluster&amp;quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
-legend(
-  &amp;quot;topleft&amp;quot;, title = &amp;quot;Áreas homogêneas&amp;quot;, fill = terrain.colors(10),
-  legend = c(&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot;, &amp;quot;10&amp;quot;),
-  border = terrain.colors(10), bty = &amp;quot;n&amp;quot;)
-set.seed(2002)
-pts &amp;lt;- sp::spsample(grid, n = 33, type = &amp;quot;clustered&amp;quot;, nclusters = 10)
-points(pts, pch = 21, cex = 0.75)
-leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
-legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)
+&lt;p&gt;&lt;img src=&#34;./index_1_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(&amp;quot;Welcome to Academic!&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;referências&#34;&gt;Referências&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;Welcome to Academic!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;install-python-and-jupyterlab&#34;&gt;Install Python and JupyterLab&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.anaconda.com/distribution/#download-section&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Install Anaconda&lt;/a&gt; which includes Python 3 and JupyterLab.&lt;/p&gt;
+&lt;p&gt;Alternatively, install JupyterLab with &lt;code&gt;pip3 install jupyterlab&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;create-or-upload-a-jupyter-notebook&#34;&gt;Create or upload a Jupyter notebook&lt;/h2&gt;
+&lt;p&gt;Run the following commands in your Terminal, substituting &lt;code&gt;&amp;lt;MY-WEBSITE-FOLDER&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;SHORT-POST-TITLE&amp;gt;&lt;/code&gt; with the file path to your Academic website folder and a short title for your blog post (use hyphens instead of spaces), respectively:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir -p &amp;lt;MY-WEBSITE-FOLDER&amp;gt;/content/post/&amp;lt;SHORT-POST-TITLE&amp;gt;/
+cd &amp;lt;MY-WEBSITE-FOLDER&amp;gt;/content/post/&amp;lt;SHORT-POST-TITLE&amp;gt;/
+jupyter lab index.ipynb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;jupyter&lt;/code&gt; command above will launch the JupyterLab editor, allowing us to add Academic metadata and write the content.&lt;/p&gt;
+&lt;h2 id=&#34;edit-your-post-metadata&#34;&gt;Edit your post metadata&lt;/h2&gt;
+&lt;p&gt;The first cell of your Jupter notebook will contain your post metadata (
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/front-matter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;front matter&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;In Jupter, choose &lt;em&gt;Markdown&lt;/em&gt; as the type of the first cell and wrap your Academic metadata in three dashes, indicating that it is YAML front matter:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: My post&#39;s title
+date: 2019-09-01
+
+# Put any other Academic metadata here...
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Edit the metadata of your post, using the 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; as a guide to the available options.&lt;/p&gt;
+&lt;p&gt;To set a 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#featured-image&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;featured image&lt;/a&gt;, place an image named &lt;code&gt;featured&lt;/code&gt; into your post&amp;rsquo;s folder.&lt;/p&gt;
+&lt;p&gt;For other tips, such as using math, see the guide on 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;writing content with Academic&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;convert-notebook-to-markdown&#34;&gt;Convert notebook to Markdown&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;jupyter nbconvert index.ipynb --to markdown --NbConvertApp.output_files_dir=.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+&lt;p&gt;This post was created with Jupyter. The orginal files can be found at &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&#34;&gt;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Academic: the website builder for Hugo</title>
+      <link>https://pedometriafacil.netlify.app/post/getting-started/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://pedometriafacil.netlify.app/post/getting-started/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Create a free website with Academic using Markdown, Jupyter, or RStudio. Choose a beautiful color theme and build anything with the Page Builder - over 40 &lt;em&gt;widgets&lt;/em&gt;, &lt;em&gt;themes&lt;/em&gt;, and &lt;em&gt;language packs&lt;/em&gt; included!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes, or 
+&lt;a href=&#34;https://sourcethemes.com/academic/#expo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt; of personal, project, and business sites.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;👉 
+&lt;a href=&#34;#install&#34;&gt;&lt;strong&gt;Get Started&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📚 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View the &lt;strong&gt;documentation&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💬 
+&lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Ask a question&lt;/strong&gt; on the forum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;👥 
+&lt;a href=&#34;https://spectrum.chat/academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chat with the &lt;strong&gt;community&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🐦 Twitter: 
+&lt;a href=&#34;https://twitter.com/source_themes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@source_themes&lt;/a&gt; 
+&lt;a href=&#34;https://twitter.com/GeorgeCushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@GeorgeCushen&lt;/a&gt; 
+&lt;a href=&#34;https://twitter.com/search?q=%23MadeWithAcademic&amp;amp;src=typd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#MadeWithAcademic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💡 
+&lt;a href=&#34;https://github.com/gcushen/hugo-academic/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Request a &lt;strong&gt;feature&lt;/strong&gt; or report a &lt;strong&gt;bug&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;⬆️ &lt;strong&gt;Updating?&lt;/strong&gt; View the 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Update Guide&lt;/a&gt; and 
+&lt;a href=&#34;https://sourcethemes.com/academic/updates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;❤️ &lt;strong&gt;Support development&lt;/strong&gt; of Academic:
+&lt;ul&gt;
+&lt;li&gt;☕️ 
+&lt;a href=&#34;https://paypal.me/cushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Donate a coffee&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💵 
+&lt;a href=&#34;https://www.patreon.com/cushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Become a backer on &lt;strong&gt;Patreon&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🖼️ 
+&lt;a href=&#34;https://www.redbubble.com/people/neutreno/works/34387919-academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Decorate your laptop or journal with an Academic &lt;strong&gt;sticker&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;👕 
+&lt;a href=&#34;https://academic.threadless.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wear the &lt;strong&gt;T-shirt&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;👩‍💻 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/contribute/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Contribute&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-academic-is-mobile-first-with-a-responsive-design-to-ensure-that-your-site-looks-stunning-on-every-device&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; data-caption=&#34;Academic is mobile first with a responsive design to ensure that your site looks stunning on every device.&#34;&gt;
+
+
+  &lt;img src=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Academic is mobile first with a responsive design to ensure that your site looks stunning on every device.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Key features:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/page-builder/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;widgets&lt;/strong&gt;&lt;/a&gt; and 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;elements&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Edit any type of content&lt;/strong&gt; - Blog posts, publications, talks, slides, projects, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;, 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/jupyter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/a&gt;, or 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable 
+&lt;a href=&#34;https://sourcethemes.com/academic/themes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;color&lt;/strong&gt; and &lt;strong&gt;font themes&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Display Code and Math&lt;/strong&gt; - Code highlighting and 
+&lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX math&lt;/a&gt; supported&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - 
+&lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Analytics&lt;/a&gt;, 
+&lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus commenting&lt;/a&gt;, Maps, Contact Forms, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Beautiful Site&lt;/strong&gt; - Simple and refreshing one page design&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Industry-Leading SEO&lt;/strong&gt; - Help get your website found on search engines and social media&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Media Galleries&lt;/strong&gt; - Display your images and videos with captions in a customizable gallery&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mobile Friendly&lt;/strong&gt; - Look amazing on every screen with a mobile friendly version of your site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-language&lt;/strong&gt; - 15+ language packs including English, 中文, and Português&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-user&lt;/strong&gt; - Each author gets their own profile page&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Privacy Pack&lt;/strong&gt; - Assists with GDPR&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stand Out&lt;/strong&gt; - Bring your site to life with animation, parallax backgrounds, and scroll effects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;One-Click Deployment&lt;/strong&gt; - No servers. No databases. Only files.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+&lt;p&gt;Academic comes with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Alternatively, visitors can  choose their preferred mode - click the sun/moon icon in the top right of the 
+&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo&lt;/a&gt; to see it in action! Day/night mode can also be disabled by the site admin in &lt;code&gt;params.toml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/themes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choose a stunning &lt;strong&gt;theme&lt;/strong&gt; and &lt;strong&gt;font&lt;/strong&gt;&lt;/a&gt; for your site. Themes are fully 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/#custom-theme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;customizable&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;
+&lt;a href=&#34;https://github.com/sourcethemes/academic-admin&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic Admin&lt;/a&gt;:&lt;/strong&gt; An admin tool to import publications from BibTeX or import assets for an offline site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;
+&lt;a href=&#34;https://github.com/sourcethemes/academic-scripts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic Scripts&lt;/a&gt;:&lt;/strong&gt; Scripts to help migrate content to new versions of Academic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;p&gt;You can choose from one of the following four methods to install:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-web-browser&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;one-click install using your web browser (recommended)&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-git&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer using &lt;strong&gt;Git&lt;/strong&gt; with the Command Prompt/Terminal app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer by downloading the &lt;strong&gt;ZIP files&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer with &lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/get-started/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;personalize and deploy your new site&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;updating&#34;&gt;Updating&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View the Update Guide&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Feel free to &lt;em&gt;star&lt;/em&gt; the project on 
+&lt;a href=&#34;https://github.com/gcushen/hugo-academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github&lt;/a&gt; to help keep track of 
+&lt;a href=&#34;https://sourcethemes.com/academic/updates&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;updates&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;Copyright 2016-present 
+&lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Released under the 
+&lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
 </description>
     </item>
     
