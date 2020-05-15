@@ -18,36 +18,6 @@
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/tag/ensino/</loc>
-    <lastmod>2020-08-29T08:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedometriafacil.netlify.app/tag/palestra/</loc>
-    <lastmod>2020-08-29T08:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedometriafacil.netlify.app/talk/ceade2018/</loc>
-    <lastmod>2020-08-29T08:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedometriafacil.netlify.app/</loc>
-    <lastmod>2020-08-29T08:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedometriafacil.netlify.app/talk/</loc>
-    <lastmod>2020-08-29T08:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedometriafacil.netlify.app/tags/</loc>
-    <lastmod>2020-08-29T08:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://pedometriafacil.netlify.app/tag/amostragem/</loc>
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
   </url>
@@ -78,6 +48,11 @@
   </url>
   
   <url>
+    <loc>https://pedometriafacil.netlify.app/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://pedometriafacil.netlify.app/post/</loc>
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
   </url>
@@ -89,6 +64,11 @@
   
   <url>
     <loc>https://pedometriafacil.netlify.app/category/r/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pedometriafacil.netlify.app/tags/</loc>
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -185,6 +165,26 @@
   <url>
     <loc>https://pedometriafacil.netlify.app/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pedometriafacil.netlify.app/tag/ensino/</loc>
+    <lastmod>2018-08-29T08:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pedometriafacil.netlify.app/tag/palestra/</loc>
+    <lastmod>2018-08-29T08:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pedometriafacil.netlify.app/talk/ceade2018/</loc>
+    <lastmod>2018-08-29T08:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pedometriafacil.netlify.app/talk/</loc>
+    <lastmod>2018-08-29T08:00:00+00:00</lastmod>
   </url>
   
   <url>
