@@ -16,8 +16,10 @@ authors:
 - admin
 categories:
   - R
+  - Programação
 tags:
   - MDS
+  - Amostragem
 nocite: | 
   @R-bookdown
 ---
@@ -69,6 +71,9 @@ Das cenas foram derivados os indices de vegetação (NDVI, inglês) e índice de
 ## Áreas ambientalmente homogêneas (Estratos)
 Para fazer o exerício foram criadas áreas ambientalmente similares (homogêneas), essa a bordagem é indicada em casos onde há por exemplo o interesse de fazer a amostragem po estratos. Nesse execício optou-se por criar 10 estratos usando as variáveis, que julgamos serem as mais representativas para discretizar os ambientes. Foram elas elevação, declividade e SAVI. Para fazer o agrupamento da áreas de maior similaridade (criação de clusters) foi utilizado o algorítimo de classificação não supervisionada *K-Means Clustering* que visa particionar os pontos em k grupos de forma que a soma dos quadrados dos pontos aos centros de cluster designados seja minimizada. No mínimo, todos os centros do cluster estão na média dos seus conjuntos de Voronoi (o conjunto de pontos de dados que estão mais próximos do centro do cluster).
 
+## Você pode baixar os dados usados aqui no seguinte link
+Para baixaixas shapes [shape](https://mega.nz/folder/2FYmnSTZ#U8KUUKsOV5DzaBK5oQXEzA) e para baixar os dados [data](https://mega.nz/folder/PMIi1IzT#OqptGkjIKxJigwPFGPB47g)
+
 ```{r, warning=FALSE, message=FALSE}
 ## Carregar os pacotes
 library(sp)
@@ -80,8 +85,9 @@ library(clhs)
 library(spsann)
 library(sf)
 # Carregando a base de dados da fazendinha
-dados <- read.csv("/home/elias/Dropbox/WEB/Pedometria/static/data/dataset.csv"); dados=dados[2:54]
-grid <- read.csv("/home/elias/Dropbox/WEB/Pedometria/static/data/grid.csv"); grid=grid[2:23]
+# Aqui você precisa direcionar o diretório onde salvou os dados no seu computador
+dados <- read.csv("/home/elias/MEGA/Fazendinha/data/dataset.csv"); dados=dados[2:54]
+grid <- read.csv("/home/elias/MEGA/Fazendinha/data/grid.csv"); grid=grid[2:23]
 
 # criando um cluster de unidades homogêneas usando os dados das covariáveis ambientais
 cluster <- kmeans(grid[, c(1,2,20)], 10)
@@ -109,11 +115,12 @@ crsSIRGAS2000=CRS("+proj=utm +zone=23 +south +ellps=GRS80 +
                   towgs84=0,0,0,0,0,0,0 +units=m +no_defs") 
 
 #carregando arquivos shapfile
+# Aqui você precisa direcionar o diretório onde salvou os dados no seu computador
 ## Estradas
-estrada <- maptools::readShapeSpatial("/home/elias/Dropbox/WEB/Pedometria/static/shape/estrada.shp", 
+estrada <- maptools::readShapeSpatial("/home/elias/MEGA/Fazendinha/shape/estrada.shp", 
                                          proj4string=crsSIRGAS2000,verbose=TRUE)
 ## Perfis completos
-perfis <- maptools::readShapeSpatial("/home/elias/Dropbox/WEB/Pedometria/static/shape/pontos.shp", 
+perfis <- maptools::readShapeSpatial("/home/elias/MEGA/Fazendinha/shape/pontos.shp", 
                                       proj4string=crsSIRGAS2000,verbose=TRUE)
 ```
 

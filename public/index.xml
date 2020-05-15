@@ -134,6 +134,10 @@ Das cenas foram derivados os indices de vegetação (NDVI, inglês) e índice de
 &lt;div id=&#34;áreas-ambientalmente-homogêneas-estratos&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Áreas ambientalmente homogêneas (Estratos)&lt;/h2&gt;
 &lt;p&gt;Para fazer o exerício foram criadas áreas ambientalmente similares (homogêneas), essa a bordagem é indicada em casos onde há por exemplo o interesse de fazer a amostragem po estratos. Nesse execício optou-se por criar 10 estratos usando as variáveis, que julgamos serem as mais representativas para discretizar os ambientes. Foram elas elevação, declividade e SAVI. Para fazer o agrupamento da áreas de maior similaridade (criação de clusters) foi utilizado o algorítimo de classificação não supervisionada &lt;em&gt;K-Means Clustering&lt;/em&gt; que visa particionar os pontos em k grupos de forma que a soma dos quadrados dos pontos aos centros de cluster designados seja minimizada. No mínimo, todos os centros do cluster estão na média dos seus conjuntos de Voronoi (o conjunto de pontos de dados que estão mais próximos do centro do cluster).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;você-pode-baixar-os-dados-usados-aqui-no-seguinte-link&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Você pode baixar os dados usados aqui no seguinte link&lt;/h2&gt;
+&lt;p&gt;Para baixaixas shapes &lt;a href=&#34;https://mega.nz/folder/2FYmnSTZ#U8KUUKsOV5DzaBK5oQXEzA&#34;&gt;shape&lt;/a&gt; e para baixar os dados &lt;a href=&#34;https://mega.nz/folder/PMIi1IzT#OqptGkjIKxJigwPFGPB47g&#34;&gt;data&lt;/a&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Carregar os pacotes
 library(sp)
 library(raster)
@@ -144,8 +148,9 @@ library(clhs)
 library(spsann)
 library(sf)
 # Carregando a base de dados da fazendinha
-dados &amp;lt;- read.csv(&amp;quot;/home/elias/Dropbox/WEB/Pedometria/static/data/dataset.csv&amp;quot;); dados=dados[2:54]
-grid &amp;lt;- read.csv(&amp;quot;/home/elias/Dropbox/WEB/Pedometria/static/data/grid.csv&amp;quot;); grid=grid[2:23]
+# Aqui você precisa direcionar o diretório onde salvou os dados no seu computador
+dados &amp;lt;- read.csv(&amp;quot;/home/elias/MEGA/Fazendinha/data/dataset.csv&amp;quot;); dados=dados[2:54]
+grid &amp;lt;- read.csv(&amp;quot;/home/elias/MEGA/Fazendinha/data/grid.csv&amp;quot;); grid=grid[2:23]
 
 # criando um cluster de unidades homogêneas usando os dados das covariáveis ambientais
 cluster &amp;lt;- kmeans(grid[, c(1,2,20)], 10)
@@ -173,13 +178,14 @@ crsSIRGAS2000=CRS(&amp;quot;+proj=utm +zone=23 +south +ellps=GRS80 +
                   towgs84=0,0,0,0,0,0,0 +units=m +no_defs&amp;quot;) 
 
 #carregando arquivos shapfile
+# Aqui você precisa direcionar o diretório onde salvou os dados no seu computador
 ## Estradas
-estrada &amp;lt;- maptools::readShapeSpatial(&amp;quot;/home/elias/Dropbox/WEB/Pedometria/static/shape/estrada.shp&amp;quot;, 
+estrada &amp;lt;- maptools::readShapeSpatial(&amp;quot;/home/elias/MEGA/Fazendinha/shape/estrada.shp&amp;quot;, 
                                          proj4string=crsSIRGAS2000,verbose=TRUE)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Shapefile type: PolyLine, (3), # of Shapes: 1
 ## Shapefile type: PolyLine, (3), # of Shapes: 1&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Perfis completos
-perfis &amp;lt;- maptools::readShapeSpatial(&amp;quot;/home/elias/Dropbox/WEB/Pedometria/static/shape/pontos.shp&amp;quot;, 
+perfis &amp;lt;- maptools::readShapeSpatial(&amp;quot;/home/elias/MEGA/Fazendinha/shape/pontos.shp&amp;quot;, 
                                       proj4string=crsSIRGAS2000,verbose=TRUE)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Shapefile type: Point, (1), # of Shapes: 71
 ## Shapefile type: Point, (1), # of Shapes: 71&lt;/code&gt;&lt;/pre&gt;
