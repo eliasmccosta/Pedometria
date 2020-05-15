@@ -6,9 +6,9 @@ image:
   placement: 3
 math: true
 title: Amostragem para mapeamento digital de solos
-bibliography: [references.bib]
+bibliography: [../../static/markdown/references.bib]
 link-citations: true 
-csl: [geoderma-regional.csl]
+csl: [../../static/markdown/geoderma-regional.csl]
 lang: pt
 image:
   caption: ""
