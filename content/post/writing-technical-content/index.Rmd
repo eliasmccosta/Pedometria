@@ -72,7 +72,7 @@ Das cenas foram derivados os indices de vegetação (NDVI, inglês) e índice de
 Para fazer o exerício foram criadas áreas ambientalmente similares (homogêneas), essa a bordagem é indicada em casos onde há por exemplo o interesse de fazer a amostragem po estratos. Nesse execício optou-se por criar 10 estratos usando as variáveis, que julgamos serem as mais representativas para discretizar os ambientes. Foram elas elevação, declividade e SAVI. Para fazer o agrupamento da áreas de maior similaridade (criação de clusters) foi utilizado o algorítimo de classificação não supervisionada *K-Means Clustering* que visa particionar os pontos em k grupos de forma que a soma dos quadrados dos pontos aos centros de cluster designados seja minimizada. No mínimo, todos os centros do cluster estão na média dos seus conjuntos de Voronoi (o conjunto de pontos de dados que estão mais próximos do centro do cluster).
 
 ## Você pode baixar os dados usados aqui no seguinte link
-Para baixaixas shapes [shape](https://mega.nz/folder/2FYmnSTZ#U8KUUKsOV5DzaBK5oQXEzA) e para baixar os dados [data](https://mega.nz/folder/PMIi1IzT#OqptGkjIKxJigwPFGPB47g)
+Para baixar shapes [shape](https://mega.nz/folder/2FYmnSTZ#U8KUUKsOV5DzaBK5oQXEzA) e para baixar os dados [data](https://mega.nz/folder/PMIi1IzT#OqptGkjIKxJigwPFGPB47g)
 
 ```{r, warning=FALSE, message=FALSE}
 ## Carregar os pacotes

@@ -137,7 +137,7 @@ Das cenas foram derivados os indices de vegetação (NDVI, inglês) e índice de
 &lt;/div&gt;
 &lt;div id=&#34;você-pode-baixar-os-dados-usados-aqui-no-seguinte-link&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Você pode baixar os dados usados aqui no seguinte link&lt;/h2&gt;
-&lt;p&gt;Para baixaixas shapes &lt;a href=&#34;https://mega.nz/folder/2FYmnSTZ#U8KUUKsOV5DzaBK5oQXEzA&#34;&gt;shape&lt;/a&gt; e para baixar os dados &lt;a href=&#34;https://mega.nz/folder/PMIi1IzT#OqptGkjIKxJigwPFGPB47g&#34;&gt;data&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Para baixar shapes &lt;a href=&#34;https://mega.nz/folder/2FYmnSTZ#U8KUUKsOV5DzaBK5oQXEzA&#34;&gt;shape&lt;/a&gt; e para baixar os dados &lt;a href=&#34;https://mega.nz/folder/PMIi1IzT#OqptGkjIKxJigwPFGPB47g&#34;&gt;data&lt;/a&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Carregar os pacotes
 library(sp)
 library(raster)
