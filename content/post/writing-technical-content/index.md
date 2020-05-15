@@ -1,5 +1,5 @@
 ---
-date: "2019-07-12"
+date: "2020-05-15"
 diagram: true
 image:
   caption: 'Image credit: [**Elias**](https://www.instagram.com/eliasmendescosta/)'
@@ -7,11 +7,16 @@ image:
 math: true
 title: Amostragem para mapeamento digital de solos
 bibliography: references.bib
+link-citations: true 
 csl: geoderma-regional.csl
 lang: pt
 fig_caption: yes
 keep_tex: yes
 author: Elias Mendes Costa
+categories:
+  - R
+tags:
+  - MDS
 ---
 
 Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.

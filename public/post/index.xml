@@ -5,7 +5,7 @@
     <link>https://pedometriafacil.netlify.app/post/</link>
       <atom:link href="https://pedometriafacil.netlify.app/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Pedometria, 2020</copyright><lastBuildDate>Fri, 12 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Pedometria, 2020</copyright><lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://pedometriafacil.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Amostragem para mapeamento digital de solos</title>
       <link>https://pedometriafacil.netlify.app/post/writing-technical-content/</link>
-      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
       <guid>https://pedometriafacil.netlify.app/post/writing-technical-content/</guid>
       <description>&lt;p&gt;Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.&lt;/strong&gt;&lt;/p&gt;
@@ -244,6 +244,7 @@ A Markdown aside is useful for displaying notices, hints, or definitions to your
 
   &lt;i class=&#34;fab fa-r-project  pr-1 fa-fw&#34;&gt;&lt;/i&gt; R&lt;/p&gt;
 &lt;h3 id=&#34;did-you-find-this-page-helpful-consider-sharing-it-&#34;&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h3&gt;
+&lt;h1 id=&#34;referências&#34;&gt;Referências&lt;/h1&gt;
 </description>
     </item>
     
