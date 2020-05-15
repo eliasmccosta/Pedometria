@@ -1,24 +1,24 @@
 ---
-date: "2020-05-15"
-diagram: true
-image:
-  caption: 'Image credit: [**Elias**](https://www.instagram.com/eliasmendescosta/)'
-  placement: 3
-math: true
-title: Amostragem para mapeamento digital de solos
-bibliography: [references.bib]
-link-citations: true 
-csl: [geoderma-regional.csl]
-lang: pt
-image:
-  caption: ""
-  focal_point: ""
-authors:
-- admin
+title: Trying Out Blogdown
+author: Desirée De Leon
+date: '2019-06-13'
+slug: trying-out-blogdown
 categories:
   - R
-tags:
-  - MDS
+tags: []
+subtitle: 'Getting in some practice including various elements in a blogdown post'
+summary: ''
+authors: []
+lastmod: '2019-06-13T10:36:58-04:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+output: html_document
+bibliography: [references.bib]
+link-citations: true
 nocite: | 
   @R-bookdown
 ---
