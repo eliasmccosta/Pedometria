@@ -2,10 +2,16 @@
 date: "2019-07-12"
 diagram: true
 image:
-  caption: 'Image credit: [**John Moeses Bauan**](https://unsplash.com/photos/OGZtQF8iC0g)'
+  caption: 'Image credit: [**Elias**](https://www.instagram.com/eliasmendescosta/)'
   placement: 3
 math: true
-title: Writing technical content in Academic
+title: Amostragem para mapeamento digital de solos
+bibliography: references.bib
+csl: geoderma-regional.csl
+lang: pt
+fig_caption: yes
+keep_tex: yes
+author: Elias Mendes Costa
 ---
 
 Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.
