@@ -1,0 +1,523 @@
+---
+date: "2020-05-15"
+diagram: true
+image:
+  caption: 'Image credit: [**Elias**](https://www.instagram.com/eliasmendescosta/)'
+  focal_point: ""
+  placement: 3
+math: true
+title: Amostragem para mapeamento de solos
+subtitle: 'Amostragem para mapeamento digital de solos: Um tutorial em R'
+summary: ''
+bibliography: [references.bib]
+link-citations: true 
+csl: [geoderma-regional.csl]
+authors:
+- admin
+categories:
+  - R
+  - Programação
+tags:
+  - MDS
+  - Amostragem
+nocite: | 
+  @R-bookdown
+---
+
+
+
+<div id="introdução" class="section level1">
+<h1>Introdução</h1>
+<div id="conceitos-básicos-e-terminologias" class="section level2">
+<h2>Conceitos básicos e terminologias</h2>
+<p>A <em>amostragem</em> diz respeito à seleção de um subconjunto de indivíduos de uma população para estimar características de toda a população <span class="citation">(Wang et al., <a href="#ref-Wang2012a">2012</a>)</span>. Ou A amostragem pode ser definida como selecção de partes de um universo finito, com a proposta de obter informações desse universo <span class="citation">(Gruijter et al., <a href="#ref-deGruijter2006">2006</a>)</span>. A <em>amostra</em> pode ser definida como a parte coletada, e levada para laboratório, ou observada <em>in situ</em>. E uma única parte dessa amostra pode ser definida como <em>unidade amostral</em>, o número de unidades amostrais é definido como <em>tamanho amostral</em> ou <em>n amostral</em> <span class="citation">(Gruijter et al., <a href="#ref-deGruijter2006">2006</a>)</span>.
+Uma confusão comum na literatura é sobre a definição de amostragem aletória e amostragem arbitrária ou casual <span class="citation">(Brus, <a href="#ref-Brus2019">2019</a>)</span> no segundo caso os locais de amostragem são escolhidos, fundamentalmente, em função da subjetividade da pessoa conduzindo o ntraballho. Para evitar a confusão o termo <em>amostragem probabilística</em> deve ser priorizado para o as amostras aleatórias. A amostragem de probabilidade é uma amostragem aleatória que atende a dois requisitos. Em primeiro lugar, todas as unidades da população têm uma probabilidade positiva de serem selecionadas. Nenhuma parte da população pode ser excluída. Em segundo lugar, a probabilidade de seleção de cada amostra possível é conhecida. Com amostragem arbitrária (casual), esses dois requisitos geralmente não são atendidos <span class="citation">(Brus, <a href="#ref-Brus2019">2019</a>)</span>.</p>
+</div>
+<div id="amostragem-no-mapeamento-convencional-de-solos" class="section level2">
+<h2>Amostragem no mapeamento convencional de solos</h2>
+<p>No caso do mapeamento convencional de solos, o método de prospecção e a frequência de amostragem dependem do nível de detalhe do levantamento e do objetivo do levantamento <span class="citation">(IBGE, <a href="#ref-IBGE2015">2015</a>)</span>. Por exemplo, na terceira edição do Manual Técnico de Pedologia <span class="citation">(IBGE, <a href="#ref-IBGE2015">2015</a>)</span> o método de prospecção indicado para levantamento exploratório é o de extrapolação, generalizações, correlações e poucas observações de campo, com uma frequência de amostragem de um perfil completo por classe de solo predominante na associação. Para o levantamento semidetalhado a densidade de observações e a frequência de amostragem são calculadas em função da heterogeneidade da área e da facilidade de correlação de solos e a superfície geomorfológicas. No entanto, é recomendada uma média de 0,002 a 0,20 observações por hectare e um perfil completo e um complementar por classe de solo componente da unidade de mapeamento simples ou associação.
+Porém para o MDS esse esquema de amostragem não se aplica, pois não fornece estimativa estatística representativa. No MDS é necessário o uso de estratégias de amostragem estatisticamente robustas para diminuir a subjetividade e consequentemente os possíveis erros na predição <span class="citation">(Minasny and McBratney, <a href="#ref-Minasny2007b">2007</a>)</span></p>
+</div>
+<div id="amostragem-no-mapeamento-digital-de-solos" class="section level2">
+<h2>Amostragem no mapeamento digital de solos</h2>
+<p>No caso do mapeamento digital de solos (MDS) a amostragem é um fator crucial, pois pode contribuir para elevar ou diminuir os custos do levantamento de solos. Ainda é considera uma das etapas mais importantes para o MDS <span class="citation">(Carvalho Junior et al., <a href="#ref-CarvalhoJunior2014">2014</a>)</span>. Para o MDS, para uma otimização da calibração de modelos matemáticos as amostras coletadas devem representar ao máximo a distribuição espacial do que está sendo modelado (atributo ou classe de solo), por isso técnicas como o Hipercubo Latino Condicionado (cLHS) <span class="citation">(Minasny and McBratney, <a href="#ref-Minasny2006">2006</a>)</span> são frequentemente usados nessa etapa e para essa finalidade. Esse tipo de amostragem é conhecido como amostragem não probabilística e será abordado com mais detalhes nos exemplos.
+Para validação dos resultados das predições espaciais no MDS o tipo de abordagem recomendado é a amostragem probabilística <span class="citation">(Brus et al., <a href="#ref-BrusEtAl2011">2011</a>)</span>, esse tipo de amostragem busca a imparcialidade e diminuição de viés para validação dos produtos do mapeamento. Atenção especial deve ser tomada nessa etapa, pois nem sempre é possível uma amostragem completamente probabilística (aleatória). Há então a necessidade de encontrar a condição perfeita do que é factível e o ideal. Exemplos de amostragem probabilística serão abordados com mais detalhe nos exemplos.<br />
+Parte do material aqui desenvolvido foi extraído e adaptado do livro em desenvolvimento de Alessandro Samuel-Rosa, <a href="http://samuel-rosa.github.io/pedometria-feita-simples/principios-da-amostragem-espacial.html">pedometria feita simples</a>. O capítulo 7 do livro trata de princípios da amostragem espacial. Também foram extraídas informações a respeito de amostragem para validação de mapas digitais de solos <span class="citation">(Brus et al., <a href="#ref-BrusEtAl2011">2011</a>)</span> e amostragem para mapeamento de solos <span class="citation">(Brus, <a href="#ref-Brus2019">2019</a>)</span>. Assim objetivo desse tutorial e compilar as informações dos trabalhos mencionados para simular difentes estratégias amostrais para dar suporte aos levantamentos de solos com foco em MDS e avaliação dos produtos gerados.</p>
+</div>
+</div>
+<div id="área-experimental-e-base-dados" class="section level1">
+<h1>Área experimental e base dados</h1>
+<div id="área-experimental" class="section level2">
+<h2>Área experimental</h2>
+Ao longo desse tutorial sobre amostragem, você verá exemplos de cada tipo de amostragem implementados no R usando o conjunto de dados de um área experimental localizada no município de Seropédica, estado do Rio de Janeiro, Brasil, nas coordenadas geográficas centrais aproximadas 22º54’00” S e 43º55’00” W (Figura <a href="#fig:localizacao1">1</a>).
+<div class="figure" style="text-align: center"><span id="fig:localizacao1"></span>
+<img src="localizacao1.png" alt="Mapa de localização do município de Seropédica-RJ. Fonte: Nascimento (2019)" width="296" />
+<p class="caption">
+Figure 1: Mapa de localização do município de Seropédica-RJ. Fonte: Nascimento (2019)
+</p>
+</div>
+Especificamente, o trabalho foi desenvolvido na Fazendinha Agroecológica km 47 (Sistema Integrado de Produção Agroecológica - SIPA), associada à Embrapa Agrobiologia, Empresa de Pesquisa Agropecuária do Estado do Rio de Janeiro (Pesagro-Rio) e Universidade Federal Rural do Rio de Janeiro, nas coordenadas geográficas centrais aproximadas 22º45’0” S e 43º40’30” W (Figura <a href="#fig:localizacao2">2</a>).
+<div class="figure" style="text-align: center"><span id="fig:localizacao2"></span>
+<img src="localizacao2.png" alt="Mapa de localização da área de estudo em Seropédica-RJ. Fonte: Nascimento (2019)" width="267" />
+<p class="caption">
+Figure 2: Mapa de localização da área de estudo em Seropédica-RJ. Fonte: Nascimento (2019)
+</p>
+</div>
+<p>O clima do município caracteriza-se por ser do tipo Aw (Tropical com inverno seco), segundo a classificação de Köppen. Seropédica tem uma temperatura média de 23,5 °C e uma pluviosidade média anual de 1354 mm. Os maiores valores de precipitação são verificados nos meses de novembro a janeiro e os menores no período entre maio e agosto <span class="citation">(Oliveira-Júnior et al., <a href="#ref-Oliveira-J2014">2014</a>)</span>. A área dos exemplos encontra-se ocupada por pastagem e caracteriza-se por apresentar relevo suave-ondulado a ondulado, altitude entre 17 a 50 m sobre o nível do mar, e ausência de rochosidade e pedregosidade em superfície <span class="citation">(Nascimento, <a href="#ref-Nascimento2019">2019</a>)</span>.</p>
+<p>Os Solos da área experimental são caraterizados por apresentar, no geral baixa fertilidade e elevado grau de desonvilvimento com fatores e processos de formação específicos e dominates para cada ordem e posição da paisagem. Para o trabalho de onde os dados derivam <span class="citation">(Nascimento, <a href="#ref-Nascimento2019">2019</a>)</span>, foram abertas 10 trincheiras em diferentes pontos da paisagem, onde foram descritos e classificados perfis do solo, sendo uma trincheira no topo (P10), duas na posição de terço médio (P3 e P9), uma no terço inferior (P8), três no sopé da vertente (P2, P5 e P7) e três na área de baixada (P1, P4 e P6). Os solos froam classificados respectivamente como Argissolos Vermelhos P10, P9 e P3; Argissolo Amarelo, P8; Planossolos Háplicos (arênicos e espessarenicos), P7,P2,P5; Planossolos Háplicos (gleissólicos), P4, P6 e Cambissolo Hálico (com evidente processos de gleização) P1 (Figura <a href="#fig:localizacao2">2</a>).</p>
+</div>
+<div id="base-de-dados-covariáveis-ambientais" class="section level2">
+<h2>Base de dados (Covariáveis ambientais)</h2>
+<p>As covariáveis ambientais para modelar as propriedades do solo foram derivadas de duas fontes de dados: modelo digital de elevação, dados de sensoriamento remoto (imagem orbital), uma imagem RapidEye. Elas foram escolhidos para descrever os principais fatores formadores do solo, de acordo com a abordagem scorpan <span class="citation">(McBratney et al., <a href="#ref-McBratneyEtAl2003">2003</a>)</span>.</p>
+<p><em>Modelo Digital de Elevação (MDE)</em>: O MDE utilizado, com resolução espacial de 2 m, foi gerado a partir das curvas de nível e pontos cotados coeletados com gps geodésico. Do MDE foram derivados 12 atributos de terreno com pontencial uso para modelagem no MDS.</p>
+<p><em>Imagem de satélite</em>: foram utilizadas duas cenas do sensor RapidEyeambas de 2011. As duas cenas foram usadas para cobrir toda a área de estudo e eles têm uma 12 resolução radiométrica de bits, resolução espacial de 6,5m, e ortorretificadas para resolução espacial de 5m <span class="citation">(RapidEye, <a href="#ref-RapidEye2012">2012</a>)</span>.
+Das cenas foram derivados os indices de vegetação (NDVI, inglês) e índice de vegetação ajustado ao solo (SAVI, inglês).</p>
+</div>
+<div id="áreas-ambientalmente-homogêneas-estratos" class="section level2">
+<h2>Áreas ambientalmente homogêneas (Estratos)</h2>
+<p>Para fazer o exerício foram criadas áreas ambientalmente similares (homogêneas), essa a bordagem é indicada em casos onde há por exemplo o interesse de fazer a amostragem po estratos. Nesse execício optou-se por criar 10 estratos usando as variáveis, que julgamos serem as mais representativas para discretizar os ambientes. Foram elas elevação, declividade e SAVI. Para fazer o agrupamento da áreas de maior similaridade (criação de clusters) foi utilizado o algorítimo de classificação não supervisionada <em>K-Means Clustering</em> que visa particionar os pontos em k grupos de forma que a soma dos quadrados dos pontos aos centros de cluster designados seja minimizada. No mínimo, todos os centros do cluster estão na média dos seus conjuntos de Voronoi (o conjunto de pontos de dados que estão mais próximos do centro do cluster).</p>
+</div>
+<div id="você-pode-baixar-os-dados-usados-aqui-no-seguinte-link" class="section level2">
+<h2>Você pode baixar os dados usados aqui no seguinte link</h2>
+<p>Para baixar shapes <a href="https://mega.nz/folder/2FYmnSTZ#U8KUUKsOV5DzaBK5oQXEzA">shape</a> e para baixar os dados <a href="https://mega.nz/folder/PMIi1IzT#OqptGkjIKxJigwPFGPB47g">data</a></p>
+<pre class="r"><code>## Carregar os pacotes
+library(sp)
+library(raster)
+library(sampling)
+library(maptools)
+library(rgdal)
+library(clhs)
+library(spsann)
+library(sf)
+# Carregando a base de dados da fazendinha
+# Aqui você precisa direcionar o diretório onde salvou os dados no seu computador
+dados &lt;- read.csv(&quot;/home/elias/MEGA/Fazendinha/data/dataset.csv&quot;); dados=dados[2:54]
+grid &lt;- read.csv(&quot;/home/elias/MEGA/Fazendinha/data/grid.csv&quot;); grid=grid[2:23]
+
+# criando um cluster de unidades homogêneas usando os dados das covariáveis ambientais
+cluster &lt;- kmeans(grid[, c(1,2,20)], 10)
+cluster = data.frame(cluster$cluster)
+grid=cbind(grid,cluster)
+
+## Foi necessário transformar os estratos para fator 
+##porque estava dando erro quando calculava o número
+## de amostras por estrato 
+
+# Função para transformar uma variável em fator
+grid$cluster.cluster=as.factor(grid$cluster.cluster) 
+grid1=grid
+#cluster=data.frame(grid[,c(&quot;X&quot;,&quot;Y&quot;)],results=cluster$cluster)
+#coordinates(cluster)= ~ X+Y; gridded(cluster)=T; cluster=raster(cluster)
+#plot(cluster)
+
+# Transformar o dataframe do grid em spatialdataframe
+sp::gridded(grid) &lt;- ~ X + Y
+sp::proj4string(grid) &lt;- sp::CRS(&quot;+proj=utm +zone=23 +south +ellps=GRS80 +
+                                 towgs84=0,0,0,0,0,0,0 +units=m +no_defs&quot;) 
+
+# Definindo o sistema de projção
+crsSIRGAS2000=CRS(&quot;+proj=utm +zone=23 +south +ellps=GRS80 +
+                  towgs84=0,0,0,0,0,0,0 +units=m +no_defs&quot;) 
+
+#carregando arquivos shapfile
+# Aqui você precisa direcionar o diretório onde salvou os dados no seu computador
+## Estradas
+estrada &lt;- maptools::readShapeSpatial(&quot;/home/elias/MEGA/Fazendinha/shape/estrada.shp&quot;, 
+                                         proj4string=crsSIRGAS2000,verbose=TRUE)</code></pre>
+<pre><code>## Shapefile type: PolyLine, (3), # of Shapes: 1
+## Shapefile type: PolyLine, (3), # of Shapes: 1</code></pre>
+<pre class="r"><code>## Perfis completos
+perfis &lt;- maptools::readShapeSpatial(&quot;/home/elias/MEGA/Fazendinha/shape/pontos.shp&quot;, 
+                                      proj4string=crsSIRGAS2000,verbose=TRUE)</code></pre>
+<pre><code>## Shapefile type: Point, (1), # of Shapes: 71
+## Shapefile type: Point, (1), # of Shapes: 71</code></pre>
+</div>
+</div>
+<div id="amostragem-para-mapeamento-de-solos" class="section level1">
+<h1>Amostragem para mapeamento de solos</h1>
+<p>Não exite uma um único tipo de estratégia amostral para qualquer trabalho de MDS, cada caso precisa ser estudado de forma particular e no geral a melhor estratégia depnede so objetivo do projeto, do recurso financeiro e humano disponível e dificuldades operacionais encontradas na área que está sendo estuda. Do ponto de vista de dificuldades operacinais tem-se alguns variantes como limitação de de acesso, por se tratar de áreas com acesso limitado, nesses casos há abordagens de amostragem específica como mostra <span class="citation">Cambule et al. (<a href="#ref-CambuleEtAl2013">2013</a>)</span> onde se tem áreas de maior acessibilidade e que sejam representativas da área total de estudo. Ainda pode haver limitação por permissão de acesso, sobretudo em áreas particulares. Quanto aos tipos de amostragem elas são divididas basicamente em dois grupos ou tipos fundamentais: <em>Amostragem probabilística</em> e <em>não probabilística</em></p>
+<div id="amostragem-não-probabilística" class="section level2">
+<h2>Amostragem não probabilística</h2>
+<p>A amostragem não probabilística é uma técnica de amostragem em que as amostras são reunidas em um processo que não dá a todos os indivíduos, no caso de solos perfil de solo <em>pedon</em> ou ponto amsotral, da população chances iguais de serem selecionados. A escolha dos locais de amostragem depende da definição de um critério a ser atendido, normalmente em MDS a caracterização da máxima variação de solos e suas propriedades representados pelas covariáveis ambientais que simulam os fatores de formação do solo <span class="citation">(McBratney et al., <a href="#ref-McBratneyEtAl2003">2003</a>)</span>.
+A amostragem não-probabilística costuma ser dividida em três categorias:
+<em>casual,
+</em>conveniente, e
+*intencional.
+Além disso há amostragens não probabilísticas, onde através de algorítimos e de acordo com uma determinada finalidade, pode ser feita a otimização da configuração amostral. As principias otimizações são para representar o máximo possível o espaço de atributos (ex: tipos e/ou propriedades do solo) e espaço geográfico.</p>
+<div id="amostragem-casual" class="section level3">
+<h3>Amostragem casual</h3>
+<p>Na amostragem casual os locais de amostragem são escolhidos, fundamentalmente, em função da subjetividade da pessoa conduzindo a amostragem. Não existe um critério claro a ser atendido. Outros locais amostrais podem ser escolhidos caso outra pessoa conduza a amostragem, mesmo que não haja justificativa plausível para isso.Para fim de MDS esse tipo de amostragem não é recomendado e é mais comum em trabalhos de fetilidade do solo.
+Na prática, a amostragem casual consiste em transitar pela área a ser amostrada e, aqui e acolá (ex: Zig-Zag), definir um local para amostragem.No caso da amostra para fins de avaliação da ferilidade do solo normalmente é feito uma divisão da área em glebas (áreas menores, mais homogêneas). Essa divisão deve considerar a inclinação do terreno, o tipo de cultura, a idade da cultura, as adubações feitas anteriormente. Esse tipo de amostragem dá a impressão de que as observações são aleatórias, um pressuposto estatístico comum, mas como elas foram escolhidas subjetivamente pela pessoa que está conduzindo o trabalho não é possível se calcular a probabilidade de inclusão de cada amostra, portanto ela é casual, mas não aleatória.</p>
+<pre class="r"><code>main &lt;- &quot;Amostra casual (zig-zag)&quot;
+plot(
+  grid@coords, type = &quot;n&quot;, asp = 1, main = main,
+  xlab = &quot;Longitude (m)&quot;, ylab = &quot;Latitude (m)&quot;)
+image(
+  grid, &quot;cluster.cluster&quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
+legend(
+  &quot;topleft&quot;, title = &quot;Áreas homogêneas&quot;, fill = terrain.colors(3),
+  legend = c(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;),
+  border = terrain.colors(10), bty = &quot;n&quot;)
+set.seed(2000)
+pts &lt;- sp::spsample(grid, n = 30, type = &quot;nonaligned&quot;)
+points(pts, pch = 21, cex = 0.75)
+arrows(
+  grid@coords[1, 1], grid@coords[1, 2], pts@coords[length(pts), 1],
+  pts@coords[length(pts), 2],  length = 0.1)
+for (i in 2:length(pts) - 1) {
+  arrows(
+    x1 = pts@coords[i, 1], y1 = pts@coords[i, 2], x0 = pts@coords[i + 1, 1], 
+    y0 = pts@coords[i + 1, 2],  length = 0.1)
+}
+leg &lt;- paste(&quot;Amostras (n = &quot;, length(pts), &quot;)&quot;, sep = &quot;&quot;)
+legend(635700, 7483400, legend = leg, pch = 21, bty = &quot;n&quot;)</code></pre>
+<p><img src="/post/amostragem/index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="amostragem-conveniente" class="section level3">
+<h3>Amostragem conveniente</h3>
+<p>Esse é um dos exemplos de amostragem em que o processo não é completamente aleatório, pois são priorizados por exemplo locais ao longo das estradas, num tipo de amostragem que pode ser aleatório (dentro do limite de acessibilidade, que seja conveniente) ou amostragem arbitrária, ou seja, amostragem sem uma finalidade específica em mente, a amostragem pode ser ainda direcionada em que o usuário decide os locais que serão amostrados.
+Esse tipo de amostragem busca otimizar recursos (financeiros e operacionais) evitando locais de difícil acesso, podendo assim realizar um número maior de observações. Como resultado esse tipo de amostragem tem observações concentradas por exemplo em áreas próximo a estradas e/ou trilhas, em áreas não montanhosas, em bordas, quando em condição de densas florestas.
+Aqui foram selecionadas amostras com distância máxima da estrada de 50 m</p>
+<pre class="r"><code>main &lt;- &quot;Amostra conveninte (distante da margem da estrada)&quot;
+plot(
+  grid@coords, type = &quot;n&quot;, asp = 1, main = main,
+  xlab = &quot;Longitude (m)&quot;, ylab = &quot;Latitude (m)&quot;)
+image(
+  grid, &quot;cluster.cluster&quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
+legend(
+  &quot;topleft&quot;, title = &quot;Tipo de solo&quot;, fill = terrain.colors(10),
+  legend = c(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;),
+  border = terrain.colors(10), bty = &quot;n&quot;)
+plot(estrada, add=TRUE)
+t=buffer(estrada, width=50)
+r &lt;- raster(grid) 
+lr &lt;- mask(r, t)
+lr=as(lr, &quot;SpatialPixelsDataFrame&quot;)
+points(spsample(lr, n = 30, &quot;random&quot;), pch = 21, cex = 0.75)
+leg &lt;- paste(&quot;Amostras (n = &quot;, length(pts), &quot;)&quot;, sep = &quot;&quot;)
+legend(635700, 7483400, legend = leg, pch = 21, bty = &quot;n&quot;)</code></pre>
+<p><img src="/post/amostragem/index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+<div id="amostragem-intencional" class="section level3">
+<h3>Amostragem intencional</h3>
+<p>Semelhante a amostragem convencional a amostragem intencional também busca otimizar recursos financeiros e operacionais, mas difere principalmente porque na amostragem intencional são agregados critérios pedológicos, de levatamento para fins de fetilidade do solo e/ou estatístico.
+Em geral, a amostragem intencional é o tipo de amostragem mais eficiente para a obtenção de observações de calibração para a modelagem espacial do solo. Isso se dá exatamente porque a localização das observações é definida com base no modelo usado para descrever a estrutura da variação espacial do solo bem como capturar as variações dos fatores envolvidos com gênese do solo <span class="citation">(McBratney et al., <a href="#ref-McBratneyEtAl2003">2003</a>)</span>. Em outras palavras, a configuração espacial das observações é otimizada para atender aos pressupostos e requerimentos do modelo formação do solo (<em>SCORPAN</em>) que será usado na modelagem. Quanto melhor as amostras representarem as relações solo-paisagem e estrutura espacial dos dados, melhor será o desempenho do modelo calibrado.</p>
+<div id="amostragem-intencional-sistemática" class="section level4">
+<h4>Amostragem intencional sistemática</h4>
+<p>Na amostragem intencional sistemática um critério pedológico e/ou estatístico tem origem no modelo usado para descrever a estrutura da variação espacial do solo e o método usado para fazer predições espaciais. Por exemplo, o objetivo pode ser selecionar os locais amostrais de maneira a obter a melhor cobertura espacial porque isso pode minimizar a incerteza ou erros das predições. O resultado dessa amostragem é a alocação de observações equidistantes no que é denominado malha ou grid, que pode quadrada ou triangular.
+Esse tipo de maostragem é comumente usado em trabalhos de mapeamento do solo para fins de agricultura de precisão, por exemplo para avaliação da fertilidade do solo, pois essas áreas são normalmente homogêneas e de mais fácil acesso.</p>
+<pre class="r"><code>main &lt;- &quot;Amostra sistemática (malha quadrada)&quot;
+plot(
+  grid@coords, type = &quot;n&quot;, asp = 1, main = main,
+  xlab = &quot;Longitude (m)&quot;, ylab = &quot;Latitude (m)&quot;)
+image(
+  grid, &quot;cluster.cluster&quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
+legend(
+  &quot;topleft&quot;, title = &quot;Áreas homogêneas&quot;, fill = terrain.colors(10),
+  legend = c(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;),
+  border = terrain.colors(10), bty = &quot;n&quot;)
+pts &lt;- sp::spsample(grid, n = 30, type = &quot;regular&quot;, offset = c(0.5, 0.5))
+points(pts, pch = 21, cex = 0.75)
+polygon(pts@coords[c(1, 2, 6, 5, 1), ])
+leg &lt;- paste(&quot;Amostras (n = &quot;, length(pts), &quot;)&quot;, sep = &quot;&quot;)
+legend(635700, 7483400, legend = leg, pch = 21, bty = &quot;n&quot;)</code></pre>
+<p><img src="/post/amostragem/index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<pre class="r"><code>main &lt;- &quot;Amostra sistemática (malha triangular)&quot;
+plot(
+  grid@coords, type = &quot;n&quot;, asp = 1, main = main,
+  xlab = &quot;Longitude (m)&quot;, ylab = &quot;Latitude (m)&quot;)
+image(
+  grid, &quot;cluster.cluster&quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
+legend(
+  &quot;topleft&quot;, title = &quot;Áreas homogêneas&quot;, fill = terrain.colors(10),
+  legend = c(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;),
+  border = terrain.colors(10), bty = &quot;n&quot;)
+pts &lt;- sp::spsample(grid, n = 34, type = &quot;hexagonal&quot;, offset = c(0.5, 0.5))
+points(pts, pch = 21, cex = 0.75)
+polygon(pts@coords[c(1, 2, 5, 1), ])
+leg &lt;- paste(&quot;Amostras (n = &quot;, length(pts), &quot;)&quot;, sep = &quot;&quot;)
+legend(635700, 7483400, legend = leg, pch = 21, bty = &quot;n&quot;)</code></pre>
+<p><img src="/post/amostragem/index_files/figure-html/unnamed-chunk-5-2.png" width="672" /></p>
+</div>
+<div id="amostragem-intencional-caminhamento-livre" class="section level4">
+<h4>Amostragem intencional caminhamento livre</h4>
+<p>No critério intencional caminhamento livre as amostras são escolhidas a fim de agregar as questões de custos, conhecimento do especialista (ex: Pedólogo), e máxima caracterização da área. A localização das observações é definida com base no conhecimento tácito do responsável, seu modelo mental das relações solo-paisagem ou pedogênese. O modelo mental é construído com a experiência obtida no campo e sua qualidade geralmente é diretamente proporcional ao número de anos de trabalho de campo.
+Aguns dos exemplos são amostragens em <em>Topossequência</em>, que busca amostrar os diferentes tipos de solos de acordo com sua variação topográfica, <em>Topolitossequência</em>, que seria variação no relevo e material de origem, <em>Climosequência</em>, uma variação nas condições climáticas da região de estudo entre outras.</p>
+<pre class="r"><code>main &lt;- &quot;Caminhamento livre&quot;
+plot(
+  grid@coords, type = &quot;n&quot;, asp = 1, main = main,
+  xlab = &quot;Longitude (m)&quot;, ylab = &quot;Latitude (m)&quot;)
+image(
+  grid, &quot;cluster.cluster&quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
+legend(
+  &quot;topleft&quot;, title = &quot;Áreas homogêneas&quot;, fill = terrain.colors(3),
+  legend = c(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;),
+  border = terrain.colors(10), bty = &quot;n&quot;)
+points(perfis, pch = 21, cex = 0.75)
+text(perfis, perfis$id, cex=0.75, adj = c(01.5))
+arrows(
+  grid@coords[1, 1], grid@coords[1, 2], perfis@coords[length(perfis), 1], 
+  perfis@coords[length(perfis), 2],
+  length = 0.1)
+for (i in 2:length(perfis) - 1) {
+  arrows(
+    x1 = perfis@coords[i, 1], y1 = perfis@coords[i, 2], x0 = perfis@coords[i + 1, 1], 
+    y0 = perfis@coords[i + 1, 2], length = 0.1)
+}
+leg &lt;- paste(&quot;Amostras n = 10&quot;, sep = &quot;&quot;)
+legend(635700, 7483400, legend = leg, pch = 21, bty = &quot;n&quot;)</code></pre>
+<p><img src="/post/amostragem/index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+</div>
+<div id="otimização-de-configurações-amostrais" class="section level3">
+<h3>Otimização de Configurações Amostrais</h3>
+<div id="hipercubo-latino-condicionado-clhs" class="section level4">
+<h4>Hipercubo Latino Condicionado (cLHS)</h4>
+<p>O cLHS é um algoritmo de busca baseado em regras heurísticas combinadas com um cronograma de recozimento. Para amostragem de uma área informações prévias representativas da área de estudo são fornecidas ao algoritmo como dados auxiliares (covariáveis ambientais). Ele fornece uma cobertura completa da faixa de cada covariável estratificando a distribuição marginal, ou seja, usa as informações fornecidas para produzir uma estratificação de amostragem otimizada <span class="citation">(Minasny and McBratney, <a href="#ref-Minasny2006">2006</a>)</span>. Variações do cLHS para otimização de locais de amostragem podem ser encontradas em <span class="citation">Roudier et al. (<a href="#ref-Roudier2012">2012</a>)</span>, <span class="citation">Mulder et al. (<a href="#ref-Mulder2013">2013</a>)</span>, <span class="citation">Carvalho Junior et al. (<a href="#ref-CarvalhoJunior2014">2014</a>)</span>, <span class="citation">Clifford et al. (<a href="#ref-Clifford2014">2014</a>)</span>, <span class="citation">Kidd et al. (<a href="#ref-Kidd2014">2015</a>)</span>, e <span class="citation">Stumpf et al. (<a href="#ref-Stumpf2016">2016</a>)</span>.
+No caso desse exemplo usado no cLHS como variáveis auxiliares a elevação, declividade e SAVI, ou seja as mesmas que foram escolhidas para gerar as áreas ambientalmente homogêneas (os estratos).</p>
+<pre class="r"><code>dem=raster(grid[1])
+slope=raster(grid[2])
+savi=raster(grid[20])
+stack=raster::addLayer(dem, slope, savi)
+s &lt;- rasterToPoints(stack, spatial=TRUE)
+set.seed(2001)
+pts &lt;- clhs(s, size = 30, iter = 1000, progress = FALSE) 
+main &lt;- &quot;Amostra pelo Hipercubo Latino Condicionado (cLHS)&quot;
+plot(
+  grid@coords, type = &quot;n&quot;, asp = 1, main = main,
+  xlab = &quot;Longitude (m)&quot;, ylab = &quot;Latitude (m)&quot;)
+image(
+  grid, &quot;cluster.cluster&quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
+points(pts, pch = 21, cex = 0.75)
+leg &lt;- paste(&quot;Amostras (n = &quot;, length(pts), &quot;)&quot;, sep = &quot;&quot;)
+legend(635700, 7483400, legend = leg, pch = 21, bty = &quot;n&quot;)</code></pre>
+<p><img src="/post/amostragem/index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+<div id="identificação-de-tendência-espacial-e-estimativa-optimclhs" class="section level4">
+<h4>Identificação de tendência espacial e estimativa (optimCLHS)</h4>
+<p>Essas é uma Otimização de configurações de amostra para identificação de tendência espacial e estimativa. As funções de otimização foram implementadas no pacote <em>spsann</em> do <em>R</em>.
+Esse método busca Otimizar uma configuração de amostra para identificação e estimativa de tendência espacial usando o método proposta por <span class="citation">Minasny and McBratney (<a href="#ref-Minasny2006">2006</a>)</span>, metodo anteriormente cidado chocido como cLHS. Nesse método otimizado uma função de utilidade <em>U</em> é definida para que a amostra reproduza a distribuição marginal e a matriz de correlação das covariáveis numéricas e as proporções de classe do fator covariáveis (cLHS). A função de utilidade é obtida agregando três funções objetivas: <em>O1</em>, <em>O2</em> e <em>O3</em>. Nesse exemplo assim com no cLHS usamos como variáveis auxiliares (covariáveis) a elevação, declividade e SAVI.</p>
+<pre class="r"><code>candi &lt;- grid1[, 21:22]; names(candi)[1] &lt;- &quot;x&quot; ;names(candi)[2] &lt;- &quot;y&quot;
+covars &lt;- grid1[, c(1,2,20)]
+schedule &lt;- scheduleSPSANN(
+  chains = 1, initial.temperature = 0.001, x.max =  635865.8, y.max = 7483684,
+  x.min = 0, y.min = 0, cellsize = 40)
+set.seed(2001)
+pts &lt;- spsann::optimCLHS(
+  points = 30, candi = candi, covars = covars, use.coords = TRUE,
+  clhs.version = &quot;update&quot;,  weights = list(O1 = 0.5, O3 = 0.5), schedule = schedule)
+main &lt;- &quot;Identificação de tendência espacial e estimativa (optimCLHS)&quot;
+plot(
+  grid@coords, type = &quot;n&quot;, asp = 1, main = main,
+  xlab = &quot;Longitude (m)&quot;, ylab = &quot;Latitude (m)&quot;)
+image(
+  grid, &quot;cluster.cluster&quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
+points(pts$points[, 2:3], pch = 21, cex = 0.75)
+leg &lt;- paste(&quot;Amostras (n = &quot;, length(pts), &quot;)&quot;, sep = &quot;&quot;)
+legend(635700, 7483400, legend = leg, pch = 21, bty = &quot;n&quot;)</code></pre>
+<p><img src="/post/amostragem/index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+<div id="otimização-de-configurações-de-amostra-para-interpolação-espacial-optimmssd" class="section level4">
+<h4>Otimização de configurações de amostra para interpolação espacial (optimMSSD)</h4>
+<p>Otimização para estimativa de tendências espaciais. Esse é um tipo de Configuração amostral espacial otimizada no espaço geográfico para fins de interpolação espacial usando krigagem. O critério utilizado é a média ao quadrado da
+distância mais curta (MSSD, inglês) entre pontos de amostragem e pontos de predição.
+Amostragem por cobertura espacial: A amostragem por cobertura espacial baseia-se no conhecimento de que a variação da krigagem depende da distância entre os pontos da amostra. Assim, quanto melhor o spread dos pontos da amostra no domínio espacial, menor a variação da krigagem. Isso é semelhante a usando uma grade regular de pontos de amostra. No entanto, uma grade regular geralmente é sub-ótima para áreas irregulares <span class="citation">(Walvoort et al., <a href="#ref-Walvoort2010">2010</a>)</span>.</p>
+<pre class="r"><code>pts &lt;- spsann::optimMSSD(
+  points = 30, candi = candi, schedule = schedule)
+main &lt;- &quot;Otimização de amostra para interpolação espacial (optimMSSD)&quot;
+plot(
+  grid@coords, type = &quot;n&quot;, asp = 1, main = main,
+  xlab = &quot;Longitude (m)&quot;, ylab = &quot;Latitude (m)&quot;)
+image(
+  grid, &quot;cluster.cluster&quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
+points(pts$points[, 2:3], pch = 21, cex = 0.75)
+leg &lt;- paste(&quot;Amostras (n = &quot;, length(pts), &quot;)&quot;, sep = &quot;&quot;)
+legend(635700, 7483400, legend = leg, pch = 21, bty = &quot;n&quot;)</code></pre>
+<p><img src="/post/amostragem/index_files/figure-html/unnamed-chunk-9-1.png" width="672" />
+<strong>Para mais e informações sobre funções implementadas no R para otimização amostral, vocês podem consultar o o pacote <a href="https://cran.r-project.org/web/packages/spsann/spsann.pdf">spsann</a></strong></p>
+</div>
+</div>
+</div>
+<div id="amostragem-probabilística" class="section level2">
+<h2>Amostragem probabilística</h2>
+<p>A amostragem probabilistica é uma técnica de amostragem em que a amostra de uma população maior, no caso uma coleção de perfis de solo ou <em>pedon</em> de toda área, é escolhida usando um método baseado na teoria da probabilidade. Para que um perfil (ou ponto amostral) seja considerado uma amostra probabilística, ele deve ser selecionado usando uma seleção aleatória. Nesse tipo de amostragem todo e qualquer local possui alguma chance de ser amostrado, mesmo que alguns tenham maior chance do que outros. No caso da modelagem espacial do solo, a amostragem probabilística costuma ser usada para a validação das predições espaciais <span class="citation">(Brus et al., <a href="#ref-BrusEtAl2011">2011</a>)</span>. Entretanto, ela também pode ser usada para obter observações para a calibração dos modelos preditivos ou serem usadas para validação e calibração em métodos de calçibração cruzada como o <em>leave-one-out</em> (LOO-CV) <span class="citation">(Brus et al., <a href="#ref-BrusEtAl2011">2011</a>)</span>.</p>
+<div id="amostragem-aleatória-simples" class="section level3">
+<h3>Amostragem aleatória simples</h3>
+<p>Amostragem aleatória simples é a técnica de amostragem onde todos os elementos que compõem o universo amostral têm idêntica probabilidade de serem selecionados para a amostra, ou seja, mesma probabilidade de inclusão e são completamente independentes uns dos outros.
+Seria como fazer um sorteio justo entre os indivíduos do universo: No caso específico da ciência do solo seria por exemplo selecionar qualquer <em>pedon</em> de um determinado tipo de solo (classe). Nesse tipo de amostragem é apenas definido o número de amostras, <em>n</em>.
+Apesar de ser um método totalmente probabilístico, ou seja, não é tendencioso ou enviesado, condição ideal para validação dos resultados das predições no MDS, as mostras nesse método selecionadas podem ser irregularidade na distribuição espacial dos locais amostrais, pode haver forte agrupamento de alguns locais amostrais além da presença de amplos espaços vazios entre locais amostrais.
+Isso significa que a amostras aleatórias simples não são boas quando se busca amostras espacialmente representativas de uma área de estudo e/ou que cubram a variação das características do terreno e paisagem, condição essa, ideal para calibração de modelos no MDS.</p>
+<pre class="r"><code>main &lt;- &quot;Amostra aleatória simples&quot;
+plot(
+  grid@coords, type = &quot;n&quot;, asp = 1, main = main,
+  xlab = &quot;Longitude (m)&quot;, ylab = &quot;Latitude (m)&quot;)
+image(
+  grid, &quot;cluster.cluster&quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
+set.seed(2001)
+pts &lt;- grid[sampling::srswr(30, length(grid)) == 1, ]
+set.seed(2001)
+pts@coords &lt;- 
+  pts@coords + matrix(runif(prod(dim(pts@coords)), min = -0.5, max = 0.5), ncol = 2) * 
+  grid@grid@cellsize
+points(pts, pch = 21, cex = 0.75)
+leg &lt;- paste(&quot;Amostras (n = &quot;, length(pts), &quot;)&quot;, sep = &quot;&quot;)
+legend(635700, 7483400, legend = leg, pch = 21, bty = &quot;n&quot;)</code></pre>
+<p><img src="/post/amostragem/index_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+</div>
+<div id="amostragem-aleatória-estratificada-simples" class="section level3">
+<h3>Amostragem aleatória estratificada simples</h3>
+<p>As amostras estratificadas podem ser podem ser: <em>estratificada proporcional</em>, quando a quantidade de pontos é proporcional a área do estrato; <em>estratificada uniforme</em>, quando há o mesmo número de amostras para todos os estratos; <em>estratificada ótima</em>, nesse caso o tamanho das amostras é definido em proporção com o desvio-padrão das variáveis estudadas. Isto é, se obtêm camadas maiores dos estratos com maior variabilidade interna para representar melhor o total da amostra nos grupos populacionais mais difíceis de estudar.
+Assim como a amostragem aleatória simples a amostragem aleatória estratificada simples pertence à família de amostras probabilísticas e consiste em dividir toda a população ou o “objeto de estudo” em diferentes subgrupos ou estratos diferentes, de maneira que um indivíduo pode fazer parte apenas de um único estrato ou camada. No caso específico desse exemplo dividimos a área em 10 estratos, que são as nossas áreas ambientalmente homogêneas e pontos de amostragem são selecionados aleatoriamente dentro de cada estrato.
+Se as subáreas (estratos) são internamente homogêneas e heterogêneas entre si o uso da amostragem aleatória estratificada reduz o erro amostral e pode ser, de certa forma, mais eficiente para validação dos resultados do MDS, pois você certifica não que ficaram espaços vazios e que todos os tipos de solos (ou atributos do solo) tem no mínimo um representante para validação partindo do pressuposto que os estratos ambientalmente heterogêneos entre se representam solos diferentes, que poderiam não terem sido amostras na amostragem aleatória simples.</p>
+<pre class="r"><code>main &lt;- &quot;Amostra aleatória estratificada simples&quot;
+plot(
+  grid@coords, type = &quot;n&quot;, asp = 1, main = main,
+  xlab = &quot;Longitude (m)&quot;, ylab = &quot;Latitude (m)&quot;)
+image(
+  grid, &quot;cluster.cluster&quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
+legend( &quot;topleft&quot;, title = &quot;Áreas homogêneas&quot;, fill = terrain.colors(10),
+  legend = c(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;),
+  border = terrain.colors(10), bty = &quot;n&quot;)
+n &lt;- round(30 * summary(grid$cluster.cluster) / length(grid))
+set.seed(2001)
+pts &lt;- sampling::strata(
+  grid[order(grid$cluster.cluster), ], stratanames = &quot;cluster.cluster&quot;, size = n, 
+  method = &quot;srswr&quot;)$ID_unit
+pts &lt;- grid[order(grid$cluster.cluster), ][pts, ]
+set.seed(2001)
+pts@coords &lt;- pts@coords + 
+  matrix(runif(prod(dim(pts@coords)), min = -0.5, max = 0.5), ncol = 2) * 
+  grid@grid@cellsize
+points(pts, pch = 21, cex = 0.75)
+leg &lt;- paste(&quot;Amostras (n = &quot;, length(pts), &quot;)&quot;, sep = &quot;&quot;)
+legend(635700, 7483400, legend = leg, pch = 21, bty = &quot;n&quot;)</code></pre>
+<p><img src="/post/amostragem/index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+<div id="amostragem-aleatória-sistemática" class="section level3">
+<h3>Amostragem aleatória sistemática</h3>
+<p>Amostragem aleatória sistemática é uma técnica dentro da categoria de <em>amostragem probabilística</em> – que requer certo controle do marco amostral entre os indivíduos selecionados junto com a probabilidade que sejam selecionados – consiste em escolher um indivíduo inicialmente de forma aleatória entre a população e, posteriormente, selecionar para amostra cada enésimo indivíduo disponível de forma sistemática, pode ser por exemplo há uma distância pré-definida e seguindo uma determinada direção. O pesquisador deve ter certeza de que sistematização escolhida não reflete um certo padrão de características presentes no terreno. Se existir um padrão na população e coincidir com a sistematização do pesquisador, a aleatoriedade da técnica de amostragem fica comprometida.</p>
+<pre class="r"><code>main &lt;- &quot;Amostra aleatória sistemática (malha quadrada)&quot;
+plot(
+  grid@coords, type = &quot;n&quot;, asp = 1, main = main,
+  xlab = &quot;Longitude (m)&quot;, ylab = &quot;Latitude (m)&quot;)
+image(
+  grid, &quot;cluster.cluster&quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
+legend(
+  &quot;topleft&quot;, title = &quot;Áreas homogêneas&quot;, fill = terrain.colors(10),
+  legend = c(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;),
+  border = terrain.colors(10), bty = &quot;n&quot;)
+set.seed(2001)
+pts &lt;- sp::spsample(grid, n = 30, type = &quot;regular&quot;)
+points(pts, pch = 21, cex = 0.75)
+polygon(pts@coords[c(1, 5, 6, 2, 1), ])
+set.seed(1984)
+points(sp::spsample(grid, n = 30, type = &quot;regular&quot;), pch = 20, cex = 0.75)
+legend(636200, 7483450, legend = &quot;Amostras (2019)&quot;, pch = 21, bty = &quot;n&quot;)
+legend(636200, 7483400, legend = &quot;Amostras (2020)&quot;, pch = 20, bty = &quot;n&quot;)</code></pre>
+<p><img src="/post/amostragem/index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<pre class="r"><code>main &lt;- &quot;Amostra aleatória sistemática (malha desalinhada)&quot;
+plot(
+  grid@coords, type = &quot;n&quot;, asp = 1, main = main,
+  xlab = &quot;Longitude (m)&quot;, ylab = &quot;Latitude (m)&quot;)
+image(
+  grid, &quot;cluster.cluster&quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
+legend(
+  &quot;topleft&quot;, title = &quot;Áreas homogêneas&quot;, fill = terrain.colors(10),
+  legend = c(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;),
+  border = terrain.colors(10), bty = &quot;n&quot;)
+set.seed(2001)
+pts &lt;- sp::spsample(grid, n = 31, type = &quot;nonaligned&quot;)
+points(pts, pch = 21, cex = 0.75)
+polygon(pts@coords[c(2, 7, 8, 3, 2), ])
+leg &lt;- paste(&quot;Amostras (n = &quot;, length(pts), &quot;)&quot;, sep = &quot;&quot;)
+legend(635700, 7483400, legend = leg, pch = 21, bty = &quot;n&quot;)</code></pre>
+<p><img src="/post/amostragem/index_files/figure-html/unnamed-chunk-12-2.png" width="672" /></p>
+</div>
+<div id="amostragem-aleatória-em-conglomerados" class="section level3">
+<h3>Amostragem aleatória em conglomerados</h3>
+<p>Amostra por conglomerados é um procedimento de <em>amostragem probabilística</em> em que os elementos da população são selecionados aleatoriamente de forma natural por grupos (clusters). Os elementos da amostragem são selecionados a partir da população de maneira individual, um de cada vez. A separação desses clusters é evidente numa população quando os grupos são mutuamente homogêneos e internamente heterogêneos.
+Na amostragem aleatória em conglomerados um estágio após seleção de grupos todos os indivíduos daquele grupo são selecionados. No caso da amostragem em dois estágios após a definição e seleção de grupos uma amostra aleatória ( por exemplo uma amostra aleatória simples) se tornam os elementos de cada grupo selecionado.</p>
+<pre class="r"><code>main &lt;- &quot;Amostra aleatória em conglomerados (dois estágios)&quot;
+plot(
+  grid@coords, type = &quot;n&quot;, asp = 1, main = main,
+  xlab = &quot;Longitude (m)&quot;, ylab = &quot;Latitude (m)&quot;)
+image(
+  grid, &quot;cluster.cluster&quot;, col = terrain.colors(10), axes = TRUE, add = TRUE)
+legend(
+  &quot;topleft&quot;, title = &quot;Áreas homogêneas&quot;, fill = terrain.colors(10),
+  legend = c(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;),
+  border = terrain.colors(10), bty = &quot;n&quot;)
+set.seed(2002)
+pts &lt;- sp::spsample(grid, n = 33, type = &quot;clustered&quot;, nclusters = 10)
+points(pts, pch = 21, cex = 0.75)
+leg &lt;- paste(&quot;Amostras (n = &quot;, length(pts), &quot;)&quot;, sep = &quot;&quot;)
+legend(635700, 7483400, legend = leg, pch = 21, bty = &quot;n&quot;)</code></pre>
+<p><img src="/post/amostragem/index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+</div>
+<div id="se-você-chegou-até-aqui-muito-bem" class="section level3">
+<h3>Se você chegou até aqui muito bem !!!! 👏👏👏</h3>
+</div>
+</div>
+</div>
+<div id="referências" class="section level1 unnumbered">
+<h1>Referências</h1>
+<div id="refs" class="references">
+<div id="ref-Brus2019">
+<p>Brus, D.J., 2019. Sampling for digital soil mapping: A tutorial supported by R scripts. Geoderma 338, 464–480. <a href="https://doi.org/10.1016/j.geoderma.2018.07.036">https://doi.org/10.1016/j.geoderma.2018.07.036</a></p>
+</div>
+<div id="ref-BrusEtAl2011">
+<p>Brus, D.J., Kempen, B., Heuvelink, G.B.M., 2011. Sampling for validation of digital soil maps. European Journal of Soil Science 62, 394–407. <a href="https://doi.org/10.1111/j.1365-2389.2011.01364.x">https://doi.org/10.1111/j.1365-2389.2011.01364.x</a></p>
+</div>
+<div id="ref-CambuleEtAl2013">
+<p>Cambule, A.H., Rossiter, D.G., Stoorvogel, J.J., 2013. A methodology for digital soil mapping in poorly-accessible areas. Geoderma 192, 341–353. <a href="https://doi.org/10.1016/j.geoderma.2012.08.020">https://doi.org/10.1016/j.geoderma.2012.08.020</a></p>
+</div>
+<div id="ref-CarvalhoJunior2014">
+<p>Carvalho Junior, W., Lagacherie, P., Chagas, C. da S., Calderano Filho, B., Bhering, S.B., 2014. A regional-scale assessment of digital mapping of soil attributes in a tropical hillslope environment. Geoderma 232-234, 479–486. <a href="https://doi.org/10.1016/j.geoderma.2014.06.007">https://doi.org/10.1016/j.geoderma.2014.06.007</a></p>
+</div>
+<div id="ref-Clifford2014">
+<p>Clifford, D., Payne, J.E., Pringle, M.J., Searle, R., Butler, N., 2014. Pragmatic soil survey design using flexible Latin hypercube sampling. Computers and Geosciences 67, 62–68. <a href="https://doi.org/10.1016/j.cageo.2014.03.005">https://doi.org/10.1016/j.cageo.2014.03.005</a></p>
+</div>
+<div id="ref-deGruijter2006">
+<p>Gruijter, J. de, Brus, D., Bierkens, M.F.P., Knotters, M., 2006. Sampling for Natural Resource Monitoring, in: Springer. Berlin, p. 334. <a href="https://doi.org/10.2136/sssaj2007.0018br">https://doi.org/10.2136/sssaj2007.0018br</a></p>
+</div>
+<div id="ref-IBGE2015">
+<p>IBGE, 2015. Manual Técnico de Pedologia, 3 Edição. ed. Rio de Janeiro.</p>
+</div>
+<div id="ref-Kidd2014">
+<p>Kidd, D., Malone, B., McBratney, A.B., Minasny, B., Webb, M., 2015. Operational sampling challenges to digital soilmapping in Tasmania, Australia. Geoderma Regional 4, 1–10.</p>
+</div>
+<div id="ref-McBratneyEtAl2003">
+<p>McBratney, A.B., Mendonça-Santos, M.L., Minasny, B., 2003. On digital soil mapping. Geoderma 117, 3–52. <a href="https://doi.org/10.1016/S0016-7061(03)00223-4">https://doi.org/10.1016/S0016-7061(03)00223-4</a></p>
+</div>
+<div id="ref-Minasny2007b">
+<p>Minasny, B., McBratney, A., 2007. Latin hypercube sampling as tool for digital soil mapping. Developments in Soil Science 31, 153–606. <a href="https://doi.org/10.1016/S0166-2481(06)31012-4">https://doi.org/10.1016/S0166-2481(06)31012-4</a></p>
+</div>
+<div id="ref-Minasny2006">
+<p>Minasny, B., McBratney, A.B., 2006. A conditioned Latin hypercube method for sampling in the presence of ancillary information. Computers and Geosciences 32, 1378–1388. <a href="https://doi.org/10.1016/j.cageo.2005.12.009">https://doi.org/10.1016/j.cageo.2005.12.009</a></p>
+</div>
+<div id="ref-Mulder2013">
+<p>Mulder, V.L., Bruin, S. de, Schaepman, M.E., 2013. Representing major soil variability at regional scale by constrained Latin Hypercube Sampling of remote sensing data. International Journal of Applied Earth Observations and Geoinformation 21, 301–310. <a href="https://doi.org/10.1016/j.jag.2012.07.004">https://doi.org/10.1016/j.jag.2012.07.004</a></p>
+</div>
+<div id="ref-Nascimento2019">
+<p>Nascimento, C.W.R., 2019. Carlos wagner rodrigues do nascimento 2019 (PhD thesis).</p>
+</div>
+<div id="ref-Oliveira-J2014">
+<p>Oliveira-Júnior, J.F., Delgado, R.C., Gois, G., Lannes, A., Dias, F.O., Souza, J.C., Souza, M., 2014. Análise da precipitação e sua relação com sistemas meteorológicos em seropédica, Rio de Janeiro. Floresta e Ambiente 21, 140–149. <a href="https://doi.org/10.4322/floram.2014.030">https://doi.org/10.4322/floram.2014.030</a></p>
+</div>
+<div id="ref-RapidEye2012">
+<p>RapidEye, 2012. RapidEye Mosaic™ Product Specifications.</p>
+</div>
+<div id="ref-Roudier2012">
+<p>Roudier, P., Hewitt, A.E., Beaudette, D.E., 2012. A conditioned Latin hypercube sampling algorithm incorporating operational constraints. Digital Soil Assessments and Beyond 227–231. <a href="https://doi.org/10.1201/b12728-46">https://doi.org/10.1201/b12728-46</a></p>
+</div>
+<div id="ref-Stumpf2016">
+<p>Stumpf, F., Schmidt, K., Behrens, T., Schönbrodt-stitt, S., Buzzo, G., Dumperth, C., Wadoux, A., Xiang, W., Scholten, T., 2016. Incorporating limited field operability and legacy soil samples in a hypercube sampling design for digital soil mapping. Journal of Plant Nutrition and Soil Science 000, 1–11. <a href="https://doi.org/10.1002/jpln.201500313">https://doi.org/10.1002/jpln.201500313</a></p>
+</div>
+<div id="ref-Walvoort2010">
+<p>Walvoort, D.J., Brus, D.J., Gruijter, J.J. de, 2010. An R package for spatial coverage sampling and random sampling from compact geographical strata by k-means. Computers and Geosciences 36, 1261–1267. <a href="https://doi.org/10.1016/j.cageo.2010.04.005">https://doi.org/10.1016/j.cageo.2010.04.005</a></p>
+</div>
+<div id="ref-Wang2012a">
+<p>Wang, J.F., Stein, A., Gao, B.B., Ge, Y., 2012. A review of spatial sampling. Spatial Statistics 2, 1–14. <a href="https://doi.org/10.1016/j.spasta.2012.08.001">https://doi.org/10.1016/j.spasta.2012.08.001</a></p>
+</div>
+</div>
+</div>
