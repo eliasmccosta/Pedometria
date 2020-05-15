@@ -28,7 +28,7 @@ On this page, you'll find some examples of the types of technical content that c
 ## Examples
 
 ### Code
-A *amostragem* diz respeito à seleção de um subconjunto de indivíduos de uma população para estimar características de toda a população [@Wang2012a]
+A *amostragem* diz respeito à seleção de um subconjunto de indivíduos de uma população para estimar características de toda a população `@Wang2012a`
 Academic supports a Markdown extension for highlighting code syntax. You can enable this feature by toggling the `highlight` option in your `config/_default/params.toml` file.
 
     ```python
