@@ -38,7 +38,17 @@
   </url>
   
   <url>
+    <loc>https://pedometriafacil.netlify.app/authors/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://pedometriafacil.netlify.app/categories/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pedometriafacil.netlify.app/author/elias-mendes-costa/</loc>
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -64,16 +74,6 @@
   
   <url>
     <loc>https://pedometriafacil.netlify.app/publication-type/2/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedometriafacil.netlify.app/authors/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedometriafacil.netlify.app/author/elias-mendes-costa/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   

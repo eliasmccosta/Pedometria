@@ -6,17 +6,21 @@ image:
   placement: 3
 math: true
 title: Amostragem para mapeamento digital de solos
-bibliography: references.bib
+bibliography: [../../static/mardown/references.bib]
 link-citations: true 
-csl: geoderma-regional.csl
+csl: [../../static/mardown/geoderma-regional.csl]
 lang: pt
-fig_caption: yes
-keep_tex: yes
-author: Elias Mendes Costa
+image:
+  caption: ""
+  focal_point: ""
+authors:
+- admin
 categories:
   - R
 tags:
   - MDS
+nocite: | 
+  @R-bookdown
 ---
 
 Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.
@@ -28,7 +32,7 @@ On this page, you'll find some examples of the types of technical content that c
 ## Examples
 
 ### Code
-A *amostragem* diz respeito à seleção de um subconjunto de indivíduos de uma população para estimar características de toda a população `@Wang2012a`
+A *amostragem* diz respeito à seleção de um subconjunto de indivíduos de uma população para estimar características de toda a população [@Wang2012a]
 Academic supports a Markdown extension for highlighting code syntax. You can enable this feature by toggling the `highlight` option in your `config/_default/params.toml` file.
 
     ```python
