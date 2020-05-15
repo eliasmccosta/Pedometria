@@ -291,3 +291,5 @@ renders as
 {{< icon name="r-project" pack="fab" >}} R
 
 ### Did you find this page helpful? Consider sharing it 🙌
+
+# Referências
