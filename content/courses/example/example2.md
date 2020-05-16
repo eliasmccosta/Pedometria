@@ -12,13 +12,14 @@ type: docs
 weight: 2
 ---
 
-# Se quer levar o curso para sua empresa ou instituição por favor entre em contato
-## Tópicos 
-1- Mendeley
-2- Zotero
-3- Sincronização
-4- Arquivo .bib
-5- Latex
-6- Rmarkdown
+`Se quer levar o curso para sua empresa ou instituição por favor entre em contato`
+#### Tópicos 
+- 1- Mendeley
+- 2- Zotero
+- 3- Sincronização
+- 4- Arquivo .bib
+- 5- Latex
+- 6- Rmarkdown
 
 *Todos os tópicos descritos podem ser abordados como um curso separado dependendo da necessidade de aprofundamento desejado*
+

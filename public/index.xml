@@ -17,15 +17,17 @@
       <link>https://pedometriafacil.netlify.app/courses/example/example1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://pedometriafacil.netlify.app/courses/example/example1/</guid>
-      <description>&lt;h1 id=&#34;se-quer-levar-o-curso-para-sua-empresa-ou-instituição-por-favor-entre-em-contato&#34;&gt;Se quer levar o curso para sua empresa ou instituição por favor entre em contato&lt;/h1&gt;
+      <description>&lt;p&gt;&lt;code&gt;Se quer levar o curso para sua empresa ou instituição por favor entre em contato&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;tópicos&#34;&gt;Tópicos&lt;/h2&gt;
-&lt;p&gt;1- Introdução e revisão
-2- Geoestatística para mapeamento
-3- Preparação de dados de solo e covariáveis
-4- Sensoriamento remoto e proximal do solo
-5- Machine learning para mapeamento
-6- Quantificação e propagação de incerteza
-7- Amostragem para mapeamento e validação estatística&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1- Introdução e revisão&lt;/li&gt;
+&lt;li&gt;2- Geoestatística para mapeamento&lt;/li&gt;
+&lt;li&gt;3- Preparação de dados de solo e covariáveis&lt;/li&gt;
+&lt;li&gt;4- Sensoriamento remoto e proximal do solo&lt;/li&gt;
+&lt;li&gt;5- Machine learning para mapeamento&lt;/li&gt;
+&lt;li&gt;6- Quantificação e propagação de incerteza&lt;/li&gt;
+&lt;li&gt;7- Amostragem para mapeamento e validação estatística&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;Todos os tópicos descritos podem ser abordados como um curso separado dependendo da necessidade de aprofundamento desejado&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
@@ -35,14 +37,16 @@
       <link>https://pedometriafacil.netlify.app/courses/example/example2/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://pedometriafacil.netlify.app/courses/example/example2/</guid>
-      <description>&lt;h1 id=&#34;se-quer-levar-o-curso-para-sua-empresa-ou-instituição-por-favor-entre-em-contato&#34;&gt;Se quer levar o curso para sua empresa ou instituição por favor entre em contato&lt;/h1&gt;
-&lt;h2 id=&#34;tópicos&#34;&gt;Tópicos&lt;/h2&gt;
-&lt;p&gt;1- Mendeley
-2- Zotero
-3- Sincronização
-4- Arquivo .bib
-5- Latex
-6- Rmarkdown&lt;/p&gt;
+      <description>&lt;p&gt;&lt;code&gt;Se quer levar o curso para sua empresa ou instituição por favor entre em contato&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;tópicos&#34;&gt;Tópicos&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;1- Mendeley&lt;/li&gt;
+&lt;li&gt;2- Zotero&lt;/li&gt;
+&lt;li&gt;3- Sincronização&lt;/li&gt;
+&lt;li&gt;4- Arquivo .bib&lt;/li&gt;
+&lt;li&gt;5- Latex&lt;/li&gt;
+&lt;li&gt;6- Rmarkdown&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;Todos os tópicos descritos podem ser abordados como um curso separado dependendo da necessidade de aprofundamento desejado&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
