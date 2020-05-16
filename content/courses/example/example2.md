@@ -10,8 +10,6 @@ title: Escrita Científica Reprodutível
 toc: true
 type: docs
 weight: 2
-image:
-  caption: 'Image credit: [**Mendeley**](hhttps://www.mendeley.com/?interaction_required=true)'
 ---
 
 # Se quer levar o curso para sua empresa ou instituição por favor entre em contato
