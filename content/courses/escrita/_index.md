@@ -22,7 +22,8 @@ image:
 2- Zotero
 3- Sincronização
 4- Arquivo .bib
-5- Rmarkdown
+5- Latex
+6- Rmarkdown
 
 *Todos os tópicos descritos podem ser abordados como um curso separado dependendo da necessidade de aprofundamento desejado*
 
