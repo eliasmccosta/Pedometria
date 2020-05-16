@@ -1,7 +1,7 @@
 ---
-date: "2018-09-09T00:00:00Z"
+date: "2020-07-09T00:00:00Z"
 draft: false
-lastmod: "2018-09-09T00:00:00Z"
+lastmod: "2020-07-09T00:00:00Z"
 linktitle: Cursos diversos
 menu:
   example:
