@@ -4,9 +4,9 @@ draft: false
 linktitle: Tips 1-2
 menu:
   example:
-    parent: Example Topic
+    parent: Cursos
     weight: 1
-title: Example Page 1
+title: Métodos e técnicas de MDS
 toc: true
 type: docs
 weight: 1

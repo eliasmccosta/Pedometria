@@ -4,9 +4,9 @@ draft: false
 linktitle: Tips 3-4
 menu:
   example:
-    parent: Example Topic
+    parent: Cursos
     weight: 2
-title: Example Page 2
+title: Escrita Científica
 toc: true
 type: docs
 weight: 2
