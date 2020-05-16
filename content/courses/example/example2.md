@@ -1,12 +1,12 @@
 ---
-date: "2019-05-05T00:00:00+01:00"
+date: "2020-05-05T00:00:00+01:00"
 draft: false
-linktitle: Tips 3-4
+linktitle: Métodos e técnicas de MDS
 menu:
   example:
-    parent: Example Topic
+    parent: Cursos
     weight: 2
-title: Example Page 2
+title: Métodos e técnicas de MDS
 toc: true
 type: docs
 weight: 2

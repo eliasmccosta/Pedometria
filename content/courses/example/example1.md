@@ -1,12 +1,12 @@
 ---
 date: "2020-05  -05T00:00:00+01:00"
 draft: false
-linktitle: Tips 1-2
+linktitle: Escrita Científica Reprodutível
 menu:
   example:
-    parent: Example Topic
+    parent: Cursos
     weight: 1
-title: Example Page 1
+title: Escrita Científica Reprodutível
 toc: true
 type: docs
 weight: 1
