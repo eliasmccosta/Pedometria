@@ -153,11 +153,6 @@
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/post/jupyter/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://pedometriafacil.netlify.app/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url>
@@ -228,33 +223,18 @@
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/tag/academic/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+    <loc>https://pedometriafacil.netlify.app/author/mauro-antonio-homem-antunes/</loc>
+    <lastmod>2016-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/post/getting-started/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+    <loc>https://pedometriafacil.netlify.app/author/paula-debiasi/</loc>
+    <lastmod>2016-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/category/demo/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedometriafacil.netlify.app/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedometriafacil.netlify.app/tag/%E5%BC%80%E6%BA%90/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedometriafacil.netlify.app/category/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+    <loc>https://pedometriafacil.netlify.app/publication/journal-article/pab2016/</loc>
+    <lastmod>2016-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -295,6 +275,10 @@
   <url>
     <loc>https://pedometriafacil.netlify.app/tag/areas-degradadas/</loc>
     <lastmod>2013-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pedometriafacil.netlify.app/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
   </url>
   
 </urlset>

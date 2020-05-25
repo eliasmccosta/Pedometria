@@ -49,6 +49,8 @@ url_project: "Elias Mendes Costa was supported by the FAPERJ Foundation (Process
 url_slides: ""
 url_source: ""
 url_video: ""
+projects:
+- Pinheiral
 ---
 
 {{% alert note %}}
