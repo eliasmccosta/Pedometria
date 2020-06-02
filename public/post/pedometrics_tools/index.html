@@ -236,7 +236,7 @@
   
   <meta property="og:site_name" content="Pedometria Fácil">
   <meta property="og:url" content="https://pedometriafacil.netlify.app/post/pedometrics_tools/">
-  <meta property="og:title" content="Amostragem para mapeamento de solos | Pedometria Fácil">
+  <meta property="og:title" content="Ferramenta pedometricas | Pedometria Fácil">
   <meta property="og:description" content="Introdução Nesse tutorial serão abordados através do Algoritmos para Pedologia Quantitativa (AQP em inglês) e pacotes auxiliares uma coleção de códigos, ideias, e plotes usando o software R (???). Toda a teoria por trás de grande parte do código pode ser encontrada no artigo Algorithms for quantitative pedology: A toolkit for soil scientists (?"><meta property="og:image" content="https://pedometriafacil.netlify.app/post/pedometrics_tools/featured.png">
   <meta property="twitter:image" content="https://pedometriafacil.netlify.app/post/pedometrics_tools/featured.png"><meta property="og:locale" content="en-us">
   
@@ -269,7 +269,7 @@
     "@type": "WebPage",
     "@id": "https://pedometriafacil.netlify.app/post/pedometrics_tools/"
   },
-  "headline": "Amostragem para mapeamento de solos",
+  "headline": "Ferramenta pedometricas",
   
   "image": [
     "https://pedometriafacil.netlify.app/post/pedometrics_tools/featured.png"
@@ -309,7 +309,7 @@
 
 
 
-  <title>Amostragem para mapeamento de solos | Pedometria Fácil</title>
+  <title>Ferramenta pedometricas | Pedometria Fácil</title>
 
 </head>
 
@@ -668,10 +668,10 @@
 
 
 <div class="article-container pt-3">
-  <h1>Amostragem para mapeamento de solos</h1>
+  <h1>Ferramenta pedometricas</h1>
 
   
-  <p class="page-subtitle">Ferramenta pedometricas para pedologia quantitativa</p>
+  <p class="page-subtitle">Ferramenta pedometricas para análises de pedologia quantitativa</p>
   
 
   
@@ -707,7 +707,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    5 min read
+    6 min read
   </span>
   
 
@@ -760,9 +760,9 @@
 <div id="introdução" class="section level1">
 <h1>Introdução</h1>
 <p>Nesse tutorial serão abordados através do Algoritmos para Pedologia Quantitativa (AQP em inglês) e pacotes auxiliares uma coleção de códigos, ideias, e plotes usando o software R <span class="citation">(<span class="citeproc-not-found" data-reference-id="R2018"><strong>???</strong></span>)</span>. Toda a teoria por trás de grande parte do código pode ser encontrada no artigo <a href="https://www.sciencedirect.com/science/article/pii/S009830041200369X?via%3Dihub"><em>Algorithms for quantitative pedology: A toolkit for soil scientists</em></a> <span class="citation">(<span class="citeproc-not-found" data-reference-id="beaudette_algorithms_2013"><strong>???</strong></span>)</span>. Além disso artigos disso alguns exemplos de aplicações das ferramentas podem se encontrados em <span class="citation">Pinheiro et al. (<a href="#ref-Pinheiro2016">2016</a>)</span> e <span class="citation">Pinheiro et al. (<a href="#ref-Pinheiro2018">2018</a>)</span>. Para fins didáticos o tutorial foi dividido em três partes e os pacotes usados serão <em>soilDB</em>, que contem uma base de dados de solos para análises pedométricas, <em>AQP</em> que contem as principais ferramentas de pedologia quantitativa usadas no tutorial, <em>sharpshootR</em> que contem uma coelção de funções que dão suporte ao levantamento e exploração de dados de solos, <em>SP</em> um pacote que fornece classes e métodos para dados espaciais: pontos, linhas, polígonos e grades, <em>Hmisc</em> que contém muitas funções úteis para análise de dados, gráficos de alto nível, operações utilitárias, funções para calcular o tamanho de amostras, importar e manipular conjuntos de dados, imputar valores ausentes, criação avançada de tabelas, análise de cluster entre outras funções, <em>lattice</em> que é um sistema de visualização de dados de alto nível, poderoso e elegante, com ênfase em dados multivariados, <em>MASS</em> com funções e conjuntos de dados para apoiar Venables e Ripley, <strong>Modern Applied Statistics with S</strong> e <em>plyr</em> que contem um conjunto de ferramentas que resolve problemas tais como: Divisão, aplicação e combinação de dados.</p>
-<div id="base-de-dados-dos-execícios" class="section level2">
-<h2>Base de dados dos execícios</h2>
-<p>Todos os dados usados nos execícios ou são do pacote <em>AQP</em> ou são <em>soilDB</em>. Muitas das informações contidas nesse</p>
+<div id="base-de-dados-dos-exercícios" class="section level2">
+<h2>Base de dados dos exercícios</h2>
+<p>Todos os dados usados nos exercícios ou são do pacote <em>AQP</em> ou são do pacote <em>soilDB</em>. Muitas das informações contidas nesse nesse tutorial foram extraídas do <a href="http://ncss-tech.github.io/AQP/">projeto do AQP</a></p>
 <pre class="r"><code># Carregando os pacotes no R
 library(soilDB) # 
 library(aqp)  # 
@@ -840,14 +840,15 @@ sp1$structure_grade # </code></pre>
 ## [26]  1  1  1  1 NA NA NA NA NA  1  1  1  1  1 NA NA NA NA NA  1  1  1  1 NA NA
 ## [51] NA NA  1  1  1  1 NA NA NA NA</code></pre>
 <pre class="r"><code>par(mar=c(1,1,3,1)) # tighter figure margins
-plot(sp1, name=&#39;name&#39;, color=&#39;structure_grade&#39;,cex.names=0.5,cex.id=0.5, id.style=&#39;top&#39;,col.legend.cex=1,family=&quot;serif&quot;)</code></pre>
+plot(sp1, name=&#39;name&#39;, color=&#39;structure_grade&#39;,cex.names=0.5,cex.id=0.5, id.style=&#39;top&#39;,col.legend.cex=1,family=&quot;serif&quot;, col.label=&#39;Estrutura&#39;, )</code></pre>
 <p><img src="/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-3-3.png" width="672" /></p>
 <pre class="r"><code>sp1$prop # </code></pre>
 <pre><code>##  [1] 13  7  9 14 21 NA  1  3  2  4 14 18 22 30 50  5  6  6 25 57  8 14 23 57  0
 ## [26]  2  5  7  5  5  6 10 15 12  3  3  3  3  5  0  0  0  0  0  1  2  2  4  7  6
 ## [51]  1  0  5  3  3  3  2 27  3  5</code></pre>
 <pre class="r"><code>par(mar=c(1,1,3,1)) # tighter figure margins
-plot(sp1, name=&#39;name&#39;, color=&#39;prop&#39;,cex.names=0.5,cex.id=0.5, id.style=&#39;top&#39;,col.legend.cex=1,family=&quot;serif&quot;)</code></pre>
+plot(sp1, name=&#39;name&#39;, color=&#39;prop&#39;,cex.names=0.5,cex.id=0.5, id.style=&#39;top&#39;,col.legend.cex=1,
+     col.label=&#39;Prop&#39;, family=&quot;serif&quot;)</code></pre>
 <p><img src="/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-3-4.png" width="672" /></p>
 <pre class="r"><code>sp1$name1 # </code></pre>
 <pre><code>## NULL</code></pre>
@@ -876,7 +877,7 @@ bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
 <p><img src="/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-3-6.png" width="672" /></p>
 <pre class="r"><code>bwplot(prop~ factor(name1, levels=hz.designation.by.median.depths),
        data=horizons(sp1),       
-       ylab=&#39;Prop&#39;,       
+       ylab=&#39;Profundidade&#39;,       
        scales=list(y=list(tick.number=10)),       
        panel= function ( ... ) {  
          panel.abline(h=seq(0, 600, by=50), v=1:length(hz.designation.by.median.depths), col=grey(0.8), lty=3)  
@@ -927,7 +928,7 @@ bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://pedometriafacil.netlify.app/post/pedometrics_tools/&amp;text=Amostragem%20para%20mapeamento%20de%20solos" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://pedometriafacil.netlify.app/post/pedometrics_tools/&amp;text=Ferramenta%20pedometricas" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -940,7 +941,7 @@ bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://pedometriafacil.netlify.app/post/pedometrics_tools/&amp;t=Amostragem%20para%20mapeamento%20de%20solos" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://pedometriafacil.netlify.app/post/pedometrics_tools/&amp;t=Ferramenta%20pedometricas" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -953,7 +954,7 @@ bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
       
       
       <li>
-        <a href="mailto:?subject=Amostragem%20para%20mapeamento%20de%20solos&amp;body=https://pedometriafacil.netlify.app/post/pedometrics_tools/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Ferramenta%20pedometricas&amp;body=https://pedometriafacil.netlify.app/post/pedometrics_tools/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -966,7 +967,7 @@ bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://pedometriafacil.netlify.app/post/pedometrics_tools/&amp;title=Amostragem%20para%20mapeamento%20de%20solos" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://pedometriafacil.netlify.app/post/pedometrics_tools/&amp;title=Ferramenta%20pedometricas" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -979,7 +980,7 @@ bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Amostragem%20para%20mapeamento%20de%20solos%20https://pedometriafacil.netlify.app/post/pedometrics_tools/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Ferramenta%20pedometricas%20https://pedometriafacil.netlify.app/post/pedometrics_tools/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -992,7 +993,7 @@ bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://pedometriafacil.netlify.app/post/pedometrics_tools/&amp;title=Amostragem%20para%20mapeamento%20de%20solos" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://pedometriafacil.netlify.app/post/pedometrics_tools/&amp;title=Ferramenta%20pedometricas" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>

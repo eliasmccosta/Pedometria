@@ -6,8 +6,8 @@ image:
   focal_point: ""
   placement: 3
 math: true
-title: Amostragem para mapeamento de solos
-subtitle: 'Ferramenta pedometricas para pedologia quantitativa'
+title: Ferramenta pedometricas
+subtitle: 'Ferramenta pedometricas para análises de pedologia quantitativa'
 summary: ''
 bibliography: [references.bib]
 link-citations: true 
@@ -31,8 +31,8 @@ rmarkdown::render('index.Rmd', encoding = 'UTF-8'")
 # Introdução
 Nesse tutorial serão abordados através do Algoritmos para Pedologia Quantitativa (AQP em inglês) e pacotes auxiliares uma coleção de códigos, ideias, e plotes usando o software R [@R2018]. Toda a teoria por trás de grande parte do código pode ser encontrada no artigo [*Algorithms for quantitative pedology: A toolkit for soil scientists*](https://www.sciencedirect.com/science/article/pii/S009830041200369X?via%3Dihub) [@beaudette_algorithms_2013]. Além disso artigos disso alguns exemplos de aplicações das ferramentas podem se encontrados em @Pinheiro2016 e @Pinheiro2018. Para fins didáticos o tutorial foi dividido em três partes e os pacotes usados serão *soilDB*, que contem uma base de dados de solos para análises pedométricas, *AQP* que contem as principais ferramentas de pedologia quantitativa usadas no tutorial, *sharpshootR* que contem uma coelção de funções que dão suporte ao levantamento e exploração de dados de solos, *SP* um pacote que fornece classes e métodos para dados espaciais: pontos, linhas, polígonos e grades, *Hmisc* que contém muitas funções úteis para análise de dados, gráficos de alto nível, operações utilitárias, funções para calcular o tamanho de amostras, importar e manipular conjuntos de dados, imputar valores ausentes, criação avançada de tabelas, análise de cluster entre outras funções, *lattice* que é um sistema de visualização de dados de alto nível, poderoso e elegante, com ênfase em dados multivariados, *MASS* com funções e conjuntos de dados para apoiar Venables e Ripley, **Modern Applied Statistics with S** e *plyr* que contem um conjunto de ferramentas que resolve problemas tais como: Divisão, aplicação e combinação de dados. 
 
-## Base de dados dos execícios
-Todos os dados usados nos execícios ou são do pacote *AQP* ou são *soilDB*. Muitas das informações contidas nesse 
+## Base de dados dos exercícios
+Todos os dados usados nos exercícios ou são do pacote *AQP* ou são do pacote *soilDB*. Muitas das informações contidas nesse nesse tutorial foram extraídas do [projeto do AQP](http://ncss-tech.github.io/AQP/) 
 
 ```{r, warning=FALSE, message=FALSE}
 # Carregando os pacotes no R
@@ -85,11 +85,12 @@ aqp::groupedProfilePlot(sp1, groups='group', max.depth=240, group.name.offset = 
 # Esboços Temáticos
 sp1$structure_grade # 
 par(mar=c(1,1,3,1)) # tighter figure margins
-plot(sp1, name='name', color='structure_grade',cex.names=0.5,cex.id=0.5, id.style='top',col.legend.cex=1,family="serif")
+plot(sp1, name='name', color='structure_grade',cex.names=0.5,cex.id=0.5, id.style='top',col.legend.cex=1,family="serif", col.label='Estrutura', )
 
 sp1$prop # 
 par(mar=c(1,1,3,1)) # tighter figure margins
-plot(sp1, name='name', color='prop',cex.names=0.5,cex.id=0.5, id.style='top',col.legend.cex=1,family="serif")
+plot(sp1, name='name', color='prop',cex.names=0.5,cex.id=0.5, id.style='top',col.legend.cex=1,
+     col.label='Prop', family="serif")
 
 sp1$name1 # 
 par(mar=c(2,2,3,2)) # tighter figure margins
@@ -115,7 +116,7 @@ bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
          panel.bwplot( ... ) })
 bwplot(prop~ factor(name1, levels=hz.designation.by.median.depths),
        data=horizons(sp1),       
-       ylab='Prop',       
+       ylab='Profundidade',       
        scales=list(y=list(tick.number=10)),       
        panel= function ( ... ) {  
          panel.abline(h=seq(0, 600, by=50), v=1:length(hz.designation.by.median.depths), col=grey(0.8), lty=3)  

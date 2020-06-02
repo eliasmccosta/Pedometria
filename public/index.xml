@@ -52,7 +52,7 @@
     </item>
     
     <item>
-      <title>Amostragem para mapeamento de solos</title>
+      <title>Ferramenta pedometricas</title>
       <link>https://pedometriafacil.netlify.app/post/pedometrics_tools/</link>
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
       <guid>https://pedometriafacil.netlify.app/post/pedometrics_tools/</guid>
@@ -62,9 +62,9 @@
 &lt;div id=&#34;introdução&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Introdução&lt;/h1&gt;
 &lt;p&gt;Nesse tutorial serão abordados através do Algoritmos para Pedologia Quantitativa (AQP em inglês) e pacotes auxiliares uma coleção de códigos, ideias, e plotes usando o software R &lt;span class=&#34;citation&#34;&gt;(&lt;span class=&#34;citeproc-not-found&#34; data-reference-id=&#34;R2018&#34;&gt;&lt;strong&gt;???&lt;/strong&gt;&lt;/span&gt;)&lt;/span&gt;. Toda a teoria por trás de grande parte do código pode ser encontrada no artigo &lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S009830041200369X?via%3Dihub&#34;&gt;&lt;em&gt;Algorithms for quantitative pedology: A toolkit for soil scientists&lt;/em&gt;&lt;/a&gt; &lt;span class=&#34;citation&#34;&gt;(&lt;span class=&#34;citeproc-not-found&#34; data-reference-id=&#34;beaudette_algorithms_2013&#34;&gt;&lt;strong&gt;???&lt;/strong&gt;&lt;/span&gt;)&lt;/span&gt;. Além disso artigos disso alguns exemplos de aplicações das ferramentas podem se encontrados em &lt;span class=&#34;citation&#34;&gt;Pinheiro et al. (&lt;a href=&#34;#ref-Pinheiro2016&#34;&gt;2016&lt;/a&gt;)&lt;/span&gt; e &lt;span class=&#34;citation&#34;&gt;Pinheiro et al. (&lt;a href=&#34;#ref-Pinheiro2018&#34;&gt;2018&lt;/a&gt;)&lt;/span&gt;. Para fins didáticos o tutorial foi dividido em três partes e os pacotes usados serão &lt;em&gt;soilDB&lt;/em&gt;, que contem uma base de dados de solos para análises pedométricas, &lt;em&gt;AQP&lt;/em&gt; que contem as principais ferramentas de pedologia quantitativa usadas no tutorial, &lt;em&gt;sharpshootR&lt;/em&gt; que contem uma coelção de funções que dão suporte ao levantamento e exploração de dados de solos, &lt;em&gt;SP&lt;/em&gt; um pacote que fornece classes e métodos para dados espaciais: pontos, linhas, polígonos e grades, &lt;em&gt;Hmisc&lt;/em&gt; que contém muitas funções úteis para análise de dados, gráficos de alto nível, operações utilitárias, funções para calcular o tamanho de amostras, importar e manipular conjuntos de dados, imputar valores ausentes, criação avançada de tabelas, análise de cluster entre outras funções, &lt;em&gt;lattice&lt;/em&gt; que é um sistema de visualização de dados de alto nível, poderoso e elegante, com ênfase em dados multivariados, &lt;em&gt;MASS&lt;/em&gt; com funções e conjuntos de dados para apoiar Venables e Ripley, &lt;strong&gt;Modern Applied Statistics with S&lt;/strong&gt; e &lt;em&gt;plyr&lt;/em&gt; que contem um conjunto de ferramentas que resolve problemas tais como: Divisão, aplicação e combinação de dados.&lt;/p&gt;
-&lt;div id=&#34;base-de-dados-dos-execícios&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Base de dados dos execícios&lt;/h2&gt;
-&lt;p&gt;Todos os dados usados nos execícios ou são do pacote &lt;em&gt;AQP&lt;/em&gt; ou são &lt;em&gt;soilDB&lt;/em&gt;. Muitas das informações contidas nesse&lt;/p&gt;
+&lt;div id=&#34;base-de-dados-dos-exercícios&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Base de dados dos exercícios&lt;/h2&gt;
+&lt;p&gt;Todos os dados usados nos exercícios ou são do pacote &lt;em&gt;AQP&lt;/em&gt; ou são do pacote &lt;em&gt;soilDB&lt;/em&gt;. Muitas das informações contidas nesse nesse tutorial foram extraídas do &lt;a href=&#34;http://ncss-tech.github.io/AQP/&#34;&gt;projeto do AQP&lt;/a&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Carregando os pacotes no R
 library(soilDB) # 
 library(aqp)  # 
@@ -142,14 +142,15 @@ sp1$structure_grade # &lt;/code&gt;&lt;/pre&gt;
 ## [26]  1  1  1  1 NA NA NA NA NA  1  1  1  1  1 NA NA NA NA NA  1  1  1  1 NA NA
 ## [51] NA NA  1  1  1  1 NA NA NA NA&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar=c(1,1,3,1)) # tighter figure margins
-plot(sp1, name=&amp;#39;name&amp;#39;, color=&amp;#39;structure_grade&amp;#39;,cex.names=0.5,cex.id=0.5, id.style=&amp;#39;top&amp;#39;,col.legend.cex=1,family=&amp;quot;serif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+plot(sp1, name=&amp;#39;name&amp;#39;, color=&amp;#39;structure_grade&amp;#39;,cex.names=0.5,cex.id=0.5, id.style=&amp;#39;top&amp;#39;,col.legend.cex=1,family=&amp;quot;serif&amp;quot;, col.label=&amp;#39;Estrutura&amp;#39;, )&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-3-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sp1$prop # &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] 13  7  9 14 21 NA  1  3  2  4 14 18 22 30 50  5  6  6 25 57  8 14 23 57  0
 ## [26]  2  5  7  5  5  6 10 15 12  3  3  3  3  5  0  0  0  0  0  1  2  2  4  7  6
 ## [51]  1  0  5  3  3  3  2 27  3  5&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar=c(1,1,3,1)) # tighter figure margins
-plot(sp1, name=&amp;#39;name&amp;#39;, color=&amp;#39;prop&amp;#39;,cex.names=0.5,cex.id=0.5, id.style=&amp;#39;top&amp;#39;,col.legend.cex=1,family=&amp;quot;serif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+plot(sp1, name=&amp;#39;name&amp;#39;, color=&amp;#39;prop&amp;#39;,cex.names=0.5,cex.id=0.5, id.style=&amp;#39;top&amp;#39;,col.legend.cex=1,
+     col.label=&amp;#39;Prop&amp;#39;, family=&amp;quot;serif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-3-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sp1$name1 # &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## NULL&lt;/code&gt;&lt;/pre&gt;
@@ -178,7 +179,7 @@ bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
 &lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-3-6.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bwplot(prop~ factor(name1, levels=hz.designation.by.median.depths),
        data=horizons(sp1),       
-       ylab=&amp;#39;Prop&amp;#39;,       
+       ylab=&amp;#39;Profundidade&amp;#39;,       
        scales=list(y=list(tick.number=10)),       
        panel= function ( ... ) {  
          panel.abline(h=seq(0, 600, by=50), v=1:length(hz.designation.by.median.depths), col=grey(0.8), lty=3)  
