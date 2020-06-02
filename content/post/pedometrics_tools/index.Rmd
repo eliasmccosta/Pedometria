@@ -1,0 +1,127 @@
+---
+date: "2020-06-02"
+diagram: true
+image:
+  caption: 'Image credit: [**Elias**](https://www.instagram.com/eliasmendescosta/)'
+  focal_point: ""
+  placement: 3
+math: true
+title: Amostragem para mapeamento de solos
+subtitle: 'Ferramenta pedometricas para pedologia quantitativa'
+summary: ''
+bibliography: [references.bib]
+link-citations: true 
+csl: [geoderma-regional.csl]
+authors:
+- admin
+categories:
+  - R
+  - Programação
+tags:
+  - MDS
+  - Pedometria
+nocite: | 
+  @R-bookdown
+---
+
+```{r, eval=FALSE, echo=FALSE}
+rmarkdown::render('index.Rmd', encoding = 'UTF-8'")
+```
+
+# Introdução
+Nesse tutorial serão abordados através do Algoritmos para Pedologia Quantitativa (AQP em inglês) e pacotes auxiliares uma coleção de códigos, ideias, e plotes usando o software R [@R2018]. Toda a teoria por trás de grande parte do código pode ser encontrada no artigo [*Algorithms for quantitative pedology: A toolkit for soil scientists*](https://www.sciencedirect.com/science/article/pii/S009830041200369X?via%3Dihub) [@beaudette_algorithms_2013]. Além disso artigos disso alguns exemplos de aplicações das ferramentas podem se encontrados em @Pinheiro2016 e @Pinheiro2018. Para fins didáticos o tutorial foi dividido em três partes e os pacotes usados serão *soilDB*, que contem uma base de dados de solos para análises pedométricas, *AQP* que contem as principais ferramentas de pedologia quantitativa usadas no tutorial, *sharpshootR* que contem uma coelção de funções que dão suporte ao levantamento e exploração de dados de solos, *SP* um pacote que fornece classes e métodos para dados espaciais: pontos, linhas, polígonos e grades, *Hmisc* que contém muitas funções úteis para análise de dados, gráficos de alto nível, operações utilitárias, funções para calcular o tamanho de amostras, importar e manipular conjuntos de dados, imputar valores ausentes, criação avançada de tabelas, análise de cluster entre outras funções, *lattice* que é um sistema de visualização de dados de alto nível, poderoso e elegante, com ênfase em dados multivariados, *MASS* com funções e conjuntos de dados para apoiar Venables e Ripley, **Modern Applied Statistics with S** e *plyr* que contem um conjunto de ferramentas que resolve problemas tais como: Divisão, aplicação e combinação de dados. 
+
+## Base de dados dos execícios
+Todos os dados usados nos execícios ou são do pacote *AQP* ou são *soilDB*. Muitas das informações contidas nesse 
+
+```{r, warning=FALSE, message=FALSE}
+# Carregando os pacotes no R
+library(soilDB) # 
+library(aqp)  # 
+library(sharpshootR) # 
+library(sp) # 
+library(Hmisc)
+library(lattice)
+library(MASS)
+library(plyr)
+```
+# Parte I
+Na parte I serão abordadas características das funções básicas do *AQP*, conceito de coleção de perfis de solos, **SoilProfileCollection**, e verificação da estrutura de dados na coleção, além de alguns plotes básicos.
+A classe **SoilProfileCollection** foi projetada para simplificar o processo de trabalhar com a coleção de dados associados aos perfis de solo: dados em nível de local (site), dados em nível de horizonte, dados espaciais, dados de horizonte de diagnóstico, metadados, etc. Os exemplos listados abaixo devem ser copiados/colados deste documento e executados de forma interativa em R. Lembrando que antes de execultar você deve instalar e ler todas as bibliotécas (pacotes) mencionados. 
+
+
+```{r, warning=FALSE, message=FALSE}
+# Carregando dados de solos
+data(sp1) # Conjunto de dados sp1 do pacote AQP
+aqp::depths(sp1) <- id ~ top + bottom
+aqp::site(sp1) <- ~ group
+
+idname (sp1) # auto-explicativo
+horizonDepths(sp1) # auto-explicativo
+depth_units(sp1) # defaults 'cm'
+metadata(sp1) # 
+profile_id(sp1) # vector com IDs dos perfis
+horizonNames(sp1) # coluna com osnomes dos dados dos horizontes
+siteNames(sp1) # coluna com os nomes do dados dos locais (site data)
+length(sp1) # número de perfis na coleção
+nrow(sp1) # número de horizontes na coleção
+names(sp1) # nomes de colunas dos dados do site e do horizonte, concatenados em um único vetor
+min(sp1) # profundidade de perfil mais raso da coleção
+max(sp1) # profundidade de perfil mais profundo da coleção
+
+# Fazendo um plot simples
+plot(sp1, name='name')
+# title, note line argument:
+title('Perfis de Solo', line=1, cex.main=0.75)
+# profiles are centered at integers, from 1 to length(obj)
+axis(1, line=0, at=1:15, cex.axis=0.75, font=4, col='blue', col.axis='blue', lwd=2)
+mtext('Perfis', side=1, line=2, font=4, col='blue')
+# y-axis is based on profile depths
+axis(2, line=-1, at=pretty(1:max(sp1)), cex.axis=0.75, font=4, las=1, col='blue', col.axis='blue', lwd=2)
+mtext('Profundidade', side=2, line=1, font=4, col='blue')
+
+aqp::groupedProfilePlot(sp1, groups='group', max.depth=240, group.name.offset = -5, id.style='side')
+
+# Esboços Temáticos
+sp1$structure_grade # 
+par(mar=c(1,1,3,1)) # tighter figure margins
+plot(sp1, name='name', color='structure_grade',cex.names=0.5,cex.id=0.5, id.style='top',col.legend.cex=1,family="serif")
+
+sp1$prop # 
+par(mar=c(1,1,3,1)) # tighter figure margins
+plot(sp1, name='name', color='prop',cex.names=0.5,cex.id=0.5, id.style='top',col.legend.cex=1,family="serif")
+
+sp1$name1 # 
+par(mar=c(2,2,3,2)) # tighter figure margins
+plot(sp1, name='name', color='name', col.palette=RColorBrewer::brewer.pal(9, 'Set1'), col.label='Nomes do Horizontes', 
+     cex.names=0.5)
+###############
+### Boxplot ###
+sp1$name1 <- generalize.hz(sp1$name, 
+                           new=c('A','AB', 'BA','B','BC', 'C', 'E', 'AE', 'O', 'H', 'R', '2C', '3C', '3B', '3A'), 
+                           pat=c('^A','^AB','^BA','^B','^BC','^C', '^E', '^AE', '^O', '^H', '^R', '^2C', '^3C','^3B', '^3A' ))
+
+# compute horizon mid-points 
+sp1$mid <- with(horizons(sp1), (top+ bottom)/2)
+# sort horizon designation by group-wise median values 
+hz.designation.by.median.depths <- names(sort(tapply(sp1$mid, sp1$name1, median)))
+# plot the distribution of horizon mid-points by designation 
+bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
+       data=horizons(sp1),       
+       ylim=c(200, 0), ylab='Profundidade do ponto médio do horizonte (cm)',       
+       scales=list(y=list(tick.number=10)),       
+       panel= function ( ... ) {
+         panel.abline(h=seq(0, 180, by=10), v=1:length(hz.designation.by.median.depths), col=grey(0.8), lty=3)    
+         panel.bwplot( ... ) })
+bwplot(prop~ factor(name1, levels=hz.designation.by.median.depths),
+       data=horizons(sp1),       
+       ylab='Prop',       
+       scales=list(y=list(tick.number=10)),       
+       panel= function ( ... ) {  
+         panel.abline(h=seq(0, 600, by=50), v=1:length(hz.designation.by.median.depths), col=grey(0.8), lty=3)  
+         panel.bwplot( ... ) })
+```
+
+### Se você chegou até aqui muito bem !!!! 👏👏👏
+
+# Referências

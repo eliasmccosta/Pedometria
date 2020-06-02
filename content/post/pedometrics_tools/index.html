@@ -1,0 +1,168 @@
+---
+date: "2020-06-02"
+diagram: true
+image:
+  caption: 'Image credit: [**Elias**](https://www.instagram.com/eliasmendescosta/)'
+  focal_point: ""
+  placement: 3
+math: true
+title: Amostragem para mapeamento de solos
+subtitle: 'Ferramenta pedometricas para pedologia quantitativa'
+summary: ''
+bibliography: [references.bib]
+link-citations: true 
+csl: [geoderma-regional.csl]
+authors:
+- admin
+categories:
+  - R
+  - Programação
+tags:
+  - MDS
+  - Pedometria
+nocite: | 
+  @R-bookdown
+---
+
+
+
+<div id="introdução" class="section level1">
+<h1>Introdução</h1>
+<p>Nesse tutorial serão abordados através do Algoritmos para Pedologia Quantitativa (AQP em inglês) e pacotes auxiliares uma coleção de códigos, ideias, e plotes usando o software R <span class="citation">(<span class="citeproc-not-found" data-reference-id="R2018"><strong>???</strong></span>)</span>. Toda a teoria por trás de grande parte do código pode ser encontrada no artigo <a href="https://www.sciencedirect.com/science/article/pii/S009830041200369X?via%3Dihub"><em>Algorithms for quantitative pedology: A toolkit for soil scientists</em></a> <span class="citation">(<span class="citeproc-not-found" data-reference-id="beaudette_algorithms_2013"><strong>???</strong></span>)</span>. Além disso artigos disso alguns exemplos de aplicações das ferramentas podem se encontrados em <span class="citation">Pinheiro et al. (<a href="#ref-Pinheiro2016">2016</a>)</span> e <span class="citation">Pinheiro et al. (<a href="#ref-Pinheiro2018">2018</a>)</span>. Para fins didáticos o tutorial foi dividido em três partes e os pacotes usados serão <em>soilDB</em>, que contem uma base de dados de solos para análises pedométricas, <em>AQP</em> que contem as principais ferramentas de pedologia quantitativa usadas no tutorial, <em>sharpshootR</em> que contem uma coelção de funções que dão suporte ao levantamento e exploração de dados de solos, <em>SP</em> um pacote que fornece classes e métodos para dados espaciais: pontos, linhas, polígonos e grades, <em>Hmisc</em> que contém muitas funções úteis para análise de dados, gráficos de alto nível, operações utilitárias, funções para calcular o tamanho de amostras, importar e manipular conjuntos de dados, imputar valores ausentes, criação avançada de tabelas, análise de cluster entre outras funções, <em>lattice</em> que é um sistema de visualização de dados de alto nível, poderoso e elegante, com ênfase em dados multivariados, <em>MASS</em> com funções e conjuntos de dados para apoiar Venables e Ripley, <strong>Modern Applied Statistics with S</strong> e <em>plyr</em> que contem um conjunto de ferramentas que resolve problemas tais como: Divisão, aplicação e combinação de dados.</p>
+<div id="base-de-dados-dos-execícios" class="section level2">
+<h2>Base de dados dos execícios</h2>
+<p>Todos os dados usados nos execícios ou são do pacote <em>AQP</em> ou são <em>soilDB</em>. Muitas das informações contidas nesse</p>
+<pre class="r"><code># Carregando os pacotes no R
+library(soilDB) # 
+library(aqp)  # 
+library(sharpshootR) # 
+library(sp) # 
+library(Hmisc)
+library(lattice)
+library(MASS)
+library(plyr)</code></pre>
+</div>
+</div>
+<div id="parte-i" class="section level1">
+<h1>Parte I</h1>
+<p>Na parte I serão abordadas características das funções básicas do <em>AQP</em>, conceito de coleção de perfis de solos, <strong>SoilProfileCollection</strong>, e verificação da estrutura de dados na coleção, além de alguns plotes básicos.
+A classe <strong>SoilProfileCollection</strong> foi projetada para simplificar o processo de trabalhar com a coleção de dados associados aos perfis de solo: dados em nível de local (site), dados em nível de horizonte, dados espaciais, dados de horizonte de diagnóstico, metadados, etc. Os exemplos listados abaixo devem ser copiados/colados deste documento e executados de forma interativa em R. Lembrando que antes de execultar você deve instalar e ler todas as bibliotécas (pacotes) mencionados.</p>
+<pre class="r"><code># Carregando dados de solos
+data(sp1) # Conjunto de dados sp1 do pacote AQP
+aqp::depths(sp1) &lt;- id ~ top + bottom
+aqp::site(sp1) &lt;- ~ group
+
+idname (sp1) # auto-explicativo</code></pre>
+<pre><code>## [1] &quot;id&quot;</code></pre>
+<pre class="r"><code>horizonDepths(sp1) # auto-explicativo</code></pre>
+<pre><code>## [1] &quot;top&quot;    &quot;bottom&quot;</code></pre>
+<pre class="r"><code>depth_units(sp1) # defaults &#39;cm&#39;</code></pre>
+<pre><code>## [1] &quot;cm&quot;</code></pre>
+<pre class="r"><code>metadata(sp1) # </code></pre>
+<pre><code>##   depth_units
+## 1          cm</code></pre>
+<pre class="r"><code>profile_id(sp1) # vector com IDs dos perfis</code></pre>
+<pre><code>## [1] &quot;P001&quot; &quot;P002&quot; &quot;P003&quot; &quot;P004&quot; &quot;P005&quot; &quot;P006&quot; &quot;P007&quot; &quot;P008&quot; &quot;P009&quot;</code></pre>
+<pre class="r"><code>horizonNames(sp1) # coluna com osnomes dos dados dos horizontes</code></pre>
+<pre><code>##  [1] &quot;id&quot;               &quot;top&quot;              &quot;bottom&quot;           &quot;bound_distinct&quot;  
+##  [5] &quot;bound_topography&quot; &quot;name&quot;             &quot;texture&quot;          &quot;prop&quot;            
+##  [9] &quot;structure_grade&quot;  &quot;structure_size&quot;   &quot;structure_type&quot;   &quot;stickiness&quot;      
+## [13] &quot;plasticity&quot;       &quot;field_ph&quot;         &quot;hue&quot;              &quot;value&quot;           
+## [17] &quot;chroma&quot;           &quot;hzID&quot;</code></pre>
+<pre class="r"><code>siteNames(sp1) # coluna com os nomes do dados dos locais (site data)</code></pre>
+<pre><code>## [1] &quot;id&quot;    &quot;group&quot;</code></pre>
+<pre class="r"><code>length(sp1) # número de perfis na coleção</code></pre>
+<pre><code>## [1] 9</code></pre>
+<pre class="r"><code>nrow(sp1) # número de horizontes na coleção</code></pre>
+<pre><code>## [1] 60</code></pre>
+<pre class="r"><code>names(sp1) # nomes de colunas dos dados do site e do horizonte, concatenados em um único vetor</code></pre>
+<pre><code>##          horizons1          horizons2          horizons3          horizons4 
+##               &quot;id&quot;              &quot;top&quot;           &quot;bottom&quot;   &quot;bound_distinct&quot; 
+##          horizons5          horizons6          horizons7          horizons8 
+## &quot;bound_topography&quot;             &quot;name&quot;          &quot;texture&quot;             &quot;prop&quot; 
+##          horizons9         horizons10         horizons11         horizons12 
+##  &quot;structure_grade&quot;   &quot;structure_size&quot;   &quot;structure_type&quot;       &quot;stickiness&quot; 
+##         horizons13         horizons14         horizons15         horizons16 
+##       &quot;plasticity&quot;         &quot;field_ph&quot;              &quot;hue&quot;            &quot;value&quot; 
+##         horizons17         horizons18               site 
+##           &quot;chroma&quot;             &quot;hzID&quot;            &quot;group&quot;</code></pre>
+<pre class="r"><code>min(sp1) # profundidade de perfil mais raso da coleção</code></pre>
+<pre><code>## [1] 59</code></pre>
+<pre class="r"><code>max(sp1) # profundidade de perfil mais profundo da coleção</code></pre>
+<pre><code>## [1] 240</code></pre>
+<pre class="r"><code># Fazendo um plot simples
+plot(sp1, name=&#39;name&#39;)
+# title, note line argument:
+title(&#39;Perfis de Solo&#39;, line=1, cex.main=0.75)
+# profiles are centered at integers, from 1 to length(obj)
+axis(1, line=0, at=1:15, cex.axis=0.75, font=4, col=&#39;blue&#39;, col.axis=&#39;blue&#39;, lwd=2)
+mtext(&#39;Perfis&#39;, side=1, line=2, font=4, col=&#39;blue&#39;)
+# y-axis is based on profile depths
+axis(2, line=-1, at=pretty(1:max(sp1)), cex.axis=0.75, font=4, las=1, col=&#39;blue&#39;, col.axis=&#39;blue&#39;, lwd=2)
+mtext(&#39;Profundidade&#39;, side=2, line=1, font=4, col=&#39;blue&#39;)</code></pre>
+<p><img src="/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<pre class="r"><code>aqp::groupedProfilePlot(sp1, groups=&#39;group&#39;, max.depth=240, group.name.offset = -5, id.style=&#39;side&#39;)</code></pre>
+<p><img src="/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-3-2.png" width="672" /></p>
+<pre class="r"><code># Esboços Temáticos
+sp1$structure_grade # </code></pre>
+<pre><code>##  [1]  1  1  1  1  2 NA  3  1 NA NA NA  1  1  1 NA  2  2  1  1 NA  2  1 NA NA NA
+## [26]  1  1  1  1 NA NA NA NA NA  1  1  1  1  1 NA NA NA NA NA  1  1  1  1 NA NA
+## [51] NA NA  1  1  1  1 NA NA NA NA</code></pre>
+<pre class="r"><code>par(mar=c(1,1,3,1)) # tighter figure margins
+plot(sp1, name=&#39;name&#39;, color=&#39;structure_grade&#39;,cex.names=0.5,cex.id=0.5, id.style=&#39;top&#39;,col.legend.cex=1,family=&quot;serif&quot;)</code></pre>
+<p><img src="/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-3-3.png" width="672" /></p>
+<pre class="r"><code>sp1$prop # </code></pre>
+<pre><code>##  [1] 13  7  9 14 21 NA  1  3  2  4 14 18 22 30 50  5  6  6 25 57  8 14 23 57  0
+## [26]  2  5  7  5  5  6 10 15 12  3  3  3  3  5  0  0  0  0  0  1  2  2  4  7  6
+## [51]  1  0  5  3  3  3  2 27  3  5</code></pre>
+<pre class="r"><code>par(mar=c(1,1,3,1)) # tighter figure margins
+plot(sp1, name=&#39;name&#39;, color=&#39;prop&#39;,cex.names=0.5,cex.id=0.5, id.style=&#39;top&#39;,col.legend.cex=1,family=&quot;serif&quot;)</code></pre>
+<p><img src="/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-3-4.png" width="672" /></p>
+<pre class="r"><code>sp1$name1 # </code></pre>
+<pre><code>## NULL</code></pre>
+<pre class="r"><code>par(mar=c(2,2,3,2)) # tighter figure margins
+plot(sp1, name=&#39;name&#39;, color=&#39;name&#39;, col.palette=RColorBrewer::brewer.pal(9, &#39;Set1&#39;), col.label=&#39;Nomes do Horizontes&#39;, 
+     cex.names=0.5)</code></pre>
+<p><img src="/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-3-5.png" width="672" /></p>
+<pre class="r"><code>###############
+### Boxplot ###
+sp1$name1 &lt;- generalize.hz(sp1$name, 
+                           new=c(&#39;A&#39;,&#39;AB&#39;, &#39;BA&#39;,&#39;B&#39;,&#39;BC&#39;, &#39;C&#39;, &#39;E&#39;, &#39;AE&#39;, &#39;O&#39;, &#39;H&#39;, &#39;R&#39;, &#39;2C&#39;, &#39;3C&#39;, &#39;3B&#39;, &#39;3A&#39;), 
+                           pat=c(&#39;^A&#39;,&#39;^AB&#39;,&#39;^BA&#39;,&#39;^B&#39;,&#39;^BC&#39;,&#39;^C&#39;, &#39;^E&#39;, &#39;^AE&#39;, &#39;^O&#39;, &#39;^H&#39;, &#39;^R&#39;, &#39;^2C&#39;, &#39;^3C&#39;,&#39;^3B&#39;, &#39;^3A&#39; ))
+
+# compute horizon mid-points 
+sp1$mid &lt;- with(horizons(sp1), (top+ bottom)/2)
+# sort horizon designation by group-wise median values 
+hz.designation.by.median.depths &lt;- names(sort(tapply(sp1$mid, sp1$name1, median)))
+# plot the distribution of horizon mid-points by designation 
+bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
+       data=horizons(sp1),       
+       ylim=c(200, 0), ylab=&#39;Profundidade do ponto médio do horizonte (cm)&#39;,       
+       scales=list(y=list(tick.number=10)),       
+       panel= function ( ... ) {
+         panel.abline(h=seq(0, 180, by=10), v=1:length(hz.designation.by.median.depths), col=grey(0.8), lty=3)    
+         panel.bwplot( ... ) })</code></pre>
+<p><img src="/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-3-6.png" width="672" /></p>
+<pre class="r"><code>bwplot(prop~ factor(name1, levels=hz.designation.by.median.depths),
+       data=horizons(sp1),       
+       ylab=&#39;Prop&#39;,       
+       scales=list(y=list(tick.number=10)),       
+       panel= function ( ... ) {  
+         panel.abline(h=seq(0, 600, by=50), v=1:length(hz.designation.by.median.depths), col=grey(0.8), lty=3)  
+         panel.bwplot( ... ) })</code></pre>
+<p><img src="/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-3-7.png" width="672" /></p>
+<div id="se-você-chegou-até-aqui-muito-bem" class="section level3">
+<h3>Se você chegou até aqui muito bem !!!! 👏👏👏</h3>
+</div>
+</div>
+<div id="referências" class="section level1 unnumbered">
+<h1>Referências</h1>
+<div id="refs" class="references">
+<div id="ref-Pinheiro2016">
+<p>Pinheiro, H.S.K., Chagas, C. da S., Carvalho Junior, W., Anjos, L.H.C., 2016. Ferramentas de pedometria para caracterização da composição granulométrica de perfis de solos hidromórficos. Pesquisa Agropecuária Brasileira 51, 1326–1338. <a href="https://doi.org/10.1590/S0100-204X2016000900032">https://doi.org/10.1590/S0100-204X2016000900032</a></p>
+</div>
+<div id="ref-Pinheiro2018">
+<p>Pinheiro, H.S.K., Helena, L., Anjos, C., Xavier, P.A.M., Cesar, S., 2018. Quantitative pedology to evaluate a soil profile collection from the Brazilian semi-arid region. South African Journal of Geomatics 1862, 1–11. <a href="https://doi.org/10.1080/02571862.2017.1419385">https://doi.org/10.1080/02571862.2017.1419385</a></p>
+</div>
+</div>
+</div>
