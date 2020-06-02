@@ -291,6 +291,44 @@ d <- SoilTaxonomyDendrogram(s, cex.taxon.labels=0.8, width=0.25, y.offset = 0.4)
 
 ```
 
+
+# Parte III
+Nessa parte é usado outra base de dados do `soilDB`, e aqui além de plotes que marcam os horizontes diagnósticos de alguns perfis e feitos alguns plots que relacionam o perfil e a paisagem. Maiores comentários estam na linha de código
+
+```{r, warning=FALSE, message=FALSE}
+# Carregando outros dados de solos
+data("loafercreek")
+# selecionar os 10 primeiros perfis
+x <- loafercreek[1:10, ]
+
+#reconfigurando as margens porque o default é muito largo
+par(mar=c(1,1,2,1))
+
+# Alguns plots
+plot(x)
+plot(x, label='pedon_id', id.style='side')
+str(x)
+
+# Adicionar marcação para alguns horizontes diagnósticos
+addDiagnosticBracket(x, kind='argillic horizon', col='red')
+addDiagnosticBracket(x, kind='paralithic contact', col='black')
+
+# Agrupar perfis pela posição na paisagem
+groupedProfilePlot(x, groups='hillslopeprof', label='pedon_id', id.style='side')
+
+# plot de distância ao longo de um transecto
+coordinates(x) <- ~ x_std + y_std
+# defina o sistema de coordenada de referência (CRS)
+proj4string(x) <- '+proj=longlat +datum=WGS84'
+crs.utm <- CRS('+proj=utm +zone=10 +datum=NAD83') #reprojetando para utm metros
+par(mar=c(4.5,4,1,1))
+plotTransect(x, grad.var.name = 'elev_field', crs = crs.utm)
+plotTransect(x, grad.var.name='elev_field', crs=crs.utm, grad.axis.title='Elevação (m)', 
+             distance.axis.title='Distância ao longo do transecto (km)',
+             label='pedon_id', scaling.factor = 0.5,
+             cex.names=0.8,cex.id=0.8,col.legend.cex=1.5,family="serif")
+
+```
 ### Se você chegou até aqui muito bem !!!! 👏👏👏
 
 # Referências
