@@ -181,8 +181,11 @@ lattice::bwplot(prop~ factor(name1, levels=hz.designation.by.median.depths),
          panel.abline(h=seq(0, 600, by=50), v=1:length(hz.designation.by.median.depths), col=grey(0.8), lty=3)  
          panel.bwplot( ... ) })
 ```
-# Parte II
+
+#Parte II
+
 ## Funções de fatiamento (slice)
+
 Coleções de perfis de solo podem ser fatiadas (ou reamostradas) em intervalos regulares de profundidade com a função `slice()`. A estrutura de fatiamento e as variáveis de interesse são definidas por meio de notação de fórmula: seq ~ var.1 + var.2 + var.3 + ... onde seq é uma sequência de números inteiros (por exemplo, 0:15, c (5,10,15,20) etc.) e var.1 + var.2 + var.3 + ... são atributos no horizonte que se deja fatiar. As variáveis contínuas e categóricas podem ser nomeadas no lado direito da fórmula. Os resultados retornados pela função `slice ()` são **SoilProfileCollection** ou **data.frame** quando chamados com o argumento opcional *just.the.data = TRUE*. Por exemplo, para dividir nosso conjunto de dados de amostra em intervalos de 1 cm, de 0 a 15 cm:
 
 ```{r, warning=FALSE, message=FALSE}

@@ -889,21 +889,21 @@ sp4</code></pre>
 ## 5  glenn    A   0      9 0.2 21.9 4.4  18.8        0.20   54   20   25 0.55
 ## 6  glenn   Bt   9     34 0.3 18.9 4.5  27.5        0.20   49   18   34 0.84
 ##   hzID thickness random.numbers
-## 1    1         3     0.04657807
-## 2    2         5     0.49034281
-## 3    3        22    -0.06534385
-## 4    4        12     0.68077606
-## 5    5         9     1.23107803
-## 6    6        25     0.98054068
+## 1    1         3    -0.36060117
+## 2    2         5     1.75905157
+## 3    3        22    -0.48821296
+## 4    4        12    -0.91432946
+## 5    5         9     1.21854215
+## 6    6        25    -0.09023359
 ## 
 ## Sampling site attributes:
 ##          id elevation group
-## 1    colusa  791.5455     A
-## 2     glenn 1233.3481     B
-## 3     kings  663.0645     A
-## 4  mariposa  976.2551     B
-## 5 mendocino  805.6210     A
-## 6      napa  876.1520     B</code></pre>
+## 1    colusa  883.3759     A
+## 2     glenn 1058.3092     B
+## 3     kings 1193.0784     A
+## 4  mariposa  971.4880     B
+## 5 mendocino 1017.9710     A
+## 6      napa  968.5223     B</code></pre>
 <pre class="r"><code># Fazendo um plot simples
 plot(sp4, name=&#39;name&#39;)
 # title, note line argument:
@@ -967,10 +967,12 @@ lattice::bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
        panel= function ( ... ) {  
          panel.abline(h=seq(0, 600, by=50), v=1:length(hz.designation.by.median.depths), col=grey(0.8), lty=3)  
          panel.bwplot( ... ) })</code></pre>
-<p><img src="/post/tools/index_files/figure-html/unnamed-chunk-7-7.png" width="672" />
-# Parte II
-## Funções de fatiamento (slice)
-Coleções de perfis de solo podem ser fatiadas (ou reamostradas) em intervalos regulares de profundidade com a função <code>slice()</code>. A estrutura de fatiamento e as variáveis de interesse são definidas por meio de notação de fórmula: seq ~ var.1 + var.2 + var.3 + … onde seq é uma sequência de números inteiros (por exemplo, 0:15, c (5,10,15,20) etc.) e var.1 + var.2 + var.3 + … são atributos no horizonte que se deja fatiar. As variáveis contínuas e categóricas podem ser nomeadas no lado direito da fórmula. Os resultados retornados pela função <code>slice ()</code> são <strong>SoilProfileCollection</strong> ou <strong>data.frame</strong> quando chamados com o argumento opcional <em>just.the.data = TRUE</em>. Por exemplo, para dividir nosso conjunto de dados de amostra em intervalos de 1 cm, de 0 a 15 cm:</p>
+<p><img src="/post/tools/index_files/figure-html/unnamed-chunk-7-7.png" width="672" /></p>
+<p>#Parte II</p>
+</div>
+<div id="funções-de-fatiamento-slice" class="section level2">
+<h2>Funções de fatiamento (slice)</h2>
+<p>Coleções de perfis de solo podem ser fatiadas (ou reamostradas) em intervalos regulares de profundidade com a função <code>slice()</code>. A estrutura de fatiamento e as variáveis de interesse são definidas por meio de notação de fórmula: seq ~ var.1 + var.2 + var.3 + … onde seq é uma sequência de números inteiros (por exemplo, 0:15, c (5,10,15,20) etc.) e var.1 + var.2 + var.3 + … são atributos no horizonte que se deja fatiar. As variáveis contínuas e categóricas podem ser nomeadas no lado direito da fórmula. Os resultados retornados pela função <code>slice ()</code> são <strong>SoilProfileCollection</strong> ou <strong>data.frame</strong> quando chamados com o argumento opcional <em>just.the.data = TRUE</em>. Por exemplo, para dividir nosso conjunto de dados de amostra em intervalos de 1 cm, de 0 a 15 cm:</p>
 <pre class="r"><code># fatiar dados
 sliced &lt;- aqp::slice(sp4, fm= 0:50 ~ sand + silt + clay)
 # verificar o resultado
