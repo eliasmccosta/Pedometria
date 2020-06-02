@@ -293,10 +293,10 @@ d <- SoilTaxonomyDendrogram(s, cex.taxon.labels=0.8, width=0.25, y.offset = 0.4)
 
 
 # Parte III
-Nessa parte é usado outra base de dados do `soilDB`, e aqui além de plotes que marcam os horizontes diagnósticos de alguns perfis e feitos alguns plots que relacionam o perfil e a paisagem. Maiores comentários estam na linha de código
+Nessa parte é usado outra base de dados do `soilDB` são eles o conjunto `loafercreek` e o conjunto `mineralKing`, e aqui além de plots que marcam os horizontes diagnósticos de alguns perfis é feitos alguns plots que relacionam o perfil e a paisagem. Maiores comentários estam na linha de código
 
 ```{r, warning=FALSE, message=FALSE}
-# Carregando outros dados de solos
+# Carregando onconjunto de dados de solos loafercreek
 data("loafercreek")
 # selecionar os 10 primeiros perfis
 x <- loafercreek[1:10, ]
@@ -316,14 +316,23 @@ addDiagnosticBracket(x, kind='paralithic contact', col='black')
 # Agrupar perfis pela posição na paisagem
 groupedProfilePlot(x, groups='hillslopeprof', label='pedon_id', id.style='side')
 
+# Carregando onconjunto de dados de solos mineralKing
+data("mineralKing")
+par(mar=c(1,1,2,1))
+groupedProfilePlot(mineralKing, groups='taxonname', print.id=FALSE)
+
 # plot de distância ao longo de um transecto
-coordinates(x) <- ~ x_std + y_std
+coordinates(mineralKing) <- ~ x_std + y_std
 # defina o sistema de coordenada de referência (CRS)
-proj4string(x) <- '+proj=longlat +datum=WGS84'
-crs.utm <- CRS('+proj=utm +zone=10 +datum=NAD83') #reprojetando para utm metros
+proj4string(mineralKing) <- '+proj=longlat +datum=NAD83'
+crs.utm <- CRS('+proj=utm +zone=11 +datum=NAD83') #reprojetando para utm metros
 par(mar=c(4.5,4,1,1))
-plotTransect(x, grad.var.name = 'elev_field', crs = crs.utm)
-plotTransect(x, grad.var.name='elev_field', crs=crs.utm, grad.axis.title='Elevação (m)', 
+
+# plot Padrão
+plotTransect(mineralKing, grad.var.name = 'elev_field', crs = crs.utm)
+
+# plot com alteração de tamanho e tipo de fonte e nome dos eixos
+plotTransect(mineralKing, grad.var.name='elev_field', crs=crs.utm, grad.axis.title='Elevação (m)', 
              distance.axis.title='Distância ao longo do transecto (km)',
              label='pedon_id', scaling.factor = 0.5,
              cex.names=0.8,cex.id=0.8,col.legend.cex=1.5,family="serif")
