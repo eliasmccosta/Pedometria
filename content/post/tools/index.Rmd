@@ -6,8 +6,8 @@ image:
   focal_point: ""
   placement: 3
 math: true
-title: Ferramentas pedometricas
-subtitle: 'Ferramentas pedometricas para análise de pedologia quantitativa'
+title: Ferramentas pedométricas
+subtitle: 'Ferramentas pedométricas para análise de pedologia quantitativa'
 summary: ''
 bibliography: [references.bib]
 link-citations: true 

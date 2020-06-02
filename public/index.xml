@@ -52,7 +52,7 @@
     </item>
     
     <item>
-      <title>Ferramentas pedometricas</title>
+      <title>Ferramentas pedométricas</title>
       <link>https://pedometriafacil.netlify.app/post/tools/</link>
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
       <guid>https://pedometriafacil.netlify.app/post/tools/</guid>
@@ -191,21 +191,21 @@ sp4&lt;/code&gt;&lt;/pre&gt;
 ## 5  glenn    A   0      9 0.2 21.9 4.4  18.8        0.20   54   20   25 0.55
 ## 6  glenn   Bt   9     34 0.3 18.9 4.5  27.5        0.20   49   18   34 0.84
 ##   hzID thickness random.numbers
-## 1    1         3      0.2240481
-## 2    2         5     -1.4982659
-## 3    3        22     -0.3595631
-## 4    4        12      0.2497662
-## 5    5         9     -0.1860561
-## 6    6        25     -1.9475632
+## 1    1         3     1.33850280
+## 2    2         5     0.07588016
+## 3    3        22     0.31418409
+## 4    4        12     1.37243127
+## 5    5         9     1.32200831
+## 6    6        25    -1.36221230
 ## 
 ## Sampling site attributes:
 ##          id elevation group
-## 1    colusa  818.5822     A
-## 2     glenn 1128.8932     B
-## 3     kings  686.5213     A
-## 4  mariposa 1091.3266     B
-## 5 mendocino  750.6490     A
-## 6      napa 1196.6594     B&lt;/code&gt;&lt;/pre&gt;
+## 1    colusa  815.4883     A
+## 2     glenn 1205.2245     B
+## 3     kings 1031.2892     A
+## 4  mariposa 1164.5104     B
+## 5 mendocino  904.1963     A
+## 6      napa  957.3039     B&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Fazendo um plot simples
 plot(sp4, name=&amp;#39;name&amp;#39;)
 # title, note line argument:
