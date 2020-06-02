@@ -1,0 +1,1608 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Elias Mendes Costa">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Introdução Nesse tutorial serão abordados através do Algoritmos para Pedologia Quantitativa (AQP em inglês) e pacotes auxiliares uma coleção de códigos, ideias, e plotes usando o software R (R Core Team, 2019).">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://pedometriafacil.netlify.app/post/tools/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://pedometriafacil.netlify.app/post/tools/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Pedometria Fácil">
+  <meta property="og:url" content="https://pedometriafacil.netlify.app/post/tools/">
+  <meta property="og:title" content="Ferramentas pedometricas | Pedometria Fácil">
+  <meta property="og:description" content="Introdução Nesse tutorial serão abordados através do Algoritmos para Pedologia Quantitativa (AQP em inglês) e pacotes auxiliares uma coleção de códigos, ideias, e plotes usando o software R (R Core Team, 2019)."><meta property="og:image" content="https://pedometriafacil.netlify.app/post/tools/featured.png">
+  <meta property="twitter:image" content="https://pedometriafacil.netlify.app/post/tools/featured.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-06-02T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-06-02T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://pedometriafacil.netlify.app/post/tools/"
+  },
+  "headline": "Ferramentas pedometricas",
+  
+  "image": [
+    "https://pedometriafacil.netlify.app/post/tools/featured.png"
+  ],
+  
+  "datePublished": "2020-06-02T00:00:00Z",
+  "dateModified": "2020-06-02T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Elias Mendes Costa"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pedometria Fácil",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pedometriafacil.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Introdução Nesse tutorial serão abordados através do Algoritmos para Pedologia Quantitativa (AQP em inglês) e pacotes auxiliares uma coleção de códigos, ideias, e plotes usando o software R (R Core Team, 2019)."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Ferramentas pedometricas | Pedometria Fácil</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Pedometria Fácil</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Pedometria Fácil</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Postagens</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="https://www.youtube.com/channel/UCDkLzuE5WtNF0HRzTnsj-UA" target="_blank" rel="noopener"><span>Vídeos</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projetos</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publicações</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Cursos</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contato</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Paletras e Workshops</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+            
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="http://lattes.cnpq.br/2831196588233643" target="_blank" rel="noopener"><span>Lattes</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Ferramentas pedometricas</h1>
+
+  
+  <p class="page-subtitle">Ferramentas pedometricas para análise de pedologia quantitativa</p>
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  
+  <span><a href="/author/elias-mendes-costa/">Elias Mendes Costa</a></span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jun 2, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    16 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/programacao/">Programação</a>, <a href="/category/r/">R</a></span>
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="article-header container-fluid featured-image-wrapper mt-4 mb-4" style="max-width: 462px; max-height: 378px;">
+  <div style="position: relative">
+    <img src="/post/tools/featured.png" alt="" class="featured-image">
+    <span class="article-header-caption">Image credit: <a href="https://www.instagram.com/eliasmendescosta/"><strong>Elias</strong></a></span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+
+<div id="introdução" class="section level1">
+<h1>Introdução</h1>
+<p>Nesse tutorial serão abordados através do Algoritmos para Pedologia Quantitativa (AQP em inglês) e pacotes auxiliares uma coleção de códigos, ideias, e plotes usando o software R <span class="citation">(R Core Team, <a href="#ref-R2019">2019</a>)</span>. Toda a teoria por trás de grande parte do código pode ser encontrada no artigo <a href="https://www.sciencedirect.com/science/article/pii/S009830041200369X?via%3Dihub"><em>Algorithms for quantitative pedology: A toolkit for soil scientists</em></a> <span class="citation">(Beaudette et al., <a href="#ref-Beaudette2013">2013</a>)</span>. Além disso artigos disso alguns exemplos de aplicações das ferramentas podem se encontrados em <span class="citation">Pinheiro et al. (<a href="#ref-Pinheiro2016">2016</a>)</span> e <span class="citation">Pinheiro et al. (<a href="#ref-Pinheiro2018">2018</a>)</span>. Para fins didáticos o tutorial foi dividido em três partes e os pacotes usados serão <code>soilDB</code>, que contem uma base de dados de solos para análises pedométricas, <code>AQP</code> que contem as principais ferramentas de pedologia quantitativa usadas no tutorial, <code>sharpshootR</code> que contem uma coelção de funções que dão suporte ao levantamento e exploração de dados de solos, <code>SP</code> um pacote que fornece classes e métodos para dados espaciais: pontos, linhas, polígonos e grades, <code>Hmisc</code> que contém muitas funções úteis para análise de dados, gráficos de alto nível, operações utilitárias, funções para calcular o tamanho de amostras, importar e manipular conjuntos de dados, imputar valores ausentes, criação avançada de tabelas, análise de cluster entre outras funções, <code>lattice</code> que é um sistema de visualização de dados de alto nível, poderoso e elegante, com ênfase em dados multivariados, <code>MASS</code> com funções e conjuntos de dados para apoiar Venables e Ripley, <strong>Modern Applied Statistics with S</strong>, <code>plyr</code> que contem um conjunto de ferramentas que resolve problemas tais como: Divisão, aplicação e combinação de dados e <code>cluster</code> que um pacote com médodos para análise de cluster a fim de encontrar grupos em conjunto de dados.</p>
+<div id="base-de-dados-dos-exercícios" class="section level2">
+<h2>Base de dados dos exercícios</h2>
+<p>Todos os dados usados nos exercícios ou são do pacote <code>AQP</code> ou são do pacote <code>soilDB</code>. Muitas das informações contidas nesse tutorial foram extraídas do <a href="http://ncss-tech.github.io/AQP/">projeto do AQP</a> e todo crédito é dado ao autor.</p>
+<pre class="r"><code># Carregando os pacotes no R
+library(soilDB) 
+library(aqp)  
+library(sharpshootR) 
+library(sp) 
+library(Hmisc)
+library(lattice)
+library(MASS)
+library(plyr)
+library(cluster)</code></pre>
+</div>
+</div>
+<div id="parte-i" class="section level1">
+<h1>Parte I</h1>
+<p>Na parte I serão abordadas características das funções básicas do <em>AQP</em>, conceito de coleção de perfis de solos, <strong>SoilProfileCollection</strong>, e verificação da estrutura de dados na coleção, além de alguns plotes básicos.
+A classe <strong>SoilProfileCollection</strong> foi projetada para simplificar o processo de trabalhar com a coleção de dados associados aos perfis de solo: dados em nível de local (site), dados em nível de horizonte, dados espaciais, dados de horizontes de diagnósticos, metadados, etc. Os exemplos listados abaixo devem ser copiados/colados deste documento e executados de forma interativa em R. Lembrando que antes de execultar você deve instalar e carregar todas as bibliotécas (pacotes) mencionados.</p>
+<div id="criação-de-objetos" class="section level2">
+<h2>Criação de Objetos</h2>
+<p>Os objetos <strong>SoilProfileCollection</strong> geralmente são criados pela através de objetos <em>data.frame</em> (tabelas retangulares de dados) que contêm pelo menos três colunas essenciais:</p>
+<ul>
+<li>Uma coluna de identificação que identifica exclusivamente grupos de horizontes (por exemplo, <em>pedons</em>)</li>
+<li>Limites superiores do horizonte</li>
+<li>Limites inferiores do horizonte</li>
+</ul>
+<p>O <em>data.frame</em> deve ser pré-classificado de acordo com o ID do perfil e o limite superior do horizonte. A notação de fórmula é usada para definir as colunas usadas para promover um objeto <em>data.frame</em>.</p>
+<pre class="r"><code># Carregando dados de solos
+# upgrade para SoilProfileCollection
+# &#39;id&#39; é o nome da coluna que contém o ID do perfil
+# &#39;top&#39; é o nome da coluna que contém os limites superiores do horizonte
+# &#39;bottom&#39; é o nome da coluna que contém os limites inferiores do horizonte
+data(sp1) # Conjunto de dados sp4 do pacote AQP (data.frame)
+aqp::depths(sp1) &lt;- id ~ top + bottom 
+aqp::site(sp1) &lt;- ~ group </code></pre>
+</div>
+<div id="acessando-configurando-e-substituindo-dados" class="section level2">
+<h2>Acessando, configurando e substituindo dados</h2>
+<p>As funções de acesar são usadas para extrair componentes específicos dos objetos <strong>SoilProfileCollection</strong>.</p>
+<pre class="r"><code># Métodos para inpensão dos objetos
+aqp::idname (sp1) # auto-explicativo</code></pre>
+<pre><code>## [1] &quot;id&quot;</code></pre>
+<pre class="r"><code>aqp::horizonDepths(sp1) # auto-explicativo</code></pre>
+<pre><code>## [1] &quot;top&quot;    &quot;bottom&quot;</code></pre>
+<pre class="r"><code>aqp::depth_units(sp1) # defaults &#39;cm&#39;</code></pre>
+<pre><code>## [1] &quot;cm&quot;</code></pre>
+<pre class="r"><code>aqp::metadata(sp1) # </code></pre>
+<pre><code>##   depth_units
+## 1          cm</code></pre>
+<pre class="r"><code>aqp::profile_id(sp1) # vector com IDs dos perfis</code></pre>
+<pre><code>## [1] &quot;P001&quot; &quot;P002&quot; &quot;P003&quot; &quot;P004&quot; &quot;P005&quot; &quot;P006&quot; &quot;P007&quot; &quot;P008&quot; &quot;P009&quot;</code></pre>
+<pre class="r"><code>aqp::horizonNames(sp1) # coluna com osnomes dos dados dos horizontes</code></pre>
+<pre><code>##  [1] &quot;id&quot;               &quot;top&quot;              &quot;bottom&quot;           &quot;bound_distinct&quot;  
+##  [5] &quot;bound_topography&quot; &quot;name&quot;             &quot;texture&quot;          &quot;prop&quot;            
+##  [9] &quot;structure_grade&quot;  &quot;structure_size&quot;   &quot;structure_type&quot;   &quot;stickiness&quot;      
+## [13] &quot;plasticity&quot;       &quot;field_ph&quot;         &quot;hue&quot;              &quot;value&quot;           
+## [17] &quot;chroma&quot;           &quot;hzID&quot;</code></pre>
+<pre class="r"><code>aqp::siteNames(sp1) # coluna com os nomes do dados dos locais (site data)</code></pre>
+<pre><code>## [1] &quot;id&quot;    &quot;group&quot;</code></pre>
+<pre class="r"><code>length(sp1) # número de perfis na coleção</code></pre>
+<pre><code>## [1] 9</code></pre>
+<pre class="r"><code>nrow(sp1) # número de horizontes na coleção</code></pre>
+<pre><code>## [1] 60</code></pre>
+<pre class="r"><code>names(sp1) # nomes de colunas dos dados do site e do horizonte, concatenados em um único vetor</code></pre>
+<pre><code>##          horizons1          horizons2          horizons3          horizons4 
+##               &quot;id&quot;              &quot;top&quot;           &quot;bottom&quot;   &quot;bound_distinct&quot; 
+##          horizons5          horizons6          horizons7          horizons8 
+## &quot;bound_topography&quot;             &quot;name&quot;          &quot;texture&quot;             &quot;prop&quot; 
+##          horizons9         horizons10         horizons11         horizons12 
+##  &quot;structure_grade&quot;   &quot;structure_size&quot;   &quot;structure_type&quot;       &quot;stickiness&quot; 
+##         horizons13         horizons14         horizons15         horizons16 
+##       &quot;plasticity&quot;         &quot;field_ph&quot;              &quot;hue&quot;            &quot;value&quot; 
+##         horizons17         horizons18               site 
+##           &quot;chroma&quot;             &quot;hzID&quot;            &quot;group&quot;</code></pre>
+<pre class="r"><code>min(sp1) # profundidade de perfil mais raso da coleção</code></pre>
+<pre><code>## [1] 59</code></pre>
+<pre class="r"><code>max(sp1) # profundidade de perfil mais profundo da coleção</code></pre>
+<pre><code>## [1] 240</code></pre>
+</div>
+<div id="dados-do-horizonte-e-do-site-local" class="section level2">
+<h2>Dados do horizonte e do site (local)</h2>
+<p>Normalmente, os dados do horizonte e do site são os componentes mais importantes dos objetos SoilProfileCollection. Ambos são armazenados internamente como objetos data.frame; com uma ou mais linhas (por ID do perfil) na tabela do horizonte e uma linha (por ID do perfil) na tabela do site. As colunas de qualquer tabela podem ser acessadas com a notação <code>$</code>. Novos dados podem ser atribuídos a qualquer tabela da mesma maneira, desde que o comprimento dos novos dados seja:</p>
+<ul>
+<li>Mesmo tamanho que o número de perfis na coleção (o destino é a tabela de sites).</li>
+<li>Mesmo comprimento que o número de horizontes na coleção (o destino é a tabela do horizonte).</li>
+</ul>
+</div>
+<div id="plotando-soilprofilecollection" class="section level2">
+<h2>Plotando <strong>SoilProfileCollection</strong></h2>
+<p>O método <code>plot()</code> para objetos <strong>SoilProfileCollection</strong> gera esboços de perfis na coleção com base nos limites dos horizontes, alinhados verticalmente a uma sequência inteira de 1 ao número de perfis. Os nomes dos horizontes são extraídos automaticamente de um nome de atributo no nível do horizonte (se presente) ou por meio de um atributo alternativo fornecido como argumento: <code>name = 'nomedacoula'</code>. As cores do horizonte são geradas automaticamente a partir do atributo no nível do horizonte <code>soil_color</code>, ou qualquer outro atributo da descrição de cor compatível com R, fornecido como argumento: <code>color = 'nomedacoula'</code>. Essa função é altamente personalizável; portanto, é prudente consultar a ajuda <code>(plotSPC)</code> de tempos em tempos. As cores do solo na notação Munsell podem ser convertidas em cores compatíveis com R via <code>munsell2rgb()</code>.</p>
+<pre class="r"><code>data(sp4) # Conjunto de dados sp4 do pacote AQP (data.frame)
+aqp::depths(sp4) &lt;- id ~ top + bottom 
+# Atribuição de novos dados a atributos existentes ou novos
+sp4$elevation &lt;- rnorm(n=length(sp4), mean=1000, sd=150) # no nível do site, com base no comprimento dos dados atribuídos
+sp4$thickness &lt;- sp4$bottom - sp4$top # nível do horizonte
+# Extração de atributos específicos por nome
+sp4$clay # Vetor de conteúdo de argila (dados do horizonte)</code></pre>
+<pre><code>##  [1] 21 27 32 55 25 34  3 15 27 32 25 31 33 13 21 23 15 17 12 19 14 14 22 25 40
+## [26] 51 67 24 25 32</code></pre>
+<p>Os dados do horizonte e do local (site) também podem ser modificados por extração para um data.frame, seguidos pela substituição (dados do horizonte) ou junção (dados do site). Observe que, embora essa abordagem ofereça a maior flexibilidade, ela também é a mais perigosa - a substituição dos dados do horizonte por novos dados que não estão exatamente de acordo com a classificação original pode corromper seu <strong>SoilProfileCollection</strong>.</p>
+<pre class="r"><code># extrair dados os horizontes para o data.frame
+h &lt;- aqp::horizons(sp4)
+# Adicionar uma nova coluna e salvar de volta no objeto
+h$random.numbers &lt;- rnorm(n=nrow(h), mean=0, sd=1)
+# repor dados originais dos horizontes com versão modificada
+#!a ordem das linhas não deve ser alterada!
+horizons(sp4) &lt;- h
+# extrair dados do site para o data.frame
+s &lt;- aqp::site(sp4)
+# Adicionar um grupo para o site fake
+s$group &lt;- base::factor(rep(c(&#39;A&#39;, &#39;B&#39;), length.out=nrow(s)))
+# junte novos dados do site com dados anteriores: os dados antigos não são substituídos
+site(sp4) &lt;- s
+# Verificar
+sp4</code></pre>
+<pre><code>## Object of class SoilProfileCollection
+## Number of profiles: 10
+## Depth range: 16-49 cm
+## 
+## Horizon attributes:
+##       id name top bottom   K   Mg  Ca CEC_7 ex_Ca_to_Mg sand silt clay   CF
+## 1 colusa    A   0      3 0.3 25.7 9.0  23.0        0.35   46   33   21 0.12
+## 2 colusa  ABt   3      8 0.2 23.7 5.6  21.4        0.23   42   31   27 0.27
+## 3 colusa  Bt1   8     30 0.1 23.2 1.9  23.7        0.08   40   28   32 0.27
+## 4 colusa  Bt2  30     42 0.1 44.3 0.3  43.0        0.01   27   18   55 0.16
+## 5  glenn    A   0      9 0.2 21.9 4.4  18.8        0.20   54   20   25 0.55
+## 6  glenn   Bt   9     34 0.3 18.9 4.5  27.5        0.20   49   18   34 0.84
+##   hzID thickness random.numbers
+## 1    1         3     0.04657807
+## 2    2         5     0.49034281
+## 3    3        22    -0.06534385
+## 4    4        12     0.68077606
+## 5    5         9     1.23107803
+## 6    6        25     0.98054068
+## 
+## Sampling site attributes:
+##          id elevation group
+## 1    colusa  791.5455     A
+## 2     glenn 1233.3481     B
+## 3     kings  663.0645     A
+## 4  mariposa  976.2551     B
+## 5 mendocino  805.6210     A
+## 6      napa  876.1520     B</code></pre>
+<pre class="r"><code># Fazendo um plot simples
+plot(sp4, name=&#39;name&#39;)
+# title, note line argument:
+title(&#39;Perfis de Solo&#39;, line=1, cex.main=0.75)
+# profiles are centered at integers, from 1 to length(obj)
+axis(1, line=0, at=1:15, cex.axis=0.75, font=4, col=&#39;blue&#39;, col.axis=&#39;blue&#39;, lwd=2)
+mtext(&#39;Perfis&#39;, side=1, line=2, font=4, col=&#39;blue&#39;)
+# y-axis is based on profile depths
+axis(2, line=-1, at=pretty(1:max(sp4)), cex.axis=0.75, font=4, las=1, col=&#39;blue&#39;, col.axis=&#39;blue&#39;, lwd=2)
+mtext(&#39;Profundidade&#39;, side=2, line=1, font=4, col=&#39;blue&#39;)</code></pre>
+<p><img src="/post/tools/index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<pre class="r"><code># plot com separação de grupos
+aqp::groupedProfilePlot(sp4, groups=&#39;group&#39;, max.depth=60, group.name.offset = -5, id.style=&#39;side&#39;)</code></pre>
+<p><img src="/post/tools/index_files/figure-html/unnamed-chunk-7-2.png" width="672" /></p>
+<pre class="r"><code># Esboços Temáticos
+sp4$clay # </code></pre>
+<pre><code>##  [1] 21 27 32 55 25 34  3 15 27 32 25 31 33 13 21 23 15 17 12 19 14 14 22 25 40
+## [26] 51 67 24 25 32</code></pre>
+<pre class="r"><code>par(mar=c(1,1,3,1)) # tighter figure margins
+plot(sp4, name=&#39;name&#39;, color=&#39;clay&#39;,cex.names=0.5,cex.id=0.5, id.style=&#39;top&#39;,col.legend.cex=1,family=&quot;serif&quot;, col.label=&#39;Argila&#39;, )</code></pre>
+<p><img src="/post/tools/index_files/figure-html/unnamed-chunk-7-3.png" width="672" /></p>
+<pre class="r"><code>sp4$Ca # </code></pre>
+<pre><code>##  [1]  9.0  5.6  1.9  0.3  4.4  4.5  1.4  7.0  4.4  5.8  6.2  6.2  4.4  2.2  3.4
+## [16]  3.7 24.1 21.5  0.7  5.6  3.5  2.0  6.6  4.1  3.5  1.5  0.8 16.3 16.5 13.7</code></pre>
+<pre class="r"><code>par(mar=c(1,1,3,1)) # tighter figure margins
+plot(sp4, name=&#39;name&#39;, color=&#39;Ca&#39;,cex.names=0.5,cex.id=0.5, id.style=&#39;top&#39;,col.legend.cex=1,
+     col.label=&#39;Ca&#39;, family=&quot;serif&quot;)</code></pre>
+<p><img src="/post/tools/index_files/figure-html/unnamed-chunk-7-4.png" width="672" /></p>
+<pre class="r"><code>sp4$name # </code></pre>
+<pre><code>##  [1] &quot;A&quot;   &quot;ABt&quot; &quot;Bt1&quot; &quot;Bt2&quot; &quot;A&quot;   &quot;Bt&quot;  &quot;A&quot;   &quot;Bt1&quot; &quot;Bt2&quot; &quot;A&quot;   &quot;Bt1&quot; &quot;Bt2&quot;
+## [13] &quot;Bt3&quot; &quot;A&quot;   &quot;Bt1&quot; &quot;Bt2&quot; &quot;A&quot;   &quot;Bt&quot;  &quot;A&quot;   &quot;Bt&quot;  &quot;A&quot;   &quot;Bt&quot;  &quot;A1&quot;  &quot;A2&quot; 
+## [25] &quot;AB&quot;  &quot;Bt1&quot; &quot;Bt2&quot; &quot;A&quot;   &quot;Bt1&quot; &quot;Bt2&quot;</code></pre>
+<pre class="r"><code>par(mar=c(2,2,3,2)) # tighter figure margins
+plot(sp4, name=&#39;name&#39;, color=&#39;name&#39;, col.palette=RColorBrewer::brewer.pal(9, &#39;Set1&#39;), col.label=&#39;Nomes dos Horizontes&#39;, 
+     cex.names=0.5)</code></pre>
+<p><img src="/post/tools/index_files/figure-html/unnamed-chunk-7-5.png" width="672" /></p>
+<pre class="r"><code>###############
+### Boxplot ###
+# Aqui usaremos o conjunto sp1
+sp1$name1 &lt;- aqp::generalize.hz(sp1$name, 
+                           new=c(&#39;A&#39;,&#39;AB&#39;, &#39;BA&#39;,&#39;B&#39;,&#39;BC&#39;, &#39;C&#39;, &#39;E&#39;, &#39;AE&#39;, &#39;O&#39;, &#39;H&#39;, &#39;R&#39;, &#39;2C&#39;, &#39;3C&#39;, &#39;3B&#39;, &#39;3A&#39;), 
+                           pat=c(&#39;^A&#39;,&#39;^AB&#39;,&#39;^BA&#39;,&#39;^B&#39;,&#39;^BC&#39;,&#39;^C&#39;, &#39;^E&#39;, &#39;^AE&#39;, &#39;^O&#39;, &#39;^H&#39;, &#39;^R&#39;, &#39;^2C&#39;, &#39;^3C&#39;,&#39;^3B&#39;, &#39;^3A&#39; ))
+
+# compute horizon mid-points 
+sp1$mid &lt;- with(horizons(sp1), (top+ bottom)/2)
+# sort horizon designation by group-wise median values 
+hz.designation.by.median.depths &lt;- names(sort(tapply(sp1$mid, sp1$name1, median)))
+# plot the distribution of horizon mid-points by designation 
+lattice::bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
+       data=horizons(sp1),       
+       ylim=c(200, 0), ylab=&#39;Profundidade do ponto médio do horizonte (cm)&#39;,       
+       scales=list(y=list(tick.number=10)),       
+       panel= function ( ... ) {
+         panel.abline(h=seq(0, 180, by=10), v=1:length(hz.designation.by.median.depths), col=grey(0.8), lty=3)    
+         panel.bwplot( ... ) })</code></pre>
+<p><img src="/post/tools/index_files/figure-html/unnamed-chunk-7-6.png" width="672" /></p>
+<pre class="r"><code>lattice::bwplot(prop~ factor(name1, levels=hz.designation.by.median.depths),
+       data=horizons(sp1),       
+       ylab=&#39;Profundidade&#39;,       
+       scales=list(y=list(tick.number=10)),       
+       panel= function ( ... ) {  
+         panel.abline(h=seq(0, 600, by=50), v=1:length(hz.designation.by.median.depths), col=grey(0.8), lty=3)  
+         panel.bwplot( ... ) })</code></pre>
+<p><img src="/post/tools/index_files/figure-html/unnamed-chunk-7-7.png" width="672" />
+# Parte II
+## Funções de fatiamento (slice)
+Coleções de perfis de solo podem ser fatiadas (ou reamostradas) em intervalos regulares de profundidade com a função <code>slice()</code>. A estrutura de fatiamento e as variáveis de interesse são definidas por meio de notação de fórmula: seq ~ var.1 + var.2 + var.3 + … onde seq é uma sequência de números inteiros (por exemplo, 0:15, c (5,10,15,20) etc.) e var.1 + var.2 + var.3 + … são atributos no horizonte que se deja fatiar. As variáveis contínuas e categóricas podem ser nomeadas no lado direito da fórmula. Os resultados retornados pela função <code>slice ()</code> são <strong>SoilProfileCollection</strong> ou <strong>data.frame</strong> quando chamados com o argumento opcional <em>just.the.data = TRUE</em>. Por exemplo, para dividir nosso conjunto de dados de amostra em intervalos de 1 cm, de 0 a 15 cm:</p>
+<pre class="r"><code># fatiar dados
+sliced &lt;- aqp::slice(sp4, fm= 0:50 ~ sand + silt + clay)
+# verificar o resultado
+class(sliced)</code></pre>
+<pre><code>## [1] &quot;SoilProfileCollection&quot;
+## attr(,&quot;package&quot;)
+## [1] &quot;aqp&quot;</code></pre>
+<pre class="r"><code># fatiar de 0 até a profundidade máxima dos perfis da coleção
+sliced &lt;- aqp::slice(sp4, fm= 0:max(sp4) ~ sand + silt + clay)
+# Extraia todos os dados na faixa de 5--10 cm:
+plot(sliced[, 5:10])</code></pre>
+<p><img src="/post/tools/index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<pre class="r"><code># Extraia todos os dados na faixa de 25 a 50 cm:
+plot(sliced[, 25:50])</code></pre>
+<p><img src="/post/tools/index_files/figure-html/unnamed-chunk-8-2.png" width="672" /></p>
+<pre class="r"><code># Extraia todos os dados na faixa de 0--5, 10--20 e 40--50 cm:
+plot(sliced[, c(0:5, 10:20, 40:50)])</code></pre>
+<p><img src="/post/tools/index_files/figure-html/unnamed-chunk-8-3.png" width="672" />
+## Agregando coleções de perfis de solo em “slabs” regulares
+O resumo detalhado dos atributos no nível de horizonte é realizado com a função <code>slab()</code>. Os critérios de agrupamento de perfis e a seleção de atributos do horizonte são parametrizados por meio da fórmula: grupos ~ var1 + var2 + var3 onde variáveis nomeadas são agregadas em grupos ou onde variáveis nomeadas são agregadas em toda a coleção com fórmula: coleção ~ var1 + var2 + var3. A função de resumo padrão <em>(slab.fun)</em> calcula os percentis 5, 25, 50, 75 e 95 através do estimador de quantil Harrell-Davis.</p>
+<p>A estrutura de profundidade (“slabs”) sobre a qual os resumos são calculados é definida com o argumento <code>slab.structure</code> usando:</p>
+<ul>
+<li>Um único número inteiro (por exemplo, 10): os dados são agregados em uma sequência regular de <em>slabs</em> de 10 unidades de espessura.</li>
+<li>Um vetor de 2 números inteiros (por exemplo, c (50, 60)): os dados são agregados em profundidades que variam de 50 a 60 unidades.
+-Um vetor de 3 ou mais números inteiros (por exemplo, c (0, 5, 10, 50, 100)): os dados são agregados nas profundidades que variam de 0 a 5, 5 a 10, 10 a 50, 50 a 100 unidades. Essa é por exemplo umas das formas usadas para harmonização de dados em profundidades pré-definidas como é o caso do projeto <strong>GlobalSoilMap project</strong> <span class="citation">(Arrouays et al., <a href="#ref-Arrouays2017">2017</a>)</span> que é de 0-5, 5-15, 15-30, 30-60, 60-100, 100-200 cm.</li>
+</ul>
+<pre class="r"><code># Agregar coleções de perfis de solo em “slabs” (conjuntos) regulares
+# calculando o valor médio ignorando os dados ausentes
+aqp::slab(sp4, fm= ~ sand + silt + clay, slab.structure=c(0,10), slab.fun=mean, na.rm=TRUE)</code></pre>
+<pre><code>##   variable all.profiles value top bottom contributing_fraction
+## 1     sand            1 47.63   0     10                     1
+## 2     silt            1 31.15   0     10                     1
+## 3     clay            1 21.11   0     10                     1</code></pre>
+<pre class="r"><code># Novamente, desta vez em grupos definidos por um atributo no nível do site:
+aqp::slab(sp4, fm= group ~ sand + silt + clay, slab.structure=c(0,10), slab.fun=mean, na.rm=TRUE)</code></pre>
+<pre><code>##   variable group value top bottom contributing_fraction
+## 1     sand     A 48.26   0     10                     1
+## 2     silt     A 31.52   0     10                     1
+## 3     clay     A 20.30   0     10                     1
+## 4     sand     B 47.00   0     10                     1
+## 5     silt     B 30.78   0     10                     1
+## 6     clay     B 21.92   0     10                     1</code></pre>
+<pre class="r"><code># Novamente, desta vez em várias faixas de profundidade
+aqp::slab(sp4, fm= ~ sand + silt + clay, slab.structure=c(0,5,15,30,60), slab.fun=mean, na.rm=TRUE)</code></pre>
+<pre><code>##    variable all.profiles    value top bottom contributing_fraction
+## 1      sand            1 48.54000   0      5             1.0000000
+## 2      sand            1 45.96000   5     15             1.0000000
+## 3      sand            1 39.29310  15     30             0.7733333
+## 4      sand            1 30.36923  30     60             0.3421053
+## 5      silt            1 32.40000   0      5             1.0000000
+## 6      silt            1 29.15000   5     15             1.0000000
+## 7      silt            1 30.37069  15     30             0.7733333
+## 8      silt            1 31.00000  30     60             0.3421053
+## 9      clay            1 19.00000   0      5             1.0000000
+## 10     clay            1 24.79000   5     15             1.0000000
+## 11     clay            1 30.20690  15     30             0.7733333
+## 12     clay            1 38.38462  30     60             0.3421053</code></pre>
+<pre class="r"><code># Novamente, desta vez em fatias de 1 cm, calculando quantis
+agg &lt;- aqp::slab(sp4, fm= ~ sand + silt + clay)
+
+# Agregando coleções de perfis de solo ao longo de períodos regulares “Slabs”
+lattice::xyplot(top ~ p.q50 | variable, data=agg, ylab=&#39;Profundidade (cm)&#39;,
+       xlab=&#39;Mediana delimitada pelos percentis 25 e 75&#39;,
+       lower=agg$p.q25, upper=agg$p.q75, ylim=c(50,-2),
+       panel=panel.depth_function,
+       alpha=0.25, sync.colors=TRUE,
+       par.settings=list(superpose.line=list(col=&#39;RoyalBlue&#39;, lwd=2)),
+       prepanel=prepanel.depth_function,
+       cf=agg$contributing_fraction, cf.col=&#39;black&#39;, cf.interval=5, 
+       layout=c(3,1), strip=strip.custom(bg=grey(0.8)),
+       scales=list(x=list(tick.number=4, alternating=3, relation=&#39;free&#39;))
+)</code></pre>
+<p><img src="/post/tools/index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
+<div id="análise-de-dissimilaridade-dendogramas" class="section level2">
+<h2>Análise de Dissimilaridade (Dendogramas)</h2>
+<p>Os dendogramas são uma maneira conveniente de descrever a dissimilaridade entre pares (<em>pair-wise</em>), comumente associada ao tópico da análise de cluster.
+O cálculo da dissimilaridade entre perfis é realizado usando a função <code>profile_compare()</code>. Os valores de dissimilaridade dependem da seleção de atributos (por exemplo, argila, CEC, pH etc.), parâmetro opcional de ponderação em profundidade <code>(k)</code> e uma profundidade máxima de avaliação <code>(max_d)</code>. Maiores informações dobre análise de dissimilaridade pode ser encotrado em <span class="citation">Beaudette et al. (<a href="#ref-Beaudette2013">2013</a>)</span> e com exemplos de aplicação em <span class="citation">Pinheiro et al. (<a href="#ref-Pinheiro2016">2016</a>)</span> e <span class="citation">Pinheiro et al. (<a href="#ref-Pinheiro2018">2018</a>)</span>.</p>
+<pre class="r"><code># Dissimilaridade usando o conjunto sp4
+# usando Ex-Ca:Mg e CTC a pH 7
+# sem ponderação de profundidade (k = 0)
+# até uma profundidade máxima de 50 cm
+d &lt;- aqp::profile_compare(sp4, vars=c(&#39;ex_Ca_to_Mg&#39;, &#39;CEC_7&#39;), k=0, max_d=50)
+
+# Verificar matriz de distância
+round(d, 1)</code></pre>
+<pre><code>## Dissimilarities :
+##                colusa glenn kings mariposa mendocino napa san benito shasta
+## glenn            15.8                                                      
+## kings            18.0  13.1                                                
+## mariposa         17.4  20.6  25.5                                          
+## mendocino        14.1   8.2  17.0     24.5                                 
+## napa             33.5  24.9  30.5     39.3      22.2                       
+## san benito       28.8  21.4  27.4     38.3      16.4 18.0                  
+## shasta           19.2  13.6   8.7     26.6      17.6 34.8       23.3       
+## shasta-trinity    8.4  16.9  22.3     18.6      17.0 30.9       28.3   23.3
+## tehama           32.1  23.9  29.2     37.6      20.8  9.0       15.3   32.7
+##                shasta-trinity
+## glenn                        
+## kings                        
+## mariposa                     
+## mendocino                    
+## napa                         
+## san benito                   
+## shasta                       
+## shasta-trinity               
+## tehama                   29.2
+## 
+## Metric :  mixed ;  Types = I, I 
+## Number of objects : 10</code></pre>
+<pre class="r"><code># Análise hierárquica de cluster em um conjunto de dissimilaridades (Hierarchical Clustering)
+h &lt;- stats::hclust(d)
+# Melhor ajuste de margens
+par(mar=c(4,3,2,3))
+
+##Plotando dendrograma
+plot(as.dendrogram(h))</code></pre>
+<p><img src="/post/tools/index_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<pre class="r"><code>#stats::rect.hclust(h,5)
+
+################
+# Fazendo de outra forma com função diana (DIvisive ANAlysis Clustering)
+# vizualize a matriz de dissimilaridade via cluster hierárquico divisivo
+d.diana &lt;- cluster::diana(d)
+
+## Plotando Dendograma
+# esta função é do pacote sharpshootR
+# requer alguns ajustes manuais
+par(mar=c(1,1,5,1))
+sharpshootR::plotProfileDendrogram(sp4, d.diana, scaling.factor = 0.8, y.offset = 5, width=0.25, color=&#39;ex_Ca_to_Mg&#39;)</code></pre>
+<p><img src="/post/tools/index_files/figure-html/unnamed-chunk-10-2.png" width="672" /></p>
+<pre class="r"><code># solos de interesse do levatamento Americano
+s.list &lt;- c(&#39;hornitos&#39;, &#39;perkins&#39;, &#39;argonaut&#39;, &#39;inks&#39;, &#39;mokelumne&#39;,
+            &#39;dunstone&#39;, &#39;auburn&#39;, &#39;pentz&#39;, &#39;pardee&#39;, &#39;peters&#39;, 
+            &#39;amador&#39;, &#39;laniger&#39;)
+
+# Buscar e converter dados em um SoilProfileCollection
+s &lt;- soilDB::fetchOSD(s.list)
+# Estimando a profundidade do solo com base na designação do horizontes
+s$soil.depth &lt;- profileApply(s, estimateSoilDepth, name=&#39;hzname&#39;, top=&#39;top&#39;, bottom=&#39;bottom&#39;)
+
+# plot profiles, order by soil depth
+par(mar=c(0, 0, 0, 0))
+plot(s, name=&#39;hzname&#39;, plot.order=order(s$soil.depth), cex.names=0.85, axis.line.offset=-5, width=0.25, id.style=&#39;top&#39;)</code></pre>
+<p><img src="/post/tools/index_files/figure-html/unnamed-chunk-10-3.png" width="672" /></p>
+<pre class="r"><code>d &lt;- SoilTaxonomyDendrogram(s, cex.taxon.labels=0.8, width=0.25, y.offset = 0.4)</code></pre>
+<p><img src="/post/tools/index_files/figure-html/unnamed-chunk-10-4.png" width="672" /></p>
+<div id="se-você-chegou-até-aqui-muito-bem" class="section level3">
+<h3>Se você chegou até aqui muito bem !!!! 👏👏👏</h3>
+</div>
+</div>
+</div>
+<div id="referências" class="section level1 unnumbered">
+<h1>Referências</h1>
+<div id="refs" class="references">
+<div id="ref-Arrouays2017">
+<p>Arrouays, D., Leenaars, J.G.B., Richer-de-Forges, A.C., Adhikari, K., Ballabio, C., Greve, M., Grundy, M., Guerrero, E., Hempel, J., Hengl, T., Heuvelink, G., Batjes, N., Carvalho, E., Hartemink, A., Hewitt, A., Hong, S.Y., Krasilnikov, P., Lagacherie, P., Lelyk, G., Libohova, Z., Lilly, A., McBratney, A., McKenzie, N., Vasquez, G.M., Mulder, V.L., Minasny, B., Montanarella, L., Odeh, I., Padarian, J., Poggio, L., Roudier, P., Saby, N., Savin, I., Searle, R., Solbovoy, V., Thompson, J., Smith, S., Sulaeman, Y., Vintila, R., Rossel, R.V., Wilson, P., Zhang, G.L., Swerts, M., Oorts, K., Karklins, A., Feng, L., Ibelles Navarro, A.R., Levin, A., Laktionova, T., Dell’Acqua, M., Suvannang, N., Ruam, W., Prasad, J., Patil, N., Husnjak, S., Pásztor, L., Okx, J., Hallet, S., Keay, C., Farewell, T., Lilja, H., Juilleret, J., Marx, S., Takata, Y., Kazuyuki, Y., Mansuy, N., Panagos, P., Van Liedekerke, M., Skalsky, R., Sobocka, J., Kobza, J., Eftekhari, K., Alavipanah, S.K., Moussadek, R., Badraoui, M., Da Silva, M., Paterson, G., Gonçalves, M. da C., Theocharopoulos, S., Yemefack, M., Tedou, S., Vrscaj, B., Grob, U., Kozák, J., Boruvka, L., Dobos, E., Taboada, M., Moretti, L., Rodriguez, D., 2017. Soil legacy data rescue via GlobalSoilMap and other international and national initiatives. GeoResJ 14, 1–19. <a href="https://doi.org/10.1016/j.grj.2017.06.001">https://doi.org/10.1016/j.grj.2017.06.001</a></p>
+</div>
+<div id="ref-Beaudette2013">
+<p>Beaudette, D.E., Roudier, P., O’Geen, A.T., 2013. Algorithms for quantitative pedology: A toolkit for soil scientists. Computers and Geosciences 52, 258–268. <a href="https://doi.org/10.1016/j.cageo.2012.10.020">https://doi.org/10.1016/j.cageo.2012.10.020</a></p>
+</div>
+<div id="ref-Pinheiro2016">
+<p>Pinheiro, H.S.K., Chagas, C. da S., Carvalho Junior, W., Anjos, L.H.C., 2016. Ferramentas de pedometria para caracterização da composição granulométrica de perfis de solos hidromórficos. Pesquisa Agropecuária Brasileira 51, 1326–1338. <a href="https://doi.org/10.1590/S0100-204X2016000900032">https://doi.org/10.1590/S0100-204X2016000900032</a></p>
+</div>
+<div id="ref-Pinheiro2018">
+<p>Pinheiro, H.S.K., Helena, L., Anjos, C., Xavier, P.A.M., Cesar, S., 2018. Quantitative pedology to evaluate a soil profile collection from the Brazilian semi-arid region. South African Journal of Geomatics 1862, 1–11. <a href="https://doi.org/10.1080/02571862.2017.1419385">https://doi.org/10.1080/02571862.2017.1419385</a></p>
+</div>
+<div id="ref-R2019">
+<p>R Core Team, 2019. R: A Language and Environment for Statistical Computing.</p>
+</div>
+</div>
+</div>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/mds/">MDS</a>
+  
+  <a class="badge badge-light" href="/tag/pedometria/">Pedometria</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://pedometriafacil.netlify.app/post/tools/&amp;text=Ferramentas%20pedometricas" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://pedometriafacil.netlify.app/post/tools/&amp;t=Ferramentas%20pedometricas" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Ferramentas%20pedometricas&amp;body=https://pedometriafacil.netlify.app/post/tools/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://pedometriafacil.netlify.app/post/tools/&amp;title=Ferramentas%20pedometricas" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Ferramentas%20pedometricas%20https://pedometriafacil.netlify.app/post/tools/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://pedometriafacil.netlify.app/post/tools/&amp;title=Ferramentas%20pedometricas" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/author/elias-mendes-costa/avatar_huc97ddd0bb84c39ea267ad3b620f5d872_748309_270x270_fill_q90_lanczos_center.jpg" alt="Elias Mendes Costa">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href="https://pedometriafacil.netlify.app/">Elias Mendes Costa</a></h5>
+        <h6 class="card-subtitle">Pesquisador</h6>
+        <p class="card-text">Meu principal interesse acadêmico-científico envolve Gênese, Morfologia, Classificação, Fertilidade e Manejo de Solos, Levantamento e Mapeamento Digital de Solos, Pedologia Quantitativa (Pedometria), Geotecnologias e Análise Ambiental, Modelagem e Programação.</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.instagram.com/eliasmendescosta/" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.facebook.com/elias.mendes.98" target="_blank" rel="noopener">
+        <i class="ai ai-facebook"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/eliasmccosta" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.researchgate.net/profile/Elias_Costa6" target="_blank" rel="noopener">
+        <i class="fab fa-researchgate"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://orcid.org/0000-0003-3630-1174" target="_blank" rel="noopener">
+        <i class="fab fa-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/elias-mendes-costa-3ba13614b/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/amostragem/">Amostragem para mapeamento de solos</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.8/mermaid.min.js" integrity="sha256-lyWCDMnMeZiXRi7Zl54sZGKYmgQs4izcT7+tKc+KUBk=" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © Pedometria, 2020 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

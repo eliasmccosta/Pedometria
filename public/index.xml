@@ -52,19 +52,19 @@
     </item>
     
     <item>
-      <title>Ferramenta pedometricas</title>
-      <link>https://pedometriafacil.netlify.app/post/pedometrics_tools/</link>
+      <title>Ferramentas pedometricas</title>
+      <link>https://pedometriafacil.netlify.app/post/tools/</link>
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>https://pedometriafacil.netlify.app/post/pedometrics_tools/</guid>
+      <guid>https://pedometriafacil.netlify.app/post/tools/</guid>
       <description>
 
 
 &lt;div id=&#34;introdução&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Introdução&lt;/h1&gt;
-&lt;p&gt;Nesse tutorial serão abordados através do Algoritmos para Pedologia Quantitativa (AQP em inglês) e pacotes auxiliares uma coleção de códigos, ideias, e plotes usando o software R &lt;span class=&#34;citation&#34;&gt;(&lt;span class=&#34;citeproc-not-found&#34; data-reference-id=&#34;2019&#34;&gt;&lt;strong&gt;???&lt;/strong&gt;&lt;/span&gt;)&lt;/span&gt;. Toda a teoria por trás de grande parte do código pode ser encontrada no artigo &lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S009830041200369X?via%3Dihub&#34;&gt;&lt;em&gt;Algorithms for quantitative pedology: A toolkit for soil scientists&lt;/em&gt;&lt;/a&gt; &lt;span class=&#34;citation&#34;&gt;(Beaudette et al., &lt;a href=&#34;#ref-Beaudette2013&#34;&gt;2013&lt;/a&gt;)&lt;/span&gt;. Além disso artigos disso alguns exemplos de aplicações das ferramentas podem se encontrados em &lt;span class=&#34;citation&#34;&gt;Pinheiro et al. (&lt;a href=&#34;#ref-Pinheiro2016&#34;&gt;2016&lt;/a&gt;)&lt;/span&gt; e &lt;span class=&#34;citation&#34;&gt;Pinheiro et al. (&lt;a href=&#34;#ref-Pinheiro2018&#34;&gt;2018&lt;/a&gt;)&lt;/span&gt;. Para fins didáticos o tutorial foi dividido em três partes e os pacotes usados serão &lt;em&gt;soilDB&lt;/em&gt;, que contem uma base de dados de solos para análises pedométricas, &lt;em&gt;AQP&lt;/em&gt; que contem as principais ferramentas de pedologia quantitativa usadas no tutorial, &lt;em&gt;sharpshootR&lt;/em&gt; que contem uma coelção de funções que dão suporte ao levantamento e exploração de dados de solos, &lt;em&gt;SP&lt;/em&gt; um pacote que fornece classes e métodos para dados espaciais: pontos, linhas, polígonos e grades, &lt;em&gt;Hmisc&lt;/em&gt; que contém muitas funções úteis para análise de dados, gráficos de alto nível, operações utilitárias, funções para calcular o tamanho de amostras, importar e manipular conjuntos de dados, imputar valores ausentes, criação avançada de tabelas, análise de cluster entre outras funções, &lt;em&gt;lattice&lt;/em&gt; que é um sistema de visualização de dados de alto nível, poderoso e elegante, com ênfase em dados multivariados, &lt;em&gt;MASS&lt;/em&gt; com funções e conjuntos de dados para apoiar Venables e Ripley, &lt;strong&gt;Modern Applied Statistics with S&lt;/strong&gt; e &lt;em&gt;plyr&lt;/em&gt; que contem um conjunto de ferramentas que resolve problemas tais como: Divisão, aplicação e combinação de dados.&lt;/p&gt;
+&lt;p&gt;Nesse tutorial serão abordados através do Algoritmos para Pedologia Quantitativa (AQP em inglês) e pacotes auxiliares uma coleção de códigos, ideias, e plotes usando o software R &lt;span class=&#34;citation&#34;&gt;(R Core Team, &lt;a href=&#34;#ref-R2019&#34;&gt;2019&lt;/a&gt;)&lt;/span&gt;. Toda a teoria por trás de grande parte do código pode ser encontrada no artigo &lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S009830041200369X?via%3Dihub&#34;&gt;&lt;em&gt;Algorithms for quantitative pedology: A toolkit for soil scientists&lt;/em&gt;&lt;/a&gt; &lt;span class=&#34;citation&#34;&gt;(Beaudette et al., &lt;a href=&#34;#ref-Beaudette2013&#34;&gt;2013&lt;/a&gt;)&lt;/span&gt;. Além disso artigos disso alguns exemplos de aplicações das ferramentas podem se encontrados em &lt;span class=&#34;citation&#34;&gt;Pinheiro et al. (&lt;a href=&#34;#ref-Pinheiro2016&#34;&gt;2016&lt;/a&gt;)&lt;/span&gt; e &lt;span class=&#34;citation&#34;&gt;Pinheiro et al. (&lt;a href=&#34;#ref-Pinheiro2018&#34;&gt;2018&lt;/a&gt;)&lt;/span&gt;. Para fins didáticos o tutorial foi dividido em três partes e os pacotes usados serão &lt;code&gt;soilDB&lt;/code&gt;, que contem uma base de dados de solos para análises pedométricas, &lt;code&gt;AQP&lt;/code&gt; que contem as principais ferramentas de pedologia quantitativa usadas no tutorial, &lt;code&gt;sharpshootR&lt;/code&gt; que contem uma coelção de funções que dão suporte ao levantamento e exploração de dados de solos, &lt;code&gt;SP&lt;/code&gt; um pacote que fornece classes e métodos para dados espaciais: pontos, linhas, polígonos e grades, &lt;code&gt;Hmisc&lt;/code&gt; que contém muitas funções úteis para análise de dados, gráficos de alto nível, operações utilitárias, funções para calcular o tamanho de amostras, importar e manipular conjuntos de dados, imputar valores ausentes, criação avançada de tabelas, análise de cluster entre outras funções, &lt;code&gt;lattice&lt;/code&gt; que é um sistema de visualização de dados de alto nível, poderoso e elegante, com ênfase em dados multivariados, &lt;code&gt;MASS&lt;/code&gt; com funções e conjuntos de dados para apoiar Venables e Ripley, &lt;strong&gt;Modern Applied Statistics with S&lt;/strong&gt;, &lt;code&gt;plyr&lt;/code&gt; que contem um conjunto de ferramentas que resolve problemas tais como: Divisão, aplicação e combinação de dados e &lt;code&gt;cluster&lt;/code&gt; que um pacote com médodos para análise de cluster a fim de encontrar grupos em conjunto de dados.&lt;/p&gt;
 &lt;div id=&#34;base-de-dados-dos-exercícios&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Base de dados dos exercícios&lt;/h2&gt;
-&lt;p&gt;Todos os dados usados nos exercícios ou são do pacote &lt;em&gt;AQP&lt;/em&gt; ou são do pacote &lt;em&gt;soilDB&lt;/em&gt;. Muitas das informações contidas nesse nesse tutorial foram extraídas do &lt;a href=&#34;http://ncss-tech.github.io/AQP/&#34;&gt;projeto do AQP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Todos os dados usados nos exercícios ou são do pacote &lt;code&gt;AQP&lt;/code&gt; ou são do pacote &lt;code&gt;soilDB&lt;/code&gt;. Muitas das informações contidas nesse tutorial foram extraídas do &lt;a href=&#34;http://ncss-tech.github.io/AQP/&#34;&gt;projeto do AQP&lt;/a&gt; e todo crédito é dado ao autor.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Carregando os pacotes no R
 library(soilDB) 
 library(aqp)  
@@ -73,7 +73,8 @@ library(sp)
 library(Hmisc)
 library(lattice)
 library(MASS)
-library(plyr)&lt;/code&gt;&lt;/pre&gt;
+library(plyr)
+library(cluster)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;parte-i&#34; class=&#34;section level1&#34;&gt;
@@ -82,17 +83,19 @@ library(plyr)&lt;/code&gt;&lt;/pre&gt;
 A classe &lt;strong&gt;SoilProfileCollection&lt;/strong&gt; foi projetada para simplificar o processo de trabalhar com a coleção de dados associados aos perfis de solo: dados em nível de local (site), dados em nível de horizonte, dados espaciais, dados de horizontes de diagnósticos, metadados, etc. Os exemplos listados abaixo devem ser copiados/colados deste documento e executados de forma interativa em R. Lembrando que antes de execultar você deve instalar e carregar todas as bibliotécas (pacotes) mencionados.&lt;/p&gt;
 &lt;div id=&#34;criação-de-objetos&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Criação de Objetos&lt;/h2&gt;
-&lt;p&gt;Os objetos &lt;strong&gt;SoilProfileCollection&lt;/strong&gt; geralmente são criados pela através de objetos &lt;em&gt;data.frame&lt;/em&gt; (tabelas retangulares de dados) que contêm pelo menos três colunas essenciais:
-- Uma coluna de identificação que identifica exclusivamente grupos de horizontes (por exemplo, &lt;em&gt;pedons&lt;/em&gt;)
-- Limites superiores do horizonte
-- Limites inferiores do horizonte
-O &lt;em&gt;data.frame&lt;/em&gt; deve ser pré-classificado de acordo com o ID do perfil e o limite superior do horizonte. A notação de fórmula é usada para definir as colunas usadas para promover um objeto &lt;em&gt;data.frame&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Os objetos &lt;strong&gt;SoilProfileCollection&lt;/strong&gt; geralmente são criados pela através de objetos &lt;em&gt;data.frame&lt;/em&gt; (tabelas retangulares de dados) que contêm pelo menos três colunas essenciais:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Uma coluna de identificação que identifica exclusivamente grupos de horizontes (por exemplo, &lt;em&gt;pedons&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;Limites superiores do horizonte&lt;/li&gt;
+&lt;li&gt;Limites inferiores do horizonte&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;O &lt;em&gt;data.frame&lt;/em&gt; deve ser pré-classificado de acordo com o ID do perfil e o limite superior do horizonte. A notação de fórmula é usada para definir as colunas usadas para promover um objeto &lt;em&gt;data.frame&lt;/em&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Carregando dados de solos
 # upgrade para SoilProfileCollection
 # &amp;#39;id&amp;#39; é o nome da coluna que contém o ID do perfil
 # &amp;#39;top&amp;#39; é o nome da coluna que contém os limites superiores do horizonte
 # &amp;#39;bottom&amp;#39; é o nome da coluna que contém os limites inferiores do horizonte
-data(sp1) # Conjunto de dados sp1 do pacote AQP (data.frame)
+data(sp1) # Conjunto de dados sp4 do pacote AQP (data.frame)
 aqp::depths(sp1) &amp;lt;- id ~ top + bottom 
 aqp::site(sp1) &amp;lt;- ~ group &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -100,24 +103,24 @@ aqp::site(sp1) &amp;lt;- ~ group &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Acessando, configurando e substituindo dados&lt;/h2&gt;
 &lt;p&gt;As funções de acesar são usadas para extrair componentes específicos dos objetos &lt;strong&gt;SoilProfileCollection&lt;/strong&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Métodos para inpensão dos objetos
-idname (sp1) # auto-explicativo&lt;/code&gt;&lt;/pre&gt;
+aqp::idname (sp1) # auto-explicativo&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] &amp;quot;id&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;horizonDepths(sp1) # auto-explicativo&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;aqp::horizonDepths(sp1) # auto-explicativo&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] &amp;quot;top&amp;quot;    &amp;quot;bottom&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;depth_units(sp1) # defaults &amp;#39;cm&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;aqp::depth_units(sp1) # defaults &amp;#39;cm&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] &amp;quot;cm&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;metadata(sp1) # &lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;aqp::metadata(sp1) # &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   depth_units
 ## 1          cm&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;profile_id(sp1) # vector com IDs dos perfis&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;aqp::profile_id(sp1) # vector com IDs dos perfis&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] &amp;quot;P001&amp;quot; &amp;quot;P002&amp;quot; &amp;quot;P003&amp;quot; &amp;quot;P004&amp;quot; &amp;quot;P005&amp;quot; &amp;quot;P006&amp;quot; &amp;quot;P007&amp;quot; &amp;quot;P008&amp;quot; &amp;quot;P009&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;horizonNames(sp1) # coluna com osnomes dos dados dos horizontes&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;aqp::horizonNames(sp1) # coluna com osnomes dos dados dos horizontes&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;id&amp;quot;               &amp;quot;top&amp;quot;              &amp;quot;bottom&amp;quot;           &amp;quot;bound_distinct&amp;quot;  
 ##  [5] &amp;quot;bound_topography&amp;quot; &amp;quot;name&amp;quot;             &amp;quot;texture&amp;quot;          &amp;quot;prop&amp;quot;            
 ##  [9] &amp;quot;structure_grade&amp;quot;  &amp;quot;structure_size&amp;quot;   &amp;quot;structure_type&amp;quot;   &amp;quot;stickiness&amp;quot;      
 ## [13] &amp;quot;plasticity&amp;quot;       &amp;quot;field_ph&amp;quot;         &amp;quot;hue&amp;quot;              &amp;quot;value&amp;quot;           
 ## [17] &amp;quot;chroma&amp;quot;           &amp;quot;hzID&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;siteNames(sp1) # coluna com os nomes do dados dos locais (site data)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;aqp::siteNames(sp1) # coluna com os nomes do dados dos locais (site data)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] &amp;quot;id&amp;quot;    &amp;quot;group&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;length(sp1) # número de perfis na coleção&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 9&lt;/code&gt;&lt;/pre&gt;
@@ -141,13 +144,15 @@ idname (sp1) # auto-explicativo&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;dados-do-horizonte-e-do-site-local&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Dados do horizonte e do site (local)&lt;/h2&gt;
-&lt;p&gt;Normalmente, os dados do horizonte e do site são os componentes mais importantes dos objetos SoilProfileCollection. Ambos são armazenados internamente como objetos data.frame; com uma ou mais linhas (por ID do perfil) na tabela do horizonte e uma linha (por ID do perfil) na tabela do site. As colunas de qualquer tabela podem ser acessadas com a notação &lt;em&gt;$&lt;/em&gt;. Novos dados podem ser atribuídos a qualquer tabela da mesma maneira, desde que o comprimento dos novos dados seja:
-- Mesmo tamanho que o número de perfis na coleção (o destino é a tabela de sites).
-- Mesmo comprimento que o número de horizontes na coleção (o destino é a tabela do horizonte).&lt;/p&gt;
+&lt;p&gt;Normalmente, os dados do horizonte e do site são os componentes mais importantes dos objetos SoilProfileCollection. Ambos são armazenados internamente como objetos data.frame; com uma ou mais linhas (por ID do perfil) na tabela do horizonte e uma linha (por ID do perfil) na tabela do site. As colunas de qualquer tabela podem ser acessadas com a notação &lt;code&gt;$&lt;/code&gt;. Novos dados podem ser atribuídos a qualquer tabela da mesma maneira, desde que o comprimento dos novos dados seja:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mesmo tamanho que o número de perfis na coleção (o destino é a tabela de sites).&lt;/li&gt;
+&lt;li&gt;Mesmo comprimento que o número de horizontes na coleção (o destino é a tabela do horizonte).&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;plotando-soilprofilecollection&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Plotando &lt;strong&gt;SoilProfileCollection&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;O método &lt;em&gt;plot()&lt;/em&gt; para objetos &lt;strong&gt;SoilProfileCollection&lt;/strong&gt; gera esboços de perfis na coleção com base nos limites dos horizontes, alinhados verticalmente a uma sequência inteira de 1 ao número de perfis. Os nomes dos horizontes são extraídos automaticamente de um nome de atributo no nível do horizonte (se presente) ou por meio de um atributo alternativo fornecido como argumento: &lt;em&gt;name = ‘nomedacoula’&lt;/em&gt;. As cores do horizonte são geradas automaticamente a partir do atributo no nível do horizonte &lt;em&gt;soil_color&lt;/em&gt;, ou qualquer outro atributo da descrição de cor compatível com R, fornecido como argumento: &lt;em&gt;color = ‘nomedacoula’&lt;/em&gt;. Essa função é altamente personalizável; portanto, é prudente consultar a ajuda &lt;em&gt;(plotSPC)&lt;/em&gt; de tempos em tempos. As cores do solo na notação Munsell podem ser convertidas em cores compatíveis com R via &lt;em&gt;munsell2rgb()&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;O método &lt;code&gt;plot()&lt;/code&gt; para objetos &lt;strong&gt;SoilProfileCollection&lt;/strong&gt; gera esboços de perfis na coleção com base nos limites dos horizontes, alinhados verticalmente a uma sequência inteira de 1 ao número de perfis. Os nomes dos horizontes são extraídos automaticamente de um nome de atributo no nível do horizonte (se presente) ou por meio de um atributo alternativo fornecido como argumento: &lt;code&gt;name = &#39;nomedacoula&#39;&lt;/code&gt;. As cores do horizonte são geradas automaticamente a partir do atributo no nível do horizonte &lt;code&gt;soil_color&lt;/code&gt;, ou qualquer outro atributo da descrição de cor compatível com R, fornecido como argumento: &lt;code&gt;color = &#39;nomedacoula&#39;&lt;/code&gt;. Essa função é altamente personalizável; portanto, é prudente consultar a ajuda &lt;code&gt;(plotSPC)&lt;/code&gt; de tempos em tempos. As cores do solo na notação Munsell podem ser convertidas em cores compatíveis com R via &lt;code&gt;munsell2rgb()&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data(sp4) # Conjunto de dados sp4 do pacote AQP (data.frame)
 aqp::depths(sp4) &amp;lt;- id ~ top + bottom 
 # Atribuição de novos dados a atributos existentes ou novos
@@ -159,16 +164,16 @@ sp4$clay # Vetor de conteúdo de argila (dados do horizonte)&lt;/code&gt;&lt;/pr
 ## [26] 51 67 24 25 32&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Os dados do horizonte e do local (site) também podem ser modificados por extração para um data.frame, seguidos pela substituição (dados do horizonte) ou junção (dados do site). Observe que, embora essa abordagem ofereça a maior flexibilidade, ela também é a mais perigosa - a substituição dos dados do horizonte por novos dados que não estão exatamente de acordo com a classificação original pode corromper seu &lt;strong&gt;SoilProfileCollection&lt;/strong&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# extrair dados os horizontes para o data.frame
-h &amp;lt;- horizons(sp4)
+h &amp;lt;- aqp::horizons(sp4)
 # Adicionar uma nova coluna e salvar de volta no objeto
 h$random.numbers &amp;lt;- rnorm(n=nrow(h), mean=0, sd=1)
 # repor dados originais dos horizontes com versão modificada
 #!a ordem das linhas não deve ser alterada!
 horizons(sp4) &amp;lt;- h
 # extrair dados do site para o data.frame
-s &amp;lt;- site(sp4)
+s &amp;lt;- aqp::site(sp4)
 # Adicionar um grupo para o site fake
-s$group &amp;lt;- factor(rep(c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;), length.out=nrow(s)))
+s$group &amp;lt;- base::factor(rep(c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;), length.out=nrow(s)))
 # junte novos dados do site com dados anteriores: os dados antigos não são substituídos
 site(sp4) &amp;lt;- s
 # Verificar
@@ -186,21 +191,21 @@ sp4&lt;/code&gt;&lt;/pre&gt;
 ## 5  glenn    A   0      9 0.2 21.9 4.4  18.8        0.20   54   20   25 0.55
 ## 6  glenn   Bt   9     34 0.3 18.9 4.5  27.5        0.20   49   18   34 0.84
 ##   hzID thickness random.numbers
-## 1    1         3    -2.01278170
-## 2    2         5     0.02852967
-## 3    3        22     0.62486568
-## 4    4        12     2.28256707
-## 5    5         9     1.07620296
-## 6    6        25    -2.26869533
+## 1    1         3     0.04657807
+## 2    2         5     0.49034281
+## 3    3        22    -0.06534385
+## 4    4        12     0.68077606
+## 5    5         9     1.23107803
+## 6    6        25     0.98054068
 ## 
 ## Sampling site attributes:
 ##          id elevation group
-## 1    colusa  810.9684     A
-## 2     glenn 1043.7407     B
-## 3     kings 1393.9292     A
-## 4  mariposa 1216.2948     B
-## 5 mendocino 1226.2206     A
-## 6      napa  754.1708     B&lt;/code&gt;&lt;/pre&gt;
+## 1    colusa  791.5455     A
+## 2     glenn 1233.3481     B
+## 3     kings  663.0645     A
+## 4  mariposa  976.2551     B
+## 5 mendocino  805.6210     A
+## 6      napa  876.1520     B&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Fazendo um plot simples
 plot(sp4, name=&amp;#39;name&amp;#39;)
 # title, note line argument:
@@ -211,37 +216,36 @@ mtext(&amp;#39;Perfis&amp;#39;, side=1, line=2, font=4, col=&amp;#39;blue&amp;#3
 # y-axis is based on profile depths
 axis(2, line=-1, at=pretty(1:max(sp4)), cex.axis=0.75, font=4, las=1, col=&amp;#39;blue&amp;#39;, col.axis=&amp;#39;blue&amp;#39;, lwd=2)
 mtext(&amp;#39;Profundidade&amp;#39;, side=2, line=1, font=4, col=&amp;#39;blue&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# plot com separação de grupos
-aqp::groupedProfilePlot(sp4, groups=&amp;#39;group&amp;#39;, max.depth=240, group.name.offset = -5, id.style=&amp;#39;side&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-7-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+aqp::groupedProfilePlot(sp4, groups=&amp;#39;group&amp;#39;, max.depth=60, group.name.offset = -5, id.style=&amp;#39;side&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Esboços Temáticos
-
 sp4$clay # &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] 21 27 32 55 25 34  3 15 27 32 25 31 33 13 21 23 15 17 12 19 14 14 22 25 40
 ## [26] 51 67 24 25 32&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar=c(1,1,3,1)) # tighter figure margins
 plot(sp4, name=&amp;#39;name&amp;#39;, color=&amp;#39;clay&amp;#39;,cex.names=0.5,cex.id=0.5, id.style=&amp;#39;top&amp;#39;,col.legend.cex=1,family=&amp;quot;serif&amp;quot;, col.label=&amp;#39;Argila&amp;#39;, )&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-7-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sp4$Ca # &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1]  9.0  5.6  1.9  0.3  4.4  4.5  1.4  7.0  4.4  5.8  6.2  6.2  4.4  2.2  3.4
 ## [16]  3.7 24.1 21.5  0.7  5.6  3.5  2.0  6.6  4.1  3.5  1.5  0.8 16.3 16.5 13.7&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar=c(1,1,3,1)) # tighter figure margins
 plot(sp4, name=&amp;#39;name&amp;#39;, color=&amp;#39;Ca&amp;#39;,cex.names=0.5,cex.id=0.5, id.style=&amp;#39;top&amp;#39;,col.legend.cex=1,
      col.label=&amp;#39;Ca&amp;#39;, family=&amp;quot;serif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-7-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sp4$name # &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;A&amp;quot;   &amp;quot;ABt&amp;quot; &amp;quot;Bt1&amp;quot; &amp;quot;Bt2&amp;quot; &amp;quot;A&amp;quot;   &amp;quot;Bt&amp;quot;  &amp;quot;A&amp;quot;   &amp;quot;Bt1&amp;quot; &amp;quot;Bt2&amp;quot; &amp;quot;A&amp;quot;   &amp;quot;Bt1&amp;quot; &amp;quot;Bt2&amp;quot;
 ## [13] &amp;quot;Bt3&amp;quot; &amp;quot;A&amp;quot;   &amp;quot;Bt1&amp;quot; &amp;quot;Bt2&amp;quot; &amp;quot;A&amp;quot;   &amp;quot;Bt&amp;quot;  &amp;quot;A&amp;quot;   &amp;quot;Bt&amp;quot;  &amp;quot;A&amp;quot;   &amp;quot;Bt&amp;quot;  &amp;quot;A1&amp;quot;  &amp;quot;A2&amp;quot; 
 ## [25] &amp;quot;AB&amp;quot;  &amp;quot;Bt1&amp;quot; &amp;quot;Bt2&amp;quot; &amp;quot;A&amp;quot;   &amp;quot;Bt1&amp;quot; &amp;quot;Bt2&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar=c(2,2,3,2)) # tighter figure margins
-plot(sp4, name=&amp;#39;name&amp;#39;, color=&amp;#39;name&amp;#39;, col.palette=RColorBrewer::brewer.pal(9, &amp;#39;Set1&amp;#39;), col.label=&amp;#39;Nomes do Horizontes&amp;#39;, 
+plot(sp4, name=&amp;#39;name&amp;#39;, color=&amp;#39;name&amp;#39;, col.palette=RColorBrewer::brewer.pal(9, &amp;#39;Set1&amp;#39;), col.label=&amp;#39;Nomes dos Horizontes&amp;#39;, 
      cex.names=0.5)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-7-5.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-5.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;###############
 ### Boxplot ###
 # Aqui usaremos o conjunto sp1
-sp1$name1 &amp;lt;- generalize.hz(sp1$name, 
+sp1$name1 &amp;lt;- aqp::generalize.hz(sp1$name, 
                            new=c(&amp;#39;A&amp;#39;,&amp;#39;AB&amp;#39;, &amp;#39;BA&amp;#39;,&amp;#39;B&amp;#39;,&amp;#39;BC&amp;#39;, &amp;#39;C&amp;#39;, &amp;#39;E&amp;#39;, &amp;#39;AE&amp;#39;, &amp;#39;O&amp;#39;, &amp;#39;H&amp;#39;, &amp;#39;R&amp;#39;, &amp;#39;2C&amp;#39;, &amp;#39;3C&amp;#39;, &amp;#39;3B&amp;#39;, &amp;#39;3A&amp;#39;), 
                            pat=c(&amp;#39;^A&amp;#39;,&amp;#39;^AB&amp;#39;,&amp;#39;^BA&amp;#39;,&amp;#39;^B&amp;#39;,&amp;#39;^BC&amp;#39;,&amp;#39;^C&amp;#39;, &amp;#39;^E&amp;#39;, &amp;#39;^AE&amp;#39;, &amp;#39;^O&amp;#39;, &amp;#39;^H&amp;#39;, &amp;#39;^R&amp;#39;, &amp;#39;^2C&amp;#39;, &amp;#39;^3C&amp;#39;,&amp;#39;^3B&amp;#39;, &amp;#39;^3A&amp;#39; ))
 
@@ -250,22 +254,172 @@ sp1$mid &amp;lt;- with(horizons(sp1), (top+ bottom)/2)
 # sort horizon designation by group-wise median values 
 hz.designation.by.median.depths &amp;lt;- names(sort(tapply(sp1$mid, sp1$name1, median)))
 # plot the distribution of horizon mid-points by designation 
-bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
+lattice::bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
        data=horizons(sp1),       
        ylim=c(200, 0), ylab=&amp;#39;Profundidade do ponto médio do horizonte (cm)&amp;#39;,       
        scales=list(y=list(tick.number=10)),       
        panel= function ( ... ) {
          panel.abline(h=seq(0, 180, by=10), v=1:length(hz.designation.by.median.depths), col=grey(0.8), lty=3)    
          panel.bwplot( ... ) })&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-7-6.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bwplot(prop~ factor(name1, levels=hz.designation.by.median.depths),
+&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-6.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;lattice::bwplot(prop~ factor(name1, levels=hz.designation.by.median.depths),
        data=horizons(sp1),       
        ylab=&amp;#39;Profundidade&amp;#39;,       
        scales=list(y=list(tick.number=10)),       
        panel= function ( ... ) {  
          panel.abline(h=seq(0, 600, by=50), v=1:length(hz.designation.by.median.depths), col=grey(0.8), lty=3)  
          panel.bwplot( ... ) })&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/pedometrics_tools/index_files/figure-html/unnamed-chunk-7-7.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-7.png&#34; width=&#34;672&#34; /&gt;
+# Parte II
+## Funções de fatiamento (slice)
+Coleções de perfis de solo podem ser fatiadas (ou reamostradas) em intervalos regulares de profundidade com a função &lt;code&gt;slice()&lt;/code&gt;. A estrutura de fatiamento e as variáveis de interesse são definidas por meio de notação de fórmula: seq ~ var.1 + var.2 + var.3 + … onde seq é uma sequência de números inteiros (por exemplo, 0:15, c (5,10,15,20) etc.) e var.1 + var.2 + var.3 + … são atributos no horizonte que se deja fatiar. As variáveis contínuas e categóricas podem ser nomeadas no lado direito da fórmula. Os resultados retornados pela função &lt;code&gt;slice ()&lt;/code&gt; são &lt;strong&gt;SoilProfileCollection&lt;/strong&gt; ou &lt;strong&gt;data.frame&lt;/strong&gt; quando chamados com o argumento opcional &lt;em&gt;just.the.data = TRUE&lt;/em&gt;. Por exemplo, para dividir nosso conjunto de dados de amostra em intervalos de 1 cm, de 0 a 15 cm:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# fatiar dados
+sliced &amp;lt;- aqp::slice(sp4, fm= 0:50 ~ sand + silt + clay)
+# verificar o resultado
+class(sliced)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;SoilProfileCollection&amp;quot;
+## attr(,&amp;quot;package&amp;quot;)
+## [1] &amp;quot;aqp&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# fatiar de 0 até a profundidade máxima dos perfis da coleção
+sliced &amp;lt;- aqp::slice(sp4, fm= 0:max(sp4) ~ sand + silt + clay)
+# Extraia todos os dados na faixa de 5--10 cm:
+plot(sliced[, 5:10])&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Extraia todos os dados na faixa de 25 a 50 cm:
+plot(sliced[, 25:50])&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-8-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Extraia todos os dados na faixa de 0--5, 10--20 e 40--50 cm:
+plot(sliced[, c(0:5, 10:20, 40:50)])&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-8-3.png&#34; width=&#34;672&#34; /&gt;
+## Agregando coleções de perfis de solo em “slabs” regulares
+O resumo detalhado dos atributos no nível de horizonte é realizado com a função &lt;code&gt;slab()&lt;/code&gt;. Os critérios de agrupamento de perfis e a seleção de atributos do horizonte são parametrizados por meio da fórmula: grupos ~ var1 + var2 + var3 onde variáveis nomeadas são agregadas em grupos ou onde variáveis nomeadas são agregadas em toda a coleção com fórmula: coleção ~ var1 + var2 + var3. A função de resumo padrão &lt;em&gt;(slab.fun)&lt;/em&gt; calcula os percentis 5, 25, 50, 75 e 95 através do estimador de quantil Harrell-Davis.&lt;/p&gt;
+&lt;p&gt;A estrutura de profundidade (“slabs”) sobre a qual os resumos são calculados é definida com o argumento &lt;code&gt;slab.structure&lt;/code&gt; usando:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Um único número inteiro (por exemplo, 10): os dados são agregados em uma sequência regular de &lt;em&gt;slabs&lt;/em&gt; de 10 unidades de espessura.&lt;/li&gt;
+&lt;li&gt;Um vetor de 2 números inteiros (por exemplo, c (50, 60)): os dados são agregados em profundidades que variam de 50 a 60 unidades.
+-Um vetor de 3 ou mais números inteiros (por exemplo, c (0, 5, 10, 50, 100)): os dados são agregados nas profundidades que variam de 0 a 5, 5 a 10, 10 a 50, 50 a 100 unidades. Essa é por exemplo umas das formas usadas para harmonização de dados em profundidades pré-definidas como é o caso do projeto &lt;strong&gt;GlobalSoilMap project&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Arrouays et al., &lt;a href=&#34;#ref-Arrouays2017&#34;&gt;2017&lt;/a&gt;)&lt;/span&gt; que é de 0-5, 5-15, 15-30, 30-60, 60-100, 100-200 cm.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Agregar coleções de perfis de solo em “slabs” (conjuntos) regulares
+# calculando o valor médio ignorando os dados ausentes
+aqp::slab(sp4, fm= ~ sand + silt + clay, slab.structure=c(0,10), slab.fun=mean, na.rm=TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   variable all.profiles value top bottom contributing_fraction
+## 1     sand            1 47.63   0     10                     1
+## 2     silt            1 31.15   0     10                     1
+## 3     clay            1 21.11   0     10                     1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Novamente, desta vez em grupos definidos por um atributo no nível do site:
+aqp::slab(sp4, fm= group ~ sand + silt + clay, slab.structure=c(0,10), slab.fun=mean, na.rm=TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   variable group value top bottom contributing_fraction
+## 1     sand     A 48.26   0     10                     1
+## 2     silt     A 31.52   0     10                     1
+## 3     clay     A 20.30   0     10                     1
+## 4     sand     B 47.00   0     10                     1
+## 5     silt     B 30.78   0     10                     1
+## 6     clay     B 21.92   0     10                     1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Novamente, desta vez em várias faixas de profundidade
+aqp::slab(sp4, fm= ~ sand + silt + clay, slab.structure=c(0,5,15,30,60), slab.fun=mean, na.rm=TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    variable all.profiles    value top bottom contributing_fraction
+## 1      sand            1 48.54000   0      5             1.0000000
+## 2      sand            1 45.96000   5     15             1.0000000
+## 3      sand            1 39.29310  15     30             0.7733333
+## 4      sand            1 30.36923  30     60             0.3421053
+## 5      silt            1 32.40000   0      5             1.0000000
+## 6      silt            1 29.15000   5     15             1.0000000
+## 7      silt            1 30.37069  15     30             0.7733333
+## 8      silt            1 31.00000  30     60             0.3421053
+## 9      clay            1 19.00000   0      5             1.0000000
+## 10     clay            1 24.79000   5     15             1.0000000
+## 11     clay            1 30.20690  15     30             0.7733333
+## 12     clay            1 38.38462  30     60             0.3421053&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Novamente, desta vez em fatias de 1 cm, calculando quantis
+agg &amp;lt;- aqp::slab(sp4, fm= ~ sand + silt + clay)
+
+# Agregando coleções de perfis de solo ao longo de períodos regulares “Slabs”
+lattice::xyplot(top ~ p.q50 | variable, data=agg, ylab=&amp;#39;Profundidade (cm)&amp;#39;,
+       xlab=&amp;#39;Mediana delimitada pelos percentis 25 e 75&amp;#39;,
+       lower=agg$p.q25, upper=agg$p.q75, ylim=c(50,-2),
+       panel=panel.depth_function,
+       alpha=0.25, sync.colors=TRUE,
+       par.settings=list(superpose.line=list(col=&amp;#39;RoyalBlue&amp;#39;, lwd=2)),
+       prepanel=prepanel.depth_function,
+       cf=agg$contributing_fraction, cf.col=&amp;#39;black&amp;#39;, cf.interval=5, 
+       layout=c(3,1), strip=strip.custom(bg=grey(0.8)),
+       scales=list(x=list(tick.number=4, alternating=3, relation=&amp;#39;free&amp;#39;))
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;análise-de-dissimilaridade-dendogramas&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Análise de Dissimilaridade (Dendogramas)&lt;/h2&gt;
+&lt;p&gt;Os dendogramas são uma maneira conveniente de descrever a dissimilaridade entre pares (&lt;em&gt;pair-wise&lt;/em&gt;), comumente associada ao tópico da análise de cluster.
+O cálculo da dissimilaridade entre perfis é realizado usando a função &lt;code&gt;profile_compare()&lt;/code&gt;. Os valores de dissimilaridade dependem da seleção de atributos (por exemplo, argila, CEC, pH etc.), parâmetro opcional de ponderação em profundidade &lt;code&gt;(k)&lt;/code&gt; e uma profundidade máxima de avaliação &lt;code&gt;(max_d)&lt;/code&gt;. Maiores informações dobre análise de dissimilaridade pode ser encotrado em &lt;span class=&#34;citation&#34;&gt;Beaudette et al. (&lt;a href=&#34;#ref-Beaudette2013&#34;&gt;2013&lt;/a&gt;)&lt;/span&gt; e com exemplos de aplicação em &lt;span class=&#34;citation&#34;&gt;Pinheiro et al. (&lt;a href=&#34;#ref-Pinheiro2016&#34;&gt;2016&lt;/a&gt;)&lt;/span&gt; e &lt;span class=&#34;citation&#34;&gt;Pinheiro et al. (&lt;a href=&#34;#ref-Pinheiro2018&#34;&gt;2018&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Dissimilaridade usando o conjunto sp4
+# usando Ex-Ca:Mg e CTC a pH 7
+# sem ponderação de profundidade (k = 0)
+# até uma profundidade máxima de 50 cm
+d &amp;lt;- aqp::profile_compare(sp4, vars=c(&amp;#39;ex_Ca_to_Mg&amp;#39;, &amp;#39;CEC_7&amp;#39;), k=0, max_d=50)
+
+# Verificar matriz de distância
+round(d, 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Dissimilarities :
+##                colusa glenn kings mariposa mendocino napa san benito shasta
+## glenn            15.8                                                      
+## kings            18.0  13.1                                                
+## mariposa         17.4  20.6  25.5                                          
+## mendocino        14.1   8.2  17.0     24.5                                 
+## napa             33.5  24.9  30.5     39.3      22.2                       
+## san benito       28.8  21.4  27.4     38.3      16.4 18.0                  
+## shasta           19.2  13.6   8.7     26.6      17.6 34.8       23.3       
+## shasta-trinity    8.4  16.9  22.3     18.6      17.0 30.9       28.3   23.3
+## tehama           32.1  23.9  29.2     37.6      20.8  9.0       15.3   32.7
+##                shasta-trinity
+## glenn                        
+## kings                        
+## mariposa                     
+## mendocino                    
+## napa                         
+## san benito                   
+## shasta                       
+## shasta-trinity               
+## tehama                   29.2
+## 
+## Metric :  mixed ;  Types = I, I 
+## Number of objects : 10&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Análise hierárquica de cluster em um conjunto de dissimilaridades (Hierarchical Clustering)
+h &amp;lt;- stats::hclust(d)
+# Melhor ajuste de margens
+par(mar=c(4,3,2,3))
+
+##Plotando dendrograma
+plot(as.dendrogram(h))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#stats::rect.hclust(h,5)
+
+################
+# Fazendo de outra forma com função diana (DIvisive ANAlysis Clustering)
+# vizualize a matriz de dissimilaridade via cluster hierárquico divisivo
+d.diana &amp;lt;- cluster::diana(d)
+
+## Plotando Dendograma
+# esta função é do pacote sharpshootR
+# requer alguns ajustes manuais
+par(mar=c(1,1,5,1))
+sharpshootR::plotProfileDendrogram(sp4, d.diana, scaling.factor = 0.8, y.offset = 5, width=0.25, color=&amp;#39;ex_Ca_to_Mg&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-10-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# solos de interesse do levatamento Americano
+s.list &amp;lt;- c(&amp;#39;hornitos&amp;#39;, &amp;#39;perkins&amp;#39;, &amp;#39;argonaut&amp;#39;, &amp;#39;inks&amp;#39;, &amp;#39;mokelumne&amp;#39;,
+            &amp;#39;dunstone&amp;#39;, &amp;#39;auburn&amp;#39;, &amp;#39;pentz&amp;#39;, &amp;#39;pardee&amp;#39;, &amp;#39;peters&amp;#39;, 
+            &amp;#39;amador&amp;#39;, &amp;#39;laniger&amp;#39;)
+
+# Buscar e converter dados em um SoilProfileCollection
+s &amp;lt;- soilDB::fetchOSD(s.list)
+# Estimando a profundidade do solo com base na designação do horizontes
+s$soil.depth &amp;lt;- profileApply(s, estimateSoilDepth, name=&amp;#39;hzname&amp;#39;, top=&amp;#39;top&amp;#39;, bottom=&amp;#39;bottom&amp;#39;)
+
+# plot profiles, order by soil depth
+par(mar=c(0, 0, 0, 0))
+plot(s, name=&amp;#39;hzname&amp;#39;, plot.order=order(s$soil.depth), cex.names=0.85, axis.line.offset=-5, width=0.25, id.style=&amp;#39;top&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-10-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d &amp;lt;- SoilTaxonomyDendrogram(s, cex.taxon.labels=0.8, width=0.25, y.offset = 0.4)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-10-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;se-você-chegou-até-aqui-muito-bem&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Se você chegou até aqui muito bem !!!! 👏👏👏&lt;/h3&gt;
 &lt;/div&gt;
@@ -274,6 +428,9 @@ bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
 &lt;div id=&#34;referências&#34; class=&#34;section level1 unnumbered&#34;&gt;
 &lt;h1&gt;Referências&lt;/h1&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-Arrouays2017&#34;&gt;
+&lt;p&gt;Arrouays, D., Leenaars, J.G.B., Richer-de-Forges, A.C., Adhikari, K., Ballabio, C., Greve, M., Grundy, M., Guerrero, E., Hempel, J., Hengl, T., Heuvelink, G., Batjes, N., Carvalho, E., Hartemink, A., Hewitt, A., Hong, S.Y., Krasilnikov, P., Lagacherie, P., Lelyk, G., Libohova, Z., Lilly, A., McBratney, A., McKenzie, N., Vasquez, G.M., Mulder, V.L., Minasny, B., Montanarella, L., Odeh, I., Padarian, J., Poggio, L., Roudier, P., Saby, N., Savin, I., Searle, R., Solbovoy, V., Thompson, J., Smith, S., Sulaeman, Y., Vintila, R., Rossel, R.V., Wilson, P., Zhang, G.L., Swerts, M., Oorts, K., Karklins, A., Feng, L., Ibelles Navarro, A.R., Levin, A., Laktionova, T., Dell’Acqua, M., Suvannang, N., Ruam, W., Prasad, J., Patil, N., Husnjak, S., Pásztor, L., Okx, J., Hallet, S., Keay, C., Farewell, T., Lilja, H., Juilleret, J., Marx, S., Takata, Y., Kazuyuki, Y., Mansuy, N., Panagos, P., Van Liedekerke, M., Skalsky, R., Sobocka, J., Kobza, J., Eftekhari, K., Alavipanah, S.K., Moussadek, R., Badraoui, M., Da Silva, M., Paterson, G., Gonçalves, M. da C., Theocharopoulos, S., Yemefack, M., Tedou, S., Vrscaj, B., Grob, U., Kozák, J., Boruvka, L., Dobos, E., Taboada, M., Moretti, L., Rodriguez, D., 2017. Soil legacy data rescue via GlobalSoilMap and other international and national initiatives. GeoResJ 14, 1–19. &lt;a href=&#34;https://doi.org/10.1016/j.grj.2017.06.001&#34;&gt;https://doi.org/10.1016/j.grj.2017.06.001&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;ref-Beaudette2013&#34;&gt;
 &lt;p&gt;Beaudette, D.E., Roudier, P., O’Geen, A.T., 2013. Algorithms for quantitative pedology: A toolkit for soil scientists. Computers and Geosciences 52, 258–268. &lt;a href=&#34;https://doi.org/10.1016/j.cageo.2012.10.020&#34;&gt;https://doi.org/10.1016/j.cageo.2012.10.020&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -282,6 +439,9 @@ bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
 &lt;/div&gt;
 &lt;div id=&#34;ref-Pinheiro2018&#34;&gt;
 &lt;p&gt;Pinheiro, H.S.K., Helena, L., Anjos, C., Xavier, P.A.M., Cesar, S., 2018. Quantitative pedology to evaluate a soil profile collection from the Brazilian semi-arid region. South African Journal of Geomatics 1862, 1–11. &lt;a href=&#34;https://doi.org/10.1080/02571862.2017.1419385&#34;&gt;https://doi.org/10.1080/02571862.2017.1419385&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-R2019&#34;&gt;
+&lt;p&gt;R Core Team, 2019. R: A Language and Environment for Statistical Computing.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

@@ -1,0 +1,293 @@
+---
+date: "2020-06-02"
+diagram: true
+image:
+  caption: 'Image credit: [**Elias**](https://www.instagram.com/eliasmendescosta/)'
+  focal_point: ""
+  placement: 3
+math: true
+title: Ferramentas pedometricas
+subtitle: 'Ferramentas pedometricas para análise de pedologia quantitativa'
+summary: ''
+bibliography: [references.bib]
+link-citations: true 
+csl: [geoderma-regional.csl]
+authors:
+- admin
+categories:
+  - R
+  - Programação
+tags:
+  - MDS
+  - Pedometria
+nocite: | 
+  @R-bookdown
+---
+
+```{r, eval=FALSE, echo=FALSE}
+rmarkdown::render('index.Rmd', encoding = 'UTF-8'")
+```
+
+# Introdução
+Nesse tutorial serão abordados através do Algoritmos para Pedologia Quantitativa (AQP em inglês) e pacotes auxiliares uma coleção de códigos, ideias, e plotes usando o software R [@R2019]. Toda a teoria por trás de grande parte do código pode ser encontrada no artigo [*Algorithms for quantitative pedology: A toolkit for soil scientists*](https://www.sciencedirect.com/science/article/pii/S009830041200369X?via%3Dihub) [@Beaudette2013]. Além disso artigos disso alguns exemplos de aplicações das ferramentas podem se encontrados em @Pinheiro2016 e @Pinheiro2018. Para fins didáticos o tutorial foi dividido em três partes e os pacotes usados serão `soilDB`, que contem uma base de dados de solos para análises pedométricas, `AQP` que contem as principais ferramentas de pedologia quantitativa usadas no tutorial, `sharpshootR` que contem uma coelção de funções que dão suporte ao levantamento e exploração de dados de solos, `SP` um pacote que fornece classes e métodos para dados espaciais: pontos, linhas, polígonos e grades, `Hmisc` que contém muitas funções úteis para análise de dados, gráficos de alto nível, operações utilitárias, funções para calcular o tamanho de amostras, importar e manipular conjuntos de dados, imputar valores ausentes, criação avançada de tabelas, análise de cluster entre outras funções, `lattice` que é um sistema de visualização de dados de alto nível, poderoso e elegante, com ênfase em dados multivariados, `MASS` com funções e conjuntos de dados para apoiar Venables e Ripley, **Modern Applied Statistics with S**, `plyr` que contem um conjunto de ferramentas que resolve problemas tais como: Divisão, aplicação e combinação de dados e `cluster` que um pacote com médodos para análise de cluster a fim de encontrar grupos em conjunto de dados. 
+
+## Base de dados dos exercícios
+Todos os dados usados nos exercícios ou são do pacote `AQP` ou são do pacote `soilDB`. Muitas das informações contidas nesse tutorial foram extraídas do [projeto do AQP](http://ncss-tech.github.io/AQP/) e todo crédito é dado ao autor.
+
+```{r, warning=FALSE, message=FALSE}
+# Carregando os pacotes no R
+library(soilDB) 
+library(aqp)  
+library(sharpshootR) 
+library(sp) 
+library(Hmisc)
+library(lattice)
+library(MASS)
+library(plyr)
+library(cluster)
+```
+# Parte I
+Na parte I serão abordadas características das funções básicas do *AQP*, conceito de coleção de perfis de solos, **SoilProfileCollection**, e verificação da estrutura de dados na coleção, além de alguns plotes básicos.
+A classe **SoilProfileCollection** foi projetada para simplificar o processo de trabalhar com a coleção de dados associados aos perfis de solo: dados em nível de local (site), dados em nível de horizonte, dados espaciais, dados de horizontes de diagnósticos, metadados, etc. Os exemplos listados abaixo devem ser copiados/colados deste documento e executados de forma interativa em R. Lembrando que antes de execultar você deve instalar e carregar todas as bibliotécas (pacotes) mencionados. 
+
+## Criação de Objetos
+Os objetos **SoilProfileCollection** geralmente são criados pela através de objetos *data.frame* (tabelas retangulares de dados) que contêm pelo menos três colunas essenciais:
+
+- Uma coluna de identificação que identifica exclusivamente grupos de horizontes (por exemplo, *pedons*)
+- Limites superiores do horizonte
+- Limites inferiores do horizonte
+
+O *data.frame* deve ser pré-classificado de acordo com o ID do perfil e o limite superior do horizonte. A notação de fórmula é usada para definir as colunas usadas para promover um objeto *data.frame*.
+```{r, warning=FALSE, message=FALSE}
+# Carregando dados de solos
+# upgrade para SoilProfileCollection
+# 'id' é o nome da coluna que contém o ID do perfil
+# 'top' é o nome da coluna que contém os limites superiores do horizonte
+# 'bottom' é o nome da coluna que contém os limites inferiores do horizonte
+data(sp1) # Conjunto de dados sp4 do pacote AQP (data.frame)
+aqp::depths(sp1) <- id ~ top + bottom 
+aqp::site(sp1) <- ~ group 
+```
+
+## Acessando, configurando e substituindo dados
+As funções de acesar são usadas para extrair componentes específicos dos objetos **SoilProfileCollection**.
+```{r, warning=FALSE, message=FALSE}
+# Métodos para inpensão dos objetos
+aqp::idname (sp1) # auto-explicativo
+aqp::horizonDepths(sp1) # auto-explicativo
+aqp::depth_units(sp1) # defaults 'cm'
+aqp::metadata(sp1) # 
+aqp::profile_id(sp1) # vector com IDs dos perfis
+aqp::horizonNames(sp1) # coluna com osnomes dos dados dos horizontes
+aqp::siteNames(sp1) # coluna com os nomes do dados dos locais (site data)
+length(sp1) # número de perfis na coleção
+nrow(sp1) # número de horizontes na coleção
+names(sp1) # nomes de colunas dos dados do site e do horizonte, concatenados em um único vetor
+min(sp1) # profundidade de perfil mais raso da coleção
+max(sp1) # profundidade de perfil mais profundo da coleção
+```
+
+## Dados do horizonte e do site (local)
+Normalmente, os dados do horizonte e do site são os componentes mais importantes dos objetos SoilProfileCollection. Ambos são armazenados internamente como objetos data.frame; com uma ou mais linhas (por ID do perfil) na tabela do horizonte e uma linha (por ID do perfil) na tabela do site. As colunas de qualquer tabela podem ser acessadas com a notação `$`. Novos dados podem ser atribuídos a qualquer tabela da mesma maneira, desde que o comprimento dos novos dados seja:
+
+- Mesmo tamanho que o número de perfis na coleção (o destino é a tabela de sites).
+- Mesmo comprimento que o número de horizontes na coleção (o destino é a tabela do horizonte). 
+
+## Plotando **SoilProfileCollection**
+O método `plot()` para objetos **SoilProfileCollection** gera esboços de perfis na coleção com base nos limites dos horizontes, alinhados verticalmente a uma sequência inteira de 1 ao número de perfis. Os nomes dos horizontes são extraídos automaticamente de um nome de atributo no nível do horizonte (se presente) ou por meio de um atributo alternativo fornecido como argumento: `name = 'nomedacoula'`. As cores do horizonte são geradas automaticamente a partir do atributo no nível do horizonte `soil_color`, ou qualquer outro atributo da descrição de cor compatível com R, fornecido como argumento: `color = 'nomedacoula'`. Essa função é altamente personalizável; portanto, é prudente consultar a ajuda `(plotSPC)` de tempos em tempos. As cores do solo na notação Munsell podem ser convertidas em cores compatíveis com R via `munsell2rgb()`.
+
+```{r, warning=FALSE, message=FALSE}
+data(sp4) # Conjunto de dados sp4 do pacote AQP (data.frame)
+aqp::depths(sp4) <- id ~ top + bottom 
+# Atribuição de novos dados a atributos existentes ou novos
+sp4$elevation <- rnorm(n=length(sp4), mean=1000, sd=150) # no nível do site, com base no comprimento dos dados atribuídos
+sp4$thickness <- sp4$bottom - sp4$top # nível do horizonte
+# Extração de atributos específicos por nome
+sp4$clay # Vetor de conteúdo de argila (dados do horizonte)
+```
+
+Os dados do horizonte e do local (site) também podem ser modificados por extração para um data.frame, seguidos pela substituição (dados do horizonte) ou junção (dados do site). Observe que, embora essa abordagem ofereça a maior flexibilidade, ela também é a mais perigosa - a substituição dos dados do horizonte por novos dados que não estão exatamente de acordo com a classificação original pode corromper seu **SoilProfileCollection**.
+```{r, warning=FALSE, message=FALSE}
+# extrair dados os horizontes para o data.frame
+h <- aqp::horizons(sp4)
+# Adicionar uma nova coluna e salvar de volta no objeto
+h$random.numbers <- rnorm(n=nrow(h), mean=0, sd=1)
+# repor dados originais dos horizontes com versão modificada
+#!a ordem das linhas não deve ser alterada!
+horizons(sp4) <- h
+# extrair dados do site para o data.frame
+s <- aqp::site(sp4)
+# Adicionar um grupo para o site fake
+s$group <- base::factor(rep(c('A', 'B'), length.out=nrow(s)))
+# junte novos dados do site com dados anteriores: os dados antigos não são substituídos
+site(sp4) <- s
+# Verificar
+sp4
+```
+
+```{r, warning=FALSE, message=FALSE}
+# Fazendo um plot simples
+plot(sp4, name='name')
+# title, note line argument:
+title('Perfis de Solo', line=1, cex.main=0.75)
+# profiles are centered at integers, from 1 to length(obj)
+axis(1, line=0, at=1:15, cex.axis=0.75, font=4, col='blue', col.axis='blue', lwd=2)
+mtext('Perfis', side=1, line=2, font=4, col='blue')
+# y-axis is based on profile depths
+axis(2, line=-1, at=pretty(1:max(sp4)), cex.axis=0.75, font=4, las=1, col='blue', col.axis='blue', lwd=2)
+mtext('Profundidade', side=2, line=1, font=4, col='blue')
+
+# plot com separação de grupos
+aqp::groupedProfilePlot(sp4, groups='group', max.depth=60, group.name.offset = -5, id.style='side')
+
+# Esboços Temáticos
+sp4$clay # 
+par(mar=c(1,1,3,1)) # tighter figure margins
+plot(sp4, name='name', color='clay',cex.names=0.5,cex.id=0.5, id.style='top',col.legend.cex=1,family="serif", col.label='Argila', )
+
+sp4$Ca # 
+par(mar=c(1,1,3,1)) # tighter figure margins
+plot(sp4, name='name', color='Ca',cex.names=0.5,cex.id=0.5, id.style='top',col.legend.cex=1,
+     col.label='Ca', family="serif")
+
+sp4$name # 
+par(mar=c(2,2,3,2)) # tighter figure margins
+plot(sp4, name='name', color='name', col.palette=RColorBrewer::brewer.pal(9, 'Set1'), col.label='Nomes dos Horizontes', 
+     cex.names=0.5)
+###############
+### Boxplot ###
+# Aqui usaremos o conjunto sp1
+sp1$name1 <- aqp::generalize.hz(sp1$name, 
+                           new=c('A','AB', 'BA','B','BC', 'C', 'E', 'AE', 'O', 'H', 'R', '2C', '3C', '3B', '3A'), 
+                           pat=c('^A','^AB','^BA','^B','^BC','^C', '^E', '^AE', '^O', '^H', '^R', '^2C', '^3C','^3B', '^3A' ))
+
+# compute horizon mid-points 
+sp1$mid <- with(horizons(sp1), (top+ bottom)/2)
+# sort horizon designation by group-wise median values 
+hz.designation.by.median.depths <- names(sort(tapply(sp1$mid, sp1$name1, median)))
+# plot the distribution of horizon mid-points by designation 
+lattice::bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
+       data=horizons(sp1),       
+       ylim=c(200, 0), ylab='Profundidade do ponto médio do horizonte (cm)',       
+       scales=list(y=list(tick.number=10)),       
+       panel= function ( ... ) {
+         panel.abline(h=seq(0, 180, by=10), v=1:length(hz.designation.by.median.depths), col=grey(0.8), lty=3)    
+         panel.bwplot( ... ) })
+lattice::bwplot(prop~ factor(name1, levels=hz.designation.by.median.depths),
+       data=horizons(sp1),       
+       ylab='Profundidade',       
+       scales=list(y=list(tick.number=10)),       
+       panel= function ( ... ) {  
+         panel.abline(h=seq(0, 600, by=50), v=1:length(hz.designation.by.median.depths), col=grey(0.8), lty=3)  
+         panel.bwplot( ... ) })
+```
+# Parte II
+## Funções de fatiamento (slice)
+Coleções de perfis de solo podem ser fatiadas (ou reamostradas) em intervalos regulares de profundidade com a função `slice()`. A estrutura de fatiamento e as variáveis de interesse são definidas por meio de notação de fórmula: seq ~ var.1 + var.2 + var.3 + ... onde seq é uma sequência de números inteiros (por exemplo, 0:15, c (5,10,15,20) etc.) e var.1 + var.2 + var.3 + ... são atributos no horizonte que se deja fatiar. As variáveis contínuas e categóricas podem ser nomeadas no lado direito da fórmula. Os resultados retornados pela função `slice ()` são **SoilProfileCollection** ou **data.frame** quando chamados com o argumento opcional *just.the.data = TRUE*. Por exemplo, para dividir nosso conjunto de dados de amostra em intervalos de 1 cm, de 0 a 15 cm:
+
+```{r, warning=FALSE, message=FALSE}
+# fatiar dados
+sliced <- aqp::slice(sp4, fm= 0:50 ~ sand + silt + clay)
+# verificar o resultado
+class(sliced)
+# fatiar de 0 até a profundidade máxima dos perfis da coleção
+sliced <- aqp::slice(sp4, fm= 0:max(sp4) ~ sand + silt + clay)
+# Extraia todos os dados na faixa de 5--10 cm:
+plot(sliced[, 5:10])
+# Extraia todos os dados na faixa de 25 a 50 cm:
+plot(sliced[, 25:50])
+# Extraia todos os dados na faixa de 0--5, 10--20 e 40--50 cm:
+plot(sliced[, c(0:5, 10:20, 40:50)])
+```
+## Agregando coleções de perfis de solo em “slabs” regulares
+O resumo detalhado dos atributos no nível de horizonte é realizado com a função `slab()`. Os critérios de agrupamento de perfis e a seleção de atributos do horizonte são parametrizados por meio da fórmula: grupos ~ var1 + var2 + var3 onde variáveis nomeadas são agregadas em grupos ou onde variáveis nomeadas são agregadas em toda a coleção com fórmula: coleção ~ var1 + var2 + var3. A função de resumo padrão *(slab.fun)* calcula os percentis 5, 25, 50, 75 e 95 através do estimador de quantil Harrell-Davis.
+
+A estrutura de profundidade ("slabs") sobre a qual os resumos são calculados é definida com o argumento `slab.structure` usando:
+
+- Um único número inteiro (por exemplo, 10): os dados são agregados em uma sequência regular de *slabs* de 10 unidades de espessura.
+- Um vetor de 2 números inteiros (por exemplo, c (50, 60)): os dados são agregados em profundidades que variam de 50 a 60 unidades.
+-Um vetor de 3 ou mais números inteiros (por exemplo, c (0, 5, 10, 50, 100)): os dados são agregados nas profundidades que variam de 0 a 5, 5 a 10, 10 a 50, 50 a 100 unidades. Essa é por exemplo umas das formas usadas para harmonização de dados em profundidades pré-definidas como é o caso do projeto **GlobalSoilMap project** [@Arrouays2017] que é de 0-5, 5-15, 15-30, 30-60, 60-100, 100-200 cm. 
+
+
+```{r, warning=FALSE, message=FALSE}
+# Agregar coleções de perfis de solo em “slabs” (conjuntos) regulares
+# calculando o valor médio ignorando os dados ausentes
+aqp::slab(sp4, fm= ~ sand + silt + clay, slab.structure=c(0,10), slab.fun=mean, na.rm=TRUE)
+
+# Novamente, desta vez em grupos definidos por um atributo no nível do site:
+aqp::slab(sp4, fm= group ~ sand + silt + clay, slab.structure=c(0,10), slab.fun=mean, na.rm=TRUE)
+
+# Novamente, desta vez em várias faixas de profundidade
+aqp::slab(sp4, fm= ~ sand + silt + clay, slab.structure=c(0,5,15,30,60), slab.fun=mean, na.rm=TRUE)
+
+# Novamente, desta vez em fatias de 1 cm, calculando quantis
+agg <- aqp::slab(sp4, fm= ~ sand + silt + clay)
+
+# Agregando coleções de perfis de solo ao longo de períodos regulares “Slabs”
+lattice::xyplot(top ~ p.q50 | variable, data=agg, ylab='Profundidade (cm)',
+       xlab='Mediana delimitada pelos percentis 25 e 75',
+       lower=agg$p.q25, upper=agg$p.q75, ylim=c(50,-2),
+       panel=panel.depth_function,
+       alpha=0.25, sync.colors=TRUE,
+       par.settings=list(superpose.line=list(col='RoyalBlue', lwd=2)),
+       prepanel=prepanel.depth_function,
+       cf=agg$contributing_fraction, cf.col='black', cf.interval=5, 
+       layout=c(3,1), strip=strip.custom(bg=grey(0.8)),
+       scales=list(x=list(tick.number=4, alternating=3, relation='free'))
+)
+
+```
+
+## Análise de Dissimilaridade (Dendogramas)
+Os dendogramas são uma maneira conveniente de descrever a dissimilaridade entre pares (*pair-wise*), comumente associada ao tópico da análise de cluster.
+O cálculo da dissimilaridade entre perfis é realizado usando a função `profile_compare()`. Os valores de dissimilaridade dependem da seleção de atributos (por exemplo, argila, CEC, pH etc.), parâmetro opcional de ponderação em profundidade `(k)` e uma profundidade máxima de avaliação `(max_d)`. Maiores informações dobre análise de dissimilaridade pode ser encotrado em @Beaudette2013 e com exemplos de aplicação em @Pinheiro2016 e @Pinheiro2018.
+
+```{r, warning=FALSE, message=FALSE}
+# Dissimilaridade usando o conjunto sp4
+# usando Ex-Ca:Mg e CTC a pH 7
+# sem ponderação de profundidade (k = 0)
+# até uma profundidade máxima de 50 cm
+d <- aqp::profile_compare(sp4, vars=c('ex_Ca_to_Mg', 'CEC_7'), k=0, max_d=50)
+
+# Verificar matriz de distância
+round(d, 1)
+# Análise hierárquica de cluster em um conjunto de dissimilaridades (Hierarchical Clustering)
+h <- stats::hclust(d)
+# Melhor ajuste de margens
+par(mar=c(4,3,2,3))
+
+##Plotando dendrograma
+plot(as.dendrogram(h))
+#stats::rect.hclust(h,5)
+
+################
+# Fazendo de outra forma com função diana (DIvisive ANAlysis Clustering)
+# vizualize a matriz de dissimilaridade via cluster hierárquico divisivo
+d.diana <- cluster::diana(d)
+
+## Plotando Dendograma
+# esta função é do pacote sharpshootR
+# requer alguns ajustes manuais
+par(mar=c(1,1,5,1))
+sharpshootR::plotProfileDendrogram(sp4, d.diana, scaling.factor = 0.8, y.offset = 5, width=0.25, color='ex_Ca_to_Mg')
+
+# solos de interesse do levatamento Americano
+s.list <- c('hornitos', 'perkins', 'argonaut', 'inks', 'mokelumne',
+            'dunstone', 'auburn', 'pentz', 'pardee', 'peters', 
+            'amador', 'laniger')
+
+# Buscar e converter dados em um SoilProfileCollection
+s <- soilDB::fetchOSD(s.list)
+# Estimando a profundidade do solo com base na designação do horizontes
+s$soil.depth <- profileApply(s, estimateSoilDepth, name='hzname', top='top', bottom='bottom')
+
+# plot profiles, order by soil depth
+par(mar=c(0, 0, 0, 0))
+plot(s, name='hzname', plot.order=order(s$soil.depth), cex.names=0.85, axis.line.offset=-5, width=0.25, id.style='top')
+d <- SoilTaxonomyDendrogram(s, cex.taxon.labels=0.8, width=0.25, y.offset = 0.4)
+
+```
+
+### Se você chegou até aqui muito bem !!!! 👏👏👏
+
+# Referências
