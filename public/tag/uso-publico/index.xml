@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Uso Público | Pedometria Fácil</title>
-    <link>https://pedometriafacil.netlify.app/tag/uso-publico/</link>
-      <atom:link href="https://pedometriafacil.netlify.app/tag/uso-publico/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tag/uso-publico/</link>
+      <atom:link href="/tag/uso-publico/index.xml" rel="self" type="application/rss+xml" />
     <description>Uso Público</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Pedometria, 2020</copyright><lastBuildDate>Fri, 27 Mar 2015 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://pedometriafacil.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Uso Público</title>
-      <link>https://pedometriafacil.netlify.app/tag/uso-publico/</link>
+      <link>/tag/uso-publico/</link>
     </image>
     
     <item>
       <title>Parque Nacional de Itatiaia</title>
-      <link>https://pedometriafacil.netlify.app/project/pni/</link>
+      <link>/project/pni/</link>
       <pubDate>Fri, 27 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>https://pedometriafacil.netlify.app/project/pni/</guid>
+      <guid>/project/pni/</guid>
       <description>&lt;p&gt;Description
 Itatiaia National Park (INP) plateau in Rio de Janeiro State is characterized by high altitude and a cold climate environment, with endemic fauna and flora. Since knowledge about soils in this section of the park is scarce, our research aims to characterize soils in the INP plateau and their distribution associating field survey and techniques and tools for digital mapping. They include the study of spatial distribution of soil attributes, selection of predictor variables among environmental covariates such as geology, geomorphology, satellite imagery and derived indices; and related land attributes of the digital elevation model, such as: slope, planar curvature, profile curvature, distance to drainage, radiation contribution area, topographic wetness index, transport capacity sediment. The technique of Random Forest will be applied for modeling. A second goal is to evaluate the vulnerability of environments at INP plateau, using data from slope, geology, vegetation, and soil classes (information produced in this study), which will be integrated into a GIS environment for generating the vulnerability map. This product can be used by INP to select areas that ought to have restricted public use due to the high vulnerability, and to preserve them for future researches.
 We are grateful to INP administrators for providing access and support to data collection as well as the cartographic base, and the training and laboratory funding from Graduate Course in Agronomy – Soil Science, UFRRJ, Brazil. Thanks to The James Hutton Institute, Aberdeen, Scotland, for providing physical structure and specialized knowledge that aided the research, particularly the supervision of Dr. Laura Poggio. The work was supported by scholarships from the Ministry of Science, Technology, Innovations and Communications through CNPq (Process 141391/2015-4), the Ministry of Education through CAPES Foundation (Process 88881.135776/2016-01), and grants from FAPERJ Foundation (Process E_34/2014).&lt;/p&gt;

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programação | Pedometria Fácil</title>
-    <link>https://pedometriafacil.netlify.app/category/programacao/</link>
-      <atom:link href="https://pedometriafacil.netlify.app/category/programacao/index.xml" rel="self" type="application/rss+xml" />
+    <link>/category/programacao/</link>
+      <atom:link href="/category/programacao/index.xml" rel="self" type="application/rss+xml" />
     <description>Programação</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Pedometria, 2020</copyright><lastBuildDate>Tue, 02 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://pedometriafacil.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Programação</title>
-      <link>https://pedometriafacil.netlify.app/category/programacao/</link>
+      <link>/category/programacao/</link>
     </image>
     
     <item>
       <title>Ferramentas pedométricas</title>
-      <link>https://pedometriafacil.netlify.app/post/tools/</link>
+      <link>/post/tools/</link>
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>https://pedometriafacil.netlify.app/post/tools/</guid>
+      <guid>/post/tools/</guid>
       <description>
 
 
@@ -177,24 +177,24 @@ mtext(&amp;#39;Perfis&amp;#39;, side=1, line=2, font=4, col=&amp;#39;blue&amp;#3
 # y-axis is based on profile depths
 axis(2, line=-1, at=pretty(1:max(sp4)), cex.axis=0.75, font=4, las=1, col=&amp;#39;blue&amp;#39;, col.axis=&amp;#39;blue&amp;#39;, lwd=2)
 mtext(&amp;#39;Profundidade&amp;#39;, side=2, line=1, font=4, col=&amp;#39;blue&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# plot com separação de grupos
 aqp::groupedProfilePlot(sp4, groups=&amp;#39;group&amp;#39;, max.depth=60, group.name.offset = -5, id.style=&amp;#39;side&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-7-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Esboços Temáticos
 sp4$clay # &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] 21 27 32 55 25 34  3 15 27 32 25 31 33 13 21 23 15 17 12 19 14 14 22 25 40
 ## [26] 51 67 24 25 32&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar=c(1,1,3,1)) # tighter figure margins
 plot(sp4, name=&amp;#39;name&amp;#39;, color=&amp;#39;clay&amp;#39;,cex.names=0.5,cex.id=0.5, id.style=&amp;#39;top&amp;#39;,col.legend.cex=1,family=&amp;quot;serif&amp;quot;, col.label=&amp;#39;Argila&amp;#39;, )&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-7-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sp4$Ca # &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1]  9.0  5.6  1.9  0.3  4.4  4.5  1.4  7.0  4.4  5.8  6.2  6.2  4.4  2.2  3.4
 ## [16]  3.7 24.1 21.5  0.7  5.6  3.5  2.0  6.6  4.1  3.5  1.5  0.8 16.3 16.5 13.7&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar=c(1,1,3,1)) # tighter figure margins
 plot(sp4, name=&amp;#39;name&amp;#39;, color=&amp;#39;Ca&amp;#39;,cex.names=0.5,cex.id=0.5, id.style=&amp;#39;top&amp;#39;,col.legend.cex=1,
      col.label=&amp;#39;Ca&amp;#39;, family=&amp;quot;serif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-7-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sp4$name # &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;A&amp;quot;   &amp;quot;ABt&amp;quot; &amp;quot;Bt1&amp;quot; &amp;quot;Bt2&amp;quot; &amp;quot;A&amp;quot;   &amp;quot;Bt&amp;quot;  &amp;quot;A&amp;quot;   &amp;quot;Bt1&amp;quot; &amp;quot;Bt2&amp;quot; &amp;quot;A&amp;quot;   &amp;quot;Bt1&amp;quot; &amp;quot;Bt2&amp;quot;
 ## [13] &amp;quot;Bt3&amp;quot; &amp;quot;A&amp;quot;   &amp;quot;Bt1&amp;quot; &amp;quot;Bt2&amp;quot; &amp;quot;A&amp;quot;   &amp;quot;Bt&amp;quot;  &amp;quot;A&amp;quot;   &amp;quot;Bt&amp;quot;  &amp;quot;A&amp;quot;   &amp;quot;Bt&amp;quot;  &amp;quot;A1&amp;quot;  &amp;quot;A2&amp;quot; 
@@ -202,7 +202,7 @@ plot(sp4, name=&amp;#39;name&amp;#39;, color=&amp;#39;Ca&amp;#39;,cex.names=0.5,
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar=c(2,2,3,2)) # tighter figure margins
 plot(sp4, name=&amp;#39;name&amp;#39;, color=&amp;#39;name&amp;#39;, col.palette=RColorBrewer::brewer.pal(9, &amp;#39;Set1&amp;#39;), col.label=&amp;#39;Nomes dos Horizontes&amp;#39;, 
      cex.names=0.5)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-5.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-7-5.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;###############
 ### Boxplot ###
 # Aqui usaremos o conjunto sp1
@@ -222,7 +222,7 @@ lattice::bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
        panel= function ( ... ) {
          panel.abline(h=seq(0, 180, by=10), v=1:length(hz.designation.by.median.depths), col=grey(0.8), lty=3)    
          panel.bwplot( ... ) })&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-6.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-7-6.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;lattice::bwplot(prop~ factor(name1, levels=hz.designation.by.median.depths),
        data=horizons(sp1),       
        ylab=&amp;#39;Profundidade&amp;#39;,       
@@ -230,7 +230,7 @@ lattice::bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
        panel= function ( ... ) {  
          panel.abline(h=seq(0, 600, by=50), v=1:length(hz.designation.by.median.depths), col=grey(0.8), lty=3)  
          panel.bwplot( ... ) })&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-7.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-7-7.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;#Parte II&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;funções-de-fatiamento-slice&#34; class=&#34;section level2&#34;&gt;
@@ -247,13 +247,13 @@ class(sliced)&lt;/code&gt;&lt;/pre&gt;
 sliced &amp;lt;- aqp::slice(sp4, fm= 0:max(sp4) ~ sand + silt + clay)
 # Extraia todos os dados na faixa de 5--10 cm:
 plot(sliced[, 5:10])&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Extraia todos os dados na faixa de 25 a 50 cm:
 plot(sliced[, 25:50])&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-8-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-8-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Extraia todos os dados na faixa de 0--5, 10--20 e 40--50 cm:
 plot(sliced[, c(0:5, 10:20, 40:50)])&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-8-3.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-8-3.png&#34; width=&#34;672&#34; /&gt;
 ## Agregando coleções de perfis de solo em “slabs” regulares
 O resumo detalhado dos atributos no nível de horizonte é realizado com a função &lt;code&gt;slab()&lt;/code&gt;. Os critérios de agrupamento de perfis e a seleção de atributos do horizonte são parametrizados por meio da fórmula: grupos ~ var1 + var2 + var3 onde variáveis nomeadas são agregadas em grupos ou onde variáveis nomeadas são agregadas em toda a coleção com fórmula: coleção ~ var1 + var2 + var3. A função de resumo padrão &lt;em&gt;(slab.fun)&lt;/em&gt; calcula os percentis 5, 25, 50, 75 e 95 através do estimador de quantil Harrell-Davis.&lt;/p&gt;
 &lt;p&gt;A estrutura de profundidade (“slabs”) sobre a qual os resumos são calculados é definida com o argumento &lt;code&gt;slab.structure&lt;/code&gt; usando:&lt;/p&gt;
@@ -308,7 +308,7 @@ lattice::xyplot(top ~ p.q50 | variable, data=agg, ylab=&amp;#39;Profundidade (cm
        layout=c(3,1), strip=strip.custom(bg=grey(0.8)),
        scales=list(x=list(tick.number=4, alternating=3, relation=&amp;#39;free&amp;#39;))
 )&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;análise-de-dissimilaridade-dendogramas&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Análise de Dissimilaridade (Dendogramas)&lt;/h2&gt;
@@ -353,7 +353,7 @@ par(mar=c(4,3,2,3))
 
 ##Plotando dendrograma
 plot(as.dendrogram(h))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#stats::rect.hclust(h,5)
 
 ################
@@ -366,7 +366,7 @@ d.diana &amp;lt;- cluster::diana(d)
 # requer alguns ajustes manuais
 par(mar=c(1,1,5,1))
 sharpshootR::plotProfileDendrogram(sp4, d.diana, scaling.factor = 0.8, y.offset = 5, width=0.25, color=&amp;#39;ex_Ca_to_Mg&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-10-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-10-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# solos de interesse do levatamento Americano
 s.list &amp;lt;- c(&amp;#39;hornitos&amp;#39;, &amp;#39;perkins&amp;#39;, &amp;#39;argonaut&amp;#39;, &amp;#39;inks&amp;#39;, &amp;#39;mokelumne&amp;#39;,
             &amp;#39;dunstone&amp;#39;, &amp;#39;auburn&amp;#39;, &amp;#39;pentz&amp;#39;, &amp;#39;pardee&amp;#39;, &amp;#39;peters&amp;#39;, 
@@ -380,9 +380,9 @@ s$soil.depth &amp;lt;- profileApply(s, estimateSoilDepth, name=&amp;#39;hzname&a
 # plot profiles, order by soil depth
 par(mar=c(0, 0, 0, 0))
 plot(s, name=&amp;#39;hzname&amp;#39;, plot.order=order(s$soil.depth), cex.names=0.85, axis.line.offset=-5, width=0.25, id.style=&amp;#39;top&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-10-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-10-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d &amp;lt;- SoilTaxonomyDendrogram(s, cex.taxon.labels=0.8, width=0.25, y.offset = 0.4)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-10-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-10-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;parte-iii&#34; class=&#34;section level1&#34;&gt;
@@ -398,7 +398,7 @@ par(mar=c(1,1,2,1))
 
 # Alguns plots
 plot(x)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(x, label=&amp;#39;pedon_id&amp;#39;, id.style=&amp;#39;side&amp;#39;)
 str(x)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Formal class &amp;#39;SoilProfileCollection&amp;#39; [package &amp;quot;aqp&amp;quot;] with 8 slots
@@ -565,15 +565,15 @@ str(x)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Adicionar marcação para alguns horizontes diagnósticos
 addDiagnosticBracket(x, kind=&amp;#39;argillic horizon&amp;#39;, col=&amp;#39;red&amp;#39;)
 addDiagnosticBracket(x, kind=&amp;#39;paralithic contact&amp;#39;, col=&amp;#39;black&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-11-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-11-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Agrupar perfis pela posição na paisagem
 groupedProfilePlot(x, groups=&amp;#39;hillslopeprof&amp;#39;, label=&amp;#39;pedon_id&amp;#39;, id.style=&amp;#39;side&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-11-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-11-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Carregando onconjunto de dados de solos mineralKing
 data(&amp;quot;mineralKing&amp;quot;)
 par(mar=c(1,1,2,1))
 groupedProfilePlot(mineralKing, groups=&amp;#39;taxonname&amp;#39;, print.id=FALSE)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-11-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-11-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# plot de distância ao longo de um transecto
 coordinates(mineralKing) &amp;lt;- ~ x_std + y_std
 # defina o sistema de coordenada de referência (CRS)
@@ -583,13 +583,13 @@ par(mar=c(4.5,4,1,1))
 
 # plot Padrão
 plotTransect(mineralKing, grad.var.name = &amp;#39;elev_field&amp;#39;, crs = crs.utm)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-11-5.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-11-5.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# plot com alteração de tamanho e tipo de fonte e nome dos eixos
 plotTransect(mineralKing, grad.var.name=&amp;#39;elev_field&amp;#39;, crs=crs.utm, grad.axis.title=&amp;#39;Elevação (m)&amp;#39;, 
              distance.axis.title=&amp;#39;Distância ao longo do transecto (km)&amp;#39;,
              label=&amp;#39;pedon_id&amp;#39;, scaling.factor = 0.5,
              cex.names=0.8,cex.id=0.8,col.legend.cex=1.5,family=&amp;quot;serif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-11-6.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-11-6.png&#34; width=&#34;672&#34; /&gt;
 ### Se você chegou até aqui muito bem !!!! 👏👏👏&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;referências&#34; class=&#34;section level1 unnumbered&#34;&gt;
@@ -617,9 +617,9 @@ plotTransect(mineralKing, grad.var.name=&amp;#39;elev_field&amp;#39;, crs=crs.ut
     
     <item>
       <title>Amostragem para mapeamento de solos</title>
-      <link>https://pedometriafacil.netlify.app/post/amostragem/</link>
+      <link>/post/amostragem/</link>
       <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
-      <guid>https://pedometriafacil.netlify.app/post/amostragem/</guid>
+      <guid>/post/amostragem/</guid>
       <description>
 
 
@@ -768,7 +768,7 @@ for (i in 2:length(pts) - 1) {
 }
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-conveniente&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem conveniente&lt;/h3&gt;
@@ -793,7 +793,7 @@ lr=as(lr, &amp;quot;SpatialPixelsDataFrame&amp;quot;)
 points(spsample(lr, n = 30, &amp;quot;random&amp;quot;), pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-intencional&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem intencional&lt;/h3&gt;
@@ -818,7 +818,7 @@ points(pts, pch = 21, cex = 0.75)
 polygon(pts@coords[c(1, 2, 6, 5, 1), ])
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;main &amp;lt;- &amp;quot;Amostra sistemática (malha triangular)&amp;quot;
 plot(
   grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
@@ -834,7 +834,7 @@ points(pts, pch = 21, cex = 0.75)
 polygon(pts@coords[c(1, 2, 5, 1), ])
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-5-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-5-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-intencional-caminhamento-livre&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Amostragem intencional caminhamento livre&lt;/h4&gt;
@@ -863,7 +863,7 @@ for (i in 2:length(perfis) - 1) {
 }
 leg &amp;lt;- paste(&amp;quot;Amostras n = 10&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;otimização-de-configurações-amostrais&#34; class=&#34;section level3&#34;&gt;
@@ -888,7 +888,7 @@ image(
 points(pts, pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;identificação-de-tendência-espacial-e-estimativa-optimclhs&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Identificação de tendência espacial e estimativa (optimCLHS)&lt;/h4&gt;
@@ -912,7 +912,7 @@ image(
 points(pts$points[, 2:3], pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;otimização-de-configurações-de-amostra-para-interpolação-espacial-optimmssd&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Otimização de configurações de amostra para interpolação espacial (optimMSSD)&lt;/h4&gt;
@@ -930,7 +930,7 @@ image(
 points(pts$points[, 2:3], pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;strong&gt;Para mais e informações sobre funções implementadas no R para otimização amostral, vocês podem consultar o o pacote &lt;a href=&#34;https://cran.r-project.org/web/packages/spsann/spsann.pdf&#34;&gt;spsann&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -959,7 +959,7 @@ pts@coords &amp;lt;-
 points(pts, pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-aleatória-estratificada-simples&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem aleatória estratificada simples&lt;/h3&gt;
@@ -988,7 +988,7 @@ pts@coords &amp;lt;- pts@coords +
 points(pts, pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-aleatória-sistemática&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem aleatória sistemática&lt;/h3&gt;
@@ -1011,7 +1011,7 @@ set.seed(1984)
 points(sp::spsample(grid, n = 30, type = &amp;quot;regular&amp;quot;), pch = 20, cex = 0.75)
 legend(636200, 7483450, legend = &amp;quot;Amostras (2019)&amp;quot;, pch = 21, bty = &amp;quot;n&amp;quot;)
 legend(636200, 7483400, legend = &amp;quot;Amostras (2020)&amp;quot;, pch = 20, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;main &amp;lt;- &amp;quot;Amostra aleatória sistemática (malha desalinhada)&amp;quot;
 plot(
   grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
@@ -1028,7 +1028,7 @@ points(pts, pch = 21, cex = 0.75)
 polygon(pts@coords[c(2, 7, 8, 3, 2), ])
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-12-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-12-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-aleatória-em-conglomerados&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem aleatória em conglomerados&lt;/h3&gt;
@@ -1049,7 +1049,7 @@ pts &amp;lt;- sp::spsample(grid, n = 33, type = &amp;quot;clustered&amp;quot;, n
 points(pts, pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;se-você-chegou-até-aqui-muito-bem&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Se você chegou até aqui muito bem !!!! 👏👏👏&lt;/h3&gt;
