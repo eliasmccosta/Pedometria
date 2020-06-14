@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nordeste | Pedometria Fácil</title>
-    <link>https://pedometriafacil.netlify.app/tag/nordeste/</link>
-      <atom:link href="https://pedometriafacil.netlify.app/tag/nordeste/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tag/nordeste/</link>
+      <atom:link href="/tag/nordeste/index.xml" rel="self" type="application/rss+xml" />
     <description>Nordeste</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Pedometria, 2020</copyright><lastBuildDate>Sat, 27 Apr 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://pedometriafacil.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Nordeste</title>
-      <link>https://pedometriafacil.netlify.app/tag/nordeste/</link>
+      <link>/tag/nordeste/</link>
     </image>
     
     <item>
       <title>Mapeamento Bahia</title>
-      <link>https://pedometriafacil.netlify.app/project/bahia/</link>
+      <link>/project/bahia/</link>
       <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>https://pedometriafacil.netlify.app/project/bahia/</guid>
+      <guid>/project/bahia/</guid>
       <description>&lt;p&gt;O mapeamento digital de solos em área de produção de petróleo e gás - Bahia é um projeto coordenado pelo professor 
 &lt;a href=&#34;http://lattes.cnpq.br/2115137917689655&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Marcos Bacis Ceddia&lt;/a&gt;. O projeto integra métodos e técnicas tradicionais (área de referência) e digitais de mapeamento de solo, utilizando novas ferramentas de caracterização de solos.&lt;/p&gt;
 </description>

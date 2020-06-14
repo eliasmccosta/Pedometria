@@ -1,0 +1,554 @@
+---
+date: "2020-06-14"
+diagram: true
+image:
+  caption: 'Image credit: [**sao.francisco.mg**](https://www.instagram.com/sao.francisco.mg/)'
+  focal_point: ""
+  placement: 3
+math: true
+title: Mapas temáticos de São Francisco-MG
+subtitle: 'Tutorial: Mapas temáticos de São Francisco-MG'
+summary: ''
+bibliography: [references.bib]
+link-citations: true 
+csl: [geoderma-regional.csl]
+authors:
+- admin
+categories:
+  - R
+  - Mapeamento
+tags:
+  - MDS
+  - Pedometria
+  - Mapas
+nocite: | 
+  @R-bookdown
+---
+
+```{r, eval=FALSE, echo=FALSE}
+rmarkdown::render('index.Rmd', encoding = 'UTF-8'")
+```
+
+# Introdução
+Nesse tutorial serão abordados através de pacotes para leitura, manipulação e plotagens de arquivos *shapefile* e *raster* uma coleção de códigos usando o software R [@R2019] e como exemplo o município onde nasci, São Francisco-MG. 
+São Francisco é um município do Norte de Minas Gerais. 
+
+O município de São Francisco foi fundado, segundo relatos locais, em 1877 por Domingos do Prado e Oliveira. Sua economia é voltada principalmente para a agricultura, pecuária e serviços gerais. Localiza-se na macrorregião Norte de Minas Gerais (MG), fazendo limite com Januária, Chapada Gaúcha, Pintópolis, Icaraí de Minas, Luislândia, Brasília de Minas, Japonvar e Pedras de Maria da Cruz; Localiza-se a uma latitude 15º56'55" sul e a uma longitude 44º51'52" oeste, estando a uma altitude de 918 metros e distantes 568 km de Belo Horizonte (BH) pelas BR 040 e 135 [Wikipédia](https://pt.wikipedia.org/wiki/S%C3%A3o_Francisco_(Minas_Gerais).
+
+
+
+```{r, warning=FALSE, message=FALSE}
+# Carregando os pacotes no R
+library(geobr) # O pacote geobr fornece acesso rápido e fácil a conjuntos de dados espaciais oficiais do Brasil.. 
+library(sf) # Suporte a recursos simples, uma maneira padronizada de codificar dados vetoriais espaciais
+library(tmap) # Mapas temáticos são mapas geográficos nos quais as distribuições de dados espaciais são visualizadas
+library(raster) # manipulação de rasters
+library(ggplot2) #plot de gráficos diversos
+library(ggspatial)# plote de elementos espaciais para o ggplot2
+```
+# Parte I: Trabalhando com dados vetoriais (shape)
+Para esse exercício iremos usar oso dados da Fundação Brasileira para o desenvolvimento sustentável [FBDS](http://geo.fbds.org.br). Uma observação importante é que os dados podem demorar, sobretudo o de uso da terra.  
+Aqui os dados estão marcados como comentários com `#` porque já foi feito o dowload do dados, para rodar o código e decarregar os dados só retirar o `#`. Lembrando que no meu caso estou sanvando numa pasta denominda *shape*.
+
+Boa parte do que é apresentado de mapas aqui foi feito com a ajuda do material fornecido por [geocast brasil](https://www.youtube.com/channel/UCLAeX4dyujMoy4xqHvxSDpQ)
+
+```{r, warning=FALSE, message=FALSE}
+## Massa de água - São Francisco
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_MASSAS_DAGUA.dbf",  destfile = "./shape/MG_3161106_MASSAS_DAGUA.dbf")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_MASSAS_DAGUA.prj", destfile = "./shape/MG_3161106_MASSAS_DAGUA.prj")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_MASSAS_DAGUA.shp",  destfile = "./shape/MG_3161106_MASSAS_DAGUA.shp")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_MASSAS_DAGUA.shx", destfile = "./shape/MG_3161106_MASSAS_DAGUA.shx")
+
+## Nascentes - São Francisco
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_NASCENTES.dbf", destfile = "./shape/MG_3161106_NASCENTES.dbf")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_NASCENTES.prj", destfile = "./shape/MG_3161106_NASCENTES.prj")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_NASCENTES.shp", destfile = "./shape/MG_3161106_NASCENTES.shp")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_NASCENTES.shx", destfile = "./shape/MG_3161106_NASCENTES.shx")
+
+## Rios Duplos - São Francisco
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_DUPLOS.dbf", destfile = "./shape/MG_3161106_RIOS_DUPLOS.dbf")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_DUPLOS.prj", destfile = "./shape/MG_3161106_RIOS_DUPLOS.prj")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_DUPLOS.shp", destfile = "./shape/MG_3161106_RIOS_DUPLOS.shp")
+# download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_DUPLOS.shx", destfile = "./shape/MG_3161106_RIOS_DUPLOS.shx")
+
+## Rio simples - São Francisco
+# download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_SIMPLES.dbf", destfile = "./shape/MG_3161106_RIOS_SIMPLES.dbf")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_SIMPLES.prj", destfile = "./shape/MG_3161106_RIOS_SIMPLES.prj")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_SIMPLES.shp", destfile = "./shape/MG_3161106_RIOS_SIMPLES.shp")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_SIMPLES.shx", destfile = "./shape/MG_3161106_RIOS_SIMPLES.shx")
+
+## APP - São Francisco
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/APP/MG_3161106_APP.dbf",             destfile = "./shape/MG_3161106_APP.dbf")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/APP/MG_3161106_APP.prj",               destfile = "./shape/MG_3161106_APP.prj")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/APP/MG_3161106_APP.shp",               destfile = "./shape/MG_3161106_APP.shp")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/APP/MG_3161106_APP.shx",               destfile = "./shape/MG_3161106_APP.shx")
+
+## Uso do solo - São Francisco
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/USO/MG_3161106_USO.dbf",               destfile = "./shape/MG_3161106_USO.dbf")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/USO/MG_3161106_USO.prj",               destfile = "./shape/MG_3161106_USO.prj")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/USO/MG_3161106_USO.shp",              destfile = "./shape/MG_3161106_USO.shp")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/USO/MG_3161106_USO.shx",               destfile = "./shape/MG_3161106_USO.shx")
+```
+
+```{r, warning=FALSE, message=FALSE}
+# Importando geospatial data 
+## Nascentes
+nascentes <- sf::st_read("./shape/MG_3161106_NASCENTES.shp") # pode demorar
+nascentes
+plot(nascentes$geometry) #Aqui é possível observar o código do município
+
+## Rios simples
+rios <- sf::st_read("./shape/MG_3161106_RIOS_SIMPLES.shp") # pode demorar
+rios
+plot(rios$geometry)
+
+## Rios simples
+rios.d <- sf::st_read("./shape/MG_3161106_RIOS_DUPLOS.shp") # pode demorar
+rios.d
+plot(rios.d$geometry)
+
+## Massa de água
+massa <- sf::st_read("./shape/MG_3161106_MASSAS_DAGUA.shp") # pode demorar
+massa
+plot(massa$geometry)
+# Explorando o geobr::
+## ver quais conjuntos de dados estão disponíveis usando a função list_geobr ()
+datasets <- geobr::list_geobr()
+datasets
+# Fazendo o download de dados geoespaciais do geobr
+# Fazendo o download de uma área geográfica específica em um determinado ano
+# Estado de MG
+state <- geobr::read_state(code_state="MG", year=2018) # state of MG from 2018 data
+
+# Municipios MG
+#carregar dados de todos os municípios
+muni_mg <- geobr::read_municipality(code_muni = 'MG', year = 2018)
+muni_mg #aqui pode confirmar o código do município
+plot(muni_mg$geom, col = "gray")
+
+# Município de Sao Francisco
+sao_f<- geobr::read_municipality(code_muni = 3161106, year=2018 ) 
+sao_f
+plot(sao_f$geom, col = "gray")
+
+
+# plotagens com pacote tmap
+# 1. mapa 
+# São Francisco com municipios limitrofes
+tmap::tm_shape(muni_mg, bbox = sao_f) +
+  tmap::tm_polygons(col = "lightgrey") +
+  tmap::tm_shape(sao_f) +
+  tm_polygons(col = "red") 
+# add polygon
+# borders
+# fill
+
+# 2. mapa 
+# rios e nascentes de São Francisco com municipios limitrofes 
+m1 <- tm_shape(muni_mg, bbox = sao_f) +
+  tm_polygons(col = "lightgrey") +
+  tm_shape(sao_f) +
+  tm_polygons(col = "darkgrey") +
+  tm_shape(rios) +
+  tm_lines(col = "blue") + 
+  tm_shape(nascentes) + 
+  tm_dots(size = .2)
+m1
+
+# 3. Adicionando detalhes ----
+# rios e nascentes de São Francisco com municipios limitrofes 
+m2 <- tm_shape(muni_mg, bbox = sao_f) +
+  tm_polygons(col = "lightgrey") +
+  # add label
+  tm_shape(sao_f) +
+  tm_polygons(col = "darkgrey") +
+  tm_shape(rios) +
+  tm_lines(col = "lightblue") + 
+  tm_shape(rios.d) + 
+  tm_polygons(col = "blue")
+# simbolizar por coluna "HIDRO"
+  # add compass
+  # add grid
+  # add scale_bar()
+  # add layout Title
+    m2
+
+# 4. compondo dois ou mais mapas em uma imagem ------
+# tmap_arrange
+tmap_arrange(m1, m2, widths = c(.25, .75))
+tmap_arrange(m1, m2, widths = c(.5, .5))
+
+
+# 5. estilo pré concebidos
+# tmap_style
+m2 + tm_style("bw")
+m2 + tm_style("classic")
+m2 + tm_style("cobalt")
+m2 + tm_style("col_blind")
+
+# 6. salvando mapa
+tmap::tmap_save(filename = "./figures/map_sao_f_col_blind.png")
+
+# 7. tmap_mode()
+tmap_mode("view")
+webmap <- tm_shape(muni_mg, bbox = sao_f) +
+  tm_polygons(col = "lightgrey") +
+  tm_text("name_muni") +
+  tm_shape(sao_f) +
+  tm_polygons(col = "darkgrey") +
+  tm_text("name_muni") + 
+  tm_shape(rios) +
+  tm_lines(col = "blue")
+webmap
+
+# 8. Salvando o html 'widget'
+# tmap::tmap_save(filename = "./figures/sao_f.html",
+               # width = 20, 
+               # height = 20, 
+               # units = "cm", 
+               # dpi = 300)
+
+```
+Se você bem observou até aqui fizemos os mapas com o pacote `tmap`. Agora iremos fazer algumas plotagens de mapas com os pacotes `ggplot2` e `ggspatial`
+```{r, warning=FALSE, message=FALSE}
+# import geospatial data --------------------------------------------------
+# land use
+uso <- sf::st_read("./shape/MG_3161106_USO.shp") # pode demorar
+uso
+plot(uso$geometry)
+
+# Limite São Francisco
+limite_SF <- geobr::read_municipality(code_muni = 3161106, year = 2018)
+limite_SF
+plot(limite_SF$geom, col = "gray")
+
+# maps --------------------------------------------------------------------
+# limite_São Francisco
+ggplot() +
+  geom_sf(data = limite_SF)
+
+# limite_São Francisco color and fill
+ggplot() +
+  geom_sf(data = limite_SF, color = "red", fill = NA)
+
+# limite_São Francisco fill + land use
+ggplot() +
+  geom_sf(data = limite_SF, color = "black", fill = NA) +
+  geom_sf(data = uso)
+
+# limite_São Francisco fill + land use with colors
+ggplot() +
+  geom_sf(data = limite_SF, color = "black", fill = NA) +
+  geom_sf(data = uso, aes(fill = CLASSE_USO), color = NA)
+
+# land use with colors + limite_São Francisco fill
+ggplot() +
+  geom_sf(data = uso, aes(fill = CLASSE_USO), color = NA) +
+  geom_sf(data = limite_SF, color = "black", fill = NA)
+
+# land use and choose colors + limite_São Francisco fill 
+ggplot() +
+  geom_sf(data = uso, aes(fill = CLASSE_USO), color = NA) + #aestetic coloca a coluna que queremos
+  geom_sf(data = limite_SF, color = "black", fill = NA) +
+  scale_fill_manual(values = c("blue", "orange", "darkgray", "forestgreen", "lightgreen", "green"))
+
+# land use and choose colors + limite_São Francisco fill + coords
+ggplot() +
+  geom_sf(data = uso, aes(fill = CLASSE_USO), color = NA) +
+  geom_sf(data = limite_SF, color = "black", fill = NA) +
+  scale_fill_manual(values = c("blue", "orange", "darkgray", "forestgreen", "lightgreen", "green")) +
+  coord_sf(datum = sf::st_crs(uso)) #usando as coordenadas do shape
+
+# land use and choose colors + limite_São Francisco fill + coords + themes
+ggplot() +
+  geom_sf(data = uso, aes(fill = CLASSE_USO), color = NA) +
+  geom_sf(data = limite_SF, color = "black", fill = NA) +
+  scale_fill_manual(values = c("blue", "orange", "darkgray", "forestgreen", "lightgreen", "green")) +
+  coord_sf(datum = sf::st_crs(uso)) +
+  theme_classic()
+  # theme_bw() # theme black and white
+  #theme_minimal()
+
+# land use and choose colors + limite_São Francisco fill + coords + themes + scalebar + north
+map <- ggplot() +
+  geom_sf(data = uso, aes(fill = CLASSE_USO), color = NA) +
+  geom_sf(data = limite_SF, color = "black", fill = NA) +
+  scale_fill_manual(values = c("blue", "orange", "darkgray", "forestgreen", "lightgreen", "green")) +
+  coord_sf(datum = sf::st_crs(uso)) +
+  theme_bw() +
+  annotation_scale(location = "br", width_hint = .3) +
+  annotation_north_arrow(location = "br", which_north = "true", 
+                         pad_x = unit(0, "cm"), pad_y = unit(.8, "cm"),
+                         style = north_arrow_fancy_orienteering)
+map
+
+# Salvando o mapa
+## ggsave o gráfico que foi plotado
+#ggsave(filename = "SF_map.png",
+       #plot = map,
+       #path = "./figures",
+      # width = 20, 
+       #height = 20, 
+      # units = "cm", 
+      # dpi = 300)
+
+```
+
+# Parte II: Trabalhando com dados matriciais (raster)
+```{r, warning=FALSE, message=FALSE}
+r1 <- raster("./raster/SD-23-Y-D.tif")
+r2 <- raster("./raster/SD-23-Z-C.tif")
+r3 <- raster("./raster/SE-23-V-B.tif")
+r4 <- raster("./raster/SE-23-X-A.tif")
+mde= mosaic(r1, r2, r3, r4, fun=mean)
+plot(mde)
+
+sao_f<- geobr::read_municipality(code_muni = 3161106, year=2018 ) 
+## Rios simples
+rios <- sf::st_read("./shape/MG_3161106_RIOS_SIMPLES.shp") # pode demorar
+rios
+plot(rios$geometry)
+
+## Rios simples
+rios.d <- sf::st_read("./shape/MG_3161106_RIOS_DUPLOS.shp") # pode demorar
+rios.d
+plot(rios.d$geometry)
+
+nascentes <- sf::st_read("./shape/MG_3161106_NASCENTES.shp") # pode demorar
+#sao_f <- sp::spTransform(sao_f, "+proj=utm +zone=23 +south +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs")
+
+
+#cortando o mde com a mascara de limite do municipio
+r2 <- crop(mde, extent(sao_f)); mde <- mask(x= r2, mask=sao_f)
+
+# Transforming coordinate to UTM using EPSG=31983 for WGS=84, UTM Zone=23L,
+# Southern Hemisphere)
+sr <- "+proj=utm +zone=23 +south +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs" 
+mde.utm <- projectRaster(mde, crs = sr)
+plot(mde.utm)
+  
+######################################
+######### plotting maps #########
+######################################
+ # plotando raster com o pacote tmap e função tm_raster
+tm_shape(mde.utm) + 
+  tm_raster(style = "cont", title = "Elevation (m)",
+            palette = terrain.colors(64))+
+  tm_legend(outside = F)
+
+# classificar manualmente a elevação 450, 500, 550, 600, 650, 700, 750, 800 m
+tm_shape(mde.utm) + 
+  tm_raster(style = "fixed", title = "Elevation (m)",
+            breaks = c(450, 500, 550, 600, 650, 700, 750, 800),
+            palette = terrain.colors(5))+
+  tm_legend(outside = TRUE)
+
+# mudandom paleta de cores e adicionanddo gráfico
+tm_shape(mde.utm) + 
+  tm_raster(style = "quantile", n = 12, title = "Elevation (m)",
+            palette = colorRampPalette( c("darkolivegreen4","yellow", "brown"))(12),
+            legend.hist = TRUE)+
+  tm_legend(outside = TRUE, hist.width = 2)
+
+# Colocando detalhes no mapa com tmap
+tm_shape(mde.utm, projection = sr) + 
+  tm_raster(style = "quantile", n = 12,
+            palette = colorRampPalette( c("darkolivegreen4","yellow", "brown"))(12),
+            legend.show = FALSE) +
+  tm_shape(rios) + tm_lines(col = "blue")+
+  tm_shape(nascentes) +tm_dots(size=0.5)+
+  tm_layout(outer.margins = c(.1,.1,.1,.1))+
+  tm_grid(labels.inside.frame = FALSE, 
+          x = c(480000,500000, 520000, 540000, 560000),
+          y = c(8220000, 8240000, 8260000, 8280000), labels.size = 1)+
+  tm_scale_bar(position=c("0.55", "0.6"), text.size  = 1)+
+ tm_compass(type="rose", position=c("right", "top"), show.labels = 3)
+
+# plot com ggplot
+ggplot() +
+  
+  # annotation_spatial() layers don't train the scales, so data stays central
+  # annotation_spatial(longlake_roadsdf, size = 2, col = "black") +
+  # annotation_spatial(longlake_roadsdf, size = 1.6, col = "white") +
+    # raster layers train scales and get projected automatically
+  layer_spatial(mde.utm, aes(alpha = stat(band1)), fill = "darkolivegreen")+
+  scale_alpha_continuous(na.value = 0) +
+    # layer_spatial() layers train the scales
+  #layer_spatial(longlake_depthdf, aes(col = DEPTH_M)) +
+    # spatial-aware automagic scale bar
+  annotation_scale(location = "bl") +
+    # spatial-aware automagic north arrow
+  annotation_north_arrow(location = "tr", which_north = "true")+
+  labs(x='Longitude',y='Latitude',
+       title="São Francisco",
+       subtitle='Elevação (m)',
+       caption='Source: Elias Mendes Cosa, 2020')
+
+################################################################### 
+#### obtendo informações do rater e mais opções de plotagens
+mde= mosaic(r1, r2, r3, r4, fun=mean)
+plot(mde)
+
+sao_f<- geobr::read_municipality(code_muni = 3161106, year=2018 ) 
+## Rios simples
+rios <- sf::st_read("./shape/MG_3161106_RIOS_SIMPLES.shp") # pode demorar
+rios
+plot(rios$geometry)
+
+## Rios simples
+rios.d <- sf::st_read("./shape/MG_3161106_RIOS_DUPLOS.shp") # pode demorar
+rios.d
+plot(rios.d$geometry)
+
+nascentes <- sf::st_read("./shape/MG_3161106_NASCENTES.shp") # pode demorar
+#sao_f <- sp::spTransform(sao_f, "+proj=utm +zone=23 +south +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs")
+
+
+#cortando o mde com a mascara de limite do municipio
+r2 <- crop(mde, extent(sao_f)); mde <- mask(x= r2, mask=sao_f)
+
+# Transforming coordinate to UTM using EPSG=31983 for WGS=84, UTM Zone=23L,
+# Southern Hemisphere)
+sr <- "+proj=utm +zone=23 +south +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs" 
+dem <- projectRaster(mde, crs = sr)
+plot(dem)
+
+# informacoes do raster ---------------------------------------------------
+# objeto
+dem
+
+# extensao
+extent(dem)
+
+# nrow, ncol, ncell
+nrow(dem)
+ncol(dem)
+ncell(dem)
+
+# resolucao
+res(dem)
+
+# projecao
+projection(dem)
+
+# names
+names(dem)
+
+# values
+values(dem)
+
+# values
+dem[]
+
+# reclassificar -----------------------------------------------------------
+# matriz de reclassificação
+# vetor
+vec <- c(0, 450, 1, 
+         450, 500, 2, 
+        500, 550, 3,
+         550, 600, 4,
+         660, 650, 5,
+         650, 700, 6,
+         700, 750, 7,
+        750, 800, 8)
+vec
+
+# matriz
+mat <- matrix(vec, ncol = 3, byrow = TRUE)
+mat
+
+# reclassificar
+dem_rec <- raster::reclassify(dem, mat, right = FALSE)
+dem_rec
+plot(dem_rec)
+
+# mapa final --------------------------------------------------------------
+# tmap
+tm_shape(dem) +
+  tm_raster() +
+  tm_layout(legend.position = c("left", "bottom"))
+
+# tmap - escala de cores
+tm_shape(dem) +
+  tm_raster(palette = "-RdYlGn") +
+  tm_layout(legend.position = c("left", "bottom"))
+
+# acessar paletas de cores do tmap
+tmaptools::palette_explorer()
+
+# tmap - escala de cores - viridis
+tm_shape(dem) +
+  tm_raster(palette = viridis::viridis(5)) +
+  tm_layout(legend.position = c("left", "bottom"))
+
+# tmap - escala de cores - cpt
+cptcity::find_cpt("dem")
+cptcity::find_cpt("dem")[4]
+
+tm_shape(dem) +
+  tm_raster(palette = cptcity::cpt(pal = cptcity::find_cpt("dem")[4])) +
+  tm_layout(legend.position = c("left", "bottom"))
+
+# tmap n
+tm_shape(dem) +
+  tm_raster(palette = cptcity::cpt(pal = cptcity::find_cpt("dem")[4]), n = 9) +
+  tm_layout(legend.position = c("left", "bottom"))
+
+# tmap n
+tm_shape(dem) +
+  tm_raster(palette = cptcity::cpt(pal = cptcity::find_cpt("dem")[4]), 
+            breaks = c(400, 500, 600, 700, 800, 900))+
+  tm_layout(legend.position = c("left", "bottom"))
+
+# mapa final contínuo
+tm_shape(dem) +
+  tm_raster(palette = cptcity::cpt(pal = cptcity::find_cpt("dem")[4]), 
+            breaks = c(400, 500, 600, 700, 800),
+            labels = c("400-500", 
+                       "501-600",
+                       "601-700",
+                       "701-800"),
+            title = "Elevação (m)") +
+  tm_graticules(lines = FALSE) + 
+  tm_compass(position = c("right", "top")) +
+  tm_scale_bar(text.size = .7, position = c("right", "bottom")) +
+  tm_layout(main.title = "MDE São Francisco", 
+            main.title.position = "center",
+            legend.position = c("right", "top"))
+
+# tmap::tmap_save(filename = "./figures/mde.sf.png",
+               # width = 20, 
+               # height = 20, 
+               # units = "cm", 
+               # dpi = 600)
+
+# Colocando detalhes no mapa com tmap e plotando em utm
+tm_shape(dem, projection = sr) + 
+  tm_raster(style = "quantile", n = 7,
+            palette = colorRampPalette( c("darkolivegreen4","yellow", "brown"))(7),
+            legend.show = T,
+            title = "Elevação (m)") +
+  tm_shape(rios) + tm_lines(col = "blue")+
+  tm_shape(nascentes) +tm_dots(size=0.1)+
+  tm_layout(outer.margins = c(.1,.1,.1,.1))+
+  tm_grid(labels.inside.frame = FALSE, 
+          x = c(480000,500000, 520000, 540000, 560000),
+          y = c(8220000, 8240000, 8260000, 8280000), labels.size = 1)+
+  tm_scale_bar(position=c("0.63", "-0.03"), text.size  = 1)+
+  tm_compass(type="4star", position=c("right", "top"), show.labels = 3)+
+tm_layout(main.title = "MDE São Francisco", 
+          main.title.position = "center",
+          legend.position = c("right", "top"))
+  
+#Salvando o mapa
+# tmap::tmap_save(filename = ".img/map_dem_SF.png",
+              #  width = 20, 
+               # height = 20, 
+              #  units = "cm", 
+              #  dpi = 300)
+
+```
+
+### Se você chegou até aqui muito bem !!!! 👏👏👏
+
+# Referências

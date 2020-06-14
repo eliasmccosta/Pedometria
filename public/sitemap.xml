@@ -3,292 +3,317 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/courses/example/example1/</loc>
+    <loc>/courses/example/example1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/courses/example/</loc>
+    <loc>/courses/example/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/courses/example/example2/</loc>
+    <loc>/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/authors/</loc>
+    <loc>/authors/</loc>
+    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/elias-mendes-costa/</loc>
+    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/sf/</loc>
+    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/mapas/</loc>
+    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/category/mapeamento/</loc>
+    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/mds/</loc>
+    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/pedometria/</loc>
+    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/category/r/</loc>
+    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/tools/</loc>
     <lastmod>2020-06-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/categories/</loc>
+    <loc>/category/programacao/</loc>
     <lastmod>2020-06-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/author/elias-mendes-costa/</loc>
-    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedometriafacil.netlify.app/post/tools/</loc>
-    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedometriafacil.netlify.app/tag/mds/</loc>
-    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedometriafacil.netlify.app/tag/pedometria/</loc>
-    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedometriafacil.netlify.app/</loc>
-    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedometriafacil.netlify.app/post/</loc>
-    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedometriafacil.netlify.app/category/programacao/</loc>
-    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedometriafacil.netlify.app/category/r/</loc>
-    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedometriafacil.netlify.app/tags/</loc>
-    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pedometriafacil.netlify.app/tag/amostragem/</loc>
+    <loc>/tag/amostragem/</loc>
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/post/amostragem/</loc>
+    <loc>/post/amostragem/</loc>
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/publication-type/2/</loc>
+    <loc>/publication-type/2/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/author/helena-saraiva-koenow-pinheiro/</loc>
+    <loc>/author/helena-saraiva-koenow-pinheiro/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/author/lucia-helena-cunha-dos-anjos/</loc>
+    <loc>/author/lucia-helena-cunha-dos-anjos/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/publication/journal-article/rbcs2020/</loc>
+    <loc>/publication/journal-article/rbcs2020/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/publication_types/</loc>
+    <loc>/publication_types/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/publication/</loc>
+    <loc>/publication/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/author/robson-altiellys-tosta-marcondes/</loc>
+    <loc>/author/robson-altiellys-tosta-marcondes/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/tag/source-themes/</loc>
+    <loc>/tag/source-themes/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/author/yuri-andrei-gelsleichter/</loc>
+    <loc>/author/yuri-andrei-gelsleichter/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/courses/</loc>
+    <loc>/courses/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/tag/mapeamento/</loc>
+    <loc>/tag/mapeamento/</loc>
     <lastmod>2019-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/project/bahia/</loc>
+    <loc>/project/bahia/</loc>
     <lastmod>2019-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/tag/nordeste/</loc>
+    <loc>/tag/nordeste/</loc>
     <lastmod>2019-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/tag/petrobras/</loc>
+    <loc>/tag/petrobras/</loc>
     <lastmod>2019-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/project/</loc>
+    <loc>/project/</loc>
     <lastmod>2019-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/tag/reconcavo-baiano/</loc>
+    <loc>/tag/reconcavo-baiano/</loc>
     <lastmod>2019-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/slides/</loc>
+    <loc>/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/slides/example/</loc>
+    <loc>/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/tag/ensino/</loc>
+    <loc>/tag/ensino/</loc>
     <lastmod>2018-08-29T08:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/tag/palestra/</loc>
+    <loc>/tag/palestra/</loc>
     <lastmod>2018-08-29T08:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/talk/ceade2018/</loc>
+    <loc>/talk/ceade2018/</loc>
     <lastmod>2018-08-29T08:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/talk/</loc>
+    <loc>/talk/</loc>
     <lastmod>2018-08-29T08:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/publication-type/1/</loc>
+    <loc>/publication-type/1/</loc>
     <lastmod>2018-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/author/laura-poggio/</loc>
+    <loc>/author/laura-poggio/</loc>
     <lastmod>2018-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/publication/conference-paper/wcss2018/</loc>
+    <loc>/publication/conference-paper/wcss2018/</loc>
     <lastmod>2018-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/author/alessandro-samuel-rosa/</loc>
+    <loc>/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/privacy/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/terms/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/alessandro-samuel-rosa/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/publication/journal-article/ca2018/</loc>
+    <loc>/publication/journal-article/ca2018/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/publication/journal-article/jeq2018/</loc>
+    <loc>/publication/journal-article/jeq2018/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/author/sidinei-julio-beutler/</loc>
+    <loc>/author/sidinei-julio-beutler/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/author/wagner-de-souza-tassinari/</loc>
+    <loc>/author/wagner-de-souza-tassinari/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/author/mauro-antonio-homem-antunes/</loc>
+    <loc>/author/mauro-antonio-homem-antunes/</loc>
     <lastmod>2016-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/author/paula-debiasi/</loc>
+    <loc>/author/paula-debiasi/</loc>
     <lastmod>2016-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/publication/journal-article/pab2016/</loc>
+    <loc>/publication/journal-article/pab2016/</loc>
     <lastmod>2016-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/tag/floresta-atlantica/</loc>
+    <loc>/tag/floresta-atlantica/</loc>
     <lastmod>2015-03-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/project/pni/</loc>
+    <loc>/project/pni/</loc>
     <lastmod>2015-03-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/tag/preservacao/</loc>
+    <loc>/tag/preservacao/</loc>
     <lastmod>2015-03-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/tag/uso-publico/</loc>
+    <loc>/tag/uso-publico/</loc>
     <lastmod>2015-03-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/tag/geologia-complexa/</loc>
+    <loc>/tag/geologia-complexa/</loc>
     <lastmod>2013-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/project/pinheiral/</loc>
+    <loc>/project/pinheiral/</loc>
     <lastmod>2013-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/tag/mar-de-morros/</loc>
+    <loc>/tag/mar-de-morros/</loc>
     <lastmod>2013-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/tag/areas-degradadas/</loc>
+    <loc>/tag/areas-degradadas/</loc>
     <lastmod>2013-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pedometriafacil.netlify.app/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
+    <loc>/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
   </url>
   
 </urlset>

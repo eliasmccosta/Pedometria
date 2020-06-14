@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Amostragem | Pedometria Fácil</title>
-    <link>https://pedometriafacil.netlify.app/tag/amostragem/</link>
-      <atom:link href="https://pedometriafacil.netlify.app/tag/amostragem/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tag/amostragem/</link>
+      <atom:link href="/tag/amostragem/index.xml" rel="self" type="application/rss+xml" />
     <description>Amostragem</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Pedometria, 2020</copyright><lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://pedometriafacil.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Amostragem</title>
-      <link>https://pedometriafacil.netlify.app/tag/amostragem/</link>
+      <link>/tag/amostragem/</link>
     </image>
     
     <item>
       <title>Amostragem para mapeamento de solos</title>
-      <link>https://pedometriafacil.netlify.app/post/amostragem/</link>
+      <link>/post/amostragem/</link>
       <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
-      <guid>https://pedometriafacil.netlify.app/post/amostragem/</guid>
+      <guid>/post/amostragem/</guid>
       <description>
 
 
@@ -165,7 +165,7 @@ for (i in 2:length(pts) - 1) {
 }
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-conveniente&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem conveniente&lt;/h3&gt;
@@ -190,7 +190,7 @@ lr=as(lr, &amp;quot;SpatialPixelsDataFrame&amp;quot;)
 points(spsample(lr, n = 30, &amp;quot;random&amp;quot;), pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-intencional&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem intencional&lt;/h3&gt;
@@ -215,7 +215,7 @@ points(pts, pch = 21, cex = 0.75)
 polygon(pts@coords[c(1, 2, 6, 5, 1), ])
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;main &amp;lt;- &amp;quot;Amostra sistemática (malha triangular)&amp;quot;
 plot(
   grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
@@ -231,7 +231,7 @@ points(pts, pch = 21, cex = 0.75)
 polygon(pts@coords[c(1, 2, 5, 1), ])
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-5-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-5-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-intencional-caminhamento-livre&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Amostragem intencional caminhamento livre&lt;/h4&gt;
@@ -260,7 +260,7 @@ for (i in 2:length(perfis) - 1) {
 }
 leg &amp;lt;- paste(&amp;quot;Amostras n = 10&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;otimização-de-configurações-amostrais&#34; class=&#34;section level3&#34;&gt;
@@ -285,7 +285,7 @@ image(
 points(pts, pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;identificação-de-tendência-espacial-e-estimativa-optimclhs&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Identificação de tendência espacial e estimativa (optimCLHS)&lt;/h4&gt;
@@ -309,7 +309,7 @@ image(
 points(pts$points[, 2:3], pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;otimização-de-configurações-de-amostra-para-interpolação-espacial-optimmssd&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Otimização de configurações de amostra para interpolação espacial (optimMSSD)&lt;/h4&gt;
@@ -327,7 +327,7 @@ image(
 points(pts$points[, 2:3], pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;strong&gt;Para mais e informações sobre funções implementadas no R para otimização amostral, vocês podem consultar o o pacote &lt;a href=&#34;https://cran.r-project.org/web/packages/spsann/spsann.pdf&#34;&gt;spsann&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -356,7 +356,7 @@ pts@coords &amp;lt;-
 points(pts, pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-aleatória-estratificada-simples&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem aleatória estratificada simples&lt;/h3&gt;
@@ -385,7 +385,7 @@ pts@coords &amp;lt;- pts@coords +
 points(pts, pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-aleatória-sistemática&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem aleatória sistemática&lt;/h3&gt;
@@ -408,7 +408,7 @@ set.seed(1984)
 points(sp::spsample(grid, n = 30, type = &amp;quot;regular&amp;quot;), pch = 20, cex = 0.75)
 legend(636200, 7483450, legend = &amp;quot;Amostras (2019)&amp;quot;, pch = 21, bty = &amp;quot;n&amp;quot;)
 legend(636200, 7483400, legend = &amp;quot;Amostras (2020)&amp;quot;, pch = 20, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;main &amp;lt;- &amp;quot;Amostra aleatória sistemática (malha desalinhada)&amp;quot;
 plot(
   grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
@@ -425,7 +425,7 @@ points(pts, pch = 21, cex = 0.75)
 polygon(pts@coords[c(2, 7, 8, 3, 2), ])
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-12-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-12-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-aleatória-em-conglomerados&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem aleatória em conglomerados&lt;/h3&gt;
@@ -446,7 +446,7 @@ pts &amp;lt;- sp::spsample(grid, n = 33, type = &amp;quot;clustered&amp;quot;, n
 points(pts, pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://pedometriafacil.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/amostragem/index_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;se-você-chegou-até-aqui-muito-bem&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Se você chegou até aqui muito bem !!!! 👏👏👏&lt;/h3&gt;
