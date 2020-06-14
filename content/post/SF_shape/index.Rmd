@@ -33,7 +33,7 @@ rmarkdown::render('index.Rmd', encoding = 'UTF-8'")
 Nesse tutorial serão abordados através de pacotes para leitura, manipulação e plotagens de arquivos *shapefile* e *raster* uma coleção de códigos usando o software R [@R2019] e como exemplo o município onde nasci, São Francisco-MG. 
 São Francisco é um município do Norte de Minas Gerais. 
 
-O município de São Francisco foi fundado, segundo relatos locais, em 1877 por Domingos do Prado e Oliveira. Sua economia é voltada principalmente para a agricultura, pecuária e serviços gerais. Localiza-se na macrorregião Norte de Minas Gerais (MG), fazendo limite com Januária, Chapada Gaúcha, Pintópolis, Icaraí de Minas, Luislândia, Brasília de Minas, Japonvar e Pedras de Maria da Cruz; Localiza-se a uma latitude 15º56'55" sul e a uma longitude 44º51'52" oeste, estando a uma altitude de 918 metros e distantes 568 km de Belo Horizonte (BH) pelas BR 040 e 135 [Wikipédia](https://pt.wikipedia.org/wiki/S%C3%A3o_Francisco_(Minas_Gerais).
+O município de São Francisco foi fundado, segundo relatos locais, em 1877 por Domingos do Prado e Oliveira. Sua economia é voltada principalmente para a agricultura, pecuária e serviços gerais. Localiza-se na macrorregião Norte de Minas Gerais (MG), fazendo limite com Januária, Chapada Gaúcha, Pintópolis, Icaraí de Minas, Luislândia, Brasília de Minas, Japonvar e Pedras de Maria da Cruz; Localiza-se a uma latitude 15º56'55" sul e a uma longitude 44º51'52" oeste, estando a uma altitude de 918 metros e distantes 568 km de Belo Horizonte (BH) [Wikipédia](https://pt.wikipedia.org/wiki/S%C3%A3o_Francisco_(Minas_Gerais).
 
 
 
@@ -48,7 +48,7 @@ library(ggspatial)# plote de elementos espaciais para o ggplot2
 ```
 # Parte I: Trabalhando com dados vetoriais (shape)
 Para esse exercício iremos usar oso dados da Fundação Brasileira para o desenvolvimento sustentável [FBDS](http://geo.fbds.org.br). Uma observação importante é que os dados podem demorar, sobretudo o de uso da terra.  
-Aqui os dados estão marcados como comentários com `#` porque já foi feito o dowload do dados, para rodar o código e decarregar os dados só retirar o `#`. Lembrando que no meu caso estou salvando numa pasta denominda *shape* num diretório local do PC.
+Aqui os dados estão marcados como comentários com `#` porque já foi feito o download dos dados. Para rodar o código e descarregar os dados só retirar o `#`. Lembrando que no meu caso estou salvando numa pasta denominda *shape* num diretório local do PC.
 
 Boa parte do que é apresentado de mapas aqui foi feito com a ajuda do material fornecido por [geocast brasil](https://www.youtube.com/channel/UCLAeX4dyujMoy4xqHvxSDpQ)
 
@@ -121,7 +121,9 @@ massa <- sf::st_read("/home/elias/MEGA/SF_maps/shape/MG_3161106_MASSAS_DAGUA.shp
 # Fazendo o download de uma área geográfica específica em um determinado ano
 # Estado de MG
 # state <- geobr::read_state(code_state="MG", year=2018) # state of MG from 2018 data
+```
 
+```{r, include=FALSE, warning=FALSE, message=FALSE}
 # Municipios MG
 # carregar dados de todos os municípios
 muni_mg <- geobr::read_municipality(code_muni = 'MG', year = 2018)
@@ -132,7 +134,9 @@ muni_mg #aqui pode confirmar o código do município
 sao_f<- geobr::read_municipality(code_muni = 3161106, year=2018 ) 
 #sao_f
 #plot(sao_f$geom, col = "gray")
+```
 
+```{r, warning=FALSE, message=FALSE}
 # plotagens com pacote tmap
 # 1. mapa 
 # São Francisco com municipios limitrofes
@@ -219,52 +223,47 @@ uso <- sf::st_read("/home/elias/MEGA/SF_maps/shape/MG_3161106_USO.shp") # pode d
 uso
 plot(uso$geometry)
 
-# Limite São Francisco
-limite_SF <- geobr::read_municipality(code_muni = 3161106, year = 2018)
-limite_SF
-plot(limite_SF$geom, col = "gray")
-
 # maps --------------------------------------------------------------------
 # limite_São Francisco
 ggplot() +
-  geom_sf(data = limite_SF)
+  geom_sf(data = sao_f)
 
 # limite_São Francisco color and fill
 ggplot() +
-  geom_sf(data = limite_SF, color = "red", fill = NA)
+  geom_sf(data = sao_f, color = "red", fill = NA)
 
 # limite_São Francisco fill + land use
 ggplot() +
-  geom_sf(data = limite_SF, color = "black", fill = NA) +
+  geom_sf(data = sao_f, color = "black", fill = NA) +
   geom_sf(data = uso)
 
 # limite_São Francisco fill + land use with colors
 ggplot() +
-  geom_sf(data = limite_SF, color = "black", fill = NA) +
+  geom_sf(data = sao_f, color = "black", fill = NA) +
   geom_sf(data = uso, aes(fill = CLASSE_USO), color = NA)
 
 # land use with colors + limite_São Francisco fill
 ggplot() +
   geom_sf(data = uso, aes(fill = CLASSE_USO), color = NA) +
-  geom_sf(data = limite_SF, color = "black", fill = NA)
+  geom_sf(data = sao_f, color = "black", fill = NA)
 
 # land use and choose colors + limite_São Francisco fill 
 ggplot() +
   geom_sf(data = uso, aes(fill = CLASSE_USO), color = NA) + #aestetic coloca a coluna que queremos
-  geom_sf(data = limite_SF, color = "black", fill = NA) +
+  geom_sf(data = sao_f, color = "black", fill = NA) +
   scale_fill_manual(values = c("blue", "orange", "darkgray", "forestgreen", "lightgreen", "green"))
 
 # land use and choose colors + limite_São Francisco fill + coords
 ggplot() +
   geom_sf(data = uso, aes(fill = CLASSE_USO), color = NA) +
-  geom_sf(data = limite_SF, color = "black", fill = NA) +
+  geom_sf(data = sao_f, color = "black", fill = NA) +
   scale_fill_manual(values = c("blue", "orange", "darkgray", "forestgreen", "lightgreen", "green")) +
   coord_sf(datum = sf::st_crs(uso)) #usando as coordenadas do shape
 
 # land use and choose colors + limite_São Francisco fill + coords + themes
 ggplot() +
   geom_sf(data = uso, aes(fill = CLASSE_USO), color = NA) +
-  geom_sf(data = limite_SF, color = "black", fill = NA) +
+  geom_sf(data = sao_f, color = "black", fill = NA) +
   scale_fill_manual(values = c("blue", "orange", "darkgray", "forestgreen", "lightgreen", "green")) +
   coord_sf(datum = sf::st_crs(uso)) +
   theme_classic()
@@ -274,7 +273,7 @@ ggplot() +
 # land use and choose colors + limite_São Francisco fill + coords + themes + scalebar + north
 map <- ggplot() +
   geom_sf(data = uso, aes(fill = CLASSE_USO), color = NA) +
-  geom_sf(data = limite_SF, color = "black", fill = NA) +
+  geom_sf(data = sao_f, color = "black", fill = NA) +
   scale_fill_manual(values = c("blue", "orange", "darkgray", "forestgreen", "lightgreen", "green")) +
   coord_sf(datum = sf::st_crs(uso)) +
   theme_bw() +
