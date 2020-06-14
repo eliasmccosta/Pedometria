@@ -48,67 +48,67 @@ library(ggspatial)# plote de elementos espaciais para o ggplot2
 ```
 # Parte I: Trabalhando com dados vetoriais (shape)
 Para esse exercício iremos usar oso dados da Fundação Brasileira para o desenvolvimento sustentável [FBDS](http://geo.fbds.org.br). Uma observação importante é que os dados podem demorar, sobretudo o de uso da terra.  
-Aqui os dados estão marcados como comentários com `#` porque já foi feito o dowload do dados, para rodar o código e decarregar os dados só retirar o `#`. Lembrando que no meu caso estou sanvando numa pasta denominda *shape*.
+Aqui os dados estão marcados como comentários com `#` porque já foi feito o dowload do dados, para rodar o código e decarregar os dados só retirar o `#`. Lembrando que no meu caso estou salvando numa pasta denominda *shape* num diretório local do PC.
 
 Boa parte do que é apresentado de mapas aqui foi feito com a ajuda do material fornecido por [geocast brasil](https://www.youtube.com/channel/UCLAeX4dyujMoy4xqHvxSDpQ)
 
 ```{r, warning=FALSE, message=FALSE}
 ## Massa de água - São Francisco
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_MASSAS_DAGUA.dbf",  destfile = "./shape/MG_3161106_MASSAS_DAGUA.dbf")
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_MASSAS_DAGUA.prj", destfile = "./shape/MG_3161106_MASSAS_DAGUA.prj")
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_MASSAS_DAGUA.shp",  destfile = "./shape/MG_3161106_MASSAS_DAGUA.shp")
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_MASSAS_DAGUA.shx", destfile = "./shape/MG_3161106_MASSAS_DAGUA.shx")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_MASSAS_DAGUA.dbf",  destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_MASSAS_DAGUA.dbf")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_MASSAS_DAGUA.prj", destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_MASSAS_DAGUA.prj")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_MASSAS_DAGUA.shp",  destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_MASSAS_DAGUA.shp")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_MASSAS_DAGUA.shx", destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_MASSAS_DAGUA.shx")
 
 ## Nascentes - São Francisco
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_NASCENTES.dbf", destfile = "./shape/MG_3161106_NASCENTES.dbf")
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_NASCENTES.prj", destfile = "./shape/MG_3161106_NASCENTES.prj")
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_NASCENTES.shp", destfile = "./shape/MG_3161106_NASCENTES.shp")
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_NASCENTES.shx", destfile = "./shape/MG_3161106_NASCENTES.shx")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_NASCENTES.dbf", destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_NASCENTES.dbf")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_NASCENTES.prj", destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_NASCENTES.prj")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_NASCENTES.shp", destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_NASCENTES.shp")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_NASCENTES.shx", destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_NASCENTES.shx")
 
 ## Rios Duplos - São Francisco
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_DUPLOS.dbf", destfile = "./shape/MG_3161106_RIOS_DUPLOS.dbf")
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_DUPLOS.prj", destfile = "./shape/MG_3161106_RIOS_DUPLOS.prj")
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_DUPLOS.shp", destfile = "./shape/MG_3161106_RIOS_DUPLOS.shp")
-# download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_DUPLOS.shx", destfile = "./shape/MG_3161106_RIOS_DUPLOS.shx")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_DUPLOS.dbf", destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_RIOS_DUPLOS.dbf")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_DUPLOS.prj", destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_RIOS_DUPLOS.prj")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_DUPLOS.shp", destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_RIOS_DUPLOS.shp")
+# download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_DUPLOS.shx", destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_RIOS_DUPLOS.shx")
 
 ## Rio simples - São Francisco
-# download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_SIMPLES.dbf", destfile = "./shape/MG_3161106_RIOS_SIMPLES.dbf")
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_SIMPLES.prj", destfile = "./shape/MG_3161106_RIOS_SIMPLES.prj")
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_SIMPLES.shp", destfile = "./shape/MG_3161106_RIOS_SIMPLES.shp")
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_SIMPLES.shx", destfile = "./shape/MG_3161106_RIOS_SIMPLES.shx")
+# download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_SIMPLES.dbf", destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_RIOS_SIMPLES.dbf")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_SIMPLES.prj", destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_RIOS_SIMPLES.prj")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_SIMPLES.shp", destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_RIOS_SIMPLES.shp")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/HIDROGRAFIA/MG_3161106_RIOS_SIMPLES.shx", destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_RIOS_SIMPLES.shx")
 
 ## APP - São Francisco
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/APP/MG_3161106_APP.dbf",             destfile = "./shape/MG_3161106_APP.dbf")
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/APP/MG_3161106_APP.prj",               destfile = "./shape/MG_3161106_APP.prj")
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/APP/MG_3161106_APP.shp",               destfile = "./shape/MG_3161106_APP.shp")
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/APP/MG_3161106_APP.shx",               destfile = "./shape/MG_3161106_APP.shx")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/APP/MG_3161106_APP.dbf",             destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_APP.dbf")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/APP/MG_3161106_APP.prj",               destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_APP.prj")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/APP/MG_3161106_APP.shp",               destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_APP.shp")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/APP/MG_3161106_APP.shx",               destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_APP.shx")
 
 ## Uso do solo - São Francisco
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/USO/MG_3161106_USO.dbf",               destfile = "./shape/MG_3161106_USO.dbf")
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/USO/MG_3161106_USO.prj",               destfile = "./shape/MG_3161106_USO.prj")
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/USO/MG_3161106_USO.shp",              destfile = "./shape/MG_3161106_USO.shp")
-#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/USO/MG_3161106_USO.shx",               destfile = "./shape/MG_3161106_USO.shx")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/USO/MG_3161106_USO.dbf",               destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_USO.dbf")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/USO/MG_3161106_USO.prj",               destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_USO.prj")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/USO/MG_3161106_USO.shp",              destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_USO.shp")
+#download.file(url = "http://geo.fbds.org.br//MG/SAO_FRANCISCO/USO/MG_3161106_USO.shx",               destfile = "/home/elias/MEGA/SF_maps/shape/MG_3161106_USO.shx")
 ```
 
 ```{r, warning=FALSE, message=FALSE}
 # Importando geospatial data 
 ## Nascentes
-nascentes <- sf::st_read("./shape/MG_3161106_NASCENTES.shp") # pode demorar
+nascentes <- sf::st_read("/home/elias/MEGA/SF_maps/shape/MG_3161106_NASCENTES.shp") # pode demorar
 nascentes
 plot(nascentes$geometry) #Aqui é possível observar o código do município
 
 ## Rios simples
-rios <- sf::st_read("./shape/MG_3161106_RIOS_SIMPLES.shp") # pode demorar
+rios <- sf::st_read("/home/elias/MEGA/SF_maps/shape/MG_3161106_RIOS_SIMPLES.shp") # pode demorar
 rios
 plot(rios$geometry)
 
 ## Rios simples
-rios.d <- sf::st_read("./shape/MG_3161106_RIOS_DUPLOS.shp") # pode demorar
+rios.d <- sf::st_read("/home/elias/MEGA/SF_maps/shape/MG_3161106_RIOS_DUPLOS.shp") # pode demorar
 rios.d
 plot(rios.d$geometry)
 
 ## Massa de água
-massa <- sf::st_read("./shape/MG_3161106_MASSAS_DAGUA.shp") # pode demorar
+massa <- sf::st_read("/home/elias/MEGA/SF_maps/shape/MG_3161106_MASSAS_DAGUA.shp") # pode demorar
 massa
 plot(massa$geometry)
 # Explorando o geobr::
@@ -187,7 +187,7 @@ m2 + tm_style("cobalt")
 m2 + tm_style("col_blind")
 
 # 6. salvando mapa
-tmap::tmap_save(filename = "./figures/map_sao_f_col_blind.png")
+#tmap::tmap_save(filename = "./figures/map_sao_f_col_blind.png")
 
 # 7. tmap_mode()
 tmap_mode("view")
@@ -209,11 +209,12 @@ webmap
                # dpi = 300)
 
 ```
+
 Se você bem observou até aqui fizemos os mapas com o pacote `tmap`. Agora iremos fazer algumas plotagens de mapas com os pacotes `ggplot2` e `ggspatial`
 ```{r, warning=FALSE, message=FALSE}
 # import geospatial data --------------------------------------------------
 # land use
-uso <- sf::st_read("./shape/MG_3161106_USO.shp") # pode demorar
+uso <- sf::st_read("/home/elias/MEGA/SF_maps/shape/MG_3161106_USO.shp") # pode demorar
 uso
 plot(uso$geometry)
 
@@ -291,6 +292,266 @@ map
        #height = 20, 
       # units = "cm", 
       # dpi = 300)
+
+```
+
+# Parte II: Trabalhando com dados matriciais (raster)
+Dados raster, matriciais ou bitmap são imagens que contêm a descrição de cada pixel, em oposição aos gráficos vetoriais. O tratamento de imagens deste tipo requer ferramentas especializadas, geralmente utilizadas em fotografia, pois envolvem cálculos muito complexos, como interpolação, álgebra matricial e etc
+[Wikipédia](https://pt.wikipedia.org/wiki/Raster). No caso desse exemplo usaremos o modelo digital de elevação (MDE) de são Francisco. O MDE aqui usado é do RSTM que pode ser baixado na página do Brasil em Relevo da [Embrapa](https://www.cnpm.embrapa.br/projetos/relevobr/download/mg/mg.htm)
+
+```{r, warning=FALSE, message=FALSE}
+# Aqui estou uusando um diretório local do meu PC, pois os arquivos são
+# muito grandes para mandar para o github
+r1 <- raster("/home/elias/MEGA/SF_maps/raster/SD-23-Y-D.tif")
+r2 <- raster("/home/elias/MEGA/SF_maps/raster/SD-23-Z-C.tif")
+r3 <- raster("/home/elias/MEGA/SF_maps/raster/SE-23-V-B.tif")
+r4 <- raster("/home/elias/MEGA/SF_maps/raster/SE-23-X-A.tif")
+mde= mosaic(r1, r2, r3, r4, fun=mean)
+plot(mde)
+
+sao_f<- geobr::read_municipality(code_muni = 3161106, year=2018 ) 
+## Rios simples
+rios <- sf::st_read("/home/elias/MEGA/SF_maps/shape/MG_3161106_RIOS_SIMPLES.shp") # pode demorar
+rios
+plot(rios$geometry)
+
+## Rios simples
+rios.d <- sf::st_read("/home/elias/MEGA/SF_maps/shape/MG_3161106_RIOS_DUPLOS.shp") # pode demorar
+rios.d
+plot(rios.d$geometry)
+
+nascentes <- sf::st_read("/home/elias/MEGA/SF_maps/shape/MG_3161106_NASCENTES.shp") # pode demorar
+#sao_f <- sp::spTransform(sao_f, "+proj=utm +zone=23 +south +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs")
+
+
+#cortando o mde com a mascara de limite do municipio
+r2 <- crop(mde, extent(sao_f)); mde <- mask(x= r2, mask=sao_f)
+
+# Transforming coordinate to UTM using EPSG=31983 for WGS=84, UTM Zone=23L,
+# Southern Hemisphere)
+sr <- "+proj=utm +zone=23 +south +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs" 
+mde.utm <- projectRaster(mde, crs = sr)
+plot(mde.utm)
+  
+######################################
+######### plotting maps #########
+######################################
+ # plotando raster com o pacote tmap e função tm_raster
+tm_shape(mde.utm) + 
+  tm_raster(style = "cont", title = "Elevation (m)",
+            palette = terrain.colors(64))+
+  tm_legend(outside = F)
+
+# classificar manualmente a elevação 450, 500, 550, 600, 650, 700, 750, 800 m
+tm_shape(mde.utm) + 
+  tm_raster(style = "fixed", title = "Elevation (m)",
+            breaks = c(450, 500, 550, 600, 650, 700, 750, 800),
+            palette = terrain.colors(5))+
+  tm_legend(outside = TRUE)
+
+# mudandom paleta de cores e adicionanddo gráfico
+tm_shape(mde.utm) + 
+  tm_raster(style = "quantile", n = 12, title = "Elevation (m)",
+            palette = colorRampPalette( c("darkolivegreen4","yellow", "brown"))(12),
+            legend.hist = TRUE)+
+  tm_legend(outside = TRUE, hist.width = 2)
+
+# Colocando detalhes no mapa com tmap
+tm_shape(mde.utm, projection = sr) + 
+  tm_raster(style = "quantile", n = 12,
+            palette = colorRampPalette( c("darkolivegreen4","yellow", "brown"))(12),
+            legend.show = FALSE) +
+  tm_shape(rios) + tm_lines(col = "blue")+
+  tm_shape(nascentes) +tm_dots(size=0.5)+
+  tm_layout(outer.margins = c(.1,.1,.1,.1))+
+  tm_grid(labels.inside.frame = FALSE, 
+          x = c(480000,500000, 520000, 540000, 560000),
+          y = c(8220000, 8240000, 8260000, 8280000), labels.size = 1)+
+  tm_scale_bar(position=c("0.55", "0.6"), text.size  = 1)+
+ tm_compass(type="rose", position=c("right", "top"), show.labels = 3)
+
+# plot com ggplot
+ggplot() +
+  
+  # annotation_spatial() layers don't train the scales, so data stays central
+  # annotation_spatial(longlake_roadsdf, size = 2, col = "black") +
+  # annotation_spatial(longlake_roadsdf, size = 1.6, col = "white") +
+    # raster layers train scales and get projected automatically
+  layer_spatial(mde.utm, aes(alpha = stat(band1)), fill = "darkolivegreen")+
+  scale_alpha_continuous(na.value = 0) +
+    # layer_spatial() layers train the scales
+  #layer_spatial(longlake_depthdf, aes(col = DEPTH_M)) +
+    # spatial-aware automagic scale bar
+  annotation_scale(location = "bl") +
+    # spatial-aware automagic north arrow
+  annotation_north_arrow(location = "tr", which_north = "true")+
+  labs(x='Longitude',y='Latitude',
+       title="São Francisco",
+       subtitle='Elevação (m)',
+       caption='Source: Elias Mendes Cosa, 2020')
+
+################################################################### 
+#### obtendo informações do rater e mais opções de plotagens
+mde= mosaic(r1, r2, r3, r4, fun=mean)
+plot(mde)
+
+sao_f<- geobr::read_municipality(code_muni = 3161106, year=2018 ) 
+## Rios simples
+rios <- sf::st_read("/home/elias/MEGA/SF_maps/shape/MG_3161106_RIOS_SIMPLES.shp") # pode demorar
+rios
+plot(rios$geometry)
+
+## Rios simples
+rios.d <- sf::st_read("/home/elias/MEGA/SF_maps/shape/MG_3161106_RIOS_DUPLOS.shp") # pode demorar
+rios.d
+plot(rios.d$geometry)
+
+nascentes <- sf::st_read("/home/elias/MEGA/SF_maps/shape/MG_3161106_NASCENTES.shp") # pode demorar
+#sao_f <- sp::spTransform(sao_f, "+proj=utm +zone=23 +south +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs")
+
+
+#cortando o mde com a mascara de limite do municipio
+r2 <- crop(mde, extent(sao_f)); mde <- mask(x= r2, mask=sao_f)
+
+# Transforming coordinate to UTM using EPSG=31983 for WGS=84, UTM Zone=23L,
+# Southern Hemisphere)
+sr <- "+proj=utm +zone=23 +south +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs" 
+dem <- projectRaster(mde, crs = sr)
+plot(dem)
+
+# informacoes do raster ---------------------------------------------------
+# objeto
+dem
+
+# extensao
+extent(dem)
+
+# nrow, ncol, ncell
+nrow(dem)
+ncol(dem)
+ncell(dem)
+
+# resolucao
+res(dem)
+
+# projecao
+projection(dem)
+
+# names
+names(dem)
+
+# values
+values(dem)
+
+# values
+dem[]
+
+# reclassificar -----------------------------------------------------------
+# matriz de reclassificação
+# vetor
+vec <- c(0, 450, 1, 
+         450, 500, 2, 
+        500, 550, 3,
+         550, 600, 4,
+         660, 650, 5,
+         650, 700, 6,
+         700, 750, 7,
+        750, 800, 8)
+vec
+
+# matriz
+mat <- matrix(vec, ncol = 3, byrow = TRUE)
+mat
+
+# reclassificar
+dem_rec <- raster::reclassify(dem, mat, right = FALSE)
+dem_rec
+plot(dem_rec)
+
+# mapa final --------------------------------------------------------------
+# tmap
+tm_shape(dem) +
+  tm_raster() +
+  tm_layout(legend.position = c("left", "bottom"))
+
+# tmap - escala de cores
+tm_shape(dem) +
+  tm_raster(palette = "-RdYlGn") +
+  tm_layout(legend.position = c("left", "bottom"))
+
+# acessar paletas de cores do tmap
+tmaptools::palette_explorer()
+
+# tmap - escala de cores - viridis
+tm_shape(dem) +
+  tm_raster(palette = viridis::viridis(5)) +
+  tm_layout(legend.position = c("left", "bottom"))
+
+# tmap - escala de cores - cpt
+cptcity::find_cpt("dem")
+cptcity::find_cpt("dem")[4]
+
+tm_shape(dem) +
+  tm_raster(palette = cptcity::cpt(pal = cptcity::find_cpt("dem")[4])) +
+  tm_layout(legend.position = c("left", "bottom"))
+
+# tmap n
+tm_shape(dem) +
+  tm_raster(palette = cptcity::cpt(pal = cptcity::find_cpt("dem")[4]), n = 9) +
+  tm_layout(legend.position = c("left", "bottom"))
+
+# tmap n
+tm_shape(dem) +
+  tm_raster(palette = cptcity::cpt(pal = cptcity::find_cpt("dem")[4]), 
+            breaks = c(400, 500, 600, 700, 800, 900))+
+  tm_layout(legend.position = c("left", "bottom"))
+
+# mapa final contínuo
+tm_shape(dem) +
+  tm_raster(palette = cptcity::cpt(pal = cptcity::find_cpt("dem")[4]), 
+            breaks = c(400, 500, 600, 700, 800),
+            labels = c("400-500", 
+                       "501-600",
+                       "601-700",
+                       "701-800"),
+            title = "Elevação (m)") +
+  tm_graticules(lines = FALSE) + 
+  tm_compass(position = c("right", "top")) +
+  tm_scale_bar(text.size = .7, position = c("right", "bottom")) +
+  tm_layout(main.title = "MDE São Francisco", 
+            main.title.position = "center",
+            legend.position = c("right", "top"))
+
+# tmap::tmap_save(filename = "./figures/mde.sf.png",
+               # width = 20, 
+               # height = 20, 
+               # units = "cm", 
+               # dpi = 600)
+
+# Colocando detalhes no mapa com tmap e plotando em utm
+tm_shape(dem, projection = sr) + 
+  tm_raster(style = "quantile", n = 7,
+            palette = colorRampPalette( c("darkolivegreen4","yellow", "brown"))(7),
+            legend.show = T,
+            title = "Elevação (m)") +
+  tm_shape(rios) + tm_lines(col = "blue")+
+  tm_shape(nascentes) +tm_dots(size=0.1)+
+  tm_layout(outer.margins = c(.1,.1,.1,.1))+
+  tm_grid(labels.inside.frame = FALSE, 
+          x = c(480000,500000, 520000, 540000, 560000),
+          y = c(8220000, 8240000, 8260000, 8280000), labels.size = 1)+
+  tm_scale_bar(position=c("0.63", "-0.03"), text.size  = 1)+
+  tm_compass(type="4star", position=c("right", "top"), show.labels = 3)+
+tm_layout(main.title = "MDE São Francisco", 
+          main.title.position = "center",
+          legend.position = c("right", "top"))
+  
+#Salvando o mapa
+# tmap::tmap_save(filename = ".img/map_dem_SF.png",
+              #  width = 20, 
+               # height = 20, 
+              #  units = "cm", 
+              #  dpi = 300)
 
 ```
 

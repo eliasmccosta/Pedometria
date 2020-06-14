@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Alessandro Samuel Rosa | Pedometria Fácil</title>
-    <link>https://pedometriafacil.netlify.app/author/alessandro-samuel-rosa/</link>
-      <atom:link href="https://pedometriafacil.netlify.app/author/alessandro-samuel-rosa/index.xml" rel="self" type="application/rss+xml" />
+    <link>/author/alessandro-samuel-rosa/</link>
+      <atom:link href="/author/alessandro-samuel-rosa/index.xml" rel="self" type="application/rss+xml" />
     <description>Alessandro Samuel Rosa</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Pedometria, 2020</copyright><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://pedometriafacil.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Alessandro Samuel Rosa</title>
-      <link>https://pedometriafacil.netlify.app/author/alessandro-samuel-rosa/</link>
+      <link>/author/alessandro-samuel-rosa/</link>
     </image>
     
     <item>
       <title>Digital elevation model quality on digital soil mapping prediction accuracy</title>
-      <link>https://pedometriafacil.netlify.app/publication/journal-article/ca2018/</link>
+      <link>/publication/journal-article/ca2018/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://pedometriafacil.netlify.app/publication/journal-article/ca2018/</guid>
+      <guid>/publication/journal-article/ca2018/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.

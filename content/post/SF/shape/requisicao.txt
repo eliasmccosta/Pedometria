@@ -1,1 +1,0 @@
-http://mapgs.ibge.gov.br:80/geoserver/ows?cql_filter=geocodigo%3D%273161106%27&outputFormat=SHAPE-ZIP&request=GetFeature&service=WFS&typeName=BDIAWEB%3Av_pd_area_geo_mun&version=1.0.0
