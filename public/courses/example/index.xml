@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Visão geral | Pedometria Fácil</title>
-    <link>/courses/example/</link>
-      <atom:link href="/courses/example/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://pedometriafacil.netlify.app/courses/example/</link>
+      <atom:link href="https://pedometriafacil.netlify.app/courses/example/index.xml" rel="self" type="application/rss+xml" />
     <description>Visão geral</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Pedometria, 2020</copyright><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://pedometriafacil.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Visão geral</title>
-      <link>/courses/example/</link>
+      <link>https://pedometriafacil.netlify.app/courses/example/</link>
     </image>
     
     <item>
       <title>Métodos e técnicas de MDS</title>
-      <link>/courses/example/example1/</link>
+      <link>https://pedometriafacil.netlify.app/courses/example/example1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/courses/example/example1/</guid>
+      <guid>https://pedometriafacil.netlify.app/courses/example/example1/</guid>
       <description>&lt;p&gt;&lt;code&gt;Se quer levar o curso para sua empresa ou instituição por favor entre em contato&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;tópicos&#34;&gt;Tópicos&lt;/h2&gt;
 &lt;ul&gt;
@@ -34,9 +34,9 @@
     
     <item>
       <title>Escrita Científica Reprodutível</title>
-      <link>/courses/example/example2/</link>
+      <link>https://pedometriafacil.netlify.app/courses/example/example2/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/courses/example/example2/</guid>
+      <guid>https://pedometriafacil.netlify.app/courses/example/example2/</guid>
       <description>&lt;p&gt;&lt;code&gt;Se quer levar o curso para sua empresa ou instituição por favor entre em contato&lt;/code&gt;&lt;/p&gt;
 &lt;h4 id=&#34;tópicos&#34;&gt;Tópicos&lt;/h4&gt;
 &lt;ul&gt;
