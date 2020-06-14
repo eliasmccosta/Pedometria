@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mapeamento | Pedometria Fácil</title>
-    <link>/tag/mapeamento/</link>
-      <atom:link href="/tag/mapeamento/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://pedometriafacil.netlify.app/tag/mapeamento/</link>
+      <atom:link href="https://pedometriafacil.netlify.app/tag/mapeamento/index.xml" rel="self" type="application/rss+xml" />
     <description>Mapeamento</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Pedometria, 2020</copyright><lastBuildDate>Sat, 27 Apr 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://pedometriafacil.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Mapeamento</title>
-      <link>/tag/mapeamento/</link>
+      <link>https://pedometriafacil.netlify.app/tag/mapeamento/</link>
     </image>
     
     <item>
       <title>Mapeamento Bahia</title>
-      <link>/project/bahia/</link>
+      <link>https://pedometriafacil.netlify.app/project/bahia/</link>
       <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/project/bahia/</guid>
+      <guid>https://pedometriafacil.netlify.app/project/bahia/</guid>
       <description>&lt;p&gt;O mapeamento digital de solos em área de produção de petróleo e gás - Bahia é um projeto coordenado pelo professor 
 &lt;a href=&#34;http://lattes.cnpq.br/2115137917689655&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Marcos Bacis Ceddia&lt;/a&gt;. O projeto integra métodos e técnicas tradicionais (área de referência) e digitais de mapeamento de solo, utilizando novas ferramentas de caracterização de solos.&lt;/p&gt;
 </description>
