@@ -33,7 +33,7 @@ rmarkdown::render('index.Rmd', encoding = 'UTF-8'")
 Nesse tutorial serão abordados através de pacotes para leitura, manipulação e plotagens de arquivos *shapefile* e *raster* uma coleção de códigos usando o software R [@R2019] e como exemplo o município onde nasci, São Francisco-MG. 
 São Francisco é um município do Norte de Minas Gerais. 
 
-O município de São Francisco foi fundado, segundo relatos locais, em 1877 por Domingos do Prado e Oliveira. Sua economia é voltada principalmente para a agricultura, pecuária e serviços gerais. Localiza-se na macrorregião Norte de Minas Gerais (MG), fazendo limite com Januária, Chapada Gaúcha, Pintópolis, Icaraí de Minas, Luislândia, Brasília de Minas, Japonvar e Pedras de Maria da Cruz; Localiza-se a uma latitude 15º56'55" sul e a uma longitude 44º51'52" oeste, estando a uma altitude de 918 metros e distantes 568 km de Belo Horizonte (BH) [Wikipédia](https://pt.wikipedia.org/wiki/S%C3%A3o_Francisco_(Minas_Gerais).
+O município de São Francisco foi fundado, segundo relatos locais, em 1877 por Domingos do Prado e Oliveira. Sua economia é voltada principalmente para a agricultura, pecuária e serviços gerais. Localiza-se na macrorregião Norte de Minas Gerais (MG), fazendo limite com Januária, Chapada Gaúcha, Pintópolis, Icaraí de Minas, Luislândia, Brasília de Minas, Japonvar e Pedras de Maria da Cruz; Localiza-se a uma latitude 15º56'55" sul e a uma longitude 44º51'52" oeste, estando a uma altitude de 918 metros e distantes 568 km de Belo Horizonte (BH) [Wikipédia](https://pt.wikipedia.org/wiki/S%C3%A3o_Francisco_(Minas_Gerais)).
 
 
 
