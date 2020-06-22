@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sidinei Julio Beutler | Pedometria Fácil</title>
-    <link>/author/sidinei-julio-beutler/</link>
-      <atom:link href="/author/sidinei-julio-beutler/index.xml" rel="self" type="application/rss+xml" />
+    <title>Sidinei Julio Beutler | Elias M. Costa</title>
+    <link>https://eliasmcosta.netlify.app/author/sidinei-julio-beutler/</link>
+      <atom:link href="https://eliasmcosta.netlify.app/author/sidinei-julio-beutler/index.xml" rel="self" type="application/rss+xml" />
     <description>Sidinei Julio Beutler</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Pedometria, 2020</copyright><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Elias, 2020</copyright><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://eliasmcosta.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Sidinei Julio Beutler</title>
-      <link>/author/sidinei-julio-beutler/</link>
+      <link>https://eliasmcosta.netlify.app/author/sidinei-julio-beutler/</link>
     </image>
     
     <item>
       <title>Mapping soil organic carbon and organic matter fractions by Geographically Weighted Regression</title>
-      <link>/publication/journal-article/jeq2018/</link>
+      <link>https://eliasmcosta.netlify.app/publication/journal-article/jeq2018/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/jeq2018/</guid>
+      <guid>https://eliasmcosta.netlify.app/publication/journal-article/jeq2018/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
