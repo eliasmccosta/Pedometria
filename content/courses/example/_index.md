@@ -2,7 +2,7 @@
 date: "2018-09-09T00:00:00Z"
 draft: false
 lastmod: "2018-09-09T00:00:00Z"
-linktitle: Cursos diversos
+linktitle: Serviços diversos (Educação e consultoria)
 menu:
   example:
     name: Visão geral

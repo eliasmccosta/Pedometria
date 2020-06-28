@@ -17,28 +17,32 @@
       <link>https://eliasmcosta.netlify.app/courses/example/example1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://eliasmcosta.netlify.app/courses/example/example1/</guid>
-      <description>&lt;p&gt;&lt;code&gt;Se quer levar o curso para sua empresa ou instituição por favor entre em contato&lt;/code&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;code&gt;Se quer levar o curso para sua empresa ou instituição por favor entre em contato&lt;/code&gt;
+Nesse curso você irá conhecer as bases do mapeamento digital do solo.
+Compreender como covariáveis ambientais podem ser usadas, em modelos de predição espacial do solo. Vai conhecer técnicas avançadas de aprendizado de máquina que bem como avaliação de desempenho e otimização de algorítimos.
+Explorar diferentes esquemas de amostragem para calibração de validação de modelos.&lt;/p&gt;
 &lt;h2 id=&#34;tópicos&#34;&gt;Tópicos&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;1- Introdução e revisão&lt;/li&gt;
-&lt;li&gt;2- Geoestatística para mapeamento&lt;/li&gt;
-&lt;li&gt;3- Preparação de dados de solo e covariáveis&lt;/li&gt;
+&lt;li&gt;2- Geoestatística para mapeamento de solos&lt;/li&gt;
+&lt;li&gt;3- Preparação de dados de solo e covariáveis ambientais&lt;/li&gt;
 &lt;li&gt;4- Sensoriamento remoto e proximal do solo&lt;/li&gt;
 &lt;li&gt;5- Machine learning para mapeamento&lt;/li&gt;
 &lt;li&gt;6- Quantificação e propagação de incerteza&lt;/li&gt;
 &lt;li&gt;7- Amostragem para mapeamento e validação estatística&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Todos os tópicos descritos podem ser abordados como um curso separado dependendo da necessidade de aprofundamento desejado&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Exceto o tṕoico 1 todos os tópicos descritos podem ser abordados como um curso separado dependendo da necessidade de aprofundamento desejado&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Escrita Científica Reprodutível</title>
+      <title>Escrita científica e relatório técnico reprodutível</title>
       <link>https://eliasmcosta.netlify.app/courses/example/example2/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://eliasmcosta.netlify.app/courses/example/example2/</guid>
       <description>&lt;p&gt;&lt;code&gt;Se quer levar o curso para sua empresa ou instituição por favor entre em contato&lt;/code&gt;&lt;/p&gt;
-&lt;h4 id=&#34;tópicos&#34;&gt;Tópicos&lt;/h4&gt;
+&lt;p&gt;O objetivo desse curso é apresentar algumas ferramentas de organização de referências.  Neste curso, você irá aprender a inserir e a organizar os
+Além disso, você poderá citar e referenciar documentos de acordo com diferentes estilos de formatação dentro do Microsoft Word ou do LibreOffice mesmo no Latex ou Rmarkdown. Por fim, você poderá criar grupos e gerenciar sua rede de contatos dentro no Mendeley ou Zotero. Ainda irá aprender a escrever relatórios automatizados com o Latex e/ou Rmarkdown.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;1- Mendeley&lt;/li&gt;
 &lt;li&gt;2- Zotero&lt;/li&gt;
@@ -46,6 +50,50 @@
 &lt;li&gt;4- Arquivo .bib&lt;/li&gt;
 &lt;li&gt;5- Latex&lt;/li&gt;
 &lt;li&gt;6- Rmarkdown&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Todos os tópicos descritos podem ser abordados como um curso separado dependendo da necessidade de aprofundamento desejado&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Escrita científica e relatório técnico reprodutível</title>
+      <link>https://eliasmcosta.netlify.app/courses/example/example4/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://eliasmcosta.netlify.app/courses/example/example4/</guid>
+      <description>&lt;p&gt;&lt;code&gt;Se quer levar o curso para sua empresa ou instituição por favor entre em contato&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;O objetivo desse curso é apresentar algumas ferramentas de organização de referências.  Neste curso, você irá aprender a inserir e a organizar os
+Além disso, você poderá citar e referenciar documentos de acordo com diferentes estilos de formatação dentro do Microsoft Word ou do LibreOffice mesmo no Latex ou Rmarkdown. Por fim, você poderá criar grupos e gerenciar sua rede de contatos dentro no Mendeley ou Zotero. Ainda irá aprender a escrever relatórios automatizados com o Latex e/ou Rmarkdown.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1- Mendeley&lt;/li&gt;
+&lt;li&gt;2- Zotero&lt;/li&gt;
+&lt;li&gt;3- Sincronização&lt;/li&gt;
+&lt;li&gt;4- Arquivo .bib&lt;/li&gt;
+&lt;li&gt;5- Latex&lt;/li&gt;
+&lt;li&gt;6- Rmarkdown&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Todos os tópicos descritos podem ser abordados como um curso separado dependendo da necessidade de aprofundamento desejado&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Formação e caracterização de solos</title>
+      <link>https://eliasmcosta.netlify.app/courses/example/example3/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://eliasmcosta.netlify.app/courses/example/example3/</guid>
+      <description>&lt;p&gt;&lt;code&gt;Se quer levar o curso para sua empresa ou instituição por favor entre em contato&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Nesse curso focê irá aprender sobre: Gênese, morfologia e classificação dos solos. Vai compreender a interação entre os fatores e processos de formação do solo e sua influência nos atributos morfológicos, físicos, químicos e mineralógicos do solo. Vai ser capaz de atráves da caracterização dos atributos morfológico dos horizontes do perfil como espessura, transição, cor, textura, estrutura e consistência, entre outros, ter uma melhor compreensão da dinâmica de formação do solo, assim como sua classificação e inferências sobre o melhor manejo e o planejamento de uso sutentável.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1- Noções gerais de geologia e geomorfologia&lt;/li&gt;
+&lt;li&gt;1.1- Rochas e minerais constituintes&lt;/li&gt;
+&lt;li&gt;1.2- Conceitos básicos de geomorfologia&lt;/li&gt;
+&lt;li&gt;2- Formação de solos&lt;/li&gt;
+&lt;li&gt;2.1- Fatores: material de origem, tempo, relevo, clima e organismos&lt;/li&gt;
+&lt;li&gt;2.2- Processos pedogenéticos múltiplos: adição, perdas, transformação e translocação&lt;/li&gt;
+&lt;li&gt;2.3- Processos   pedogenéticos   específicos:   podzolização,   latolização,   gleização,   salinização   etc&amp;hellip;&lt;/li&gt;
+&lt;li&gt;3- Classificação e as principais classes de solos do Brasil&lt;/li&gt;
+&lt;li&gt;3.1- Características morfológicas, físicas, químicas e mineralógicas&lt;/li&gt;
+&lt;li&gt;3.2- Sistema brasileiro de classificação de solos&lt;/li&gt;
+&lt;li&gt;3.3- Distribuição e importância agronômica das principais ordens de solos&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;Todos os tópicos descritos podem ser abordados como um curso separado dependendo da necessidade de aprofundamento desejado&lt;/em&gt;&lt;/p&gt;
 </description>
