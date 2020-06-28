@@ -56,32 +56,12 @@ Além disso, você poderá citar e referenciar documentos de acordo com diferent
     </item>
     
     <item>
-      <title>Escrita científica e relatório técnico reprodutível</title>
-      <link>https://eliasmcosta.netlify.app/courses/example/example4/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://eliasmcosta.netlify.app/courses/example/example4/</guid>
-      <description>&lt;p&gt;&lt;code&gt;Se quer levar o curso para sua empresa ou instituição por favor entre em contato&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;O objetivo desse curso é apresentar algumas ferramentas de organização de referências.  Neste curso, você irá aprender a inserir e a organizar os
-Além disso, você poderá citar e referenciar documentos de acordo com diferentes estilos de formatação dentro do Microsoft Word ou do LibreOffice mesmo no Latex ou Rmarkdown. Por fim, você poderá criar grupos e gerenciar sua rede de contatos dentro no Mendeley ou Zotero. Ainda irá aprender a escrever relatórios automatizados com o Latex e/ou Rmarkdown.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1- Mendeley&lt;/li&gt;
-&lt;li&gt;2- Zotero&lt;/li&gt;
-&lt;li&gt;3- Sincronização&lt;/li&gt;
-&lt;li&gt;4- Arquivo .bib&lt;/li&gt;
-&lt;li&gt;5- Latex&lt;/li&gt;
-&lt;li&gt;6- Rmarkdown&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Todos os tópicos descritos podem ser abordados como um curso separado dependendo da necessidade de aprofundamento desejado&lt;/em&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Formação e caracterização de solos</title>
       <link>https://eliasmcosta.netlify.app/courses/example/example3/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://eliasmcosta.netlify.app/courses/example/example3/</guid>
       <description>&lt;p&gt;&lt;code&gt;Se quer levar o curso para sua empresa ou instituição por favor entre em contato&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Nesse curso focê irá aprender sobre: Gênese, morfologia e classificação dos solos. Vai compreender a interação entre os fatores e processos de formação do solo e sua influência nos atributos morfológicos, físicos, químicos e mineralógicos do solo. Vai ser capaz de atráves da caracterização dos atributos morfológico dos horizontes do perfil como espessura, transição, cor, textura, estrutura e consistência, entre outros, ter uma melhor compreensão da dinâmica de formação do solo, assim como sua classificação e inferências sobre o melhor manejo e o planejamento de uso sutentável.&lt;/p&gt;
+&lt;p&gt;Nesse curso você irá aprender sobre: Gênese, morfologia e classificação dos solos. Vai compreender a interação entre os fatores e processos de formação do solo e sua influência nos atributos morfológicos, físicos, químicos e mineralógicos do solo. Vai ser capaz de atráves da caracterização dos atributos morfológico dos horizontes do perfil como espessura, transição, cor, textura, estrutura e consistência, entre outros, ter uma melhor compreensão da dinâmica de formação do solo, assim como sua classificação e inferências sobre o melhor manejo e o planejamento de uso sutentável.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;1- Noções gerais de geologia e geomorfologia&lt;/li&gt;
 &lt;li&gt;1.1- Rochas e minerais constituintes&lt;/li&gt;
@@ -96,6 +76,16 @@ Além disso, você poderá citar e referenciar documentos de acordo com diferent
 &lt;li&gt;3.3- Distribuição e importância agronômica das principais ordens de solos&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;Todos os tópicos descritos podem ser abordados como um curso separado dependendo da necessidade de aprofundamento desejado&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Consultoria agrícola e ambiental</title>
+      <link>https://eliasmcosta.netlify.app/courses/example/example4/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://eliasmcosta.netlify.app/courses/example/example4/</guid>
+      <description>&lt;p&gt;&lt;code&gt;Torne a sua propriedade lugrativa com soluções inteligentes para as demandas do campo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Oferecemos soluções customizadas para seu empreendimento, perpassando em estudos de mapeamento digital de solos e agricultura de precisão, planejamento agrícola e ambiental, cadastro ambiental rural (CAR), licenciamento ambiental e regularizações, planejamento de viabilidade econômica, estratégico e financeiro para implatação e manutenção de culturas agrícolas.&lt;/p&gt;
 </description>
     </item>
     

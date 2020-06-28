@@ -4,7 +4,7 @@ draft: false
 linktitle: MDS
 menu:
   example:
-    parent: Cursos
+    parent: Serviços
     weight: 1
 title: Métodos e técnicas de MDS
 toc: true

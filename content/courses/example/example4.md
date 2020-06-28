@@ -1,28 +1,20 @@
 ---
 date: "2019-05-05T00:00:00+01:00"
 draft: false
-linktitle: Escrita científica  e relatório técnico
+linktitle: Consultoria agrícola e ambiental
 menu:
   example:
-    parent: Cursos
-    weight: 2
-title: Escrita científica e relatório técnico reprodutível
+    parent: Serviços
+    weight: 4
+title: Consultoria agrícola e ambiental
 toc: true
 type: docs
-weight: 2
+weight: 4
 ---
 
-`Se quer levar o curso para sua empresa ou instituição por favor entre em contato`
+`Torne a sua propriedade lugrativa com soluções inteligentes para as demandas do campo`
 
-O objetivo desse curso é apresentar algumas ferramentas de organização de referências.  Neste curso, você irá aprender a inserir e a organizar os
-Além disso, você poderá citar e referenciar documentos de acordo com diferentes estilos de formatação dentro do Microsoft Word ou do LibreOffice mesmo no Latex ou Rmarkdown. Por fim, você poderá criar grupos e gerenciar sua rede de contatos dentro no Mendeley ou Zotero. Ainda irá aprender a escrever relatórios automatizados com o Latex e/ou Rmarkdown. 
+Oferecemos soluções customizadas para seu empreendimento, perpassando em estudos de mapeamento digital de solos e agricultura de precisão, planejamento agrícola e ambiental, cadastro ambiental rural (CAR), licenciamento ambiental e regularizações, planejamento de viabilidade econômica, estratégico e financeiro para implatação e manutenção de culturas agrícolas. 
 
-- 1- Mendeley
-- 2- Zotero
-- 3- Sincronização
-- 4- Arquivo .bib
-- 5- Latex
-- 6- Rmarkdown
 
-*Todos os tópicos descritos podem ser abordados como um curso separado dependendo da necessidade de aprofundamento desejado*
 

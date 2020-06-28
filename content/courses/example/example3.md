@@ -4,17 +4,17 @@ draft: false
 linktitle: Formação e caracterização de solos
 menu:
   example:
-    parent: Cursos
-    weight: 2
+    parent: Serviços
+    weight: 3
 title: Formação e caracterização de solos
 toc: true
 type: docs
-weight: 2
+weight: 3
 ---
 
 `Se quer levar o curso para sua empresa ou instituição por favor entre em contato`
 
-Nesse curso focê irá aprender sobre: Gênese, morfologia e classificação dos solos. Vai compreender a interação entre os fatores e processos de formação do solo e sua influência nos atributos morfológicos, físicos, químicos e mineralógicos do solo. Vai ser capaz de atráves da caracterização dos atributos morfológico dos horizontes do perfil como espessura, transição, cor, textura, estrutura e consistência, entre outros, ter uma melhor compreensão da dinâmica de formação do solo, assim como sua classificação e inferências sobre o melhor manejo e o planejamento de uso sutentável.
+Nesse curso você irá aprender sobre: Gênese, morfologia e classificação dos solos. Vai compreender a interação entre os fatores e processos de formação do solo e sua influência nos atributos morfológicos, físicos, químicos e mineralógicos do solo. Vai ser capaz de atráves da caracterização dos atributos morfológico dos horizontes do perfil como espessura, transição, cor, textura, estrutura e consistência, entre outros, ter uma melhor compreensão da dinâmica de formação do solo, assim como sua classificação e inferências sobre o melhor manejo e o planejamento de uso sutentável.
 
 - 1- Noções gerais de geologia e geomorfologia
 - 1.1- Rochas e minerais constituintes

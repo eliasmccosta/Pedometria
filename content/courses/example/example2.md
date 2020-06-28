@@ -4,7 +4,7 @@ draft: false
 linktitle: Escrita científica  e relatório técnico
 menu:
   example:
-    parent: Cursos
+    parent: Serviços
     weight: 2
 title: Escrita científica e relatório técnico reprodutível
 toc: true
