@@ -4,7 +4,7 @@ draft: false
 linktitle: Formação e caracterização de solos
 menu:
   example:
-    parent: Serviços
+    parent: Cursos
     weight: 3
 title: Formação e caracterização de solos
 toc: true
