@@ -219,21 +219,21 @@ sp4&lt;/code&gt;&lt;/pre&gt;
 ## 5  glenn    5    A   0      9 0.2 21.9 4.4  18.8        0.20   54   20   25
 ## 6  glenn    6   Bt   9     34 0.3 18.9 4.5  27.5        0.20   49   18   34
 ##     CF thickness random.numbers
-## 1 0.12         3     -1.5450242
-## 2 0.27         5      1.0144230
-## 3 0.27        22     -2.1606963
-## 4 0.16        12     -0.4660386
-## 5 0.55         9     -1.2119416
-## 6 0.84        25      0.2974741
+## 1 0.12         3      0.2624229
+## 2 0.27         5      0.1820539
+## 3 0.27        22      0.5391199
+## 4 0.16        12      0.9154544
+## 5 0.55         9     -1.6265964
+## 6 0.84        25     -1.0389952
 ## 
 ## Sampling site attributes:
 ##          id elevation group
-## 1    colusa 1044.4902     A
-## 2     glenn 1242.3997     B
-## 3     kings  976.8577     A
-## 4  mariposa  940.8914     B
-## 5 mendocino 1145.3827     A
-## 6      napa  922.5913     B&lt;/code&gt;&lt;/pre&gt;
+## 1    colusa  850.1472     A
+## 2     glenn 1069.8486     B
+## 3     kings  949.1644     A
+## 4  mariposa 1174.6005     B
+## 5 mendocino 1111.6342     A
+## 6      napa  942.0933     B&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Fazendo um plot simples
 plot(sp4, name=&amp;#39;name&amp;#39;)
 # title, note line argument:
