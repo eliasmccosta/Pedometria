@@ -22,7 +22,7 @@
 
 &lt;div id=&#34;introdução&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Introdução&lt;/h1&gt;
-&lt;p&gt;Nesse tutorial serão abordados através do Algoritmos para Pedologia Quantitativa (AQP em inglês) e pacotes auxiliares uma coleção de códigos, ideias, e plotes usando o software R &lt;span class=&#34;citation&#34;&gt;(R Core Team, &lt;a href=&#34;#ref-R2019&#34;&gt;2019&lt;/a&gt;)&lt;/span&gt;. Toda a teoria por trás de grande parte do código pode ser encontrada no artigo &lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S009830041200369X?via%3Dihub&#34;&gt;&lt;em&gt;Algorithms for quantitative pedology: A toolkit for soil scientists&lt;/em&gt;&lt;/a&gt; &lt;span class=&#34;citation&#34;&gt;(Beaudette et al., &lt;a href=&#34;#ref-Beaudette2013&#34;&gt;2013&lt;/a&gt;)&lt;/span&gt;. Além disso artigos disso alguns exemplos de aplicações das ferramentas podem se encontrados em &lt;span class=&#34;citation&#34;&gt;Pinheiro et al. (&lt;a href=&#34;#ref-Pinheiro2016&#34;&gt;2016&lt;/a&gt;)&lt;/span&gt; e &lt;span class=&#34;citation&#34;&gt;Pinheiro et al. (&lt;a href=&#34;#ref-Pinheiro2018&#34;&gt;2018&lt;/a&gt;)&lt;/span&gt;. Para fins didáticos o tutorial foi dividido em três partes e os pacotes usados serão &lt;code&gt;soilDB&lt;/code&gt;, que contem uma base de dados de solos para análises pedométricas, &lt;code&gt;AQP&lt;/code&gt; que contem as principais ferramentas de pedologia quantitativa usadas no tutorial, &lt;code&gt;sharpshootR&lt;/code&gt; que contem uma coelção de funções que dão suporte ao levantamento e exploração de dados de solos, &lt;code&gt;SP&lt;/code&gt; um pacote que fornece classes e métodos para dados espaciais: pontos, linhas, polígonos e grades, &lt;code&gt;Hmisc&lt;/code&gt; que contém muitas funções úteis para análise de dados, gráficos de alto nível, operações utilitárias, funções para calcular o tamanho de amostras, importar e manipular conjuntos de dados, imputar valores ausentes, criação avançada de tabelas, análise de cluster entre outras funções, &lt;code&gt;lattice&lt;/code&gt; que é um sistema de visualização de dados de alto nível, poderoso e elegante, com ênfase em dados multivariados, &lt;code&gt;MASS&lt;/code&gt; com funções e conjuntos de dados para apoiar Venables e Ripley, &lt;strong&gt;Modern Applied Statistics with S&lt;/strong&gt;, &lt;code&gt;plyr&lt;/code&gt; que contem um conjunto de ferramentas que resolve problemas tais como: Divisão, aplicação e combinação de dados e &lt;code&gt;cluster&lt;/code&gt; que um pacote com médodos para análise de cluster a fim de encontrar grupos em conjunto de dados.&lt;/p&gt;
+&lt;p&gt;Nesse tutorial serão abordados através do Algoritmos para Pedologia Quantitativa (AQP em inglês) e pacotes auxiliares uma coleção de códigos, ideias, e plotes usando o software R &lt;span class=&#34;citation&#34;&gt;(R Core Team, &lt;a href=&#34;#ref-R2019&#34; role=&#34;doc-biblioref&#34;&gt;2019&lt;/a&gt;)&lt;/span&gt;. Toda a teoria por trás de grande parte do código pode ser encontrada no artigo &lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S009830041200369X?via%3Dihub&#34;&gt;&lt;em&gt;Algorithms for quantitative pedology: A toolkit for soil scientists&lt;/em&gt;&lt;/a&gt; &lt;span class=&#34;citation&#34;&gt;(Beaudette et al., &lt;a href=&#34;#ref-Beaudette2013&#34; role=&#34;doc-biblioref&#34;&gt;2013&lt;/a&gt;)&lt;/span&gt;. Além disso artigos disso alguns exemplos de aplicações das ferramentas podem se encontrados em &lt;span class=&#34;citation&#34;&gt;Pinheiro et al. (&lt;a href=&#34;#ref-Pinheiro2016&#34; role=&#34;doc-biblioref&#34;&gt;2016&lt;/a&gt;)&lt;/span&gt; e &lt;span class=&#34;citation&#34;&gt;Pinheiro et al. (&lt;a href=&#34;#ref-Pinheiro2018&#34; role=&#34;doc-biblioref&#34;&gt;2018&lt;/a&gt;)&lt;/span&gt;. Para fins didáticos o tutorial foi dividido em três partes e os pacotes usados serão &lt;code&gt;soilDB&lt;/code&gt;, que contem uma base de dados de solos para análises pedométricas, &lt;code&gt;AQP&lt;/code&gt; que contem as principais ferramentas de pedologia quantitativa usadas no tutorial, &lt;code&gt;sharpshootR&lt;/code&gt; que contem uma coelção de funções que dão suporte ao levantamento e exploração de dados de solos, &lt;code&gt;SP&lt;/code&gt; um pacote que fornece classes e métodos para dados espaciais: pontos, linhas, polígonos e grades, &lt;code&gt;Hmisc&lt;/code&gt; que contém muitas funções úteis para análise de dados, gráficos de alto nível, operações utilitárias, funções para calcular o tamanho de amostras, importar e manipular conjuntos de dados, imputar valores ausentes, criação avançada de tabelas, análise de cluster entre outras funções, &lt;code&gt;lattice&lt;/code&gt; que é um sistema de visualização de dados de alto nível, poderoso e elegante, com ênfase em dados multivariados, &lt;code&gt;MASS&lt;/code&gt; com funções e conjuntos de dados para apoiar Venables e Ripley, &lt;strong&gt;Modern Applied Statistics with S&lt;/strong&gt;, &lt;code&gt;plyr&lt;/code&gt; que contem um conjunto de ferramentas que resolve problemas tais como: Divisão, aplicação e combinação de dados e &lt;code&gt;cluster&lt;/code&gt; que um pacote com médodos para análise de cluster a fim de encontrar grupos em conjunto de dados.&lt;/p&gt;
 &lt;div id=&#34;base-de-dados-dos-exercícios&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Base de dados dos exercícios&lt;/h2&gt;
 &lt;p&gt;Todos os dados usados nos exercícios ou são do pacote &lt;code&gt;AQP&lt;/code&gt; ou são do pacote &lt;code&gt;soilDB&lt;/code&gt;. Muitas das informações contidas nesse tutorial foram extraídas do &lt;a href=&#34;http://ncss-tech.github.io/AQP/&#34;&gt;projeto do AQP&lt;/a&gt; e todo crédito é dado ao autor.&lt;/p&gt;
@@ -144,29 +144,29 @@ sp4&lt;/code&gt;&lt;/pre&gt;
 ## Depth range: 16-49 cm
 ## 
 ## Horizon attributes:
-##       id name top bottom   K   Mg  Ca CEC_7 ex_Ca_to_Mg sand silt clay   CF
-## 1 colusa    A   0      3 0.3 25.7 9.0  23.0        0.35   46   33   21 0.12
-## 2 colusa  ABt   3      8 0.2 23.7 5.6  21.4        0.23   42   31   27 0.27
-## 3 colusa  Bt1   8     30 0.1 23.2 1.9  23.7        0.08   40   28   32 0.27
-## 4 colusa  Bt2  30     42 0.1 44.3 0.3  43.0        0.01   27   18   55 0.16
-## 5  glenn    A   0      9 0.2 21.9 4.4  18.8        0.20   54   20   25 0.55
-## 6  glenn   Bt   9     34 0.3 18.9 4.5  27.5        0.20   49   18   34 0.84
-##   hzID thickness random.numbers
-## 1    1         3    -0.74297164
-## 2    2         5    -0.60836943
-## 3    3        22     0.05408632
-## 4    4        12    -0.52159161
-## 5    5         9     3.30568726
-## 6    6        25    -0.72051017
+##       id hzID name top bottom   K   Mg  Ca CEC_7 ex_Ca_to_Mg sand silt clay
+## 1 colusa    1    A   0      3 0.3 25.7 9.0  23.0        0.35   46   33   21
+## 2 colusa    2  ABt   3      8 0.2 23.7 5.6  21.4        0.23   42   31   27
+## 3 colusa    3  Bt1   8     30 0.1 23.2 1.9  23.7        0.08   40   28   32
+## 4 colusa    4  Bt2  30     42 0.1 44.3 0.3  43.0        0.01   27   18   55
+## 5  glenn    5    A   0      9 0.2 21.9 4.4  18.8        0.20   54   20   25
+## 6  glenn    6   Bt   9     34 0.3 18.9 4.5  27.5        0.20   49   18   34
+##     CF thickness random.numbers
+## 1 0.12         3     -1.5450242
+## 2 0.27         5      1.0144230
+## 3 0.27        22     -2.1606963
+## 4 0.16        12     -0.4660386
+## 5 0.55         9     -1.2119416
+## 6 0.84        25      0.2974741
 ## 
 ## Sampling site attributes:
 ##          id elevation group
-## 1    colusa 1118.9267     A
-## 2     glenn  753.1276     B
-## 3     kings 1008.5512     A
-## 4  mariposa  903.9514     B
-## 5 mendocino 1094.8294     A
-## 6      napa 1069.5906     B&lt;/code&gt;&lt;/pre&gt;
+## 1    colusa 1044.4902     A
+## 2     glenn 1242.3997     B
+## 3     kings  976.8577     A
+## 4  mariposa  940.8914     B
+## 5 mendocino 1145.3827     A
+## 6      napa  922.5913     B&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Fazendo um plot simples
 plot(sp4, name=&amp;#39;name&amp;#39;)
 # title, note line argument:
@@ -260,7 +260,7 @@ O resumo detalhado dos atributos no nível de horizonte é realizado com a funç
 &lt;ul&gt;
 &lt;li&gt;Um único número inteiro (por exemplo, 10): os dados são agregados em uma sequência regular de &lt;em&gt;slabs&lt;/em&gt; de 10 unidades de espessura.&lt;/li&gt;
 &lt;li&gt;Um vetor de 2 números inteiros (por exemplo, c (50, 60)): os dados são agregados em profundidades que variam de 50 a 60 unidades.
--Um vetor de 3 ou mais números inteiros (por exemplo, c (0, 5, 10, 50, 100)): os dados são agregados nas profundidades que variam de 0 a 5, 5 a 10, 10 a 50, 50 a 100 unidades. Essa é por exemplo umas das formas usadas para harmonização de dados em profundidades pré-definidas como é o caso do projeto &lt;strong&gt;GlobalSoilMap project&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Arrouays et al., &lt;a href=&#34;#ref-Arrouays2017&#34;&gt;2017&lt;/a&gt;)&lt;/span&gt; que é de 0-5, 5-15, 15-30, 30-60, 60-100, 100-200 cm.&lt;/li&gt;
+-Um vetor de 3 ou mais números inteiros (por exemplo, c (0, 5, 10, 50, 100)): os dados são agregados nas profundidades que variam de 0 a 5, 5 a 10, 10 a 50, 50 a 100 unidades. Essa é por exemplo umas das formas usadas para harmonização de dados em profundidades pré-definidas como é o caso do projeto &lt;strong&gt;GlobalSoilMap project&lt;/strong&gt; &lt;span class=&#34;citation&#34;&gt;(Arrouays et al., &lt;a href=&#34;#ref-Arrouays2017&#34; role=&#34;doc-biblioref&#34;&gt;2017&lt;/a&gt;)&lt;/span&gt; que é de 0-5, 5-15, 15-30, 30-60, 60-100, 100-200 cm.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Agregar coleções de perfis de solo em “slabs” (conjuntos) regulares
 # calculando o valor médio ignorando os dados ausentes
@@ -313,7 +313,7 @@ lattice::xyplot(top ~ p.q50 | variable, data=agg, ylab=&amp;#39;Profundidade (cm
 &lt;div id=&#34;análise-de-dissimilaridade-dendogramas&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Análise de Dissimilaridade (Dendogramas)&lt;/h2&gt;
 &lt;p&gt;Os dendogramas são uma maneira conveniente de descrever a dissimilaridade entre pares (&lt;em&gt;pair-wise&lt;/em&gt;), comumente associada ao tópico da análise de cluster.
-O cálculo da dissimilaridade entre perfis é realizado usando a função &lt;code&gt;profile_compare()&lt;/code&gt;. Os valores de dissimilaridade dependem da seleção de atributos (por exemplo, argila, CEC, pH etc.), parâmetro opcional de ponderação em profundidade &lt;code&gt;(k)&lt;/code&gt; e uma profundidade máxima de avaliação &lt;code&gt;(max_d)&lt;/code&gt;. Maiores informações dobre análise de dissimilaridade pode ser encotrado em &lt;span class=&#34;citation&#34;&gt;Beaudette et al. (&lt;a href=&#34;#ref-Beaudette2013&#34;&gt;2013&lt;/a&gt;)&lt;/span&gt; e com exemplos de aplicação em &lt;span class=&#34;citation&#34;&gt;Pinheiro et al. (&lt;a href=&#34;#ref-Pinheiro2016&#34;&gt;2016&lt;/a&gt;)&lt;/span&gt; e &lt;span class=&#34;citation&#34;&gt;Pinheiro et al. (&lt;a href=&#34;#ref-Pinheiro2018&#34;&gt;2018&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+O cálculo da dissimilaridade entre perfis é realizado usando a função &lt;code&gt;profile_compare()&lt;/code&gt;. Os valores de dissimilaridade dependem da seleção de atributos (por exemplo, argila, CEC, pH etc.), parâmetro opcional de ponderação em profundidade &lt;code&gt;(k)&lt;/code&gt; e uma profundidade máxima de avaliação &lt;code&gt;(max_d)&lt;/code&gt;. Maiores informações dobre análise de dissimilaridade pode ser encotrado em &lt;span class=&#34;citation&#34;&gt;Beaudette et al. (&lt;a href=&#34;#ref-Beaudette2013&#34; role=&#34;doc-biblioref&#34;&gt;2013&lt;/a&gt;)&lt;/span&gt; e com exemplos de aplicação em &lt;span class=&#34;citation&#34;&gt;Pinheiro et al. (&lt;a href=&#34;#ref-Pinheiro2016&#34; role=&#34;doc-biblioref&#34;&gt;2016&lt;/a&gt;)&lt;/span&gt; e &lt;span class=&#34;citation&#34;&gt;Pinheiro et al. (&lt;a href=&#34;#ref-Pinheiro2018&#34; role=&#34;doc-biblioref&#34;&gt;2018&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Dissimilaridade usando o conjunto sp4
 # usando Ex-Ca:Mg e CTC a pH 7
 # sem ponderação de profundidade (k = 0)
@@ -401,14 +401,16 @@ plot(x)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(x, label=&amp;#39;pedon_id&amp;#39;, id.style=&amp;#39;side&amp;#39;)
 str(x)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Formal class &amp;#39;SoilProfileCollection&amp;#39; [package &amp;quot;aqp&amp;quot;] with 8 slots
-##   ..@ idcol     : chr &amp;quot;peiid&amp;quot;
-##   ..@ hzidcol   : chr &amp;quot;hzID&amp;quot;
-##   ..@ depthcols : chr [1:2] &amp;quot;hzdept&amp;quot; &amp;quot;hzdepb&amp;quot;
-##   ..@ metadata  :&amp;#39;data.frame&amp;#39;:   1 obs. of  2 variables:
+&lt;pre&gt;&lt;code&gt;## Formal class &amp;#39;SoilProfileCollection&amp;#39; [package &amp;quot;aqp&amp;quot;] with 11 slots
+##   ..@ idcol       : chr &amp;quot;peiid&amp;quot;
+##   ..@ hzidcol     : chr &amp;quot;phiid&amp;quot;
+##   ..@ hzdesgncol  : chr &amp;quot;hzname&amp;quot;
+##   ..@ hztexclcol  : chr &amp;quot;texcl&amp;quot;
+##   ..@ depthcols   : chr [1:2] &amp;quot;hzdept&amp;quot; &amp;quot;hzdepb&amp;quot;
+##   ..@ metadata    :&amp;#39;data.frame&amp;#39;: 1 obs. of  2 variables:
 ##   .. ..$ depth_units: chr &amp;quot;cm&amp;quot;
 ##   .. ..$ origin     : chr &amp;quot;NASIS pedons&amp;quot;
-##   ..@ horizons  :&amp;#39;data.frame&amp;#39;:   62 obs. of  55 variables:
+##   ..@ horizons    :&amp;#39;data.frame&amp;#39;: 62 obs. of  69 variables:
 ##   .. ..$ peiid               : int [1:62] 64505 64505 64505 64505 64505 64505 64505 64505 115595 115595 ...
 ##   .. ..$ phiid               : int [1:62] 299222 299223 299224 299225 299226 299227 299228 299229 579662 579661 ...
 ##   .. ..$ hzname              : chr [1:62] &amp;quot;Oi&amp;quot; &amp;quot;A&amp;quot; &amp;quot;BAt&amp;quot; &amp;quot;Bt1&amp;quot; ...
@@ -428,6 +430,7 @@ str(x)&lt;/code&gt;&lt;/pre&gt;
 ##   .. ..$ rupresblkdry        : Factor w/ 11 levels &amp;quot;loose&amp;quot;,&amp;quot;soft&amp;quot;,..: NA 5 5 5 5 5 NA NA 4 4 ...
 ##   .. ..$ stickiness          : Factor w/ 4 levels &amp;quot;moderately sticky&amp;quot;,..: NA 2 2 2 3 3 NA NA 2 2 ...
 ##   .. ..$ plasticity          : Factor w/ 4 levels &amp;quot;moderately plastic&amp;quot;,..: NA 3 3 3 1 1 NA NA 3 3 ...
+##   .. ..$ ksatpedon           : num [1:62] NA NA NA NA NA NA NA NA NA NA ...
 ##   .. ..$ texture_class       : chr [1:62] &amp;quot;spm&amp;quot; &amp;quot;l&amp;quot; &amp;quot;l&amp;quot; &amp;quot;l&amp;quot; ...
 ##   .. ..$ d_r                 : num [1:62] NA 0.603 0.603 0.652 0.652 ...
 ##   .. ..$ d_g                 : num [1:62] NA 0.45 0.45 0.432 0.432 ...
@@ -445,89 +448,102 @@ str(x)&lt;/code&gt;&lt;/pre&gt;
 ##   .. ..$ m_sigma             : num [1:62] NA NA NA NA NA NA NA NA NA NA ...
 ##   .. ..$ moist_soil_color    : chr [1:62] NA &amp;quot;#7A5A48&amp;quot; &amp;quot;#7A5A48&amp;quot; &amp;quot;#64402B&amp;quot; ...
 ##   .. ..$ dry_soil_color      : chr [1:62] NA &amp;quot;#9A7359&amp;quot; &amp;quot;#9A7359&amp;quot; &amp;quot;#A66E46&amp;quot; ...
-##   .. ..$ fine_gravel         : num [1:62] NA 20 25 0 0 0 NA NA NA 0 ...
-##   .. ..$ gravel              : num [1:62] NA 20 25 10 20 20 NA NA NA 5 ...
-##   .. ..$ cobbles             : num [1:62] NA 0 0 0 5 0 NA NA NA 0 ...
-##   .. ..$ stones              : num [1:62] NA 0 0 0 0 0 NA NA NA 0 ...
-##   .. ..$ boulders            : num [1:62] NA 0 0 0 0 0 NA NA NA 0 ...
-##   .. ..$ channers            : num [1:62] NA 0 0 0 0 0 NA NA NA 0 ...
-##   .. ..$ flagstones          : num [1:62] NA 0 0 0 0 0 NA NA NA 0 ...
-##   .. ..$ parafine_gravel     : num [1:62] NA 0 0 0 0 0 NA NA NA 0 ...
-##   .. ..$ paragravel          : num [1:62] NA 0 0 0 0 0 NA NA NA 0 ...
-##   .. ..$ paracobbles         : num [1:62] NA 0 0 0 0 0 NA NA NA 0 ...
-##   .. ..$ parastones          : num [1:62] NA 0 0 0 0 0 NA NA NA 0 ...
-##   .. ..$ paraboulders        : num [1:62] NA 0 0 0 0 0 NA NA NA 0 ...
-##   .. ..$ parachanners        : num [1:62] NA 0 0 0 0 0 NA NA NA 0 ...
-##   .. ..$ paraflagstones      : num [1:62] NA 0 0 0 0 0 NA NA NA 0 ...
-##   .. ..$ unspecified         : num [1:62] NA 0 0 0 0 0 NA NA NA 0 ...
+##   .. ..$ fine_gravel         : num [1:62] 0 20 25 0 0 0 0 0 0 0 ...
+##   .. ..$ gravel              : num [1:62] 0 20 25 10 20 20 0 0 0 5 ...
+##   .. ..$ cobbles             : num [1:62] 0 0 0 0 5 0 0 0 0 0 ...
+##   .. ..$ stones              : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ boulders            : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ channers            : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ flagstones          : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ parafine_gravel     : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ paragravel          : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ paracobbles         : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ parastones          : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ paraboulders        : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ parachanners        : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ paraflagstones      : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ unspecified         : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
 ##   .. ..$ total_frags_pct_nopf: num [1:62] 0 20 25 10 25 20 0 0 0 5 ...
 ##   .. ..$ total_frags_pct     : num [1:62] 0 20 25 10 25 20 0 0 0 5 ...
+##   .. ..$ art_fgr             : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ art_gr              : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ art_cb              : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ art_st              : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ art_by              : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ art_ch              : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ art_fl              : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ art_unspecified     : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ total_art_pct       : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ huartvol_cohesive   : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ huartvol_penetrable : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ huartvol_innocuous  : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
+##   .. ..$ huartvol_persistent : num [1:62] 0 0 0 0 0 0 0 0 0 0 ...
 ##   .. ..$ soil_color          : chr [1:62] NA &amp;quot;#7A5A48&amp;quot; &amp;quot;#7A5A48&amp;quot; &amp;quot;#64402B&amp;quot; ...
 ##   .. ..$ hzID                : int [1:62] 1 2 3 4 5 6 7 8 9 10 ...
-##   ..@ site      :&amp;#39;data.frame&amp;#39;:   10 obs. of  87 variables:
+##   ..@ site        :&amp;#39;data.frame&amp;#39;: 10 obs. of  87 variables:
 ##   .. ..$ peiid               : chr [1:10] &amp;quot;64505&amp;quot; &amp;quot;115595&amp;quot; &amp;quot;115819&amp;quot; &amp;quot;115827&amp;quot; ...
 ##   .. ..$ pedon_id            : chr [1:10] &amp;quot;716Q&amp;quot; &amp;quot;300J&amp;quot; &amp;quot;S2000CA007009&amp;quot; &amp;quot;S2000CA007012&amp;quot; ...
-##   .. ..$ siteiid             : int [1:10] 64683 114622 159118 159056 209260 254459 269617 307647 308029 308033
+##   .. ..$ siteiid             : int [1:10] 64683 114622 159118 159056 254459 209260 269617 307647 308029 308033
 ##   .. ..$ site_id             : chr [1:10] &amp;quot;716Q&amp;quot; &amp;quot;300J&amp;quot; &amp;quot;300J&amp;quot; &amp;quot;716Q&amp;quot; ...
 ##   .. ..$ obs_date            : POSIXct[1:10], format: &amp;quot;1999-08-04 04:00:00&amp;quot; &amp;quot;1999-06-21 04:00:00&amp;quot; ...
 ##   .. ..$ utmzone             : int [1:10] 10 10 10 10 10 10 10 10 10 10
-##   .. ..$ utmeasting          : num [1:10] 633987 634515 634515 633987 714162 ...
-##   .. ..$ utmnorthing         : num [1:10] 4375530 4367113 4367113 4375530 4189373 ...
-##   .. ..$ x                   : num [1:10] -121 -121 -121 -121 -121 ...
-##   .. ..$ y                   : num [1:10] 39.5 39.4 39.4 39.5 37.8 ...
+##   .. ..$ utmeasting          : num [1:10] 633987 634515 634515 633987 729321 ...
+##   .. ..$ utmnorthing         : num [1:10] 4375530 4367113 4367113 4375530 4204365 ...
+##   .. ..$ x                   : num [1:10] -121 -121 -121 -121 -120 ...
+##   .. ..$ y                   : num [1:10] 39.5 39.4 39.4 39.5 38 ...
 ##   .. ..$ horizdatnm          : Factor w/ 25 levels &amp;quot;NAD27&amp;quot;,&amp;quot;NAD83&amp;quot;,..: 2 2 2 2 2 2 2 2 2 2
-##   .. ..$ x_std               : num [1:10] -121 -121 -121 -121 -121 ...
-##   .. ..$ y_std               : num [1:10] 39.5 39.4 39.4 39.5 37.8 ...
+##   .. ..$ x_std               : num [1:10] -121 -121 -121 -121 -120 ...
+##   .. ..$ y_std               : num [1:10] 39.5 39.4 39.4 39.5 38 ...
 ##   .. ..$ gpspositionalerror  : num [1:10] NA NA NA NA NA NA NA NA NA NA
 ##   .. ..$ describer           : chr [1:10] &amp;quot;DWB&amp;quot; &amp;quot;Felix J. Panlasigui Jr.&amp;quot; &amp;quot;Felix Panlasigui&amp;quot; &amp;quot;DWB&amp;quot; ...
-##   .. ..$ pedonpurpose        : Factor w/ 10 levels &amp;quot;crop yield data site&amp;quot;,..: 4 4 4 4 4 4 4 NA 2 4
-##   .. ..$ pedontype           : Factor w/ 9 levels &amp;quot;map unit inclusion&amp;quot;,..: 7 4 4 7 6 2 6 6 6 6
+##   .. ..$ pedonpurpose        : Factor w/ 10 levels &amp;quot;crop yield data site&amp;quot;,..: 4 4 4 4 8 2 2 2 2 2
+##   .. ..$ pedontype           : Factor w/ 9 levels &amp;quot;map unit inclusion&amp;quot;,..: 7 4 4 7 8 6 6 6 6 6
 ##   .. ..$ pedlabsampnum       : chr [1:10] &amp;quot;01N0266&amp;quot; &amp;quot;01N0263&amp;quot; &amp;quot;01N0263&amp;quot; &amp;quot;01N0266&amp;quot; ...
-##   .. ..$ labdatadescflag     : int [1:10] 0 0 0 0 0 0 0 0 0 0
-##   .. ..$ tsectstopnum        : int [1:10] NA NA NA NA 1 NA NA NA NA NA
-##   .. ..$ tsectinterval       : num [1:10] NA NA NA NA 30 NA NA NA NA NA
+##   .. ..$ labdatadescflag     : int [1:10] 0 0 0 0 1 0 0 0 0 0
+##   .. ..$ tsectstopnum        : int [1:10] NA NA NA NA NA 1 NA NA NA NA
+##   .. ..$ tsectinterval       : num [1:10] NA NA NA NA NA 30 NA NA NA NA
 ##   .. ..$ utransectid         : logi [1:10] NA NA NA NA NA NA ...
 ##   .. ..$ tsectkind           : Factor w/ 2 levels &amp;quot;random point&amp;quot;,..: NA NA NA NA NA NA NA NA NA NA
 ##   .. ..$ tsectselmeth        : Factor w/ 2 levels &amp;quot;random&amp;quot;,&amp;quot;biased&amp;quot;: NA NA NA NA NA NA NA NA NA NA
-##   .. ..$ elev_field          : num [1:10] 365 201 201 365 408 536 328 150 280 320
-##   .. ..$ slope_field         : num [1:10] 18 8 8 18 25 45 9 NA 5 3
-##   .. ..$ aspect_field        : int [1:10] 290 152 152 290 145 120 344 NA 90 238
+##   .. ..$ elev_field          : num [1:10] 365 201 201 365 536 408 328 150 280 320
+##   .. ..$ slope_field         : num [1:10] 18 8 8 18 45 25 9 NA 5 3
+##   .. ..$ aspect_field        : int [1:10] 290 152 152 290 120 145 344 NA 90 238
 ##   .. ..$ plantassocnm        : chr [1:10] NA NA NA NA ...
 ##   .. ..$ earthcovkind1       : Factor w/ 10 levels &amp;quot;artificial cover&amp;quot;,..: NA NA NA NA NA NA NA NA NA NA
 ##   .. ..$ earthcovkind2       : Factor w/ 28 levels &amp;quot;row crop&amp;quot;,&amp;quot;close-grown crop&amp;quot;,..: NA NA NA NA NA NA NA NA NA NA
 ##   .. ..$ erocl               : Factor w/ 5 levels &amp;quot;0&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;2&amp;quot;,&amp;quot;3&amp;quot;,..: NA NA NA NA NA NA NA NA NA NA
-##   .. ..$ bedrckdepth         : int [1:10] 107 74 74 107 73 99 64 NA NA NA
-##   .. ..$ bedrckkind          : Factor w/ 157 levels &amp;quot;sandstone, unspecified&amp;quot;,..: 106 106 106 106 104 70 104 NA 104 104
-##   .. ..$ bedrckhardness      : Factor w/ 14 levels &amp;quot;noncemented&amp;quot;,..: NA NA NA NA 11 10 9 NA 10 8
+##   .. ..$ bedrckdepth         : int [1:10] 107 74 74 107 99 73 64 NA NA NA
+##   .. ..$ bedrckkind          : Factor w/ 157 levels &amp;quot;sandstone, unspecified&amp;quot;,..: 106 106 106 106 70 104 104 NA 104 104
+##   .. ..$ bedrckhardness      : Factor w/ 14 levels &amp;quot;noncemented&amp;quot;,..: NA NA NA NA 10 11 9 NA 10 8
 ##   .. ..$ hillslopeprof       : Factor w/ 5 levels &amp;quot;summit&amp;quot;,&amp;quot;shoulder&amp;quot;,..: NA NA NA NA 3 3 3 NA 5 4
 ##   .. ..$ geomslopeseg        : Factor w/ 9 levels &amp;quot;depression&amp;quot;,&amp;quot;drainageway&amp;quot;,..: NA NA NA NA NA NA NA NA 3 NA
-##   .. ..$ shapeacross         : Factor w/ 5 levels &amp;quot;concave&amp;quot;,&amp;quot;linear&amp;quot;,..: NA 1 1 NA 2 1 1 NA 2 NA
+##   .. ..$ shapeacross         : Factor w/ 5 levels &amp;quot;concave&amp;quot;,&amp;quot;linear&amp;quot;,..: NA 1 1 NA 1 2 1 NA 2 NA
 ##   .. ..$ shapedown           : Factor w/ 5 levels &amp;quot;concave&amp;quot;,&amp;quot;linear&amp;quot;,..: NA NA NA NA 2 2 3 NA 3 NA
-##   .. ..$ slopecomplex        : Factor w/ 2 levels &amp;quot;complex&amp;quot;,&amp;quot;simple&amp;quot;: NA NA NA NA NA 2 2 NA 2 NA
+##   .. ..$ slopecomplex        : Factor w/ 2 levels &amp;quot;complex&amp;quot;,&amp;quot;simple&amp;quot;: NA NA NA NA 2 NA 2 NA 2 NA
 ##   .. ..$ drainagecl          : Factor w/ 8 levels &amp;quot;excessively&amp;quot;,..: 3 NA NA 3 3 3 3 NA 3 NA
 ##   .. ..$ geomposhill         : Factor w/ 8 levels &amp;quot;interfluve&amp;quot;,&amp;quot;head slope&amp;quot;,..: NA NA NA NA 4 4 4 NA 1 NA
 ##   .. ..$ geomposmntn         : Factor w/ 7 levels &amp;quot;mountaintop&amp;quot;,..: NA NA NA NA NA NA NA NA NA NA
 ##   .. ..$ geomposflats        : Factor w/ 4 levels &amp;quot;flat&amp;quot;,&amp;quot;dip&amp;quot;,&amp;quot;rise&amp;quot;,..: NA NA NA NA NA NA NA NA NA NA
-##   .. ..$ slope_shape         : Factor w/ 9 levels &amp;quot;convex / convex&amp;quot;,..: NA NA NA NA 5 8 7 NA 4 NA
+##   .. ..$ slope_shape         : Factor w/ 9 levels &amp;quot;linear / concave&amp;quot;,..: NA NA NA NA 8 2 9 NA 3 NA
 ##   .. ..$ classdate           : POSIXct[1:10], format: &amp;quot;2012-07-24 04:02:15&amp;quot; &amp;quot;2012-07-24 04:02:22&amp;quot; ...
 ##   .. ..$ classifier          : chr [1:10] NA NA NA NA ...
-##   .. ..$ classtype           : Factor w/ 4 levels &amp;quot;correlated&amp;quot;,&amp;quot;field&amp;quot;,..: 1 1 1 1 1 1 1 1 1 1
+##   .. ..$ classtype           : chr [1:10] &amp;quot;correlated&amp;quot; &amp;quot;correlated&amp;quot; &amp;quot;correlated&amp;quot; &amp;quot;correlated&amp;quot; ...
 ##   .. ..$ taxonname           : chr [1:10] &amp;quot;LOAFERCREEK&amp;quot; &amp;quot;LOAFERCREEK&amp;quot; &amp;quot;LOAFERCREEK&amp;quot; &amp;quot;Loafercreek&amp;quot; ...
 ##   .. ..$ localphase          : chr [1:10] NA NA NA NA ...
-##   .. ..$ taxonkind           : Factor w/ 6 levels &amp;quot;family&amp;quot;,&amp;quot;taxon above family&amp;quot;,..: 4 4 4 4 4 4 4 4 4 4
-##   .. ..$ seriesstatus        : Factor w/ 3 levels &amp;quot;tentative&amp;quot;,&amp;quot;established&amp;quot;,..: NA NA NA NA NA NA NA NA 2 1
-##   .. ..$ taxpartsize         : Factor w/ 113 levels &amp;quot;unclassified&amp;quot;,..: 54 54 54 54 54 54 54 54 54 54
-##   .. ..$ taxorder            : Factor w/ 12 levels &amp;quot;alfisols&amp;quot;,&amp;quot;andisols&amp;quot;,..: 1 1 1 1 1 1 1 1 1 1
-##   .. ..$ taxsuborder         : Factor w/ 81 levels &amp;quot;aqualfs&amp;quot;,&amp;quot;boralfs&amp;quot;,..: 5 5 5 5 5 5 5 5 5 5
-##   .. ..$ taxgrtgroup         : Factor w/ 459 levels &amp;quot;albaqualfs&amp;quot;,&amp;quot;duraqualfs&amp;quot;,..: 38 38 38 38 38 38 38 38 38 38
-##   .. ..$ taxsubgrp           : Factor w/ 3764 levels &amp;quot;typic albaqualfs&amp;quot;,..: 270 270 257 270 270 270 270 270 270 270
-##   .. ..$ soiltaxedition      : Factor w/ 12 levels &amp;quot;first edition&amp;quot;,..: 8 8 8 9 12 10 10 11 12 12
+##   .. ..$ taxonkind           : chr [1:10] &amp;quot;series&amp;quot; &amp;quot;series&amp;quot; &amp;quot;series&amp;quot; &amp;quot;series&amp;quot; ...
+##   .. ..$ seriesstatus        : chr [1:10] NA NA NA NA ...
+##   .. ..$ taxpartsize         : chr [1:10] &amp;quot;fine-loamy&amp;quot; &amp;quot;fine-loamy&amp;quot; &amp;quot;fine-loamy&amp;quot; &amp;quot;fine-loamy&amp;quot; ...
+##   .. ..$ taxorder            : chr [1:10] &amp;quot;alfisols&amp;quot; &amp;quot;alfisols&amp;quot; &amp;quot;alfisols&amp;quot; &amp;quot;alfisols&amp;quot; ...
+##   .. ..$ taxsuborder         : chr [1:10] &amp;quot;xeralfs&amp;quot; &amp;quot;xeralfs&amp;quot; &amp;quot;xeralfs&amp;quot; &amp;quot;xeralfs&amp;quot; ...
+##   .. ..$ taxgrtgroup         : chr [1:10] &amp;quot;haploxeralfs&amp;quot; &amp;quot;haploxeralfs&amp;quot; &amp;quot;haploxeralfs&amp;quot; &amp;quot;haploxeralfs&amp;quot; ...
+##   .. ..$ taxsubgrp           : chr [1:10] &amp;quot;ultic haploxeralfs&amp;quot; &amp;quot;ultic haploxeralfs&amp;quot; &amp;quot;typic haploxeralfs&amp;quot; &amp;quot;ultic haploxeralfs&amp;quot; ...
+##   .. ..$ soiltaxedition      : chr [1:10] &amp;quot;eighth edition&amp;quot; &amp;quot;eighth edition&amp;quot; &amp;quot;eighth edition&amp;quot; &amp;quot;ninth edition&amp;quot; ...
 ##   .. ..$ osdtypelocflag      : int [1:10] 0 0 0 0 0 0 0 0 0 0
-##   .. ..$ taxmoistcl          : Factor w/ 7 levels &amp;quot;aquic&amp;quot;,&amp;quot;aridic (torric)&amp;quot;,..: 7 7 7 7 7 NA 7 7 7 7
-##   .. ..$ taxtempregime       : Factor w/ 13 levels &amp;quot;cryic&amp;quot;,&amp;quot;frigid&amp;quot;,..: 10 10 10 10 10 10 10 10 10 10
-##   .. ..$ taxfamother         : Factor w/ 13 levels &amp;quot;not used&amp;quot;,&amp;quot;coated&amp;quot;,..: 1 NA NA 1 1 1 NA NA NA NA
-##   .. ..$ psctopdepth         : int [1:10] 15 10 10 15 13 48 23 NA 30 28
-##   .. ..$ pscbotdepth         : int [1:10] 66 61 61 65 63 94 64 NA 58 61
+##   .. ..$ taxmoistcl          : chr [1:10] &amp;quot;xeric&amp;quot; &amp;quot;xeric&amp;quot; &amp;quot;xeric&amp;quot; &amp;quot;xeric&amp;quot; ...
+##   .. ..$ taxtempregime       : chr [1:10] &amp;quot;thermic&amp;quot; &amp;quot;thermic&amp;quot; &amp;quot;thermic&amp;quot; &amp;quot;thermic&amp;quot; ...
+##   .. ..$ taxfamother         : chr [1:10] &amp;quot;not used&amp;quot; NA NA &amp;quot;not used&amp;quot; ...
+##   .. ..$ psctopdepth         : int [1:10] 15 10 10 15 25 13 23 NA 30 28
+##   .. ..$ pscbotdepth         : int [1:10] 66 61 61 65 99 63 64 NA 58 61
 ##   .. ..$ selection_method    : chr [1:10] &amp;quot;most recent&amp;quot; &amp;quot;most recent&amp;quot; &amp;quot;most recent&amp;quot; &amp;quot;most recent&amp;quot; ...
 ##   .. ..$ ecositeid           : chr [1:10] NA NA NA NA ...
 ##   .. ..$ ecositenm           : chr [1:10] NA NA NA NA ...
@@ -535,13 +551,13 @@ str(x)&lt;/code&gt;&lt;/pre&gt;
 ##   .. ..$ es_classifier       : chr [1:10] NA NA NA NA ...
 ##   .. ..$ es_selection_method : chr [1:10] NA NA NA NA ...
 ##   .. ..$ ochric.epipedon     : logi [1:10] TRUE TRUE TRUE TRUE TRUE TRUE ...
-##   .. ..$ argillic.horizon    : logi [1:10] TRUE TRUE TRUE TRUE TRUE TRUE ...
+##   .. ..$ argillic.horizon    : logi [1:10] TRUE TRUE TRUE TRUE FALSE TRUE ...
 ##   .. ..$ paralithic.contact  : logi [1:10] TRUE TRUE TRUE TRUE TRUE TRUE ...
 ##   .. ..$ lithic.contact      : logi [1:10] TRUE FALSE FALSE TRUE FALSE FALSE ...
-##   .. ..$ cambic.horizon      : logi [1:10] FALSE FALSE FALSE FALSE FALSE FALSE ...
+##   .. ..$ cambic.horizon      : logi [1:10] FALSE FALSE FALSE FALSE TRUE FALSE ...
 ##   .. ..$ paralithic.materials: logi [1:10] FALSE FALSE FALSE FALSE FALSE FALSE ...
 ##   .. ..$ surface_fgravel     : num [1:10] 0 0 0 0 0 0 0 0 0 0
-##   .. ..$ surface_gravel      : num [1:10] 5 0 0 0 5 0 0 0 0 0
+##   .. ..$ surface_gravel      : num [1:10] 5 0 0 0 0 5 0 0 0 0
 ##   .. ..$ surface_cobbles     : num [1:10] 2 0 0 0 0 0 0 0 0 0
 ##   .. ..$ surface_stones      : num [1:10] 2 0 0 0 0 0 0 0 0 0
 ##   .. ..$ surface_boulders    : num [1:10] 0 0 0 0 0 0 0 0 0 0
@@ -552,16 +568,25 @@ str(x)&lt;/code&gt;&lt;/pre&gt;
 ##   .. ..$ landform_string     : chr [1:10] NA NA NA NA ...
 ##   .. ..$ pmkind              : chr [1:10] &amp;quot;residuum&amp;quot; &amp;quot;residuum&amp;quot; &amp;quot;residuum&amp;quot; &amp;quot;residuum&amp;quot; ...
 ##   .. ..$ pmorigin            : chr [1:10] &amp;quot;metavolcanics&amp;quot; &amp;quot;metavolcanics&amp;quot; &amp;quot;metavolcanics&amp;quot; &amp;quot;metavolcanics&amp;quot; ...
-##   ..@ sp        :Formal class &amp;#39;SpatialPoints&amp;#39; [package &amp;quot;sp&amp;quot;] with 3 slots
+##   ..@ sp          :Formal class &amp;#39;SpatialPoints&amp;#39; [package &amp;quot;sp&amp;quot;] with 3 slots
 ##   .. .. ..@ coords     : num [1, 1] 0
 ##   .. .. ..@ bbox       : logi [1, 1] NA
 ##   .. .. ..@ proj4string:Formal class &amp;#39;CRS&amp;#39; [package &amp;quot;sp&amp;quot;] with 1 slot
 ##   .. .. .. .. ..@ projargs: chr NA
-##   ..@ diagnostic:&amp;#39;data.frame&amp;#39;:   30 obs. of  4 variables:
+##   ..@ diagnostic  :&amp;#39;data.frame&amp;#39;: 30 obs. of  4 variables:
 ##   .. ..$ peiid   : int [1:30] 64505 64505 64505 64505 115595 115595 115595 115819 115819 115819 ...
 ##   .. ..$ featkind: Factor w/ 84 levels &amp;quot;anthropic epipedon&amp;quot;,..: 23 32 35 18 23 32 35 23 32 35 ...
 ##   .. ..$ featdept: int [1:30] 1 15 79 107 0 10 74 0 10 74 ...
-##   .. ..$ featdepb: int [1:30] 5 79 107 NA 10 74 81 10 74 81 ...&lt;/code&gt;&lt;/pre&gt;
+##   .. ..$ featdepb: int [1:30] 5 79 107 NA 10 74 81 10 74 81 ...
+##   ..@ restrictions:&amp;#39;data.frame&amp;#39;: 11 obs. of  8 variables:
+##   .. ..$ peiid   : int [1:11] 64505 64505 115595 115819 115827 115827 207242 207255 268820 307957 ...
+##   .. ..$ resdept : int [1:11] 79 107 74 74 79 107 99 73 64 58 ...
+##   .. ..$ resdepb : int [1:11] 107 NA 81 81 107 NA 203 97 NA 83 ...
+##   .. ..$ resthk_l: int [1:11] NA NA NA NA NA NA NA NA NA NA ...
+##   .. ..$ resthk_r: int [1:11] NA NA 7 7 NA NA 104 24 NA 25 ...
+##   .. ..$ resthk_h: int [1:11] NA NA NA NA NA NA NA NA NA NA ...
+##   .. ..$ reskind : Factor w/ 21 levels &amp;quot;abrupt textural change&amp;quot;,..: 13 10 13 13 13 10 13 13 13 13 ...
+##   .. ..$ reshard : Factor w/ 14 levels &amp;quot;noncemented&amp;quot;,..: 11 NA NA NA 11 NA 10 11 9 10 ...&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Adicionar marcação para alguns horizontes diagnósticos
 addDiagnosticBracket(x, kind=&amp;#39;argillic horizon&amp;#39;, col=&amp;#39;red&amp;#39;)
 addDiagnosticBracket(x, kind=&amp;#39;paralithic contact&amp;#39;, col=&amp;#39;black&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
@@ -617,9 +642,9 @@ plotTransect(mineralKing, grad.var.name=&amp;#39;elev_field&amp;#39;, crs=crs.ut
     
     <item>
       <title>Amostragem para mapeamento de solos</title>
-      <link>https://eliasmcosta.netlify.app/post/amostragem/</link>
+      <link>https://eliasmcosta.netlify.app/post/sampling/</link>
       <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
-      <guid>https://eliasmcosta.netlify.app/post/amostragem/</guid>
+      <guid>https://eliasmcosta.netlify.app/post/sampling/</guid>
       <description>
 
 
@@ -627,19 +652,19 @@ plotTransect(mineralKing, grad.var.name=&amp;#39;elev_field&amp;#39;, crs=crs.ut
 &lt;h1&gt;Introdução&lt;/h1&gt;
 &lt;div id=&#34;conceitos-básicos-e-terminologias&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Conceitos básicos e terminologias&lt;/h2&gt;
-&lt;p&gt;A &lt;em&gt;amostragem&lt;/em&gt; diz respeito à seleção de um subconjunto de indivíduos de uma população para estimar características de toda a população &lt;span class=&#34;citation&#34;&gt;(Wang et al., &lt;a href=&#34;#ref-Wang2012a&#34;&gt;2012&lt;/a&gt;)&lt;/span&gt;. Ou A amostragem pode ser definida como selecção de partes de um universo finito, com a proposta de obter informações desse universo &lt;span class=&#34;citation&#34;&gt;(Gruijter et al., &lt;a href=&#34;#ref-deGruijter2006&#34;&gt;2006&lt;/a&gt;)&lt;/span&gt;. A &lt;em&gt;amostra&lt;/em&gt; pode ser definida como a parte coletada, e levada para laboratório, ou observada &lt;em&gt;in situ&lt;/em&gt;. E uma única parte dessa amostra pode ser definida como &lt;em&gt;unidade amostral&lt;/em&gt;, o número de unidades amostrais é definido como &lt;em&gt;tamanho amostral&lt;/em&gt; ou &lt;em&gt;n amostral&lt;/em&gt; &lt;span class=&#34;citation&#34;&gt;(Gruijter et al., &lt;a href=&#34;#ref-deGruijter2006&#34;&gt;2006&lt;/a&gt;)&lt;/span&gt;.
-Uma confusão comum na literatura é sobre a definição de amostragem aletória e amostragem arbitrária ou casual &lt;span class=&#34;citation&#34;&gt;(Brus, &lt;a href=&#34;#ref-Brus2019&#34;&gt;2019&lt;/a&gt;)&lt;/span&gt; no segundo caso os locais de amostragem são escolhidos, fundamentalmente, em função da subjetividade da pessoa conduzindo o ntraballho. Para evitar a confusão o termo &lt;em&gt;amostragem probabilística&lt;/em&gt; deve ser priorizado para o as amostras aleatórias. A amostragem de probabilidade é uma amostragem aleatória que atende a dois requisitos. Em primeiro lugar, todas as unidades da população têm uma probabilidade positiva de serem selecionadas. Nenhuma parte da população pode ser excluída. Em segundo lugar, a probabilidade de seleção de cada amostra possível é conhecida. Com amostragem arbitrária (casual), esses dois requisitos geralmente não são atendidos &lt;span class=&#34;citation&#34;&gt;(Brus, &lt;a href=&#34;#ref-Brus2019&#34;&gt;2019&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;A &lt;em&gt;amostragem&lt;/em&gt; diz respeito à seleção de um subconjunto de indivíduos de uma população para estimar características de toda a população &lt;span class=&#34;citation&#34;&gt;(Wang et al., &lt;a href=&#34;#ref-Wang2012a&#34; role=&#34;doc-biblioref&#34;&gt;2012&lt;/a&gt;)&lt;/span&gt;. Ou A amostragem pode ser definida como selecção de partes de um universo finito, com a proposta de obter informações desse universo &lt;span class=&#34;citation&#34;&gt;(Gruijter et al., &lt;a href=&#34;#ref-deGruijter2006&#34; role=&#34;doc-biblioref&#34;&gt;2006&lt;/a&gt;)&lt;/span&gt;. A &lt;em&gt;amostra&lt;/em&gt; pode ser definida como a parte coletada, e levada para laboratório, ou observada &lt;em&gt;in situ&lt;/em&gt;. E uma única parte dessa amostra pode ser definida como &lt;em&gt;unidade amostral&lt;/em&gt;, o número de unidades amostrais é definido como &lt;em&gt;tamanho amostral&lt;/em&gt; ou &lt;em&gt;n amostral&lt;/em&gt; &lt;span class=&#34;citation&#34;&gt;(Gruijter et al., &lt;a href=&#34;#ref-deGruijter2006&#34; role=&#34;doc-biblioref&#34;&gt;2006&lt;/a&gt;)&lt;/span&gt;.
+Uma confusão comum na literatura é sobre a definição de amostragem aletória e amostragem arbitrária ou casual &lt;span class=&#34;citation&#34;&gt;(Brus, &lt;a href=&#34;#ref-Brus2019&#34; role=&#34;doc-biblioref&#34;&gt;2019&lt;/a&gt;)&lt;/span&gt; no segundo caso os locais de amostragem são escolhidos, fundamentalmente, em função da subjetividade da pessoa conduzindo o ntraballho. Para evitar a confusão o termo &lt;em&gt;amostragem probabilística&lt;/em&gt; deve ser priorizado para o as amostras aleatórias. A amostragem de probabilidade é uma amostragem aleatória que atende a dois requisitos. Em primeiro lugar, todas as unidades da população têm uma probabilidade positiva de serem selecionadas. Nenhuma parte da população pode ser excluída. Em segundo lugar, a probabilidade de seleção de cada amostra possível é conhecida. Com amostragem arbitrária (casual), esses dois requisitos geralmente não são atendidos &lt;span class=&#34;citation&#34;&gt;(Brus, &lt;a href=&#34;#ref-Brus2019&#34; role=&#34;doc-biblioref&#34;&gt;2019&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-no-mapeamento-convencional-de-solos&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Amostragem no mapeamento convencional de solos&lt;/h2&gt;
-&lt;p&gt;No caso do mapeamento convencional de solos, o método de prospecção e a frequência de amostragem dependem do nível de detalhe do levantamento e do objetivo do levantamento &lt;span class=&#34;citation&#34;&gt;(IBGE, &lt;a href=&#34;#ref-IBGE2015&#34;&gt;2015&lt;/a&gt;)&lt;/span&gt;. Por exemplo, na terceira edição do Manual Técnico de Pedologia &lt;span class=&#34;citation&#34;&gt;(IBGE, &lt;a href=&#34;#ref-IBGE2015&#34;&gt;2015&lt;/a&gt;)&lt;/span&gt; o método de prospecção indicado para levantamento exploratório é o de extrapolação, generalizações, correlações e poucas observações de campo, com uma frequência de amostragem de um perfil completo por classe de solo predominante na associação. Para o levantamento semidetalhado a densidade de observações e a frequência de amostragem são calculadas em função da heterogeneidade da área e da facilidade de correlação de solos e a superfície geomorfológicas. No entanto, é recomendada uma média de 0,002 a 0,20 observações por hectare e um perfil completo e um complementar por classe de solo componente da unidade de mapeamento simples ou associação.
-Porém para o MDS esse esquema de amostragem não se aplica, pois não fornece estimativa estatística representativa. No MDS é necessário o uso de estratégias de amostragem estatisticamente robustas para diminuir a subjetividade e consequentemente os possíveis erros na predição &lt;span class=&#34;citation&#34;&gt;(Minasny and McBratney, &lt;a href=&#34;#ref-Minasny2007b&#34;&gt;2007&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;No caso do mapeamento convencional de solos, o método de prospecção e a frequência de amostragem dependem do nível de detalhe do levantamento e do objetivo do levantamento &lt;span class=&#34;citation&#34;&gt;(IBGE, &lt;a href=&#34;#ref-IBGE2015&#34; role=&#34;doc-biblioref&#34;&gt;2015&lt;/a&gt;)&lt;/span&gt;. Por exemplo, na terceira edição do Manual Técnico de Pedologia &lt;span class=&#34;citation&#34;&gt;(IBGE, &lt;a href=&#34;#ref-IBGE2015&#34; role=&#34;doc-biblioref&#34;&gt;2015&lt;/a&gt;)&lt;/span&gt; o método de prospecção indicado para levantamento exploratório é o de extrapolação, generalizações, correlações e poucas observações de campo, com uma frequência de amostragem de um perfil completo por classe de solo predominante na associação. Para o levantamento semidetalhado a densidade de observações e a frequência de amostragem são calculadas em função da heterogeneidade da área e da facilidade de correlação de solos e a superfície geomorfológicas. No entanto, é recomendada uma média de 0,002 a 0,20 observações por hectare e um perfil completo e um complementar por classe de solo componente da unidade de mapeamento simples ou associação.
+Porém para o MDS esse esquema de amostragem não se aplica, pois não fornece estimativa estatística representativa. No MDS é necessário o uso de estratégias de amostragem estatisticamente robustas para diminuir a subjetividade e consequentemente os possíveis erros na predição &lt;span class=&#34;citation&#34;&gt;(Minasny and McBratney, &lt;a href=&#34;#ref-Minasny2007b&#34; role=&#34;doc-biblioref&#34;&gt;2007&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-no-mapeamento-digital-de-solos&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Amostragem no mapeamento digital de solos&lt;/h2&gt;
-&lt;p&gt;No caso do mapeamento digital de solos (MDS) a amostragem é um fator crucial, pois pode contribuir para elevar ou diminuir os custos do levantamento de solos. Ainda é considera uma das etapas mais importantes para o MDS &lt;span class=&#34;citation&#34;&gt;(Carvalho Junior et al., &lt;a href=&#34;#ref-CarvalhoJunior2014&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;. Para o MDS, para uma otimização da calibração de modelos matemáticos as amostras coletadas devem representar ao máximo a distribuição espacial do que está sendo modelado (atributo ou classe de solo), por isso técnicas como o Hipercubo Latino Condicionado (cLHS) &lt;span class=&#34;citation&#34;&gt;(Minasny and McBratney, &lt;a href=&#34;#ref-Minasny2006&#34;&gt;2006&lt;/a&gt;)&lt;/span&gt; são frequentemente usados nessa etapa e para essa finalidade. Esse tipo de amostragem é conhecido como amostragem não probabilística e será abordado com mais detalhes nos exemplos.
-Para validação dos resultados das predições espaciais no MDS o tipo de abordagem recomendado é a amostragem probabilística &lt;span class=&#34;citation&#34;&gt;(Brus et al., &lt;a href=&#34;#ref-BrusEtAl2011&#34;&gt;2011&lt;/a&gt;)&lt;/span&gt;, esse tipo de amostragem busca a imparcialidade e diminuição de viés para validação dos produtos do mapeamento. Atenção especial deve ser tomada nessa etapa, pois nem sempre é possível uma amostragem completamente probabilística (aleatória). Há então a necessidade de encontrar a condição perfeita do que é factível e o ideal. Exemplos de amostragem probabilística serão abordados com mais detalhe nos exemplos.&lt;br /&gt;
-Parte do material aqui desenvolvido foi extraído e adaptado do livro em desenvolvimento de Alessandro Samuel-Rosa, &lt;a href=&#34;http://samuel-rosa.github.io/pedometria-feita-simples/principios-da-amostragem-espacial.html&#34;&gt;pedometria feita simples&lt;/a&gt;. O capítulo 7 do livro trata de princípios da amostragem espacial. Também foram extraídas informações a respeito de amostragem para validação de mapas digitais de solos &lt;span class=&#34;citation&#34;&gt;(Brus et al., &lt;a href=&#34;#ref-BrusEtAl2011&#34;&gt;2011&lt;/a&gt;)&lt;/span&gt; e amostragem para mapeamento de solos &lt;span class=&#34;citation&#34;&gt;(Brus, &lt;a href=&#34;#ref-Brus2019&#34;&gt;2019&lt;/a&gt;)&lt;/span&gt;. Assim objetivo desse tutorial e compilar as informações dos trabalhos mencionados para simular difentes estratégias amostrais para dar suporte aos levantamentos de solos com foco em MDS e avaliação dos produtos gerados.&lt;/p&gt;
+&lt;p&gt;No caso do mapeamento digital de solos (MDS) a amostragem é um fator crucial, pois pode contribuir para elevar ou diminuir os custos do levantamento de solos. Ainda é considera uma das etapas mais importantes para o MDS &lt;span class=&#34;citation&#34;&gt;(Carvalho Junior et al., &lt;a href=&#34;#ref-CarvalhoJunior2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;. Para o MDS, para uma otimização da calibração de modelos matemáticos as amostras coletadas devem representar ao máximo a distribuição espacial do que está sendo modelado (atributo ou classe de solo), por isso técnicas como o Hipercubo Latino Condicionado (cLHS) &lt;span class=&#34;citation&#34;&gt;(Minasny and McBratney, &lt;a href=&#34;#ref-Minasny2006&#34; role=&#34;doc-biblioref&#34;&gt;2006&lt;/a&gt;)&lt;/span&gt; são frequentemente usados nessa etapa e para essa finalidade. Esse tipo de amostragem é conhecido como amostragem não probabilística e será abordado com mais detalhes nos exemplos.
+Para validação dos resultados das predições espaciais no MDS o tipo de abordagem recomendado é a amostragem probabilística &lt;span class=&#34;citation&#34;&gt;(Brus et al., &lt;a href=&#34;#ref-BrusEtAl2011&#34; role=&#34;doc-biblioref&#34;&gt;2011&lt;/a&gt;)&lt;/span&gt;, esse tipo de amostragem busca a imparcialidade e diminuição de viés para validação dos produtos do mapeamento. Atenção especial deve ser tomada nessa etapa, pois nem sempre é possível uma amostragem completamente probabilística (aleatória). Há então a necessidade de encontrar a condição perfeita do que é factível e o ideal. Exemplos de amostragem probabilística serão abordados com mais detalhe nos exemplos.&lt;br /&gt;
+Parte do material aqui desenvolvido foi extraído e adaptado do livro em desenvolvimento de Alessandro Samuel-Rosa, &lt;a href=&#34;http://samuel-rosa.github.io/pedometria-feita-simples/principios-da-amostragem-espacial.html&#34;&gt;pedometria feita simples&lt;/a&gt;. O capítulo 7 do livro trata de princípios da amostragem espacial. Também foram extraídas informações a respeito de amostragem para validação de mapas digitais de solos &lt;span class=&#34;citation&#34;&gt;(Brus et al., &lt;a href=&#34;#ref-BrusEtAl2011&#34; role=&#34;doc-biblioref&#34;&gt;2011&lt;/a&gt;)&lt;/span&gt; e amostragem para mapeamento de solos &lt;span class=&#34;citation&#34;&gt;(Brus, &lt;a href=&#34;#ref-Brus2019&#34; role=&#34;doc-biblioref&#34;&gt;2019&lt;/a&gt;)&lt;/span&gt;. Assim objetivo desse tutorial e compilar as informações dos trabalhos mencionados para simular difentes estratégias amostrais para dar suporte aos levantamentos de solos com foco em MDS e avaliação dos produtos gerados.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;área-experimental-e-base-dados&#34; class=&#34;section level1&#34;&gt;
@@ -660,14 +685,14 @@ Especificamente, o trabalho foi desenvolvido na Fazendinha Agroecológica km 47 
 Figure 2: Mapa de localização da área de estudo em Seropédica-RJ. Fonte: Nascimento (2019)
 &lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;O clima do município caracteriza-se por ser do tipo Aw (Tropical com inverno seco), segundo a classificação de Köppen. Seropédica tem uma temperatura média de 23,5 °C e uma pluviosidade média anual de 1354 mm. Os maiores valores de precipitação são verificados nos meses de novembro a janeiro e os menores no período entre maio e agosto &lt;span class=&#34;citation&#34;&gt;(Oliveira-Júnior et al., &lt;a href=&#34;#ref-Oliveira-J2014&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;. A área dos exemplos encontra-se ocupada por pastagem e caracteriza-se por apresentar relevo suave-ondulado a ondulado, altitude entre 17 a 50 m sobre o nível do mar, e ausência de rochosidade e pedregosidade em superfície &lt;span class=&#34;citation&#34;&gt;(Nascimento, &lt;a href=&#34;#ref-Nascimento2019&#34;&gt;2019&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Os Solos da área experimental são caraterizados por apresentar, no geral baixa fertilidade e elevado grau de desonvilvimento com fatores e processos de formação específicos e dominates para cada ordem e posição da paisagem. Para o trabalho de onde os dados derivam &lt;span class=&#34;citation&#34;&gt;(Nascimento, &lt;a href=&#34;#ref-Nascimento2019&#34;&gt;2019&lt;/a&gt;)&lt;/span&gt;, foram abertas 10 trincheiras em diferentes pontos da paisagem, onde foram descritos e classificados perfis do solo, sendo uma trincheira no topo (P10), duas na posição de terço médio (P3 e P9), uma no terço inferior (P8), três no sopé da vertente (P2, P5 e P7) e três na área de baixada (P1, P4 e P6). Os solos froam classificados respectivamente como Argissolos Vermelhos P10, P9 e P3; Argissolo Amarelo, P8; Planossolos Háplicos (arênicos e espessarenicos), P7,P2,P5; Planossolos Háplicos (gleissólicos), P4, P6 e Cambissolo Hálico (com evidente processos de gleização) P1 (Figura &lt;a href=&#34;#fig:localizacao2&#34;&gt;2&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;O clima do município caracteriza-se por ser do tipo Aw (Tropical com inverno seco), segundo a classificação de Köppen. Seropédica tem uma temperatura média de 23,5 °C e uma pluviosidade média anual de 1354 mm. Os maiores valores de precipitação são verificados nos meses de novembro a janeiro e os menores no período entre maio e agosto &lt;span class=&#34;citation&#34;&gt;(Oliveira-Júnior et al., &lt;a href=&#34;#ref-Oliveira-J2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;. A área dos exemplos encontra-se ocupada por pastagem e caracteriza-se por apresentar relevo suave-ondulado a ondulado, altitude entre 17 a 50 m sobre o nível do mar, e ausência de rochosidade e pedregosidade em superfície &lt;span class=&#34;citation&#34;&gt;(Nascimento, &lt;a href=&#34;#ref-Nascimento2019&#34; role=&#34;doc-biblioref&#34;&gt;2019&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Os Solos da área experimental são caraterizados por apresentar, no geral baixa fertilidade e elevado grau de desonvilvimento com fatores e processos de formação específicos e dominates para cada ordem e posição da paisagem. Para o trabalho de onde os dados derivam &lt;span class=&#34;citation&#34;&gt;(Nascimento, &lt;a href=&#34;#ref-Nascimento2019&#34; role=&#34;doc-biblioref&#34;&gt;2019&lt;/a&gt;)&lt;/span&gt;, foram abertas 10 trincheiras em diferentes pontos da paisagem, onde foram descritos e classificados perfis do solo, sendo uma trincheira no topo (P10), duas na posição de terço médio (P3 e P9), uma no terço inferior (P8), três no sopé da vertente (P2, P5 e P7) e três na área de baixada (P1, P4 e P6). Os solos froam classificados respectivamente como Argissolos Vermelhos P10, P9 e P3; Argissolo Amarelo, P8; Planossolos Háplicos (arênicos e espessarenicos), P7,P2,P5; Planossolos Háplicos (gleissólicos), P4, P6 e Cambissolo Hálico (com evidente processos de gleização) P1 (Figura &lt;a href=&#34;#fig:localizacao2&#34;&gt;2&lt;/a&gt;).&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;base-de-dados-covariáveis-ambientais&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Base de dados (Covariáveis ambientais)&lt;/h2&gt;
-&lt;p&gt;As covariáveis ambientais para modelar as propriedades do solo foram derivadas de duas fontes de dados: modelo digital de elevação, dados de sensoriamento remoto (imagem orbital), uma imagem RapidEye. Elas foram escolhidos para descrever os principais fatores formadores do solo, de acordo com a abordagem scorpan &lt;span class=&#34;citation&#34;&gt;(McBratney et al., &lt;a href=&#34;#ref-McBratneyEtAl2003&#34;&gt;2003&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;As covariáveis ambientais para modelar as propriedades do solo foram derivadas de duas fontes de dados: modelo digital de elevação, dados de sensoriamento remoto (imagem orbital), uma imagem RapidEye. Elas foram escolhidos para descrever os principais fatores formadores do solo, de acordo com a abordagem scorpan &lt;span class=&#34;citation&#34;&gt;(McBratney et al., &lt;a href=&#34;#ref-McBratneyEtAl2003&#34; role=&#34;doc-biblioref&#34;&gt;2003&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Modelo Digital de Elevação (MDE)&lt;/em&gt;: O MDE utilizado, com resolução espacial de 2 m, foi gerado a partir das curvas de nível e pontos cotados coeletados com gps geodésico. Do MDE foram derivados 12 atributos de terreno com pontencial uso para modelagem no MDS.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Imagem de satélite&lt;/em&gt;: foram utilizadas duas cenas do sensor RapidEyeambas de 2011. As duas cenas foram usadas para cobrir toda a área de estudo e eles têm uma 12 resolução radiométrica de bits, resolução espacial de 6,5m, e ortorretificadas para resolução espacial de 5m &lt;span class=&#34;citation&#34;&gt;(RapidEye, &lt;a href=&#34;#ref-RapidEye2012&#34;&gt;2012&lt;/a&gt;)&lt;/span&gt;.
+&lt;p&gt;&lt;em&gt;Imagem de satélite&lt;/em&gt;: foram utilizadas duas cenas do sensor RapidEyeambas de 2011. As duas cenas foram usadas para cobrir toda a área de estudo e eles têm uma 12 resolução radiométrica de bits, resolução espacial de 6,5m, e ortorretificadas para resolução espacial de 5m &lt;span class=&#34;citation&#34;&gt;(RapidEye, &lt;a href=&#34;#ref-RapidEye2012&#34; role=&#34;doc-biblioref&#34;&gt;2012&lt;/a&gt;)&lt;/span&gt;.
 Das cenas foram derivados os indices de vegetação (NDVI, inglês) e índice de vegetação ajustado ao solo (SAVI, inglês).&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;áreas-ambientalmente-homogêneas-estratos&#34; class=&#34;section level2&#34;&gt;
@@ -732,10 +757,10 @@ perfis &amp;lt;- maptools::readShapeSpatial(&amp;quot;/home/elias/MEGA/Fazendinh
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-para-mapeamento-de-solos&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Amostragem para mapeamento de solos&lt;/h1&gt;
-&lt;p&gt;Não exite uma um único tipo de estratégia amostral para qualquer trabalho de MDS, cada caso precisa ser estudado de forma particular e no geral a melhor estratégia depnede so objetivo do projeto, do recurso financeiro e humano disponível e dificuldades operacionais encontradas na área que está sendo estuda. Do ponto de vista de dificuldades operacinais tem-se alguns variantes como limitação de de acesso, por se tratar de áreas com acesso limitado, nesses casos há abordagens de amostragem específica como mostra &lt;span class=&#34;citation&#34;&gt;Cambule et al. (&lt;a href=&#34;#ref-CambuleEtAl2013&#34;&gt;2013&lt;/a&gt;)&lt;/span&gt; onde se tem áreas de maior acessibilidade e que sejam representativas da área total de estudo. Ainda pode haver limitação por permissão de acesso, sobretudo em áreas particulares. Quanto aos tipos de amostragem elas são divididas basicamente em dois grupos ou tipos fundamentais: &lt;em&gt;Amostragem probabilística&lt;/em&gt; e &lt;em&gt;não probabilística&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Não exite uma um único tipo de estratégia amostral para qualquer trabalho de MDS, cada caso precisa ser estudado de forma particular e no geral a melhor estratégia depnede so objetivo do projeto, do recurso financeiro e humano disponível e dificuldades operacionais encontradas na área que está sendo estuda. Do ponto de vista de dificuldades operacinais tem-se alguns variantes como limitação de de acesso, por se tratar de áreas com acesso limitado, nesses casos há abordagens de amostragem específica como mostra &lt;span class=&#34;citation&#34;&gt;Cambule et al. (&lt;a href=&#34;#ref-CambuleEtAl2013&#34; role=&#34;doc-biblioref&#34;&gt;2013&lt;/a&gt;)&lt;/span&gt; onde se tem áreas de maior acessibilidade e que sejam representativas da área total de estudo. Ainda pode haver limitação por permissão de acesso, sobretudo em áreas particulares. Quanto aos tipos de amostragem elas são divididas basicamente em dois grupos ou tipos fundamentais: &lt;em&gt;Amostragem probabilística&lt;/em&gt; e &lt;em&gt;não probabilística&lt;/em&gt;&lt;/p&gt;
 &lt;div id=&#34;amostragem-não-probabilística&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Amostragem não probabilística&lt;/h2&gt;
-&lt;p&gt;A amostragem não probabilística é uma técnica de amostragem em que as amostras são reunidas em um processo que não dá a todos os indivíduos, no caso de solos perfil de solo &lt;em&gt;pedon&lt;/em&gt; ou ponto amsotral, da população chances iguais de serem selecionados. A escolha dos locais de amostragem depende da definição de um critério a ser atendido, normalmente em MDS a caracterização da máxima variação de solos e suas propriedades representados pelas covariáveis ambientais que simulam os fatores de formação do solo &lt;span class=&#34;citation&#34;&gt;(McBratney et al., &lt;a href=&#34;#ref-McBratneyEtAl2003&#34;&gt;2003&lt;/a&gt;)&lt;/span&gt;.
+&lt;p&gt;A amostragem não probabilística é uma técnica de amostragem em que as amostras são reunidas em um processo que não dá a todos os indivíduos, no caso de solos perfil de solo &lt;em&gt;pedon&lt;/em&gt; ou ponto amsotral, da população chances iguais de serem selecionados. A escolha dos locais de amostragem depende da definição de um critério a ser atendido, normalmente em MDS a caracterização da máxima variação de solos e suas propriedades representados pelas covariáveis ambientais que simulam os fatores de formação do solo &lt;span class=&#34;citation&#34;&gt;(McBratney et al., &lt;a href=&#34;#ref-McBratneyEtAl2003&#34; role=&#34;doc-biblioref&#34;&gt;2003&lt;/a&gt;)&lt;/span&gt;.
 A amostragem não-probabilística costuma ser dividida em três categorias:
 &lt;em&gt;casual,
 &lt;/em&gt;conveniente, e
@@ -768,7 +793,7 @@ for (i in 2:length(pts) - 1) {
 }
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-conveniente&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem conveniente&lt;/h3&gt;
@@ -793,12 +818,12 @@ lr=as(lr, &amp;quot;SpatialPixelsDataFrame&amp;quot;)
 points(spsample(lr, n = 30, &amp;quot;random&amp;quot;), pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-intencional&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem intencional&lt;/h3&gt;
 &lt;p&gt;Semelhante a amostragem convencional a amostragem intencional também busca otimizar recursos financeiros e operacionais, mas difere principalmente porque na amostragem intencional são agregados critérios pedológicos, de levatamento para fins de fetilidade do solo e/ou estatístico.
-Em geral, a amostragem intencional é o tipo de amostragem mais eficiente para a obtenção de observações de calibração para a modelagem espacial do solo. Isso se dá exatamente porque a localização das observações é definida com base no modelo usado para descrever a estrutura da variação espacial do solo bem como capturar as variações dos fatores envolvidos com gênese do solo &lt;span class=&#34;citation&#34;&gt;(McBratney et al., &lt;a href=&#34;#ref-McBratneyEtAl2003&#34;&gt;2003&lt;/a&gt;)&lt;/span&gt;. Em outras palavras, a configuração espacial das observações é otimizada para atender aos pressupostos e requerimentos do modelo formação do solo (&lt;em&gt;SCORPAN&lt;/em&gt;) que será usado na modelagem. Quanto melhor as amostras representarem as relações solo-paisagem e estrutura espacial dos dados, melhor será o desempenho do modelo calibrado.&lt;/p&gt;
+Em geral, a amostragem intencional é o tipo de amostragem mais eficiente para a obtenção de observações de calibração para a modelagem espacial do solo. Isso se dá exatamente porque a localização das observações é definida com base no modelo usado para descrever a estrutura da variação espacial do solo bem como capturar as variações dos fatores envolvidos com gênese do solo &lt;span class=&#34;citation&#34;&gt;(McBratney et al., &lt;a href=&#34;#ref-McBratneyEtAl2003&#34; role=&#34;doc-biblioref&#34;&gt;2003&lt;/a&gt;)&lt;/span&gt;. Em outras palavras, a configuração espacial das observações é otimizada para atender aos pressupostos e requerimentos do modelo formação do solo (&lt;em&gt;SCORPAN&lt;/em&gt;) que será usado na modelagem. Quanto melhor as amostras representarem as relações solo-paisagem e estrutura espacial dos dados, melhor será o desempenho do modelo calibrado.&lt;/p&gt;
 &lt;div id=&#34;amostragem-intencional-sistemática&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Amostragem intencional sistemática&lt;/h4&gt;
 &lt;p&gt;Na amostragem intencional sistemática um critério pedológico e/ou estatístico tem origem no modelo usado para descrever a estrutura da variação espacial do solo e o método usado para fazer predições espaciais. Por exemplo, o objetivo pode ser selecionar os locais amostrais de maneira a obter a melhor cobertura espacial porque isso pode minimizar a incerteza ou erros das predições. O resultado dessa amostragem é a alocação de observações equidistantes no que é denominado malha ou grid, que pode quadrada ou triangular.
@@ -818,7 +843,7 @@ points(pts, pch = 21, cex = 0.75)
 polygon(pts@coords[c(1, 2, 6, 5, 1), ])
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;main &amp;lt;- &amp;quot;Amostra sistemática (malha triangular)&amp;quot;
 plot(
   grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
@@ -834,7 +859,7 @@ points(pts, pch = 21, cex = 0.75)
 polygon(pts@coords[c(1, 2, 5, 1), ])
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-5-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-5-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-intencional-caminhamento-livre&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Amostragem intencional caminhamento livre&lt;/h4&gt;
@@ -863,14 +888,14 @@ for (i in 2:length(perfis) - 1) {
 }
 leg &amp;lt;- paste(&amp;quot;Amostras n = 10&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;otimização-de-configurações-amostrais&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Otimização de Configurações Amostrais&lt;/h3&gt;
 &lt;div id=&#34;hipercubo-latino-condicionado-clhs&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Hipercubo Latino Condicionado (cLHS)&lt;/h4&gt;
-&lt;p&gt;O cLHS é um algoritmo de busca baseado em regras heurísticas combinadas com um cronograma de recozimento. Para amostragem de uma área informações prévias representativas da área de estudo são fornecidas ao algoritmo como dados auxiliares (covariáveis ambientais). Ele fornece uma cobertura completa da faixa de cada covariável estratificando a distribuição marginal, ou seja, usa as informações fornecidas para produzir uma estratificação de amostragem otimizada &lt;span class=&#34;citation&#34;&gt;(Minasny and McBratney, &lt;a href=&#34;#ref-Minasny2006&#34;&gt;2006&lt;/a&gt;)&lt;/span&gt;. Variações do cLHS para otimização de locais de amostragem podem ser encontradas em &lt;span class=&#34;citation&#34;&gt;Roudier et al. (&lt;a href=&#34;#ref-Roudier2012&#34;&gt;2012&lt;/a&gt;)&lt;/span&gt;, &lt;span class=&#34;citation&#34;&gt;Mulder et al. (&lt;a href=&#34;#ref-Mulder2013&#34;&gt;2013&lt;/a&gt;)&lt;/span&gt;, &lt;span class=&#34;citation&#34;&gt;Carvalho Junior et al. (&lt;a href=&#34;#ref-CarvalhoJunior2014&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;, &lt;span class=&#34;citation&#34;&gt;Clifford et al. (&lt;a href=&#34;#ref-Clifford2014&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;, &lt;span class=&#34;citation&#34;&gt;Kidd et al. (&lt;a href=&#34;#ref-Kidd2014&#34;&gt;2015&lt;/a&gt;)&lt;/span&gt;, e &lt;span class=&#34;citation&#34;&gt;Stumpf et al. (&lt;a href=&#34;#ref-Stumpf2016&#34;&gt;2016&lt;/a&gt;)&lt;/span&gt;.
+&lt;p&gt;O cLHS é um algoritmo de busca baseado em regras heurísticas combinadas com um cronograma de recozimento. Para amostragem de uma área informações prévias representativas da área de estudo são fornecidas ao algoritmo como dados auxiliares (covariáveis ambientais). Ele fornece uma cobertura completa da faixa de cada covariável estratificando a distribuição marginal, ou seja, usa as informações fornecidas para produzir uma estratificação de amostragem otimizada &lt;span class=&#34;citation&#34;&gt;(Minasny and McBratney, &lt;a href=&#34;#ref-Minasny2006&#34; role=&#34;doc-biblioref&#34;&gt;2006&lt;/a&gt;)&lt;/span&gt;. Variações do cLHS para otimização de locais de amostragem podem ser encontradas em &lt;span class=&#34;citation&#34;&gt;Roudier et al. (&lt;a href=&#34;#ref-Roudier2012&#34; role=&#34;doc-biblioref&#34;&gt;2012&lt;/a&gt;)&lt;/span&gt;, &lt;span class=&#34;citation&#34;&gt;Mulder et al. (&lt;a href=&#34;#ref-Mulder2013&#34; role=&#34;doc-biblioref&#34;&gt;2013&lt;/a&gt;)&lt;/span&gt;, &lt;span class=&#34;citation&#34;&gt;Carvalho Junior et al. (&lt;a href=&#34;#ref-CarvalhoJunior2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;, &lt;span class=&#34;citation&#34;&gt;Clifford et al. (&lt;a href=&#34;#ref-Clifford2014&#34; role=&#34;doc-biblioref&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;, &lt;span class=&#34;citation&#34;&gt;Kidd et al. (&lt;a href=&#34;#ref-Kidd2014&#34; role=&#34;doc-biblioref&#34;&gt;2015&lt;/a&gt;)&lt;/span&gt;, e &lt;span class=&#34;citation&#34;&gt;Stumpf et al. (&lt;a href=&#34;#ref-Stumpf2016&#34; role=&#34;doc-biblioref&#34;&gt;2016&lt;/a&gt;)&lt;/span&gt;.
 No caso desse exemplo usado no cLHS como variáveis auxiliares a elevação, declividade e SAVI, ou seja as mesmas que foram escolhidas para gerar as áreas ambientalmente homogêneas (os estratos).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dem=raster(grid[1])
 slope=raster(grid[2])
@@ -888,12 +913,12 @@ image(
 points(pts, pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;identificação-de-tendência-espacial-e-estimativa-optimclhs&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Identificação de tendência espacial e estimativa (optimCLHS)&lt;/h4&gt;
 &lt;p&gt;Essas é uma Otimização de configurações de amostra para identificação de tendência espacial e estimativa. As funções de otimização foram implementadas no pacote &lt;em&gt;spsann&lt;/em&gt; do &lt;em&gt;R&lt;/em&gt;.
-Esse método busca Otimizar uma configuração de amostra para identificação e estimativa de tendência espacial usando o método proposta por &lt;span class=&#34;citation&#34;&gt;Minasny and McBratney (&lt;a href=&#34;#ref-Minasny2006&#34;&gt;2006&lt;/a&gt;)&lt;/span&gt;, metodo anteriormente cidado chocido como cLHS. Nesse método otimizado uma função de utilidade &lt;em&gt;U&lt;/em&gt; é definida para que a amostra reproduza a distribuição marginal e a matriz de correlação das covariáveis numéricas e as proporções de classe do fator covariáveis (cLHS). A função de utilidade é obtida agregando três funções objetivas: &lt;em&gt;O1&lt;/em&gt;, &lt;em&gt;O2&lt;/em&gt; e &lt;em&gt;O3&lt;/em&gt;. Nesse exemplo assim com no cLHS usamos como variáveis auxiliares (covariáveis) a elevação, declividade e SAVI.&lt;/p&gt;
+Esse método busca Otimizar uma configuração de amostra para identificação e estimativa de tendência espacial usando o método proposta por &lt;span class=&#34;citation&#34;&gt;Minasny and McBratney (&lt;a href=&#34;#ref-Minasny2006&#34; role=&#34;doc-biblioref&#34;&gt;2006&lt;/a&gt;)&lt;/span&gt;, metodo anteriormente cidado chocido como cLHS. Nesse método otimizado uma função de utilidade &lt;em&gt;U&lt;/em&gt; é definida para que a amostra reproduza a distribuição marginal e a matriz de correlação das covariáveis numéricas e as proporções de classe do fator covariáveis (cLHS). A função de utilidade é obtida agregando três funções objetivas: &lt;em&gt;O1&lt;/em&gt;, &lt;em&gt;O2&lt;/em&gt; e &lt;em&gt;O3&lt;/em&gt;. Nesse exemplo assim com no cLHS usamos como variáveis auxiliares (covariáveis) a elevação, declividade e SAVI.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;candi &amp;lt;- grid1[, 21:22]; names(candi)[1] &amp;lt;- &amp;quot;x&amp;quot; ;names(candi)[2] &amp;lt;- &amp;quot;y&amp;quot;
 covars &amp;lt;- grid1[, c(1,2,20)]
 schedule &amp;lt;- scheduleSPSANN(
@@ -912,13 +937,13 @@ image(
 points(pts$points[, 2:3], pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;otimização-de-configurações-de-amostra-para-interpolação-espacial-optimmssd&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Otimização de configurações de amostra para interpolação espacial (optimMSSD)&lt;/h4&gt;
 &lt;p&gt;Otimização para estimativa de tendências espaciais. Esse é um tipo de Configuração amostral espacial otimizada no espaço geográfico para fins de interpolação espacial usando krigagem. O critério utilizado é a média ao quadrado da
 distância mais curta (MSSD, inglês) entre pontos de amostragem e pontos de predição.
-Amostragem por cobertura espacial: A amostragem por cobertura espacial baseia-se no conhecimento de que a variação da krigagem depende da distância entre os pontos da amostra. Assim, quanto melhor o spread dos pontos da amostra no domínio espacial, menor a variação da krigagem. Isso é semelhante a usando uma grade regular de pontos de amostra. No entanto, uma grade regular geralmente é sub-ótima para áreas irregulares &lt;span class=&#34;citation&#34;&gt;(Walvoort et al., &lt;a href=&#34;#ref-Walvoort2010&#34;&gt;2010&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+Amostragem por cobertura espacial: A amostragem por cobertura espacial baseia-se no conhecimento de que a variação da krigagem depende da distância entre os pontos da amostra. Assim, quanto melhor o spread dos pontos da amostra no domínio espacial, menor a variação da krigagem. Isso é semelhante a usando uma grade regular de pontos de amostra. No entanto, uma grade regular geralmente é sub-ótima para áreas irregulares &lt;span class=&#34;citation&#34;&gt;(Walvoort et al., &lt;a href=&#34;#ref-Walvoort2010&#34; role=&#34;doc-biblioref&#34;&gt;2010&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;pts &amp;lt;- spsann::optimMSSD(
   points = 30, candi = candi, schedule = schedule)
 main &amp;lt;- &amp;quot;Otimização de amostra para interpolação espacial (optimMSSD)&amp;quot;
@@ -930,14 +955,14 @@ image(
 points(pts$points[, 2:3], pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;strong&gt;Para mais e informações sobre funções implementadas no R para otimização amostral, vocês podem consultar o o pacote &lt;a href=&#34;https://cran.r-project.org/web/packages/spsann/spsann.pdf&#34;&gt;spsann&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-probabilística&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Amostragem probabilística&lt;/h2&gt;
-&lt;p&gt;A amostragem probabilistica é uma técnica de amostragem em que a amostra de uma população maior, no caso uma coleção de perfis de solo ou &lt;em&gt;pedon&lt;/em&gt; de toda área, é escolhida usando um método baseado na teoria da probabilidade. Para que um perfil (ou ponto amostral) seja considerado uma amostra probabilística, ele deve ser selecionado usando uma seleção aleatória. Nesse tipo de amostragem todo e qualquer local possui alguma chance de ser amostrado, mesmo que alguns tenham maior chance do que outros. No caso da modelagem espacial do solo, a amostragem probabilística costuma ser usada para a validação das predições espaciais &lt;span class=&#34;citation&#34;&gt;(Brus et al., &lt;a href=&#34;#ref-BrusEtAl2011&#34;&gt;2011&lt;/a&gt;)&lt;/span&gt;. Entretanto, ela também pode ser usada para obter observações para a calibração dos modelos preditivos ou serem usadas para validação e calibração em métodos de calçibração cruzada como o &lt;em&gt;leave-one-out&lt;/em&gt; (LOO-CV) &lt;span class=&#34;citation&#34;&gt;(Brus et al., &lt;a href=&#34;#ref-BrusEtAl2011&#34;&gt;2011&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;A amostragem probabilistica é uma técnica de amostragem em que a amostra de uma população maior, no caso uma coleção de perfis de solo ou &lt;em&gt;pedon&lt;/em&gt; de toda área, é escolhida usando um método baseado na teoria da probabilidade. Para que um perfil (ou ponto amostral) seja considerado uma amostra probabilística, ele deve ser selecionado usando uma seleção aleatória. Nesse tipo de amostragem todo e qualquer local possui alguma chance de ser amostrado, mesmo que alguns tenham maior chance do que outros. No caso da modelagem espacial do solo, a amostragem probabilística costuma ser usada para a validação das predições espaciais &lt;span class=&#34;citation&#34;&gt;(Brus et al., &lt;a href=&#34;#ref-BrusEtAl2011&#34; role=&#34;doc-biblioref&#34;&gt;2011&lt;/a&gt;)&lt;/span&gt;. Entretanto, ela também pode ser usada para obter observações para a calibração dos modelos preditivos ou serem usadas para validação e calibração em métodos de calçibração cruzada como o &lt;em&gt;leave-one-out&lt;/em&gt; (LOO-CV) &lt;span class=&#34;citation&#34;&gt;(Brus et al., &lt;a href=&#34;#ref-BrusEtAl2011&#34; role=&#34;doc-biblioref&#34;&gt;2011&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;div id=&#34;amostragem-aleatória-simples&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem aleatória simples&lt;/h3&gt;
 &lt;p&gt;Amostragem aleatória simples é a técnica de amostragem onde todos os elementos que compõem o universo amostral têm idêntica probabilidade de serem selecionados para a amostra, ou seja, mesma probabilidade de inclusão e são completamente independentes uns dos outros.
@@ -959,7 +984,7 @@ pts@coords &amp;lt;-
 points(pts, pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-aleatória-estratificada-simples&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem aleatória estratificada simples&lt;/h3&gt;
@@ -988,7 +1013,7 @@ pts@coords &amp;lt;- pts@coords +
 points(pts, pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-aleatória-sistemática&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem aleatória sistemática&lt;/h3&gt;
@@ -1011,7 +1036,7 @@ set.seed(1984)
 points(sp::spsample(grid, n = 30, type = &amp;quot;regular&amp;quot;), pch = 20, cex = 0.75)
 legend(636200, 7483450, legend = &amp;quot;Amostras (2019)&amp;quot;, pch = 21, bty = &amp;quot;n&amp;quot;)
 legend(636200, 7483400, legend = &amp;quot;Amostras (2020)&amp;quot;, pch = 20, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;main &amp;lt;- &amp;quot;Amostra aleatória sistemática (malha desalinhada)&amp;quot;
 plot(
   grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
@@ -1028,7 +1053,7 @@ points(pts, pch = 21, cex = 0.75)
 polygon(pts@coords[c(2, 7, 8, 3, 2), ])
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-12-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-12-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-aleatória-em-conglomerados&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem aleatória em conglomerados&lt;/h3&gt;
@@ -1049,7 +1074,7 @@ pts &amp;lt;- sp::spsample(grid, n = 33, type = &amp;quot;clustered&amp;quot;, n
 points(pts, pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/amostragem/index_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;se-você-chegou-até-aqui-muito-bem&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Se você chegou até aqui muito bem !!!! 👏👏👏&lt;/h3&gt;
@@ -1087,7 +1112,7 @@ legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;
 &lt;p&gt;McBratney, A.B., Mendonça-Santos, M.L., Minasny, B., 2003. On digital soil mapping. Geoderma 117, 3–52. &lt;a href=&#34;https://doi.org/10.1016/S0016-7061(03)00223-4&#34;&gt;https://doi.org/10.1016/S0016-7061(03)00223-4&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-Minasny2007b&#34;&gt;
-&lt;p&gt;Minasny, B., McBratney, A., 2007. Latin hypercube sampling as tool for digital soil mapping. Developments in Soil Science 31, 153–606. &lt;a href=&#34;https://doi.org/10.1016/S0166-2481(06)31012-4&#34;&gt;https://doi.org/10.1016/S0166-2481(06)31012-4&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Minasny, B., McBratney, A.B., 2007. Latin hypercube sampling as tool for digital soil mapping. Developments in Soil Science 31, 153–606. &lt;a href=&#34;https://doi.org/10.1016/S0166-2481(06)31012-4&#34;&gt;https://doi.org/10.1016/S0166-2481(06)31012-4&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-Minasny2006&#34;&gt;
 &lt;p&gt;Minasny, B., McBratney, A.B., 2006. A conditioned Latin hypercube method for sampling in the presence of ancillary information. Computers and Geosciences 32, 1378–1388. &lt;a href=&#34;https://doi.org/10.1016/j.cageo.2005.12.009&#34;&gt;https://doi.org/10.1016/j.cageo.2005.12.009&lt;/a&gt;&lt;/p&gt;
@@ -1111,7 +1136,7 @@ legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;
 &lt;p&gt;Stumpf, F., Schmidt, K., Behrens, T., Schönbrodt-stitt, S., Buzzo, G., Dumperth, C., Wadoux, A., Xiang, W., Scholten, T., 2016. Incorporating limited field operability and legacy soil samples in a hypercube sampling design for digital soil mapping. Journal of Plant Nutrition and Soil Science 000, 1–11. &lt;a href=&#34;https://doi.org/10.1002/jpln.201500313&#34;&gt;https://doi.org/10.1002/jpln.201500313&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-Walvoort2010&#34;&gt;
-&lt;p&gt;Walvoort, D.J., Brus, D.J., Gruijter, J.J. de, 2010. An R package for spatial coverage sampling and random sampling from compact geographical strata by k-means. Computers and Geosciences 36, 1261–1267. &lt;a href=&#34;https://doi.org/10.1016/j.cageo.2010.04.005&#34;&gt;https://doi.org/10.1016/j.cageo.2010.04.005&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Walvoort, D.J.J., Brus, D.J., Gruijter, J.J. de, 2010. An R package for spatial coverage sampling and random sampling from compact geographical strata by k-means. Computers and Geosciences 36, 1261–1267. &lt;a href=&#34;https://doi.org/10.1016/j.cageo.2010.04.005&#34;&gt;https://doi.org/10.1016/j.cageo.2010.04.005&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-Wang2012a&#34;&gt;
 &lt;p&gt;Wang, J.F., Stein, A., Gao, B.B., Ge, Y., 2012. A review of spatial sampling. Spatial Statistics 2, 1–14. &lt;a href=&#34;https://doi.org/10.1016/j.spasta.2012.08.001&#34;&gt;https://doi.org/10.1016/j.spasta.2012.08.001&lt;/a&gt;&lt;/p&gt;

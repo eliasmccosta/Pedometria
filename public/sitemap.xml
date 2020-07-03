@@ -24,66 +24,41 @@
   
   <url>
     <loc>https://eliasmcosta.netlify.app/authors/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://eliasmcosta.netlify.app/categories/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://eliasmcosta.netlify.app/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://eliasmcosta.netlify.app/author/elias-mendes-costa/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eliasmcosta.netlify.app/tag/mapas/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eliasmcosta.netlify.app/post/sf/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eliasmcosta.netlify.app/category/mapeamento/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eliasmcosta.netlify.app/tag/mds/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eliasmcosta.netlify.app/tag/pedometria/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eliasmcosta.netlify.app/post/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eliasmcosta.netlify.app/category/r/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eliasmcosta.netlify.app/tags/</loc>
-    <lastmod>2020-06-14T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://eliasmcosta.netlify.app/post/tools/</loc>
+    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eliasmcosta.netlify.app/tag/mds/</loc>
+    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eliasmcosta.netlify.app/tag/pedometria/</loc>
+    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eliasmcosta.netlify.app/post/</loc>
     <lastmod>2020-06-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -93,12 +68,22 @@
   </url>
   
   <url>
+    <loc>https://eliasmcosta.netlify.app/category/r/</loc>
+    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eliasmcosta.netlify.app/tags/</loc>
+    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://eliasmcosta.netlify.app/tag/amostragem/</loc>
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://eliasmcosta.netlify.app/post/amostragem/</loc>
+    <loc>https://eliasmcosta.netlify.app/post/sampling/</loc>
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -118,7 +103,7 @@
   </url>
   
   <url>
-    <loc>https://eliasmcosta.netlify.app/publication/journal-article/rbcs2020/</loc>
+    <loc>https://eliasmcosta.netlify.app/publication/journal-article/rbcs/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url>
   
