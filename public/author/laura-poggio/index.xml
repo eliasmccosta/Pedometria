@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Laura Poggio | Elias M. Costa</title>
-    <link>https://eliasmcosta.netlify.app/author/laura-poggio/</link>
-      <atom:link href="https://eliasmcosta.netlify.app/author/laura-poggio/index.xml" rel="self" type="application/rss+xml" />
+    <link>/author/laura-poggio/</link>
+      <atom:link href="/author/laura-poggio/index.xml" rel="self" type="application/rss+xml" />
     <description>Laura Poggio</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Elias, 2020</copyright><lastBuildDate>Wed, 01 Aug 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://eliasmcosta.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Laura Poggio</title>
-      <link>https://eliasmcosta.netlify.app/author/laura-poggio/</link>
+      <link>/author/laura-poggio/</link>
     </image>
     
     <item>
       <title>Spatial Bayesian belief networks. A participatory approach for mapping soil vulnerability at the Itatiaia National Park, Brazil</title>
-      <link>https://eliasmcosta.netlify.app/publication/conference-paper/wcss2018/</link>
+      <link>/publication/conference-paper/wcss2018/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://eliasmcosta.netlify.app/publication/conference-paper/wcss2018/</guid>
+      <guid>/publication/conference-paper/wcss2018/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.

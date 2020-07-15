@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Paula Debiasi | Elias M. Costa</title>
-    <link>https://eliasmcosta.netlify.app/author/paula-debiasi/</link>
-      <atom:link href="https://eliasmcosta.netlify.app/author/paula-debiasi/index.xml" rel="self" type="application/rss+xml" />
+    <link>/author/paula-debiasi/</link>
+      <atom:link href="/author/paula-debiasi/index.xml" rel="self" type="application/rss+xml" />
     <description>Paula Debiasi</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Elias, 2020</copyright><lastBuildDate>Fri, 01 Jul 2016 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://eliasmcosta.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Paula Debiasi</title>
-      <link>https://eliasmcosta.netlify.app/author/paula-debiasi/</link>
+      <link>/author/paula-debiasi/</link>
     </image>
     
     <item>
       <title>RapidEye image processing for soil use mapping in rugged landscape accuracy</title>
-      <link>https://eliasmcosta.netlify.app/publication/journal-article/pab2016/</link>
+      <link>/publication/journal-article/pab2016/</link>
       <pubDate>Fri, 01 Jul 2016 00:00:00 +0000</pubDate>
-      <guid>https://eliasmcosta.netlify.app/publication/journal-article/pab2016/</guid>
+      <guid>/publication/journal-article/pab2016/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.

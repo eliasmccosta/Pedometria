@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Elias M. Costa</title>
-    <link>https://eliasmcosta.netlify.app/</link>
-      <atom:link href="https://eliasmcosta.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <link>/</link>
+      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>Elias M. Costa</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Elias, 2020</copyright><lastBuildDate>Tue, 02 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://eliasmcosta.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Elias M. Costa</title>
-      <link>https://eliasmcosta.netlify.app/</link>
+      <link>/</link>
     </image>
     
     <item>
       <title>Métodos e técnicas de MDS</title>
-      <link>https://eliasmcosta.netlify.app/courses/example/example1/</link>
+      <link>/courses/example/example1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://eliasmcosta.netlify.app/courses/example/example1/</guid>
+      <guid>/courses/example/example1/</guid>
       <description>&lt;p&gt;&lt;code&gt;Se quer levar o curso para sua empresa ou instituição por favor entre em contato&lt;/code&gt;
 Nesse curso você irá conhecer as bases do mapeamento digital do solo.
 Compreender como covariáveis ambientais podem ser usadas, em modelos de predição espacial do solo. Vai conhecer técnicas avançadas de aprendizado de máquina que bem como avaliação de desempenho e otimização de algorítimos.
@@ -37,9 +37,9 @@ Explorar diferentes esquemas de amostragem para calibração de validação de m
     
     <item>
       <title>Escrita científica e relatório técnico reprodutível</title>
-      <link>https://eliasmcosta.netlify.app/courses/example/example2/</link>
+      <link>/courses/example/example2/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://eliasmcosta.netlify.app/courses/example/example2/</guid>
+      <guid>/courses/example/example2/</guid>
       <description>&lt;p&gt;&lt;code&gt;Se quer levar o curso para sua empresa ou instituição por favor entre em contato&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;O objetivo desse curso é apresentar algumas ferramentas de organização de referências.  Neste curso, você irá aprender a inserir e a organizar os
 Além disso, você poderá citar e referenciar documentos de acordo com diferentes estilos de formatação dentro do Microsoft Word ou do LibreOffice mesmo no Latex ou Rmarkdown. Por fim, você poderá criar grupos e gerenciar sua rede de contatos dentro no Mendeley ou Zotero. Ainda irá aprender a escrever relatórios automatizados com o Latex e/ou Rmarkdown.&lt;/p&gt;
@@ -57,9 +57,9 @@ Além disso, você poderá citar e referenciar documentos de acordo com diferent
     
     <item>
       <title>Formação e caracterização de solos</title>
-      <link>https://eliasmcosta.netlify.app/courses/example/example3/</link>
+      <link>/courses/example/example3/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://eliasmcosta.netlify.app/courses/example/example3/</guid>
+      <guid>/courses/example/example3/</guid>
       <description>&lt;p&gt;&lt;code&gt;Se quer levar o curso para sua empresa ou instituição por favor entre em contato&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Nesse curso você irá aprender sobre: Gênese, morfologia e classificação dos solos. Vai compreender a interação entre os fatores e processos de formação do solo e sua influência nos atributos morfológicos, físicos, químicos e mineralógicos do solo. Vai ser capaz de atráves da caracterização dos atributos morfológico dos horizontes do perfil como espessura, transição, cor, textura, estrutura e consistência, entre outros, ter uma melhor compreensão da dinâmica de formação do solo, assim como sua classificação e inferências sobre o melhor manejo e o planejamento de uso sutentável.&lt;/p&gt;
 &lt;ul&gt;
@@ -81,9 +81,9 @@ Além disso, você poderá citar e referenciar documentos de acordo com diferent
     
     <item>
       <title>Ferramentas pedométricas</title>
-      <link>https://eliasmcosta.netlify.app/post/tools/</link>
+      <link>/post/tools/</link>
       <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>https://eliasmcosta.netlify.app/post/tools/</guid>
+      <guid>/post/tools/</guid>
       <description>
 
 
@@ -219,21 +219,21 @@ sp4&lt;/code&gt;&lt;/pre&gt;
 ## 5  glenn    5    A   0      9 0.2 21.9 4.4  18.8        0.20   54   20   25
 ## 6  glenn    6   Bt   9     34 0.3 18.9 4.5  27.5        0.20   49   18   34
 ##     CF thickness random.numbers
-## 1 0.12         3      0.2062452
-## 2 0.27         5     -0.3294846
-## 3 0.27        22      0.1642507
-## 4 0.16        12     -0.4427595
-## 5 0.55         9     -1.4132930
-## 6 0.84        25     -1.0940023
+## 1 0.12         3      0.3621571
+## 2 0.27         5      0.8206208
+## 3 0.27        22      0.5585632
+## 4 0.16        12     -1.8304908
+## 5 0.55         9      0.3151461
+## 6 0.84        25      0.2010646
 ## 
 ## Sampling site attributes:
 ##          id elevation group
-## 1    colusa 1154.1575     A
-## 2     glenn  818.2945     B
-## 3     kings 1042.3251     A
-## 4  mariposa  661.6340     B
-## 5 mendocino 1003.4776     A
-## 6      napa 1176.8653     B&lt;/code&gt;&lt;/pre&gt;
+## 1    colusa  953.4656     A
+## 2     glenn 1167.5848     B
+## 3     kings 1199.0923     A
+## 4  mariposa 1050.4884     B
+## 5 mendocino 1014.9473     A
+## 6      napa  803.9651     B&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Fazendo um plot simples
 plot(sp4, name=&amp;#39;name&amp;#39;)
 # title, note line argument:
@@ -244,24 +244,24 @@ mtext(&amp;#39;Perfis&amp;#39;, side=1, line=2, font=4, col=&amp;#39;blue&amp;#3
 # y-axis is based on profile depths
 axis(2, line=-1, at=pretty(1:max(sp4)), cex.axis=0.75, font=4, las=1, col=&amp;#39;blue&amp;#39;, col.axis=&amp;#39;blue&amp;#39;, lwd=2)
 mtext(&amp;#39;Profundidade&amp;#39;, side=2, line=1, font=4, col=&amp;#39;blue&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# plot com separação de grupos
 aqp::groupedProfilePlot(sp4, groups=&amp;#39;group&amp;#39;, max.depth=60, group.name.offset = -5, id.style=&amp;#39;side&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-7-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Esboços Temáticos
 sp4$clay # &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] 21 27 32 55 25 34  3 15 27 32 25 31 33 13 21 23 15 17 12 19 14 14 22 25 40
 ## [26] 51 67 24 25 32&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar=c(1,1,3,1)) # tighter figure margins
 plot(sp4, name=&amp;#39;name&amp;#39;, color=&amp;#39;clay&amp;#39;,cex.names=0.5,cex.id=0.5, id.style=&amp;#39;top&amp;#39;,col.legend.cex=1,family=&amp;quot;serif&amp;quot;, col.label=&amp;#39;Argila&amp;#39;, )&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-7-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sp4$Ca # &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1]  9.0  5.6  1.9  0.3  4.4  4.5  1.4  7.0  4.4  5.8  6.2  6.2  4.4  2.2  3.4
 ## [16]  3.7 24.1 21.5  0.7  5.6  3.5  2.0  6.6  4.1  3.5  1.5  0.8 16.3 16.5 13.7&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar=c(1,1,3,1)) # tighter figure margins
 plot(sp4, name=&amp;#39;name&amp;#39;, color=&amp;#39;Ca&amp;#39;,cex.names=0.5,cex.id=0.5, id.style=&amp;#39;top&amp;#39;,col.legend.cex=1,
      col.label=&amp;#39;Ca&amp;#39;, family=&amp;quot;serif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-7-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sp4$name # &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;A&amp;quot;   &amp;quot;ABt&amp;quot; &amp;quot;Bt1&amp;quot; &amp;quot;Bt2&amp;quot; &amp;quot;A&amp;quot;   &amp;quot;Bt&amp;quot;  &amp;quot;A&amp;quot;   &amp;quot;Bt1&amp;quot; &amp;quot;Bt2&amp;quot; &amp;quot;A&amp;quot;   &amp;quot;Bt1&amp;quot; &amp;quot;Bt2&amp;quot;
 ## [13] &amp;quot;Bt3&amp;quot; &amp;quot;A&amp;quot;   &amp;quot;Bt1&amp;quot; &amp;quot;Bt2&amp;quot; &amp;quot;A&amp;quot;   &amp;quot;Bt&amp;quot;  &amp;quot;A&amp;quot;   &amp;quot;Bt&amp;quot;  &amp;quot;A&amp;quot;   &amp;quot;Bt&amp;quot;  &amp;quot;A1&amp;quot;  &amp;quot;A2&amp;quot; 
@@ -269,7 +269,7 @@ plot(sp4, name=&amp;#39;name&amp;#39;, color=&amp;#39;Ca&amp;#39;,cex.names=0.5,
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar=c(2,2,3,2)) # tighter figure margins
 plot(sp4, name=&amp;#39;name&amp;#39;, color=&amp;#39;name&amp;#39;, col.palette=RColorBrewer::brewer.pal(9, &amp;#39;Set1&amp;#39;), col.label=&amp;#39;Nomes dos Horizontes&amp;#39;, 
      cex.names=0.5)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-5.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-7-5.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;###############
 ### Boxplot ###
 # Aqui usaremos o conjunto sp1
@@ -289,7 +289,7 @@ lattice::bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
        panel= function ( ... ) {
          panel.abline(h=seq(0, 180, by=10), v=1:length(hz.designation.by.median.depths), col=grey(0.8), lty=3)    
          panel.bwplot( ... ) })&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-6.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-7-6.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;lattice::bwplot(prop~ factor(name1, levels=hz.designation.by.median.depths),
        data=horizons(sp1),       
        ylab=&amp;#39;Profundidade&amp;#39;,       
@@ -297,7 +297,7 @@ lattice::bwplot(mid ~ factor(name, levels=hz.designation.by.median.depths),
        panel= function ( ... ) {  
          panel.abline(h=seq(0, 600, by=50), v=1:length(hz.designation.by.median.depths), col=grey(0.8), lty=3)  
          panel.bwplot( ... ) })&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-7-7.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-7-7.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;#Parte II&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;funções-de-fatiamento-slice&#34; class=&#34;section level2&#34;&gt;
@@ -314,13 +314,13 @@ class(sliced)&lt;/code&gt;&lt;/pre&gt;
 sliced &amp;lt;- aqp::slice(sp4, fm= 0:max(sp4) ~ sand + silt + clay)
 # Extraia todos os dados na faixa de 5--10 cm:
 plot(sliced[, 5:10])&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Extraia todos os dados na faixa de 25 a 50 cm:
 plot(sliced[, 25:50])&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-8-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-8-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Extraia todos os dados na faixa de 0--5, 10--20 e 40--50 cm:
 plot(sliced[, c(0:5, 10:20, 40:50)])&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-8-3.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-8-3.png&#34; width=&#34;672&#34; /&gt;
 ## Agregando coleções de perfis de solo em “slabs” regulares
 O resumo detalhado dos atributos no nível de horizonte é realizado com a função &lt;code&gt;slab()&lt;/code&gt;. Os critérios de agrupamento de perfis e a seleção de atributos do horizonte são parametrizados por meio da fórmula: grupos ~ var1 + var2 + var3 onde variáveis nomeadas são agregadas em grupos ou onde variáveis nomeadas são agregadas em toda a coleção com fórmula: coleção ~ var1 + var2 + var3. A função de resumo padrão &lt;em&gt;(slab.fun)&lt;/em&gt; calcula os percentis 5, 25, 50, 75 e 95 através do estimador de quantil Harrell-Davis.&lt;/p&gt;
 &lt;p&gt;A estrutura de profundidade (“slabs”) sobre a qual os resumos são calculados é definida com o argumento &lt;code&gt;slab.structure&lt;/code&gt; usando:&lt;/p&gt;
@@ -375,7 +375,7 @@ lattice::xyplot(top ~ p.q50 | variable, data=agg, ylab=&amp;#39;Profundidade (cm
        layout=c(3,1), strip=strip.custom(bg=grey(0.8)),
        scales=list(x=list(tick.number=4, alternating=3, relation=&amp;#39;free&amp;#39;))
 )&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;análise-de-dissimilaridade-dendogramas&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Análise de Dissimilaridade (Dendogramas)&lt;/h2&gt;
@@ -420,7 +420,7 @@ par(mar=c(4,3,2,3))
 
 ##Plotando dendrograma
 plot(as.dendrogram(h))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#stats::rect.hclust(h,5)
 
 ################
@@ -433,7 +433,7 @@ d.diana &amp;lt;- cluster::diana(d)
 # requer alguns ajustes manuais
 par(mar=c(1,1,5,1))
 sharpshootR::plotProfileDendrogram(sp4, d.diana, scaling.factor = 0.8, y.offset = 5, width=0.25, color=&amp;#39;ex_Ca_to_Mg&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-10-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-10-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# solos de interesse do levatamento Americano
 s.list &amp;lt;- c(&amp;#39;hornitos&amp;#39;, &amp;#39;perkins&amp;#39;, &amp;#39;argonaut&amp;#39;, &amp;#39;inks&amp;#39;, &amp;#39;mokelumne&amp;#39;,
             &amp;#39;dunstone&amp;#39;, &amp;#39;auburn&amp;#39;, &amp;#39;pentz&amp;#39;, &amp;#39;pardee&amp;#39;, &amp;#39;peters&amp;#39;, 
@@ -447,9 +447,9 @@ s$soil.depth &amp;lt;- profileApply(s, estimateSoilDepth, name=&amp;#39;hzname&a
 # plot profiles, order by soil depth
 par(mar=c(0, 0, 0, 0))
 plot(s, name=&amp;#39;hzname&amp;#39;, plot.order=order(s$soil.depth), cex.names=0.85, axis.line.offset=-5, width=0.25, id.style=&amp;#39;top&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-10-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-10-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d &amp;lt;- SoilTaxonomyDendrogram(s, cex.taxon.labels=0.8, width=0.25, y.offset = 0.4)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-10-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-10-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;parte-iii&#34; class=&#34;section level1&#34;&gt;
@@ -465,7 +465,7 @@ par(mar=c(1,1,2,1))
 
 # Alguns plots
 plot(x)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(x, label=&amp;#39;pedon_id&amp;#39;, id.style=&amp;#39;side&amp;#39;)
 str(x)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Formal class &amp;#39;SoilProfileCollection&amp;#39; [package &amp;quot;aqp&amp;quot;] with 11 slots
@@ -657,15 +657,15 @@ str(x)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Adicionar marcação para alguns horizontes diagnósticos
 addDiagnosticBracket(x, kind=&amp;#39;argillic horizon&amp;#39;, col=&amp;#39;red&amp;#39;)
 addDiagnosticBracket(x, kind=&amp;#39;paralithic contact&amp;#39;, col=&amp;#39;black&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-11-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-11-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Agrupar perfis pela posição na paisagem
 groupedProfilePlot(x, groups=&amp;#39;hillslopeprof&amp;#39;, label=&amp;#39;pedon_id&amp;#39;, id.style=&amp;#39;side&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-11-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-11-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Carregando onconjunto de dados de solos mineralKing
 data(&amp;quot;mineralKing&amp;quot;)
 par(mar=c(1,1,2,1))
 groupedProfilePlot(mineralKing, groups=&amp;#39;taxonname&amp;#39;, print.id=FALSE)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-11-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-11-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# plot de distância ao longo de um transecto
 coordinates(mineralKing) &amp;lt;- ~ x_std + y_std
 # defina o sistema de coordenada de referência (CRS)
@@ -675,13 +675,13 @@ par(mar=c(4.5,4,1,1))
 
 # plot Padrão
 plotTransect(mineralKing, grad.var.name = &amp;#39;elev_field&amp;#39;, crs = crs.utm)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-11-5.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-11-5.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# plot com alteração de tamanho e tipo de fonte e nome dos eixos
 plotTransect(mineralKing, grad.var.name=&amp;#39;elev_field&amp;#39;, crs=crs.utm, grad.axis.title=&amp;#39;Elevação (m)&amp;#39;, 
              distance.axis.title=&amp;#39;Distância ao longo do transecto (km)&amp;#39;,
              label=&amp;#39;pedon_id&amp;#39;, scaling.factor = 0.5,
              cex.names=0.8,cex.id=0.8,col.legend.cex=1.5,family=&amp;quot;serif&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/tools/index_files/figure-html/unnamed-chunk-11-6.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/post/tools/index_files/figure-html/unnamed-chunk-11-6.png&#34; width=&#34;672&#34; /&gt;
 ### Se você chegou até aqui muito bem !!!! 👏👏👏&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;referências&#34; class=&#34;section level1 unnumbered&#34;&gt;
@@ -709,9 +709,9 @@ plotTransect(mineralKing, grad.var.name=&amp;#39;elev_field&amp;#39;, crs=crs.ut
     
     <item>
       <title>Amostragem para mapeamento de solos</title>
-      <link>https://eliasmcosta.netlify.app/post/sampling/</link>
+      <link>/post/sampling/</link>
       <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
-      <guid>https://eliasmcosta.netlify.app/post/sampling/</guid>
+      <guid>/post/sampling/</guid>
       <description>
 
 
@@ -860,7 +860,7 @@ for (i in 2:length(pts) - 1) {
 }
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/sampling/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-conveniente&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem conveniente&lt;/h3&gt;
@@ -885,7 +885,7 @@ lr=as(lr, &amp;quot;SpatialPixelsDataFrame&amp;quot;)
 points(spsample(lr, n = 30, &amp;quot;random&amp;quot;), pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/sampling/index_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-intencional&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem intencional&lt;/h3&gt;
@@ -910,7 +910,7 @@ points(pts, pch = 21, cex = 0.75)
 polygon(pts@coords[c(1, 2, 6, 5, 1), ])
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/sampling/index_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;main &amp;lt;- &amp;quot;Amostra sistemática (malha triangular)&amp;quot;
 plot(
   grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
@@ -926,7 +926,7 @@ points(pts, pch = 21, cex = 0.75)
 polygon(pts@coords[c(1, 2, 5, 1), ])
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-5-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/sampling/index_files/figure-html/unnamed-chunk-5-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-intencional-caminhamento-livre&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Amostragem intencional caminhamento livre&lt;/h4&gt;
@@ -955,7 +955,7 @@ for (i in 2:length(perfis) - 1) {
 }
 leg &amp;lt;- paste(&amp;quot;Amostras n = 10&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/sampling/index_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;otimização-de-configurações-amostrais&#34; class=&#34;section level3&#34;&gt;
@@ -980,7 +980,7 @@ image(
 points(pts, pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/sampling/index_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;identificação-de-tendência-espacial-e-estimativa-optimclhs&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Identificação de tendência espacial e estimativa (optimCLHS)&lt;/h4&gt;
@@ -1004,7 +1004,7 @@ image(
 points(pts$points[, 2:3], pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/sampling/index_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;otimização-de-configurações-de-amostra-para-interpolação-espacial-optimmssd&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Otimização de configurações de amostra para interpolação espacial (optimMSSD)&lt;/h4&gt;
@@ -1022,7 +1022,7 @@ image(
 points(pts$points[, 2:3], pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/post/sampling/index_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;
 &lt;strong&gt;Para mais e informações sobre funções implementadas no R para otimização amostral, vocês podem consultar o o pacote &lt;a href=&#34;https://cran.r-project.org/web/packages/spsann/spsann.pdf&#34;&gt;spsann&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1051,7 +1051,7 @@ pts@coords &amp;lt;-
 points(pts, pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/sampling/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-aleatória-estratificada-simples&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem aleatória estratificada simples&lt;/h3&gt;
@@ -1080,7 +1080,7 @@ pts@coords &amp;lt;- pts@coords +
 points(pts, pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/sampling/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-aleatória-sistemática&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem aleatória sistemática&lt;/h3&gt;
@@ -1103,7 +1103,7 @@ set.seed(1984)
 points(sp::spsample(grid, n = 30, type = &amp;quot;regular&amp;quot;), pch = 20, cex = 0.75)
 legend(636200, 7483450, legend = &amp;quot;Amostras (2019)&amp;quot;, pch = 21, bty = &amp;quot;n&amp;quot;)
 legend(636200, 7483400, legend = &amp;quot;Amostras (2020)&amp;quot;, pch = 20, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/sampling/index_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;main &amp;lt;- &amp;quot;Amostra aleatória sistemática (malha desalinhada)&amp;quot;
 plot(
   grid@coords, type = &amp;quot;n&amp;quot;, asp = 1, main = main,
@@ -1120,7 +1120,7 @@ points(pts, pch = 21, cex = 0.75)
 polygon(pts@coords[c(2, 7, 8, 3, 2), ])
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-12-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/sampling/index_files/figure-html/unnamed-chunk-12-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;amostragem-aleatória-em-conglomerados&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Amostragem aleatória em conglomerados&lt;/h3&gt;
@@ -1141,7 +1141,7 @@ pts &amp;lt;- sp::spsample(grid, n = 33, type = &amp;quot;clustered&amp;quot;, n
 points(pts, pch = 21, cex = 0.75)
 leg &amp;lt;- paste(&amp;quot;Amostras (n = &amp;quot;, length(pts), &amp;quot;)&amp;quot;, sep = &amp;quot;&amp;quot;)
 legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://eliasmcosta.netlify.app/post/sampling/index_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/sampling/index_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;se-você-chegou-até-aqui-muito-bem&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Se você chegou até aqui muito bem !!!! 👏👏👏&lt;/h3&gt;
@@ -1215,9 +1215,9 @@ legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;
     
     <item>
       <title>Mapping soil properties in a poorly-accessible area</title>
-      <link>https://eliasmcosta.netlify.app/publication/journal-article/rbcs2020/</link>
+      <link>/publication/journal-article/rbcs/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://eliasmcosta.netlify.app/publication/journal-article/rbcs2020/</guid>
+      <guid>/publication/journal-article/rbcs/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -1235,9 +1235,9 @@ legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;
     
     <item>
       <title>Spatial Bayesian belief networks a a participatory approach for mapping environmental vulnerability at the Itatiaia National Park, Brazil</title>
-      <link>https://eliasmcosta.netlify.app/publication/journal-article/eas2020/</link>
+      <link>/publication/journal-article/eas2020/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://eliasmcosta.netlify.app/publication/journal-article/eas2020/</guid>
+      <guid>/publication/journal-article/eas2020/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -1255,9 +1255,9 @@ legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;
     
     <item>
       <title>Mapeamento Bahia</title>
-      <link>https://eliasmcosta.netlify.app/project/bahia/</link>
+      <link>/project/bahia/</link>
       <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>https://eliasmcosta.netlify.app/project/bahia/</guid>
+      <guid>/project/bahia/</guid>
       <description>&lt;p&gt;O mapeamento digital de solos em área de produção de petróleo e gás - Bahia é um projeto coordenado pelo professor 
 &lt;a href=&#34;http://lattes.cnpq.br/2115137917689655&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Marcos Bacis Ceddia&lt;/a&gt;. O projeto integra métodos e técnicas tradicionais (área de referência) e digitais de mapeamento de solo, utilizando novas ferramentas de caracterização de solos.&lt;/p&gt;
 </description>
@@ -1265,9 +1265,9 @@ legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;
     
     <item>
       <title>Slides</title>
-      <link>https://eliasmcosta.netlify.app/slides/example/</link>
+      <link>/slides/example/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://eliasmcosta.netlify.app/slides/example/</guid>
+      <guid>/slides/example/</guid>
       <description>&lt;h1 id=&#34;create-slides-in-markdown-with-academic&#34;&gt;Create slides in Markdown with Academic&lt;/h1&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic&lt;/a&gt; | 
@@ -1399,17 +1399,17 @@ Three
     
     <item>
       <title>Palestra</title>
-      <link>https://eliasmcosta.netlify.app/talk/ceade2018/</link>
+      <link>/talk/ceade2018/</link>
       <pubDate>Wed, 29 Aug 2018 08:00:00 +0000</pubDate>
-      <guid>https://eliasmcosta.netlify.app/talk/ceade2018/</guid>
+      <guid>/talk/ceade2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spatial Bayesian belief networks. A participatory approach for mapping soil vulnerability at the Itatiaia National Park, Brazil</title>
-      <link>https://eliasmcosta.netlify.app/publication/conference-paper/wcss2018/</link>
+      <link>/publication/conference-paper/wcss2018/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://eliasmcosta.netlify.app/publication/conference-paper/wcss2018/</guid>
+      <guid>/publication/conference-paper/wcss2018/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -1426,10 +1426,28 @@ Three
     </item>
     
     <item>
+      <title>Privacy Policy</title>
+      <link>/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>/privacy/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Terms</title>
+      <link>/terms/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>/terms/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Digital elevation model quality on digital soil mapping prediction accuracy</title>
-      <link>https://eliasmcosta.netlify.app/publication/journal-article/ca2018/</link>
+      <link>/publication/journal-article/ca2018/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://eliasmcosta.netlify.app/publication/journal-article/ca2018/</guid>
+      <guid>/publication/journal-article/ca2018/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -1447,9 +1465,9 @@ Three
     
     <item>
       <title>Mapping soil organic carbon and organic matter fractions by Geographically Weighted Regression</title>
-      <link>https://eliasmcosta.netlify.app/publication/journal-article/jeq2018/</link>
+      <link>/publication/journal-article/jeq2018/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://eliasmcosta.netlify.app/publication/journal-article/jeq2018/</guid>
+      <guid>/publication/journal-article/jeq2018/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -1467,9 +1485,9 @@ Three
     
     <item>
       <title>RapidEye image processing for soil use mapping in rugged landscape accuracy</title>
-      <link>https://eliasmcosta.netlify.app/publication/journal-article/pab2016/</link>
+      <link>/publication/journal-article/pab2016/</link>
       <pubDate>Fri, 01 Jul 2016 00:00:00 +0000</pubDate>
-      <guid>https://eliasmcosta.netlify.app/publication/journal-article/pab2016/</guid>
+      <guid>/publication/journal-article/pab2016/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -1487,9 +1505,9 @@ Three
     
     <item>
       <title>Parque Nacional de Itatiaia</title>
-      <link>https://eliasmcosta.netlify.app/project/pni/</link>
+      <link>/project/pni/</link>
       <pubDate>Fri, 27 Mar 2015 00:00:00 +0000</pubDate>
-      <guid>https://eliasmcosta.netlify.app/project/pni/</guid>
+      <guid>/project/pni/</guid>
       <description>&lt;p&gt;Description
 Itatiaia National Park (INP) plateau in Rio de Janeiro State is characterized by high altitude and a cold climate environment, with endemic fauna and flora. Since knowledge about soils in this section of the park is scarce, our research aims to characterize soils in the INP plateau and their distribution associating field survey and techniques and tools for digital mapping. They include the study of spatial distribution of soil attributes, selection of predictor variables among environmental covariates such as geology, geomorphology, satellite imagery and derived indices; and related land attributes of the digital elevation model, such as: slope, planar curvature, profile curvature, distance to drainage, radiation contribution area, topographic wetness index, transport capacity sediment. The technique of Random Forest will be applied for modeling. A second goal is to evaluate the vulnerability of environments at INP plateau, using data from slope, geology, vegetation, and soil classes (information produced in this study), which will be integrated into a GIS environment for generating the vulnerability map. This product can be used by INP to select areas that ought to have restricted public use due to the high vulnerability, and to preserve them for future researches.
 We are grateful to INP administrators for providing access and support to data collection as well as the cartographic base, and the training and laboratory funding from Graduate Course in Agronomy – Soil Science, UFRRJ, Brazil. Thanks to The James Hutton Institute, Aberdeen, Scotland, for providing physical structure and specialized knowledge that aided the research, particularly the supervision of Dr. Laura Poggio. The work was supported by scholarships from the Ministry of Science, Technology, Innovations and Communications through CNPq (Process 141391/2015-4), the Ministry of Education through CAPES Foundation (Process 88881.135776/2016-01), and grants from FAPERJ Foundation (Process E_34/2014).&lt;/p&gt;
@@ -1498,9 +1516,9 @@ We are grateful to INP administrators for providing access and support to data c
     
     <item>
       <title>Mapeamento Pinheiral</title>
-      <link>https://eliasmcosta.netlify.app/project/pinheiral/</link>
+      <link>/project/pinheiral/</link>
       <pubDate>Sat, 27 Apr 2013 00:00:00 +0000</pubDate>
-      <guid>https://eliasmcosta.netlify.app/project/pinheiral/</guid>
+      <guid>/project/pinheiral/</guid>
       <description>&lt;p&gt;Descrição: O levantamento de solos compreende a descrição das características morfológicas, físicas e químicas dos solos, a descrição da superfície e a determinação da distribuição dos solos na paisagem de uma determinada área, e pode ser utilizado para diversos fins. O conhecimento das características dos solos e sua distribuição na paisagem são fundamentais para o planejamento do uso e conservação das terras. O uso de técnicas de mapeamento digital de solos (MDS) pode otimizar a realização e aperfeiçoar os produtos dos levantamentos pedológicos através de ferramentas de sistemas de informações geográficas (SIG). O objetivo geral do projeto envolve a criação de banco de dados com dados legados e novos pontos de amostragem tendo como área de estudo a Fazenda São José do Pinheiro e adjacência, no município de Pinheiral (RJ), bem como a avaliação detalhada da representação da altimetria na área (avaliação do modelo digital de elevação - MDE) e sua relação com a acurácia do mapa de solo. Também é objetivo deste projeto proceder com a correção atmosférica na imagem de satélite (Rapid Eye) e avaliar o efeito da correção sobre o mapeamento de uso da terra além da avaliação do erro posicional da imagem. Por fim, proceder-se-á com o MDS em ambiente de Mar de Morros, aplicando a técnica de regressão logística múltipla, sendo avaliado se esse método permite boa acurácia dos mapas de classes de solos e unidades de mapeamento, que possam constituir material base para estudos ambientais e planejamento do uso das terras.
 Gostaria de agradecer à FAPERJ (Process E-26/100.422/2014) que financiou parte da minha bolsa de metrado e ao e CNPq  (141391/2015-4) que financiou a outra parte da bolsa de metrado.&lt;/p&gt;
 </description>
