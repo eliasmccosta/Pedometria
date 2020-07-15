@@ -42,7 +42,7 @@ url_slides: ""
 url_source: ""
 url_video: "https://www.youtube.com/watch?v=qOy5SdU18yA&t=32s"
 projects:
-- Pinheiral
+- PNI
 ---
 
 {{% alert note %}}

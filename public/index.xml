@@ -219,21 +219,21 @@ sp4&lt;/code&gt;&lt;/pre&gt;
 ## 5  glenn    5    A   0      9 0.2 21.9 4.4  18.8        0.20   54   20   25
 ## 6  glenn    6   Bt   9     34 0.3 18.9 4.5  27.5        0.20   49   18   34
 ##     CF thickness random.numbers
-## 1 0.12         3      0.2624229
-## 2 0.27         5      0.1820539
-## 3 0.27        22      0.5391199
-## 4 0.16        12      0.9154544
-## 5 0.55         9     -1.6265964
-## 6 0.84        25     -1.0389952
+## 1 0.12         3      0.2062452
+## 2 0.27         5     -0.3294846
+## 3 0.27        22      0.1642507
+## 4 0.16        12     -0.4427595
+## 5 0.55         9     -1.4132930
+## 6 0.84        25     -1.0940023
 ## 
 ## Sampling site attributes:
 ##          id elevation group
-## 1    colusa  850.1472     A
-## 2     glenn 1069.8486     B
-## 3     kings  949.1644     A
-## 4  mariposa 1174.6005     B
-## 5 mendocino 1111.6342     A
-## 6      napa  942.0933     B&lt;/code&gt;&lt;/pre&gt;
+## 1    colusa 1154.1575     A
+## 2     glenn  818.2945     B
+## 3     kings 1042.3251     A
+## 4  mariposa  661.6340     B
+## 5 mendocino 1003.4776     A
+## 6      napa 1176.8653     B&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Fazendo um plot simples
 plot(sp4, name=&amp;#39;name&amp;#39;)
 # title, note line argument:
@@ -1215,9 +1215,29 @@ legend(635700, 7483400, legend = leg, pch = 21, bty = &amp;quot;n&amp;quot;)&lt;
     
     <item>
       <title>Mapping soil properties in a poorly-accessible area</title>
-      <link>https://eliasmcosta.netlify.app/publication/journal-article/rbcs/</link>
+      <link>https://eliasmcosta.netlify.app/publication/journal-article/rbcs2020/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://eliasmcosta.netlify.app/publication/journal-article/rbcs/</guid>
+      <guid>https://eliasmcosta.netlify.app/publication/journal-article/rbcs2020/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Supplementary notes can be added here, including 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Spatial Bayesian belief networks a a participatory approach for mapping environmental vulnerability at the Itatiaia National Park, Brazil</title>
+      <link>https://eliasmcosta.netlify.app/publication/journal-article/eas2020/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://eliasmcosta.netlify.app/publication/journal-article/eas2020/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
