@@ -35,8 +35,7 @@ summary: The PPA demonstrates relevance in the teaching-learning process of soil
   This course can serve as a guide to meet the needs of PronaSolos
 tags:
 - Source Themes
-title: Mapping soil properties in a poorly-accessible area
-url_code: ""
+title: Training pedologist for soil mapping-Contextualizing methods and its accuracy using the project pedagogy approach
 url_dataset: ""
 url_pdf: https://www.rbcsjournal.org/wp-content/uploads/articles_xml/1806-9657-rbcs-45-e0200130/1806-9657-rbcs-45-e0200130.x22228.pdf
 url_poster: "https://www.instagram.com/p/CMhOJkbDZxx/"
