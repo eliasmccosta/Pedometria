@@ -1,8 +1,8 @@
 ---
 abstract:  The PPA demonstrates relevance in the teaching-learning process of soil mapping.
-Combination of data-driven and expert knowledge methods are advised for future courses.
-Soil mapping using new tools involves multidisciplinary knowledge.
-This course can serve as a guide to meet the needs of PronaSolos.
+  Combination of data-driven and expert knowledge methods are advised for future courses.
+  Soil mapping using new tools involves multidisciplinary knowledge.
+  This course can serve as a guide to meet the needs of PronaSolos.
   
 authors:
 - admin
@@ -12,6 +12,7 @@ authors:
 - Laiz de Oliveira Silva
 - Igor Prata Terra de Rezende
 - Douglath Alves Correa Fernandes
+
 date: "2021-01-01T00:00:00Z"
 doi: "10.36783/18069657rbcs20200130"
 featured: false
@@ -26,10 +27,10 @@ publication_types:
 - "2"
 publishDate: "2021-01-01T00:00:00Z"
 slides: example
-summary:  he PPA demonstrates relevance in the teaching-learning process of soil mapping.
-Combination of data-driven and expert knowledge methods are advised for future courses.
-Soil mapping using new tools involves multidisciplinary knowledge.
-This course can serve as a guide to meet the needs of PronaSolos.
+summary:  The PPA demonstrates relevance in the teaching-learning process of soil mapping.
+  Combination of data-driven and expert knowledge methods are advised for future courses.
+  Soil mapping using new tools involves multidisciplinary knowledge.
+  This course can serve as a guide to meet the needs of PronaSolos.
 
 tags:
 - Source Themes
