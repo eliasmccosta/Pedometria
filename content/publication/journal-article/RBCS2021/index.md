@@ -1,48 +1,49 @@
 ---
-abstract: DSM tools are useful for soil sampling and mapping in areas with limited access.
-  Non-linear models are more effective to map soil properties than linear models.
-  GAM_scorpan model can improve soil properties predictions.
-  GAM smooth functions can successfully map soil properties in 3-D.
-  The high functionality of 2-D and 3-D maps benefits decision-makers.
+abstract:  The PPA demonstrates relevance in the teaching-learning process of soil mapping.
+Combination of data-driven and expert knowledge methods are advised for future courses.
+Soil mapping using new tools involves multidisciplinary knowledge.
+This course can serve as a guide to meet the needs of PronaSolos.
   
 authors:
 - admin
-- Helena Saraiva Koenow Pinheiro
+- Marcos Bacis Ceddia
 - Lúcia Helena Cunha dos Anjos
-- Robson Altiellys Tosta Marcondes
-- Yuri Andrei Gelsleichter
-date: "2020-01-01T00:00:00Z"
-doi: "10.36783/18069657rbcs20190107"
+- Felipe Nascimento dos Santos 
+- Laiz de Oliveira Silva
+- Igor Prata Terra de Rezende
+- Douglath Alves Correa Fernandes
+date: "2021-01-01T00:00:00Z"
+doi: "10.36783/18069657rbcs20200130"
 featured: false
 image:
   caption: 'Image credit: [**Elias**](https://www.instagram.com/eliasmendescosta/?hl=pt-br)'
   focal_point: ""
   preview_only: false
 projects: []
-publication: '*Revista Brasileira de Ciência do Solo, 44*:e0190107'
+publication: '*Revista Brasileira de Ciência do Solo, 2021;45*:e0200130'
 publication_short: ""
 publication_types:
 - "2"
-publishDate: "2020-01-01T00:00:00Z"
+publishDate: "2021-01-01T00:00:00Z"
 slides: example
-summary:  DSM tools are useful for soil sampling and mapping in areas with limited access.
-  Non-linear models are more effective to map soil properties than linear models.
-  GAM_scorpan model can improve soil properties predictions.
-  GAM smooth functions can successfully map soil properties in 3-D.
-  The high functionality of 2-D and 3-D maps benefits decision-makers.
+summary:  he PPA demonstrates relevance in the teaching-learning process of soil mapping.
+Combination of data-driven and expert knowledge methods are advised for future courses.
+Soil mapping using new tools involves multidisciplinary knowledge.
+This course can serve as a guide to meet the needs of PronaSolos.
+
 tags:
 - Source Themes
-title: Mapping soil properties in a poorly-accessible area
+title: Training pedologist for soil mapping: Contextualizing methods and its accuracy using the project pedagogy
 url_code: ""
 url_dataset: ""
-url_pdf: https://www.scielo.br/pdf/rbcs/v44/1806-9657-rbcs-44-e0190107.pdf
+url_pdf: https://www.rbcsjournal.org/wp-content/uploads/articles_xml/1806-9657-rbcs-45-e0200130/1806-9657-rbcs-45-e0200130.x22228.pdf
 url_poster: ""
 url_project: ""
 url_slides: ""
 url_source: ""
-url_video: "https://www.youtube.com/watch?v=qOy5SdU18yA&t=32s"
+url_video: ""
 projects:
-- PNI
+- Bahia
 ---
 
 {{% alert note %}}
