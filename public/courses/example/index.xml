@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Visão geral | Elias M. Costa</title>
-    <link>/courses/example/</link>
-      <atom:link href="/courses/example/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://eliasmcosta.netlify.app/courses/example/</link>
+      <atom:link href="https://eliasmcosta.netlify.app/courses/example/index.xml" rel="self" type="application/rss+xml" />
     <description>Visão geral</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Elias, 2020</copyright><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Elias, 2021</copyright><lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://eliasmcosta.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Visão geral</title>
-      <link>/courses/example/</link>
+      <link>https://eliasmcosta.netlify.app/courses/example/</link>
     </image>
     
     <item>
       <title>Métodos e técnicas de MDS</title>
-      <link>/courses/example/example1/</link>
+      <link>https://eliasmcosta.netlify.app/courses/example/example1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/courses/example/example1/</guid>
+      <guid>https://eliasmcosta.netlify.app/courses/example/example1/</guid>
       <description>&lt;p&gt;&lt;code&gt;Se quer levar o curso para sua empresa ou instituição por favor entre em contato&lt;/code&gt;
 Nesse curso você irá conhecer as bases do mapeamento digital do solo.
 Compreender como covariáveis ambientais podem ser usadas, em modelos de predição espacial do solo. Vai conhecer técnicas avançadas de aprendizado de máquina que bem como avaliação de desempenho e otimização de algorítimos.
@@ -37,9 +37,9 @@ Explorar diferentes esquemas de amostragem para calibração de validação de m
     
     <item>
       <title>Escrita científica e relatório técnico reprodutível</title>
-      <link>/courses/example/example2/</link>
+      <link>https://eliasmcosta.netlify.app/courses/example/example2/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/courses/example/example2/</guid>
+      <guid>https://eliasmcosta.netlify.app/courses/example/example2/</guid>
       <description>&lt;p&gt;&lt;code&gt;Se quer levar o curso para sua empresa ou instituição por favor entre em contato&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;O objetivo desse curso é apresentar algumas ferramentas de organização de referências.  Neste curso, você irá aprender a inserir e a organizar os
 Além disso, você poderá citar e referenciar documentos de acordo com diferentes estilos de formatação dentro do Microsoft Word ou do LibreOffice mesmo no Latex ou Rmarkdown. Por fim, você poderá criar grupos e gerenciar sua rede de contatos dentro no Mendeley ou Zotero. Ainda irá aprender a escrever relatórios automatizados com o Latex e/ou Rmarkdown.&lt;/p&gt;
@@ -57,9 +57,9 @@ Além disso, você poderá citar e referenciar documentos de acordo com diferent
     
     <item>
       <title>Formação e caracterização de solos</title>
-      <link>/courses/example/example3/</link>
+      <link>https://eliasmcosta.netlify.app/courses/example/example3/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>/courses/example/example3/</guid>
+      <guid>https://eliasmcosta.netlify.app/courses/example/example3/</guid>
       <description>&lt;p&gt;&lt;code&gt;Se quer levar o curso para sua empresa ou instituição por favor entre em contato&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Nesse curso você irá aprender sobre: Gênese, morfologia e classificação dos solos. Vai compreender a interação entre os fatores e processos de formação do solo e sua influência nos atributos morfológicos, físicos, químicos e mineralógicos do solo. Vai ser capaz de atráves da caracterização dos atributos morfológico dos horizontes do perfil como espessura, transição, cor, textura, estrutura e consistência, entre outros, ter uma melhor compreensão da dinâmica de formação do solo, assim como sua classificação e inferências sobre o melhor manejo e o planejamento de uso sutentável.&lt;/p&gt;
 &lt;ul&gt;

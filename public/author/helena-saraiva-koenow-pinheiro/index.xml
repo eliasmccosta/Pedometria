@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Helena Saraiva Koenow Pinheiro | Elias M. Costa</title>
-    <link>/author/helena-saraiva-koenow-pinheiro/</link>
-      <atom:link href="/author/helena-saraiva-koenow-pinheiro/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://eliasmcosta.netlify.app/author/helena-saraiva-koenow-pinheiro/</link>
+      <atom:link href="https://eliasmcosta.netlify.app/author/helena-saraiva-koenow-pinheiro/index.xml" rel="self" type="application/rss+xml" />
     <description>Helena Saraiva Koenow Pinheiro</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Elias, 2020</copyright><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Elias, 2021</copyright><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://eliasmcosta.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Helena Saraiva Koenow Pinheiro</title>
-      <link>/author/helena-saraiva-koenow-pinheiro/</link>
+      <link>https://eliasmcosta.netlify.app/author/helena-saraiva-koenow-pinheiro/</link>
     </image>
     
     <item>
       <title>Mapping soil properties in a poorly-accessible area</title>
-      <link>/publication/journal-article/rbcs/</link>
+      <link>https://eliasmcosta.netlify.app/publication/journal-article/rbcs/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/rbcs/</guid>
+      <guid>https://eliasmcosta.netlify.app/publication/journal-article/rbcs/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -34,9 +34,9 @@
     
     <item>
       <title>Spatial Bayesian belief networks a a participatory approach for mapping environmental vulnerability at the Itatiaia National Park, Brazil</title>
-      <link>/publication/journal-article/eas2020/</link>
+      <link>https://eliasmcosta.netlify.app/publication/journal-article/eas2020/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/eas2020/</guid>
+      <guid>https://eliasmcosta.netlify.app/publication/journal-article/eas2020/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -54,9 +54,9 @@
     
     <item>
       <title>Spatial Bayesian belief networks. A participatory approach for mapping soil vulnerability at the Itatiaia National Park, Brazil</title>
-      <link>/publication/conference-paper/wcss2018/</link>
+      <link>https://eliasmcosta.netlify.app/publication/conference-paper/wcss2018/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>/publication/conference-paper/wcss2018/</guid>
+      <guid>https://eliasmcosta.netlify.app/publication/conference-paper/wcss2018/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -74,9 +74,9 @@
     
     <item>
       <title>Mapping soil organic carbon and organic matter fractions by Geographically Weighted Regression</title>
-      <link>/publication/journal-article/jeq2018/</link>
+      <link>https://eliasmcosta.netlify.app/publication/journal-article/jeq2018/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/jeq2018/</guid>
+      <guid>https://eliasmcosta.netlify.app/publication/journal-article/jeq2018/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.

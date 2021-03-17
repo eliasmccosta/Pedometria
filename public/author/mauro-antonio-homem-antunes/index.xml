@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mauro Antonio Homem Antunes | Elias M. Costa</title>
-    <link>/author/mauro-antonio-homem-antunes/</link>
-      <atom:link href="/author/mauro-antonio-homem-antunes/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://eliasmcosta.netlify.app/author/mauro-antonio-homem-antunes/</link>
+      <atom:link href="https://eliasmcosta.netlify.app/author/mauro-antonio-homem-antunes/index.xml" rel="self" type="application/rss+xml" />
     <description>Mauro Antonio Homem Antunes</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Elias, 2020</copyright><lastBuildDate>Fri, 01 Jul 2016 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Elias, 2021</copyright><lastBuildDate>Fri, 01 Jul 2016 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://eliasmcosta.netlify.app/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Mauro Antonio Homem Antunes</title>
-      <link>/author/mauro-antonio-homem-antunes/</link>
+      <link>https://eliasmcosta.netlify.app/author/mauro-antonio-homem-antunes/</link>
     </image>
     
     <item>
       <title>RapidEye image processing for soil use mapping in rugged landscape accuracy</title>
-      <link>/publication/journal-article/pab2016/</link>
+      <link>https://eliasmcosta.netlify.app/publication/journal-article/pab2016/</link>
       <pubDate>Fri, 01 Jul 2016 00:00:00 +0000</pubDate>
-      <guid>/publication/journal-article/pab2016/</guid>
+      <guid>https://eliasmcosta.netlify.app/publication/journal-article/pab2016/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.

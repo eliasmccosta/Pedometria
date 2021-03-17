@@ -1,314 +1,202 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>/courses/example/example1/</loc>
+    <loc>https://eliasmcosta.netlify.app/courses/example/example1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/courses/example/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/courses/example/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/courses/example/example2/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/courses/example/example3/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/courses/example/example3/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/publication-type/2/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/authors/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/author/douglath-alves-correa-fernandes/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/author/elias-mendes-costa/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/author/felipe-nascimento-dos-santos/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/author/igor-prata-terra-de-rezende/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/author/laiz-de-oliveira-silva/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/publication/journal-article/rbcs21/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/author/marcos-bacis-ceddia/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/publication_types/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/publication/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/tag/source-themes/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/tags/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/categories/</loc>
     <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/post/tools/</loc>
     <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/tag/mds/</loc>
     <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/elias-mendes-costa/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/tag/pedometria/</loc>
     <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/tools/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/post/</loc>
     <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/mds/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/category/programacao/</loc>
     <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/pedometria/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/category/r/</loc>
     <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/category/programacao/</loc>
-    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/category/r/</loc>
-    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-06-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/amostragem/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/tag/amostragem/</loc>
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/sampling/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/post/sampling/</loc>
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication-type/2/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/author/helena-saraiva-koenow-pinheiro/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/helena-saraiva-koenow-pinheiro/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/author/lucia-helena-cunha-dos-anjos/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/lucia-helena-cunha-dos-anjos/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/publication/journal-article/rbcs/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/journal-article/rbcs/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/author/robson-altiellys-tosta-marcondes/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/publication/journal-article/eas2020/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/author/yuri-andrei-gelsleichter/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/robson-altiellys-tosta-marcondes/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/source-themes/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/journal-article/eas2020/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/yuri-andrei-gelsleichter/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/courses/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/courses/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/mapeamento/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/tag/mapeamento/</loc>
     <lastmod>2019-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/bahia/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/project/bahia/</loc>
     <lastmod>2019-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/nordeste/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/tag/nordeste/</loc>
     <lastmod>2019-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/petrobras/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/tag/petrobras/</loc>
     <lastmod>2019-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/project/</loc>
     <lastmod>2019-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/reconcavo-baiano/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/tag/reconcavo-baiano/</loc>
     <lastmod>2019-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/slides/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/slides/example/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/ensino/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/tag/ensino/</loc>
     <lastmod>2018-08-29T08:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/palestra/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/tag/palestra/</loc>
     <lastmod>2018-08-29T08:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/talk/ceade2018/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/talk/ceade2018/</loc>
     <lastmod>2018-08-29T08:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/talk/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/talk/</loc>
     <lastmod>2018-08-29T08:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication-type/1/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/publication-type/1/</loc>
     <lastmod>2018-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/laura-poggio/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/author/laura-poggio/</loc>
     <lastmod>2018-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/conference-paper/wcss2018/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/publication/conference-paper/wcss2018/</loc>
     <lastmod>2018-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/privacy/</loc>
-    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/terms/</loc>
-    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/alessandro-samuel-rosa/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/author/alessandro-samuel-rosa/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/journal-article/ca2018/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/publication/journal-article/ca2018/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/journal-article/jeq2018/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/publication/journal-article/jeq2018/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/sidinei-julio-beutler/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/author/sidinei-julio-beutler/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/wagner-de-souza-tassinari/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/author/wagner-de-souza-tassinari/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/mauro-antonio-homem-antunes/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/author/mauro-antonio-homem-antunes/</loc>
     <lastmod>2016-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/paula-debiasi/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/author/paula-debiasi/</loc>
     <lastmod>2016-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/journal-article/pab2016/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/publication/journal-article/pab2016/</loc>
     <lastmod>2016-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/floresta-atlantica/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/tag/floresta-atlantica/</loc>
     <lastmod>2015-03-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/pni/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/project/pni/</loc>
     <lastmod>2015-03-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/preservacao/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/tag/preservacao/</loc>
     <lastmod>2015-03-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/uso-publico/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/tag/uso-publico/</loc>
     <lastmod>2015-03-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/geologia-complexa/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/tag/geologia-complexa/</loc>
     <lastmod>2013-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/project/pinheiral/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/project/pinheiral/</loc>
     <lastmod>2013-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/mar-de-morros/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/tag/mar-de-morros/</loc>
     <lastmod>2013-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/areas-degradadas/</loc>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/tag/areas-degradadas/</loc>
     <lastmod>2013-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://eliasmcosta.netlify.app/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
   </url>
-  
-  <url>
-    <loc>/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
-  </url>
-  
 </urlset>
